@@ -1,5 +1,7 @@
 package com.yc.ssm.weibo.service;
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,8 @@ public class UserInfoServiceTest {
 		UserInfo ui=new UserInfo();
 		ui.setUserid("15570934077");
 		ui.setUpwd("aa");
-			userInfoService.register(ui);
+		System.out.println(userInfoService.register(ui));
+		assertNotNull(ui);
 	}
 	@Test
 	public void testLogin() throws Exception {	
@@ -27,6 +30,7 @@ public class UserInfoServiceTest {
 		ui.setUpwd("aa");
 		//UserInfo yyq=	userInfoService.login(ui);
 		System.out.println(userInfoService.login(ui));
+		assertNotNull(ui);
 			
 	}
 
