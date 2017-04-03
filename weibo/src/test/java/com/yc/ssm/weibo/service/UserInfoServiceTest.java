@@ -17,13 +17,13 @@ public class UserInfoServiceTest {
 	private UserInfoService uis;
 
 	@Test
-	public void testLogin() {
+	public void testLogin(String userid,String upwd) {
 		UserInfo userInfo = new UserInfo();
 		userInfo.setUserid("1119185633@qq.com");
 		userInfo.setUpwd("aaaa");
 		userInfo=uis.login(userInfo);
 		System.out.println(userInfo);
-		assertNotNull(userInfo);
+		assertEquals(userid, upwd);
 	}
 
 }
