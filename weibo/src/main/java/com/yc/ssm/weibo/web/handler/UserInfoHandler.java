@@ -2,6 +2,7 @@ package com.yc.ssm.weibo.web.handler;
 
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,7 +26,7 @@ public class UserInfoHandler{
 	@Autowired
 	private UserInfoService userInfoService;
 
-	@RequestMapping("/login")
+	/*@RequestMapping("/login")
 	public String login(UserInfo user,HttpServletRequest request){
 		System.out.println("login user ===>"+user);
 		user = userInfoService.login(user);
@@ -36,6 +37,42 @@ public class UserInfoHandler{
 			request.getSession().setAttribute(ServletUtil.LOGIN_USER, user);
 		}
 		return "redirect:/page/login.jsp" ;
-	}
+	}*/
+	
+	//@RequestMapping(value="register",method=RequestMethod.POST)
+		@RequestMapping(value="")
+		public String register(String userid){
+			System.out.println("15570934077---");
+			int i=0;
+			try {
+				// i=userInfoService.register(userInfo);
+			} catch (Exception e) {
+//				if(e instanceof org.springframework.dao.DuplicateKeyException){
+//					System.out.println("12232543");
+//					
+//				}
+			}		
+				if( i>0){
+					return "/page/login.jsp";
+				}else{
+					return "redirect:/page/register1.jsp";
+				}
+		
+			
+			
+		}
+
+		@RequestMapping("login")
+		public String login(UserInfo userInfo,HttpSession session,HttpServletRequest request){
+			System.out.println("login:user ==>" +userInfo);
+			userInfo = userInfoService.login(userInfo);
+			if(userInfo == null){
+				request.setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！");
+				return "login.jsp";
+			}else{
+				request.getSession().setAttribute(ServletUtil.LOGIN_USER, userInfo);
+				return "";//"redirect:/page/list.jsp";
+			}
+		}
 
 }
