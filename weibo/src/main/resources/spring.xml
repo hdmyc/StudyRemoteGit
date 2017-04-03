@@ -15,7 +15,7 @@
 
 	<context:property-placeholder location="classpath:db.properties"/>
 	
-	<context:component-scan base-package="com.yc.ssm">
+	<context:component-scan base-package="com.yc.ssm.weibo">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan> 
 
@@ -44,11 +44,11 @@
 	 <aop:aspectj-autoproxy/> 
 	 
 	 <!-- 配置事务切面，处理事务 -->
-	 <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+	<!--  <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 	 	<property name="dataSource" ref="dataSource"/>
 	 </bean>
-	 
+	  -->
 	 <!-- 事务注解 -->
-	 <tx:annotation-driven transaction-manager="transactionManager"/>
+	 <!-- <tx:annotation-driven transaction-manager="transactionManager"/> -->
 	
 </beans>

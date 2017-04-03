@@ -10,12 +10,12 @@ import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.util.Encrypt;
 
 
-@Component("encryptAspect")
-@Aspect
+/*@Component("encryptAspect")
+@Aspect*/
 public class EncryptAspect {
 //目标，切点，切面，通知，连接，代理
 	
-	public EncryptAspect() {
+	/*public EncryptAspect() {
 		System.out.println("============EncryptAspect()=============");
 	}
 	
@@ -24,5 +24,5 @@ public class EncryptAspect {
 		UserInfo user=(UserInfo) jpoint.getArgs()[0];
 		LogManager.getLogger().debug("对密码加密前====>"+user);
 		user.setUpwd(Encrypt.md5AndSha(user.getUpwd()));
-	}
+	}*/
 }

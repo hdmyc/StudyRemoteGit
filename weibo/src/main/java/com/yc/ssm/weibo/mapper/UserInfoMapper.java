@@ -4,6 +4,8 @@ import com.yc.ssm.weibo.entity.UserInfo;
 
 public interface UserInfoMapper {
 
-	public UserInfo findUser(UserInfo user);
+	UserInfo findUser(UserInfo user);
+
+	//public UserInfo findUser(UserInfo user);
 
 }
