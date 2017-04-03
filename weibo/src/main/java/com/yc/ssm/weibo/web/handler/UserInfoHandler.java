@@ -40,22 +40,22 @@ public class UserInfoHandler{
 	}*/
 	
 	//@RequestMapping(value="register",method=RequestMethod.POST)
-		@RequestMapping(value="")
-		public String register(String userid){
+		@RequestMapping(value="register")
+		public String register(String userid,UserInfo userInfo){
 			System.out.println("15570934077---");
 			int i=0;
 			try {
-				// i=userInfoService.register(userInfo);
+				 i=userInfoService.register(userInfo);
 			} catch (Exception e) {
-//				if(e instanceof org.springframework.dao.DuplicateKeyException){
-//					System.out.println("12232543");
-//					
-//				}
+				if(e instanceof org.springframework.dao.DuplicateKeyException){
+					System.out.println("12232543");
+					
+				}
 			}		
 				if( i>0){
-					return "/page/login.jsp";
+					return "redirect:/page/login.jsp";
 				}else{
-					return "redirect:/page/register1.jsp";
+					return "/page/register1.jsp";
 				}
 		
 			
