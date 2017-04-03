@@ -9,7 +9,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.yc.ssm.weibo.entity.UserInfo;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring.xml")
 public class UserInfoServiceTest {
@@ -19,12 +18,12 @@ public class UserInfoServiceTest {
 
 	@Test
 	public void testLogin() {
-		UserInfo user = new UserInfo();
-		user.setUserid("1119185633@qq.com");
-		user.setUpwd("aaaa");
-		user=uis.login(user);
-		System.out.println(user);
-		assertNotNull(user);
+		UserInfo userInfo = new UserInfo();
+		userInfo.setUserid("1119185633@qq.com");
+		userInfo.setUpwd("aaaa");
+		userInfo=uis.login(userInfo);
+		System.out.println(userInfo);
+		assertNotNull(userInfo);
 	}
 
 }
