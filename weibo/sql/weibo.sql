@@ -33,10 +33,10 @@ create table userInfo(
 SELECT * FROM userInfo;
 DELETE FROM userInfo WHERE register_time = '2017-04-02'
 
-INSERT INTO userInfo VALUES ('1119185633@qq.com','f3cb23f95572b37250bce5547e5fbf5e6c105a60',to_char(SYSDATE,'yyyy-mm-dd')); 
-INSERT INTO userInfo VALUES ('565944701@qq.com','f3cb23f95572b37250bce5547e5fbf5e6c105a60',to_char(SYSDATE,'yyyy-mm-dd'));
-INSERT INTO userInfo VALUES ('jaejoonglee@163.com','f3cb23f95572b37250bce5547e5fbf5e6c105a60',to_char(SYSDATE,'yyyy-mm-dd'));
-INSERT INTO userInfo VALUES ('1298237952@qq.com','aaaa',to_char(SYSDATE,'yyyy-mm-dd'));
+INSERT INTO userInfo VALUES ('1119185633@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd')); 
+INSERT INTO userInfo VALUES ('565944701@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
+INSERT INTO userInfo VALUES ('jaejoonglee@163.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
+INSERT INTO userInfo VALUES ('1298237952@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
 
 SELECT * FROM userInfo
 DROP TABLE userInfo
