@@ -28,7 +28,7 @@
 				</div>
 			</div>
 			<div id="con2">
-				<form  method="post">
+				<form id="login" action="user/login" method="post">
 					<div class="phonediv1">
                         <a href=""><div class="pic12"></div></a>
                         <input type="text" name="uname" placeholder="邮箱/会员账号/手机号登录" id="phone"/>
