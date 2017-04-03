@@ -284,6 +284,7 @@
               <div class="regst">
                   <form action="page/login.jsp" method="post">
                       <div class="phonediv">
+                      		<p><label style="color:red;">${errorMsg }&nbsp;</label></p>
                             <a href=""><div class="pic12"></div></a>
                             <input type="text" name="uname" placeholder="邮箱/会员账号/手机号登录"
                             id="phone"/>
