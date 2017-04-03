@@ -4,36 +4,30 @@ var contentEditor = UE.getEditor('encontent',{
 	autoSyncData : false
 });
 
-$('#newsEdit').datagrid({    
-	url:'news/list',
+$('#usersEdit').datagrid({    
+	url:'root/list',
 	fitColumns:true,
 	fit:true,
 	singleSelect:true,
 	border:false,
 	pagination :true,
 	columns:[[    
-	          {field:'nid',title:'编号',width:50,align:'center'},    
-	          {field:'ntid',title:'类型',width:50,align:'center',
-	        	  formatter: function(value,row,index){
-	        		  //alert(row + "==>" + JSON.stringify(row));
-	        		  return row.topic.tname;
-	        	  }
-	          },    
-	          {field:'ntitle',title:'标题',width:150,align:'center'},   
-	          {field:'nauthor',title:'作者',width:50,align:'center'},
-	          {field:'ncreatedate',title:'发布',width:100,align:'center'},
-	          {field:'operator',title:'操作',width:100,align:'center',
-	        	  formatter: function(value,row,index){
-	        		  //alert(row + "==>" + JSON.stringify(row));
-	        		  return '<a class="editBtn" href="javascript:void(0)" onclick="showDetail('+row.nid+')">修改</a>'+
-	        		  '<a class="delBtn" href="javascript:void(0)" onclick="showDetail('+row.nid+')">删除</a>' + 
-	        		  '<script>$(".editBtn").linkbutton({iconCls: "icon-ok"});$(".delBtn").linkbutton({iconCls: "icon-cancel"});</script>';
-	        	  }
-	          }
-	          ]],
+	         {field:'userid',title:'用户名',width:100,align:'center'},  
+	         {field:'nickname',title:'昵称',width:100,align:'center'},
+	         {field:'upwd',title:'密码',width:100,align:'center'},  
+	         {field:'username',title:'姓名',width:100,align:'center'},
+	         {field:'username',title:'操作',width:50,align:'center',
+	        	 formatter: function(value,row,index){
+	        		 //alert(row + "==>" + JSON.stringify(row));
+	        		 return '<a class="editBtn" href="javascript:void(0)" onclick="showDetail('+row.nid+')">修改</a>'+
+	        		 '<a class="delBtn" href="javascript:void(0)" onclick="showDetail('+row.nid+')">删除</a>' + 
+	        		 '<script>$(".editBtn").linkbutton({iconCls: "icon-ok"});$(".delBtn").linkbutton({iconCls: "icon-cancel"});</script>';
+	}
+}
+]],
 });  
-$("#newsModify").dialog({
-	title: '新闻详情',        
+$("#usersModify").dialog({
+	title: '用户详情',        
 	closed: true,
 	maximizable:true,
 	minimizable:true,
@@ -42,11 +36,11 @@ $("#newsModify").dialog({
 	width:800
 });
 
-function showDetail(id){
-	$("#newsModify").dialog("open");
+/*function showDetail(id){
+	$("#usersModify").dialog("open");
 
 
-	$.post("news/get?nid="+id,function(data){
+	$.post("root/get?nid="+id,function(data){
 		//$("#entname").val(data.topic.ntname);
 		//加载所有的主题
 		$.post("topic/all?",function(d){
@@ -69,7 +63,7 @@ function showDetail(id){
 		//$("#npicpath").val(data.ncontent);
 		$("#epic").attr("src", data.npicPath ? "images/ali.gif" : data.npicPath);
 	},"json");
-}
+}*/
 $("#modifyForm").form({
 	url:"news/modify",
 	success:function(data){

@@ -14,10 +14,6 @@ import com.yc.ssm.weibo.util.ServletUtil;
 @RequestMapping("root")
 public class RootHandler {
 
-	public RootHandler() {
-		System.out.println("============RootHandler()=============");
-	}
-	
 	@Autowired
 	private RootService rootService;
 
