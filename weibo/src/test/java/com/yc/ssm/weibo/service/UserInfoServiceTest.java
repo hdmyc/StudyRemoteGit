@@ -28,7 +28,6 @@ public class UserInfoServiceTest {
 		UserInfo ui=new UserInfo();
 		ui.setUserid("15570934077");
 		ui.setUpwd("aa");
-		//UserInfo yyq=	userInfoService.login(ui);
 		System.out.println(userInfoService.login(ui));
 		assertNotNull(ui);
 			
