@@ -88,7 +88,7 @@
 				</div>
 			</div>
 			<div id="con2">
-				<form action="index.jsp" method="post">
+				<form action="login.jsp" method="post">
 					<div class="phonediv2" style="border: 1px solid #ccc;">
                         <a href=""><div class="pic123"></div></a>
                         <input type="text" name="uname" placeholder="请输入您的手机号码" id="phone2"/>
@@ -282,8 +282,9 @@
                   <a href=""><div class="pic11"></div></a>
               </div>
               <div class="regst">
-                  <form action="page/login.jsp" method="post">
+                  <form action="" method="post">
                       <div class="phonediv">
+                      		<p><label style="color:red;">${errorMsg }&nbsp;</label></p>
                             <a href=""><div class="pic12"></div></a>
                             <input type="text" name="uname" placeholder="邮箱/会员账号/手机号登录"
                             id="phone"/>
