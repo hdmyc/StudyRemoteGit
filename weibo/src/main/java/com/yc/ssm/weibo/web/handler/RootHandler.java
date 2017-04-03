@@ -27,11 +27,11 @@ public class RootHandler {
 		root = rootService.login(root);
 		if(root == null){
 			request.setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！！");
-			return "/page/manager.jsp" ;
+			return "/back/login.jsp" ;
 		}else{
 			request.getSession().setAttribute(ServletUtil.LOGIN_USER, root);
 		}
-		return "redirect:/page/login.jsp" ;
+		return "redirect:/back/manage.jsp" ;
 	}
 	
 }

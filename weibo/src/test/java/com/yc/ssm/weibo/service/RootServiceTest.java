@@ -20,7 +20,7 @@ public class RootServiceTest {
 	@Test
 	public void testLogin() {
 		Root root = new Root();
-		root.setRname("yc");
+		root.setRname("1001");
 		root.setRpwd("aa");
 		root = rootService.login(root);
 		System.out.println(root);

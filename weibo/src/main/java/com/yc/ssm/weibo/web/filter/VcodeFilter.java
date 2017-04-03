@@ -17,7 +17,7 @@ import org.apache.logging.log4j.LogManager;
 /**
  *  过滤验证码
  */
-@WebFilter("/admin/login")
+@WebFilter("/root/login")
 public class VcodeFilter extends AbstractFilter{
    
 	@Override

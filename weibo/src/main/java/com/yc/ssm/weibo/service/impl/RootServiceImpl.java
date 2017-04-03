@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.yc.ssm.weibo.entity.Root;
 import com.yc.ssm.weibo.mapper.RootMapper;
 import com.yc.ssm.weibo.service.RootService;
+import com.yc.ssm.weibo.util.Encrypt;
 
 @Service("rootService")
 public class RootServiceImpl implements RootService {
@@ -14,8 +15,7 @@ public class RootServiceImpl implements RootService {
 	private RootMapper rootMapper;
 	
 	public Root login(Root root){
-		System.out.println("用户进行管理员登录操作==》" + root);
-		
+		root.setRpwd(Encrypt.md5AndSha(root.getRpwd()));
 		return rootMapper.findRoot(root);
 	}
 

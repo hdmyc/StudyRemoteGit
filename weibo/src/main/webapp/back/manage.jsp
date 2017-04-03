@@ -16,7 +16,7 @@
 	<div data-options="region:'north'" style="height: 138px;">
 		<div id="header">
 			<div id="top_login">
-				<label> 欢迎【<span>${loginUser.uname}</span>】进入微博后台管理系统</label> 
+				<label> 欢迎【<span>${loginUser.rname}</span>】进入微博后台管理系统</label> 
 			</div>
 			<div id="nav">
 				<div id="logo">
