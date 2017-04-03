@@ -223,7 +223,7 @@
 							</div>
 						</div>
 						<div class="contleft2_3">
-							<a href=" ">编辑个人资料  ></a>
+							<a href="detail.jsp">编辑个人资料  ></a>
 						</div>
 					</div>
 					<div class="contleft5">
