@@ -22,4 +22,13 @@ public class UserInfoServiceImpl implements UserInfoService {
 		System.out.println("用户进行登录操作=======>"+user);
 		return userInfoMapper.findUser(user);
 	}
+
+	@Override
+	public UserInfo checkLogin(String userid, String upwd) {
+		UserInfo user = userInfoMapper.findUserByName(userid);
+        if (user != null && user.getUpwd().equals(upwd)) {
+            return user;
+        }
+        return null;
+    }
 }

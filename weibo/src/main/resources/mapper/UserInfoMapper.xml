@@ -7,4 +7,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    select * from userInfo where upwd=#{upwd} and userid=#{userid}
 	</select>
 	
+	 <resultMap type="com.yc.ssm.weibo.entity.UserInfo" id="userInfoMap">
+        <id property="userid" column="userid" />
+        <result property="upwd" column="upwd" />
+        <result property="register_time" column="register_time" />        
+    </resultMap>
 </mapper>
