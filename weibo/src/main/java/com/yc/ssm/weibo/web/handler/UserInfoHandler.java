@@ -3,6 +3,7 @@ package com.yc.ssm.weibo.web.handler;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,9 +46,9 @@ public class UserInfoHandler{
 				}
 		}
 
-		@RequestMapping("/login")
+		@RequestMapping("login")
 		public String login(UserInfo user,HttpServletRequest request){
-			System.out.println("login user ===>"+user);
+			LogManager.getLogger().debug("login user ===>"+user);
 			user = userInfoService.login(user);
 			if(user == null){
 				request.setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！！");
