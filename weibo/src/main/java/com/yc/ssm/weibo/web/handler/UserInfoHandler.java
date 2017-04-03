@@ -25,7 +25,7 @@ public class UserInfoHandler{
 	@Autowired
 	private UserInfoService userInfoService;
 
-	@RequestMapping("login")
+	@RequestMapping("/login")
 	public String login(UserInfo user,HttpServletRequest request){
 		System.out.println("login user ===>"+user);
 		user = userInfoService.login(user);
