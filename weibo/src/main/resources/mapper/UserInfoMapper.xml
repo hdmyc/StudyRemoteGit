@@ -3,7 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.ssm.weibo.mapper.UserInfoMapper">
-	<resultMap id="checkUserByName" type="com.yc.ssm.weibo.entity.UserInfo">
+	<resultMap id="BaseResultMap" type="com.yc.ssm.weibo.entity.UserInfo">
 		<id column="USERID" property="userid" jdbcType="VARCHAR" />
 		<result column="UPWD" property="upwd" jdbcType="VARCHAR" />
 		<result column="REGISTER_TIME" property="registerTime"
@@ -13,7 +13,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		USERID, UPWD, REGISTER_TIME
 	</sql>
 
-	
+
 
 	<insert id="insert" parameterType="UserInfo">
 		insert into UserInfo (USERID, UPWD,
