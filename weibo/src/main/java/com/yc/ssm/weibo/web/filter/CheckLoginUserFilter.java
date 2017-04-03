@@ -13,8 +13,6 @@ import javax.servlet.http.HttpSession;
 
 import com.yc.ssm.weibo.util.ServletUtil;
 
-
-
 @WebFilter("/*")
 public class CheckLoginUserFilter extends AbstractFilter{
 

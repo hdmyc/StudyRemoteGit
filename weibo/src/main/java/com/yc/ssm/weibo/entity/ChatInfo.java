@@ -3,19 +3,19 @@ package com.yc.ssm.weibo.entity;
 
 public class ChatInfo {//3.私信表
 	
-    private Long cid;
+    private Integer cid;
     private String sendid;
     private String receivedid;
     private String msgStatue;
     private String chatFile;
     private String chatdate;
-    private Short cstatus;
+    private Integer cstatus;
 
-    public Long getCid() {
+    public Integer getCid() {
         return cid;
     }
 
-    public void setCid(Long cid) {
+    public void setCid(Integer cid) {
         this.cid = cid;
     }
 
@@ -59,11 +59,11 @@ public class ChatInfo {//3.私信表
         this.chatdate = chatdate;
     }
 
-    public Short getCstatus() {
+    public Integer getCstatus() {
         return cstatus;
     }
 
-    public void setCstatus(Short cstatus) {
+    public void setCstatus(Integer cstatus) {
         this.cstatus = cstatus;
     }
 
