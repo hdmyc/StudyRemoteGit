@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.ssm.weibo.mapper.UserInfoMapper">
+	<select id="findUser" parameterType="UserInfo" resultType="UserInfo">
+	    select * from userInfo where upwd=#{upwd} and userid=#{userid}
+	</select>
+	
+</mapper>
