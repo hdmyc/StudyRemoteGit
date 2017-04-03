@@ -6,7 +6,7 @@
 <head>
 <base href="/weibo/">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>微博后台管理</title>
 <link type="text/css" rel="stylesheet" href="easyui/themes/icon.css">
 <link type="text/css" rel="stylesheet" href="easyui/themes/default/easyui.css">
 <link href="backcss/main.css" rel="stylesheet" type="text/css" />
