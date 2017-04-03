@@ -6,9 +6,7 @@ public interface UserInfoMapper {
 
 	UserInfo findUser(UserInfo user);
 
-	//public UserInfo findUser(UserInfo user);
-
-	public UserInfo findUserByName(String userid);
+	UserInfo checkUserByName(String userid);
 	
     int insert(UserInfo record);
 
