@@ -6,7 +6,7 @@
 <head>
 <base href="/weibo/">
 <meta charset="UTF-8">
-<title>weibo</title>
+<title>微博后台登录</title>
 <link type="text/css" rel="stylesheet" href="easyui/themes/icon.css">
 <link type="text/css" rel="stylesheet" href="easyui/themes/default/easyui.css">
 <link type="text/css" rel="stylesheet" href="backcss/login.css">
