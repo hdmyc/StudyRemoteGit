@@ -8,4 +8,8 @@ public interface UserInfoMapper {
 
 	//public UserInfo findUser(UserInfo user);
 
+	public UserInfo findUserByName(String userid);
+	
+    int insert(UserInfo record);
+
 }

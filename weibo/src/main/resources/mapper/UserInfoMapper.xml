@@ -3,8 +3,29 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.ssm.weibo.mapper.UserInfoMapper">
-	<select id="findUser" parameterType="UserInfo" resultType="UserInfo">
-	    select * from userInfo where upwd=#{upwd} and userid=#{userid}
-	</select>
-	
+	 <resultMap id="BaseResultMap" type="com.yc.ssm.weibo.entity.UserInfo" >
+    <id column="USERID" property="userid" jdbcType="VARCHAR" />
+    <result column="UPWD" property="upwd" jdbcType="VARCHAR" />
+    <result column="REGISTER_TIME" property="registerTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    USERID, UPWD, REGISTER_TIME
+  </sql>
+
+
+  
+    <insert id="insert" parameterType="com.yc.ssm.weibo.entity.UserInfo" >
+    insert into UserInfo (USERID,  UPWD, 
+      REGISTER_TIME)
+    values (#{userid,jdbcType=VARCHAR}, #{upwd,jdbcType=VARCHAR}, 
+      default)
+  </insert>
+  
+    <select id="findUser" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from UserInfo
+    where USERID = #{userid,jdbcType=VARCHAR}
+    and UPWD=#{upwd,jdbcType=VARCHAR}
+  </select>
 </mapper>

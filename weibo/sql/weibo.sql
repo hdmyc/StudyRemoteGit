@@ -29,7 +29,7 @@ create table userInfo(
   userid             varchar2(20) primary key,      --登录名
   upwd               varchar2(50)not null,          --用户密码
   register_time      varchar2(20) DEFAULT SYSDATE   --注册日期
-)
+);
 SELECT * FROM userInfo;
 DELETE FROM userInfo WHERE register_time = '2017-04-02'
 

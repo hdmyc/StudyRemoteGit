@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="findRoot" resultType="Root" parameterType="Root">
 		<!-- select * from Root where rpwd = #{rpwd} and rname = (rid = #{rname} or rname = #{rname}) -->
 	
-		select * from Root where rname = ${rname} and rpwd = ${rpwd}
+		select * from Root where rname = #{rname} and rpwd = #{rpwd}
 	
 	</select>
 	

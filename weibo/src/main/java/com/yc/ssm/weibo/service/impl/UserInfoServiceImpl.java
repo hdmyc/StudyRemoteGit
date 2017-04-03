@@ -20,6 +20,32 @@ public class UserInfoServiceImpl implements UserInfoService {
 	public UserInfo login(UserInfo user) {
 		//user.setPassword(Encrypt.md5AndSha(user.getPassword()));
 		System.out.println("用户进行登录操作=======>"+user);
+	//	System.out.println(userInfoMapper.findUser(user));
+		
 		return userInfoMapper.findUser(user);
+	}
+
+	@Override
+	public UserInfo checkLogin(String userid, String upwd) {
+		UserInfo user = userInfoMapper.findUserByName(userid);
+        if (user != null && user.getUpwd().equals(upwd)) {
+            return user;
+        }
+        return null;
+    }
+
+	@Override
+	public int register(UserInfo user) throws Exception {
+		System.out.println("用户进行注册操作==》" +user);
+		int i=0;
+		try {
+			 i=userInfoMapper.insert(user);
+		} catch (Exception e) {
+			if(e instanceof org.springframework.dao.DuplicateKeyException){
+				System.out.println("12232543");
+				
+			}
+		}
+		return i;
 	}
 }
