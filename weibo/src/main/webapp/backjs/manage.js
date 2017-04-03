@@ -15,17 +15,17 @@ $(".treeNav").tree({
 			$("#main").tabs('close', nodeContent)
 		}
 		
-		if(nodeContent == "新闻信息"){
+		if(nodeContent == "用户信息"){
 			$("#main").tabs('add',{
 				title: nodeContent,
-				href:"back/news_info.jsp",
+				href:"back/users_info.jsp",
 				iconCls:"icon-mini-add",
 				closable:true,
 			});
-		}else if(nodeContent == "新闻编辑"){
+		}else if(nodeContent == "用户编辑"){
 			$("#main").tabs('add',{
 				title: nodeContent,
-				href:"back/news_edit.jsp",
+				href:"back/users_edit.jsp",
 				iconCls:"icon-mini-add",
 				closable:true,
 			});
