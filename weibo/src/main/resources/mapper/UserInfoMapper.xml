@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<resultMap id="BaseResultMap" type="com.yc.ssm.weibo.entity.UserInfo">
 		<id column="USERID" property="userid" jdbcType="VARCHAR" />
 		<result column="UPWD" property="upwd" jdbcType="VARCHAR" />
-		<result column="REGISTER_TIME" property="registerTime"
+		<result column="REGISTERTIME" property="registerTime"
 			jdbcType="TIMESTAMP" />
 	</resultMap>
 	<sql id="Base_Column_List">

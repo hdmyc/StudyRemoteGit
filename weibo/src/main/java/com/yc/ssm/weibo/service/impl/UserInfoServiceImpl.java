@@ -41,10 +41,10 @@ public class UserInfoServiceImpl implements UserInfoService {
 		try {
 			 i=userInfoMapper.insert(user);
 		} catch (Exception e) {
-			if(e instanceof org.springframework.dao.DuplicateKeyException){
+			/*if(e instanceof org.springframework.dao.DuplicateKeyException){
 				System.out.println("12232543");
 				
-			}
+			}*/
 		}
 		return i;
 	}
