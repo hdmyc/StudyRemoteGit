@@ -1,6 +1,8 @@
 package com.yc.ssm.weibo.web.handler;
 
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.logging.log4j.LogManager;
@@ -20,9 +22,6 @@ import com.yc.ssm.weibo.util.ServletUtil;
 @Controller("userInfoHandler")
 @RequestMapping("user")
 public class UserInfoHandler{
-	public UserInfoHandler() {
-		System.out.println("======*********======UserInfoHandler()=======**********======");
-	}
 	@Autowired
 	private UserInfoService userInfoService;
 
@@ -71,4 +70,9 @@ public class UserInfoHandler{
 				return "";//"redirect:/page/list.jsp";
 			}
 		}*/
+		@RequestMapping("/listAll")
+		public List<UserInfo> listAll(UserInfo userInfo,HttpServletRequest request){
+			System.out.println("list user ===>"+userInfo);
+			return userInfoService.listAll();
+		}
 }

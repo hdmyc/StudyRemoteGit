@@ -1,5 +1,7 @@
 package com.yc.ssm.weibo.mapper;
 
+import java.util.List;
+
 import com.yc.ssm.weibo.entity.UserInfo;
 
 public interface UserInfoMapper {
@@ -9,5 +11,7 @@ public interface UserInfoMapper {
 	UserInfo checkUserByName(String userid);
 	
     int insert(UserInfo record);
+
+	public List<UserInfo> listAllUser();
 
 }

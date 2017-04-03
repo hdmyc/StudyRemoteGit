@@ -2,6 +2,9 @@ package com.yc.ssm.weibo.service;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +34,13 @@ public class UserInfoServiceTest {
 		System.out.println(userInfoService.login(ui));
 		assertNotNull(ui);
 			
+	}
+	
+	@Test
+	public void testListAllUser() throws Exception {	
+		List<UserInfo> userInfo = userInfoService.listAll();
+		System.out.println(userInfo);
+		assertNotNull(userInfo);
 	}
 
 }
