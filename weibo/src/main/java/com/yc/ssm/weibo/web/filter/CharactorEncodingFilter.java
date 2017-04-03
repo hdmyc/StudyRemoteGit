@@ -19,7 +19,6 @@ public class CharactorEncodingFilter extends AbstractFilter {
 		response.setCharacterEncoding(encoding);
 		response.setContentType("charset=" + encoding);
 		chain.doFilter(request, response);
-		
 	}
 
 }
