@@ -27,7 +27,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 
 	@Override
 	public UserInfo checkLogin(String userid, String upwd) {
-		UserInfo user = userInfoMapper.findUserByName(userid);
+		UserInfo user = userInfoMapper.checkUserByName(userid);
         if (user != null && user.getUpwd().equals(upwd)) {
             return user;
         }
