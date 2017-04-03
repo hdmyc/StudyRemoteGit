@@ -46,11 +46,11 @@
 						<span id="mimats4" style="display: none;"><span class="sp2">中：</span>您的密码还可以更复杂些</span>
 						<span id="mimats5" style="display: none;"><span class="sp3">强：</span>您的密码很安全</span>
 					</div>
-					<div id="jihuomadiv">
+					<!-- <div id="jihuomadiv">
 						<span id="span3"><i>*</i>激活码：</span>
 						<input type="button" name="shouji" value="免费获取短信激活码" id="jihuoma"  class="color1" />
 						<input type="text" name="jihuo" value="" id="jihuo"/>
-					</div>
+					</div> -->
 					<div>
 						<input type="submit" value="立即注册" id="sub"/>
 					</div>
