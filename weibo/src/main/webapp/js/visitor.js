@@ -167,7 +167,8 @@ for (var m= 0; m< quit.length; m++) {
 	}
 }	
 
-$('#login').linkbutton({    
+$('#login').linkbutton({
+	url:"user/login",
     iconCls: 'icon-man',
     onClick: function(){
     	//alert(开始登陆....);
