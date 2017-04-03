@@ -28,7 +28,7 @@ public class UserInfoHandler{
 	//@RequestMapping(value="register",method=RequestMethod.POST)
 		@RequestMapping(value="register")
 		public String register(String userid,UserInfo userInfo){
-			System.out.println("15570934077---");
+			System.out.println("==============register====================");
 			int i=0;
 			try {
 				 i=userInfoService.register(userInfo);
