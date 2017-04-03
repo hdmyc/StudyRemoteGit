@@ -39,7 +39,7 @@ public class UserInfoHandler{
 				}
 			}		
 				if( i>0){
-					return "redirect:/page/login.jsp";
+					return "redirect:/page/visitor.jsp";
 				}else{
 					return "/page/register1.jsp";
 				}
