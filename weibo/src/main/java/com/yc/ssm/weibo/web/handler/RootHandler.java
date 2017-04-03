@@ -1,5 +1,7 @@
 package com.yc.ssm.weibo.web.handler;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +9,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yc.ssm.weibo.entity.Root;
+import com.yc.ssm.weibo.entity.UserDetail;
+import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.service.RootService;
+import com.yc.ssm.weibo.service.UserDetailService;
+import com.yc.ssm.weibo.service.UserInfoService;
 import com.yc.ssm.weibo.util.ServletUtil;
 
 @Controller("rootHandler")
@@ -29,5 +35,4 @@ public class RootHandler {
 		}
 		return "redirect:/back/manage.jsp" ;
 	}
-	
 }
