@@ -14,14 +14,14 @@ public class UserInfoServiceTest {
 	@Autowired
 	private UserInfoService userInfoService;
 	@Test
-	public void test() throws Exception {	
+	public void testRegister() throws Exception {	
 		UserInfo ui=new UserInfo();
 		ui.setUserid("15570934077");
 		ui.setUpwd("aa");
 			userInfoService.register(ui);
 	}
 	@Test
-	public void testlogin() throws Exception {	
+	public void testLogin() throws Exception {	
 		UserInfo ui=new UserInfo();
 		ui.setUserid("15570934077");
 		ui.setUpwd("aa");
