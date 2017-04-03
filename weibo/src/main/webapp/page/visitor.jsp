@@ -93,10 +93,6 @@
                         <a href=""><div class="pic123"></div></a>
                         <input type="text" name="uname" placeholder="请输入您的手机号码" id="phone2"/>
                     </div>
-                    <div class="pwddiv2">
-                        <input type="submit" value="获取短信验证码" id="duanxin"/>
-                        <input type="password" name="uname" placeholder="短信验证码" id="pwd2"/>
-                    </div>
                     <div class="remember">
                         <input type="checkbox" />&nbsp;&nbsp;下次自动登录
                     </div>
