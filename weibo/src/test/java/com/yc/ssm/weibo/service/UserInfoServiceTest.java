@@ -1,7 +1,5 @@
 package com.yc.ssm.weibo.service;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +12,22 @@ import com.yc.ssm.weibo.entity.UserInfo;
 public class UserInfoServiceTest {
 
 	@Autowired
-	private UserInfoService uis;
-
+	private UserInfoService userInfoService;
 	@Test
-	public void testLogin() {
-		UserInfo userInfo = new UserInfo();
-		userInfo.setUserid("1119185633@qq.com");
-		userInfo.setUpwd("aaaa");
-		userInfo=uis.login(userInfo);
-		System.out.println(userInfo);
-		assertNotNull(userInfo);
+	public void test() throws Exception {	
+		UserInfo ui=new UserInfo();
+		ui.setUserid("15570934077");
+		ui.setUpwd("aa");
+			userInfoService.register(ui);
+	}
+	@Test
+	public void testlogin() throws Exception {	
+		UserInfo ui=new UserInfo();
+		ui.setUserid("15570934077");
+		ui.setUpwd("aa");
+		//UserInfo yyq=	userInfoService.login(ui);
+		System.out.println(userInfoService.login(ui));
+			
 	}
 
 }
