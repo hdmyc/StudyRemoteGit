@@ -167,9 +167,12 @@ for (var m= 0; m< quit.length; m++) {
 	}
 }	
 
-$("#login").post(function(data){
-	url : "user/login";
-	alert(1);
-})
+$('#login').linkbutton({    
+    iconCls: 'icon-man',
+    onClick: function(){
+    	//alert(开始登陆....);
+    	$("#sub").submit();  //表单提交
+    }
+});
 	
 
