@@ -167,7 +167,6 @@ for (var m= 0; m< quit.length; m++) {
 }	
 
 $.post(function(data){
-	url:"user/login";
 	alert(1);
 });
 
