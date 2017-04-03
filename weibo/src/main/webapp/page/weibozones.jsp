@@ -712,36 +712,6 @@
 	    </div>
 	    <!--网页右边底下的私信聊天结束-->
 	
-	        <div class="foot-bottom">
-	           <div class="notice">
-	              <a href=""><img src="../images/foot-wb-logo.png" />微博客服</a>
-	              <a href="" class="a2">意见反馈</a>
-	              <a href="" class="a2">舞弊举报</a>
-	              <a href="" class="a2">开放平台</a>
-	              <a href="" class="a2">微博招聘</a>
-	              <a href="" class="a2">新浪网导航</a>
-	              <a href="" class="a2">举报处理大厅</a>
-	              <select>
-	                  <option>中文(简体)</option>
-	                  <option>中文(繁体)</option>
-	                  <option>中文(香港)</option>
-	                  <option>English</option>
-	              </select>
-	           </div>
-	           <div class="address">
-	              <a href="">京ICP证100780号</a>
-	              <a href="">互联网药品服务许可证</a>
-	              <a href="">互联网医疗保健许可证</a>
-	              <a href="">京网文[2014]2046-296号</a>
-	              <a href="">京ICP备12002058号</a>
-	              <a href="">增值电信业务经营许可证B2-20140447</a>
-	           </div>
-	           <div class="copyright">
-	              <p>Copyright &copy; 2009-2016 WEIBO 北京微梦创科网络技术有限公司</p>
-	              <a href=""><img src="../images/emblem.png" />京公网安备11000002000019号</a>
-	           </div>
-	        </div>
-	    </div>
 	    <!--脚注结束-->
 		
 		<script type="text/javascript" src="../js/weibozones.js"></script>
