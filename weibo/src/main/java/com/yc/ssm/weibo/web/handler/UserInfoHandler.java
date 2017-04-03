@@ -30,7 +30,6 @@ public class UserInfoHandler{
 		System.out.println("login user ===>"+user);
 		user = userInfoService.login(user);
 		if(user == null){
-			request.setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！！");
 			return "/page/visitor.jsp" ;
 		}else{
 			request.getSession().setAttribute(ServletUtil.LOGIN_USER, user);
