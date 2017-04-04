@@ -394,12 +394,12 @@ a{
 }
 #content .contentleft{
 	width: 300px;
-	height: 800px;
+	height: 500px;
 	float: left;
 }
 #content .contentleft .contleft1{
 	width: 300px;
-	height: 60px;
+	height: 60spx;
 	float: left;
 	margin-top: 15px;
 	background: white;
@@ -434,7 +434,7 @@ a{
 	float: left;
 	margin: 15px 0px 0px 20px;
 	width: 600px;
-	height:900px ;
+	height:500px ;
 	background: white;
 }
 #content .contentright p{
