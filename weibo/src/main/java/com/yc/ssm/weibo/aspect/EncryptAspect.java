@@ -1,14 +1,5 @@
 package com.yc.ssm.weibo.aspect;
 
-import org.apache.logging.log4j.LogManager;
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.springframework.stereotype.Component;
-
-import com.yc.ssm.weibo.entity.UserInfo;
-import com.yc.ssm.weibo.util.Encrypt;
-
 
 /*@Component("encryptAspect")
 @Aspect*/
