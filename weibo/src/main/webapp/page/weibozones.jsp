@@ -4,10 +4,11 @@
 <html>
 
 	<head>
+		<base href="/weibo/">
 		<meta charset="utf-8">
 		<title>wk语默的微博-随时随地发现新鲜事</title>
-		<link rel="icon" href="../images/favicon.ico" />
-		<link rel="stylesheet" href="../css/weibozones.css">
+		<link rel="icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/weibozones.css">
 	</head>
 
 	<body>
@@ -85,7 +86,7 @@
 		<!--头部开始-->
 		<div id="head">
 			<div class="head_logo">
-				<img src="../images/WB_logo.png" />
+				<img src="images/WB_logo.png" />
 			</div>
 			<div class="head_search">
 				<input type="text" id="text" placeholder="大家正在搜索：" />
@@ -166,7 +167,7 @@
 			<div class="contenttop">
 				<p class="conttop1_1">
 					<a href="">
-						<img src="../images/meicon.jpg" width="100px" height="100px" />
+						<img src="images/meicon.jpg" width="100px" height="100px" />
 					</a>
 				</p>
 
@@ -223,11 +224,11 @@
 							</div>
 						</div>
 						<div class="contleft2_3">
-							<a href="detail.jsp">编辑个人资料  ></a>
+							<a href="page/detail.jsp">编辑个人资料  ></a>
 						</div>
 					</div>
 					<div class="contleft5">
-						<i class="contleft5_1"><img src="../images/fensi.jpg"/></i>
+						<i class="contleft5_1"><img src="images/fensi.jpg"/></i>
 						<a class="contleft5_2">添加粉丝群</a>
 					</div>
 					<div class="contleft3">
@@ -236,7 +237,7 @@
 						</div>
 						<div class="contleft3_2">
 							<a href="" class="contleft3_21">
-								<img src="../images/zan.jpg" width="92px" height="92px" />
+								<img src="images/zan.jpg" width="92px" height="92px" />
 							</a>
 							<a class="contleft3_22">
 	    						TopShop穿搭
@@ -362,7 +363,7 @@
 					<div class="contright3">
 						<div class="content4">
 				           <div class="cont4-top">
-				               <img src="../images/2016-10-15_171828.png" id="cont4-icon"/>
+				               <img src="images/2016-10-15_171828.png" id="cont4-icon"/>
 				               <div class="cont4-top-wenzi">
 				                  <h4>wk语默</h4>
 				                  <p>今天14:25来自<a href="">微博weibo.com</a></p>   
@@ -382,19 +383,19 @@
 				       	</div>
 						<div class="content5">
 				           <div class="cont5-top">
-				               <img src="../images/2016-10-15_171828.png" id="cont5-icon"/>
+				               <img src="images/2016-10-15_171828.png" id="cont5-icon"/>
 				               <div class="cont5-top-wenzi">
 				                  <h4>wk语默</h4>
 				                
 				                  <p>今天14:25来自<a href="">微博weibo.com</a></p>
-				                  <img src="../images/star_165_pc_x2.png" class="cont5-pic" />
+				                  <img src="images/star_165_pc_x2.png" class="cont5-pic" />
 				                  <span>c</span>    
 				               </div>
 				           </div>
 				           <!--http://weibo.com/u/5760843730/home?wvr=5&lf=reg-->
 				           <div class="cont5-cen">
-				               <div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜<img src="../images/hearta_org.gif" /><a href=""><span>L</span>秒拍视频</a></div>
-				               <img src="../images/content5.jpg" width="500px" height="281px"/>
+				               <div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜<img src="images/hearta_org.gif" /><a href=""><span>L</span>秒拍视频</a></div>
+				               <img src="images/content5.jpg" width="500px" height="281px"/>
 				               <div class="cont5-cen-vid"><embed width="500" height="281.25" wmode="transparent" type="application/x-shockwave-flash" src="http://js.t.sinajs.cn/t5/album/static/swf/video/player.swf?v1441960309059836241438531565" quality="high" allowfullscreen="true" flashvars="list=http%3A%2F%2Fus.sinaimg.cn%2F003K0dAFjx0759H375IY0504010000220k01.m3u8%3FExpires%3D1475655052%26ssig%3DEsFu8wxIaS%26KID%3Dunistore%2Cvideo&amp;fid=1034:713ad1e6d7766bb6e1513ea8dbf58c4e&amp;logo=2&amp;uid=5760843730&amp;vf=feed&amp;ext=%7B%22object_id%22%3A%221034%3A713ad1e6d7766bb6e1513ea8dbf58c4e%22%2C%22mid%22%3A%224027219875132793%22%2C%22mark%22%3Anull%7D" pluginspage="http://get.adobe.com/cn/flashplayer/" allowscriptaccess="always" style="width: 500px; height: 281.25px;position:absolute;left:50px;top:21px"></div>    
 				           </div>
 				           <div class="cont5-foot">
@@ -422,7 +423,7 @@
 				                  </div>
 				                  <div class="WB_text_022">
 				                      <p>好脾气都是磨出来的，坏毛病都是惯出来的，治的了你脾气的是你爱的人，受的了你脾气的是爱你的人。每个人都有自己的脾气，为你忍下所有的怒气，仅仅因为那个人比你更心疼你。每一段爱情都需要忍耐，能相互包容迁就才能长久，如果有个人对你特别好，一定要好好珍惜。</p>
-				                      <img src="../images/cont7-test01.jpg" />
+				                      <img src="images/cont7-test01.jpg" />
 				                  </div>
 				                  <div class="WB_text_023">
 				                      <p>今天20:00来自<a href="">微博weibo.com</a></p>
@@ -714,7 +715,7 @@
 	
 	    <!--脚注结束-->
 		
-		<script type="text/javascript" src="../js/weibozones.js"></script>
+		<script type="text/javascript" src="js/weibozones.js"></script>
 	</body>
 
 </html>
