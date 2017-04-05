@@ -57,7 +57,7 @@ create table userDetail(
   blog               VARCHAR2(50),                  --博客地址
   email              varchar2(30),                  --邮箱
   qq                 number(10),                    --qq
-  tel                number(11),                    --电话
+  mobeil                number(20),                    --电话
   userid             varchar2(20) constraint fk_userid  references userInfo(userid) ,        --用户名
   msgStatue          number(1) default 0 constraint ck_msgStatue check(msgStatue in(0,1,2))  --个人信息权限  默认0所有人可见  1我关注的人可见   2仅自己可见
   )
@@ -74,7 +74,8 @@ create table userDetail(
   VALUES(userDetailId_seq.nextval,'周杰伦','1986-08-15','店小二奔跑吧','F','台湾','A','哎哟，不错哟','3.jpg','http://blog.com.cn/zhoujielun.com','jaejoonglee@163.com',565944701,18473436246,'565944701@qq.com',0);
 INSERT INTO userDetail 
   VALUES(userDetailId_seq.nextval,'那英','1986-09-20','喵星人的喵星球','M','台湾','A','天气好的时候适合唱歌','4.jpg','http://blog.com.cn/naying.com','1298237952@qq.com',1298237952,18473436246,'1298237952@qq.com',0);
-
+ INSERT INTO userDetail 
+  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'15570934077',0);
 
 SELECT * FROM userDetail 
 DROP sequence userDetailId_seq
