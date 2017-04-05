@@ -2,12 +2,12 @@
 	pageEncoding="UTF-8"%>
 <!doctype html>
 <html>
-
 <head>
+<base href="/weibo/">
 <meta charset="utf-8">
 <title>wk语默的微博-微博</title>
-<link rel="icon" href="../images/favicon.ico" />
-<link rel="stylesheet" href="../css/detail.css">
+<link rel="icon" href="images/favicon.ico" />
+<link rel="stylesheet" href="css/detail.css">
 </head>
 
 <body>
@@ -92,7 +92,7 @@
 	<!--头部开始-->
 	<div id="head">
 		<div class="head_logo">
-			<img src="../images/WB_logo.png" />
+			<img src="images/WB_logo.png" />
 		</div>
 		<div class="head_search">
 			<input type="text" id="text" placeholder="大家正在搜索：" />
@@ -176,7 +176,7 @@
 	<div id="content">
 		<div class="contenttop">
 			<p class="conttop1_1">
-				<a href=""> <img src="../images/meicon.jpg" width="100px"
+				<a href=""> <img src="images/meicon.jpg" width="100px"
 					height="100px" />
 				</a>
 			</p>
@@ -213,28 +213,60 @@
 					</div>
 				</div>
 			</div>
+			<div class="contentright">
+				<form action="" method="post" id="detail">
+				<p>
+					<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
+						name="userid" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;昵&nbsp;&nbsp;称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
+						name="nickname" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;真实姓名&nbsp;&nbsp;&nbsp;</label><input type="text" name="username" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;生&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
+						name="birthString" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="radio"
+						name="sex" />男&nbsp;&nbsp;<input type="radio" name="sex" />女
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;所&nbsp;在&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
+						name="address" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;血&nbsp;&nbsp;型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
+						name="bloodType" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;简&nbsp;&nbsp;介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
+						name="brief" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;博客地址&nbsp;&nbsp;&nbsp;</label><input type="text" name="blog" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;邮&nbsp;&nbsp;箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
+						name="email" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;Q&nbsp;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
+						name="qq" />
+				</p>
+				<p>
+					<label>&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="tel" />
+				</p>
+				<p>
+					<input type="submit" id="sub" value="提交修改"/>
+				</form>
+			</div>
 		</div>
 	</div>
-	<div id="content">
-		<from action="" method="post" id="detail">
-			<p>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;<input type="text" name="userid"/></p><br/>
-			<p>&nbsp;&nbsp;昵&nbsp;&nbsp;称&nbsp;&nbsp;<input type="text" name="nickname"/></p><br/>
-			<p>&nbsp;&nbsp;真实姓名&nbsp;&nbsp;<input type="text" name="username"/></p><br/>
-			<p>&nbsp;&nbsp;生&nbsp;&nbsp;日&nbsp;&nbsp;<input type="text" name="birthString"/></p><br/>
-			<p>&nbsp;&nbsp;性&nbsp;&nbsp;别&nbsp;&nbsp;<input type="checkbox" name="sex"/>男&nbsp;&nbsp;<input type="checkbox" name="sex"/>女</p><br/>
-			<p>&nbsp;&nbsp;所&nbsp;在&nbsp;地&nbsp;&nbsp;<input type="text" name="address"/></p><br/>
-			<p>&nbsp;&nbsp;血&nbsp;&nbsp;型&nbsp;&nbsp;<input type="text" name="bloodType"/></p><br/>
-			<p>&nbsp;&nbsp;简&nbsp;&nbsp;介&nbsp;&nbsp;<input type="text" name="brief"/></p><br/>
-			<p>&nbsp;&nbsp;博客地址&nbsp;&nbsp;<input type="text" name="blog"/></p><br/>
-			<p>&nbsp;&nbsp;邮&nbsp;&nbsp;箱&nbsp;&nbsp;<input type="text" name="email"/></p><br/>
-			<p>&nbsp;&nbsp;&nbsp;Q&nbsp;Q&nbsp;&nbsp;&nbsp;<input type="text" name="qq"/></p><br/>
-			<p>&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;<input type="text" name="tel"/></p><br/>
-			<p>&nbsp;&nbsp;头&nbsp;&nbsp;像&nbsp;&nbsp;<br/>
-			<input width="100" height="100" type="image" name="head_picture"/><br/>
-			
-			<input type="button" name="编辑" id="sub"/>
-		</from>
-	</div>
+
 
 
 </body>
