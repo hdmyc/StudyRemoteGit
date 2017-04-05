@@ -1,11 +1,9 @@
 package com.yc.ssm.weibo.service;
 
-import com.yc.ssm.weibo.entity.UserInfo;
+import com.yc.ssm.weibo.entity.UserDetail;
 
 public interface UserDetailService {
-	public UserInfo checkLogin(String userid, String upwd);
-
-	int register(UserInfo userInfo) throws Exception;
+	boolean modifyUsers(UserDetail userDetail);
 	
-	UserInfo login(UserInfo userInfo);
+	UserDetail findDetail(UserDetail userDetail);
 }
