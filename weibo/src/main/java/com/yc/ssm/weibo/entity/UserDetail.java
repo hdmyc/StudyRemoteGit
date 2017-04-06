@@ -15,7 +15,7 @@ public class UserDetail {//2.用户详细信息表
 	private String blog;
 	private String email;
 	private Integer qq;
-	private Integer mobeil;
+	private Integer mobile;
 	private String userid;
 	private String picPath;
 	private Integer msgStatue;
@@ -92,11 +92,11 @@ public class UserDetail {//2.用户详细信息表
 	public void setQq(Integer qq) {
 		this.qq = qq;
 	}
-	public Integer getMobeil() {
-		return mobeil;
+	public Integer getMobile() {
+		return mobile;
 	}
-	public void setMobeil(Integer mobeil) {
-		this.mobeil = mobeil;
+	public void setMobile(Integer mobile) {
+		this.mobile = mobile;
 	}
 	public String getUserid() {
 		return userid;
@@ -122,7 +122,7 @@ public class UserDetail {//2.用户详细信息表
 		return "UserDetail [userDetailId=" + userDetailId + ", nickname=" + nickname + ", username=" + username
 				+ ", birthString=" + birthString + ", sex=" + sex + ", address=" + address + ", bloodType=" + bloodType
 				+ ", brief=" + brief + ", head_picture=" + head_picture + ", blog=" + blog + ", email=" + email
-				+ ", qq=" + qq + ", mobeil=" + mobeil + ", userid=" + userid + ", picPath=" + picPath + ", msgStatue="
+				+ ", qq=" + qq + ", mobile=" + mobile + ", userid=" + userid + ", picPath=" + picPath + ", msgStatue="
 				+ msgStatue + "]";
 	}
 }
