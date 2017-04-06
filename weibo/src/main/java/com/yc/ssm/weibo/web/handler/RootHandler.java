@@ -18,9 +18,9 @@ public class RootHandler {
 	private RootService rootService;
 
 	@RequestMapping("/login")
-	public String login(Root root,HttpServletRequest request){
-		System.out.println("login root ===>"+root);
-		root = rootService.login(root);
+	public String rootLogin(Root root,HttpServletRequest request){
+		System.out.println("rootLogin root ===>"+root);
+		root = rootService.rootLogin(root);
 		if(root == null){
 			request.setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！！");
 			return "/back/login.jsp" ;
@@ -29,4 +29,5 @@ public class RootHandler {
 		}
 		return "redirect:/back/manage.jsp" ;
 	}
+	
 }

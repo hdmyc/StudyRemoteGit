@@ -2,6 +2,9 @@ package com.yc.ssm.weibo.service;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +25,7 @@ public class RootServiceTest {
 		Root root = new Root();
 		root.setRname("1001");
 		root.setRpwd("aa");
-		root = rootService.login(root);
+		root = rootService.rootLogin(root);
 		System.out.println(root);
 		assertNotNull(root);
 	}

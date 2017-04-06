@@ -28,7 +28,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		and UPWD=#{upwd,jdbcType=VARCHAR}
 	</select>
 	
-	<select id="listAllUser" resultType="UserInfo">
+	<select id="listAllUser" resultType="UserInfo" parameterType="String">
 		select * from UserInfo
 	</select>
 </mapper>

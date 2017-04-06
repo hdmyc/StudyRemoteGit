@@ -46,14 +46,12 @@
 				<ul class="treeNav">
 					<li><span>用户信息</span></li>
 					<li><span>用户编辑</span></li>
-					<li><span>用户添加</span></li>
 				</ul>
 			</div>
 			<div title="微博管理" data-options="iconCls:'icon-mini-add'">
 				<ul class="treeNav">
 					<li><span>微博信息</span></li>
 					<li><span>微博编辑</span></li>
-					<li><span>微博添加</span></li>
 				</ul>
 			</div>
 		</div>
