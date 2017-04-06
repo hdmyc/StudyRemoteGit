@@ -213,55 +213,55 @@
 					</div>
 				</div>
 			</div>
-			<div class="contentright">
-				<form action="user" method="post" id="detail">
+			<div class="contentright" id="detailDiv">
+				<form action="detail" method="post" id="detail">
 				<p>
 					<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="userid" />
+						name="userid" id="userid"/>
 				</p>
 				<p>
 					<label>&nbsp;&nbsp;昵&nbsp;&nbsp;称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="nickname" />
+						name="nickname" id="nickname"/>
 				</p>
 				<p>
-					<label>&nbsp;&nbsp;真实姓名&nbsp;&nbsp;&nbsp;</label><input type="text" name="username" />
+					<label>&nbsp;&nbsp;真实姓名&nbsp;&nbsp;&nbsp;</label><input type="text" name="username" id="username"/>
 				</p>
 				<p>
 					<label>&nbsp;&nbsp;生&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="birthString" />
+						name="birthString" id="birthString"/>
 				</p>
 				<p>
 					<label>&nbsp;&nbsp;性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="radio"
-						name="sex" />男&nbsp;&nbsp;<input type="radio" name="sex" />女
+						name="sex" />男&nbsp;&nbsp;<input type="radio" name="sex" id="sex"/>女
 				</p>
 				<p>
 					<label>&nbsp;&nbsp;所&nbsp;在&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="address" />
+						name="address" id="address"/>
 				</p>
 				<p>
 					<label>&nbsp;&nbsp;血&nbsp;&nbsp;型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="bloodType" />
+						name="bloodType" id="bloodType"/>
 				</p>
 				<p>
 					<label>&nbsp;&nbsp;简&nbsp;&nbsp;介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="brief" />
+						name="brief" id="brief"/>
 				</p>
 				<p>
-					<label>&nbsp;&nbsp;博客地址&nbsp;&nbsp;&nbsp;</label><input type="text" name="blog" />
+					<label>&nbsp;&nbsp;博客地址&nbsp;&nbsp;&nbsp;</label><input type="text" name="blog" id="blog"/>
 				</p>
 				<p>
 					<label>&nbsp;&nbsp;邮&nbsp;&nbsp;箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="email" />
+						name="email" id="email"/>
 				</p>
 				<p>
 					<label>&nbsp;&nbsp;Q&nbsp;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="qq" />
+						name="qq" id="id"/>
 				</p>
 				<p>
-					<label>&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="tel" />
+					<label>&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="mobile" id="mobile" />
 				</p>
 				<p>
-					<input type="submit" id="sub" value="提交修改"/>
+					<a href="javaScript:void(0)"><input type="submit" id="sub" value="提交修改"/></a>
 				</form>
 			</div>
 		</div>
