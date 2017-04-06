@@ -22,10 +22,10 @@ import com.yc.ssm.weibo.util.ServletUtil;
  *
  */
 @Controller("userDetailHandler")
-@RequestMapping("user")
+@RequestMapping("detail")
 public class UserDetailHandler{
 	public UserDetailHandler() {
-		System.out.println("======*********======UserHandler()=======**********======");
+		System.out.println("======*********======UserDetailHandler()=======**********======");
 	}
 	@Autowired
 	private UserDetailService userDetailService;
