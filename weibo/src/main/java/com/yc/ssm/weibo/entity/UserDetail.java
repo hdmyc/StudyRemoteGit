@@ -17,6 +17,7 @@ public class UserDetail {//2.用户详细信息表
 	private Integer qq;
 	private Integer mobeil;
 	private String userid;
+	private String picPath;
 	private Integer msgStatue;
 	
 	public Integer getUserDetailId() {
@@ -110,15 +111,18 @@ public class UserDetail {//2.用户详细信息表
 		this.msgStatue = msgStatue;
 	}
 	
+	public String getPicPath() {
+		return picPath;
+	}
+	public void setPicPath(String picPath) {
+		this.picPath = picPath;
+	}
 	@Override
 	public String toString() {
-		return "UserDetail [userDetailId=" + userDetailId + ", nickname=" + nickname +", username="
-				+ username + ", birthString=" + birthString + ", sex=" + sex
-				+ ", address=" + address + ", bloodType=" + bloodType
-				+ ", brief=" + brief + ", head_picture=" + head_picture
-				+ ", blog=" + blog + ", email=" + email + ", qq=" + qq
-				+ ", mobeil=" + mobeil + ", userid=" + userid + ", msgStatue="
+		return "UserDetail [userDetailId=" + userDetailId + ", nickname=" + nickname + ", username=" + username
+				+ ", birthString=" + birthString + ", sex=" + sex + ", address=" + address + ", bloodType=" + bloodType
+				+ ", brief=" + brief + ", head_picture=" + head_picture + ", blog=" + blog + ", email=" + email
+				+ ", qq=" + qq + ", mobeil=" + mobeil + ", userid=" + userid + ", picPath=" + picPath + ", msgStatue="
 				+ msgStatue + "]";
 	}
-	
 }
