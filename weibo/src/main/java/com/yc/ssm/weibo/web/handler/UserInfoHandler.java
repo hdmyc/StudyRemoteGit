@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.service.UserInfoService;
@@ -70,9 +71,10 @@ public class UserInfoHandler{
 				return "";//"redirect:/page/list.jsp";
 			}
 		}*/
-		@RequestMapping("/listAll")
-		public List<UserInfo> listAll(UserInfo userInfo,HttpServletRequest request){
-			System.out.println("list user ===>"+userInfo);
+		@ResponseBody
+		@RequestMapping("listAll")
+		public List<UserInfo> listAll(){
+			System.out.println(userInfoService.listAll());
 			return userInfoService.listAll();
 		}
 }

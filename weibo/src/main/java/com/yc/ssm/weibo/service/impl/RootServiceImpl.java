@@ -1,5 +1,6 @@
 package com.yc.ssm.weibo.service.impl;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ public class RootServiceImpl implements RootService {
 	@Autowired
 	private RootMapper rootMapper;
 	
-	public Root login(Root root){
+	public Root rootLogin(Root root){
 		root.setRpwd(Encrypt.md5AndSha(root.getRpwd()));
 		return rootMapper.findRoot(root);
 	}

@@ -121,4 +121,5 @@ public class UserDetail {//2.用户详细信息表
 				+ msgStatue + "]";
 	}
 	
+	
 }

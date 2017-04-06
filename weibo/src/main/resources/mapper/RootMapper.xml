@@ -7,6 +7,4 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from Root where rpwd = #{rpwd} and (rid = #{rname} or rname = #{rname}) 
 	</select>
 	
-
-
 </mapper>
