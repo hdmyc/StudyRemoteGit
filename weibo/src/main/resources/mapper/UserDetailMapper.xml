@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.ssm.weibo.mapper.UserDetailMapper">
+	<select id="findDetail" parameterType="UserDetail" resultType="UserDetail">
+	    select * from userDetail where userid=#{userid}
+	</select>
+	
+	<update id="updateDetail" parameterType="UserDetail">
+		update userDetail
+		<set>
+			<if test="nickname != null">
+				nickname=#{nickname},
+			</if>
+			<if test="username != null">
+				username=#{username},
+			</if>
+			<if test="birthString != null">
+				birthString=#{birthString},
+			</if>
+			<if test="sex != null">
+				sex=#{sex},
+			</if>
+			<if test="address != null">
+				address=#{address},
+			</if>
+			<if test="bloodType != null">
+				bloodType=#{bloodType},
+			</if>
+			<if test="brief != null">
+				brief=#{brief}
+			</if>
+			<if test="head_picture != null">
+				head_picture=#{head_picture}
+			</if>
+			<if test="blog != null">
+				blog=#{blog}
+			</if>
+			<if test="email != null">
+				email=#{email}
+			</if>
+			<if test="qq != null">
+				qq=#{qq}
+			</if>
+			<if test="mobeil != null">
+				mobeil=#{mobeil}
+			</if>
+		</set>
+		where userid=#{userid}
+	</update>
+</mapper>
