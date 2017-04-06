@@ -214,7 +214,7 @@
 				</div>
 			</div>
 			<div class="contentright">
-				<form action="" method="post" id="detail">
+				<form action="user" method="post" id="detail">
 				<p>
 					<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
 						name="userid" />
