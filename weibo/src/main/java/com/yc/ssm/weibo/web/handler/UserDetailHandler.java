@@ -21,7 +21,7 @@ import com.yc.ssm.weibo.util.ServletUtil;
  * @author HDM-PC
  *
  */
-@Controller("userInfoHandler")
+@Controller("userDetailHandler")
 @RequestMapping("user")
 public class UserDetailHandler{
 	public UserDetailHandler() {
