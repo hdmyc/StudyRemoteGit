@@ -6,7 +6,7 @@ public class UserInfo {//1.管理员表
     private String userid;
     private String upwd;
     private String registertime;
-    
+    private Integer ustatus;
 	public String getUserid() {
 		return userid;
 	}
@@ -22,12 +22,22 @@ public class UserInfo {//1.管理员表
 	public String getRegistertime() {
 		return registertime;
 	}
-	public void setRegister_time(String register_time) {
-		this.registertime = register_time;
+	public void setRegistertime(String registertime) {
+		this.registertime = registertime;
 	}
+	public Integer getUstatus() {
+		return ustatus;
+	}
+	public void setUstatus(Integer ustatus) {
+		this.ustatus = ustatus;
+	}
+	
 	@Override
 	public String toString() {
 		return "UserInfo [userid=" + userid + ", upwd=" + upwd
-				+ ", registertime=" + registertime + "]";
+				+ ", registertime=" + registertime + ", ustatus=" + ustatus
+				+ "]";
 	}
+    
+	
 }
