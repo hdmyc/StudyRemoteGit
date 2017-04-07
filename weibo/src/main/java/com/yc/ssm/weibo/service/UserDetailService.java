@@ -3,14 +3,12 @@ package com.yc.ssm.weibo.service;
 
 import com.yc.ssm.weibo.entity.UserDetail;
 
-import java.util.List;
-
 
 public interface UserDetailService {
 
 	boolean modifyUsers(UserDetail userDetail);
 
-	public List<UserDetail> findAll();
+	//public List<UserDetail> findAll();
 	
 	UserDetail findDetail(UserDetail userDetail);
 
