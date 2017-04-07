@@ -17,6 +17,7 @@
 				<label>&nbsp;&nbsp;密码 </label> <input id="dupwd" type="text"/>
 			</p>
 			<p>
+
 				<label>&nbsp;&nbsp;注册日期 </label> <input id="dregistertime" type="text"/>
 			</p>
 			<p>

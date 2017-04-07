@@ -12,7 +12,7 @@ $('#userInfo').datagrid({
         {field:'username',title:'操作',width:50,align:'center',
         	formatter: function(value,row,index){
 				//alert(row + "==>" + JSON.stringify(row));
-        		return '<a class="detailBtn" href="javascript:void(0)" onclick="showDetail('+index+')">详情</a>' + 
+        		return '<a class="detailBtn" href="javascript:void(0)" onclick="showDetail('+row.nid+')">详情</a>' + 
         		'<script>$(".detailBtn").linkbutton({iconCls: "icon-search"});</script>';	
         	}
         }
@@ -32,8 +32,8 @@ $("#usersDetail").dialog({
 
 $("#detailDiv").dialog("close");
 
-function showDetail(dataA){
-	/*url:"userDetail/listDetail",*/
+function showDetail(data){
+	url:"userDetail/listDetail",
 	$("#usersDetail").dialog("open");
 	
 	$.post("userdetail/listDetail?duserid="+userid,function(dataB){

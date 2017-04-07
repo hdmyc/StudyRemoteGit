@@ -1,12 +1,9 @@
 package com.yc.ssm.weibo.service.impl;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yc.ssm.weibo.entity.UserDetail;
-import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.mapper.UserDetailMapper;
 import com.yc.ssm.weibo.service.UserDetailService;
 

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -26,12 +27,11 @@ import com.yc.ssm.weibo.util.ServletUtil;
 @Controller("userDetailHandler")
 @RequestMapping("userDetail")
 public class UserDetailHandler{
-	
 	@Autowired
 	private UserDetailService userDetailService;
 
+	@RequestMapping(value="findDetail",method=RequestMethod.POST)
 	@ResponseBody
-	@RequestMapping("findDetail")
 	public UserDetail findDetail(UserDetail userDetail,HttpServletRequest request){
 		System.out.println("login:user ==>" +userDetail);
 		userDetail = userDetailService.findDetail(userDetail);
@@ -45,7 +45,7 @@ public class UserDetailHandler{
 	}
 
 	@ResponseBody
-	@RequestMapping("ModifyUsers")
+	@RequestMapping(value="ModifyUsers",method=RequestMethod.POST)
 	public boolean ModifyUsers(UserDetail userDetail,@RequestParam("picData")MultipartFile picData){
 		String picPath=null;
 		if(picData!=null && !picData.isEmpty()){//判断是否有图片上传
