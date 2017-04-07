@@ -30,15 +30,16 @@ INSERT INTO root VALUES (rid_seq.nextval,'lee','c99e178d83cdfea3c167bc1d15f9b47f
 create table userInfo(
   userid             varchar2(20) primary key,      --登录名
   upwd               varchar2(50)not null,          --用户密码
-  register_time      varchar2(20) DEFAULT SYSDATE   --注册日期
+  register_time      varchar2(20) DEFAULT SYSDATE,  --注册日期
+  ustatus            number(1) default 0            --是否禁言
 );
 SELECT * FROM userInfo;
 DELETE FROM userInfo WHERE register_time = '2017-04-02'
 
-INSERT INTO userInfo VALUES ('1119185633@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd')); 
-INSERT INTO userInfo VALUES ('565944701@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
-INSERT INTO userInfo VALUES ('jaejoonglee@163.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
-INSERT INTO userInfo VALUES ('1298237952@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
+INSERT INTO userInfo(wid,wuserid,wtime,wNote) VALUES ('1119185633@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd')); 
+INSERT INTO userInfo(wid,wuserid,wtime,wNote) VALUES ('565944701@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
+INSERT INTO userInfo(wid,wuserid,wtime,wNote) VALUES ('jaejoonglee@163.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
+INSERT INTO userInfo(wid,wuserid,wtime,wNote) VALUES ('1298237952@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
 
 SELECT * FROM userInfo
 DROP TABLE userInfo
@@ -57,7 +58,7 @@ create table userDetail(
   blog               VARCHAR2(50),                  --博客地址
   email              varchar2(30),                  --邮箱
   qq                 number(10),                    --qq
-  mobeil                number(20),                    --电话
+  mobeil             number(20),                    --电话
   userid             varchar2(20) constraint fk_userid  references userInfo(userid) ,        --用户名
   msgStatue          number(1) default 0 constraint ck_msgStatue check(msgStatue in(0,1,2))  --个人信息权限  默认0所有人可见  1我关注的人可见   2仅自己可见
   )
