@@ -135,7 +135,7 @@
 			<artifactId>smartupload</artifactId>
 			<version>1.2.6</version>
 		</dependency>
-		
+
 		<!--//文本编辑 -->
 		<dependency>
 			<groupId>com.blingblingbang</groupId>
