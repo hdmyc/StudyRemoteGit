@@ -11,54 +11,54 @@
 	<div id="usersDetail">
 		<form action="#" method="post">
 			<p>
-				<label>&nbsp;&nbsp;用户名 </label> <input id="userid" type="text"/>
+				<label>&nbsp;&nbsp;用户名 </label> <input id="duserid" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;密码 </label> <input id="upwd" type="text"/>
+				<label>&nbsp;&nbsp;密码 </label> <input id="dupwd" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;注册日期 </label> <input id="registertime" type="text"/>
+				<label>&nbsp;&nbsp;注册日期 </label> <input id="dregistertime" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;是否禁言 </label> <input id="ustatus" type="text"/>
+				<label>&nbsp;&nbsp;是否禁言 </label> <input id="dustatus" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;昵称 </label> <input id="nickname" type="text"/>
+				<label>&nbsp;&nbsp;昵称 </label> <input id="dnickname" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;真实姓名 </label> <input id="username" type="text"/>
+				<label>&nbsp;&nbsp;真实姓名 </label> <input id="dusername" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;生日 </label> <input id="birthdate" type="text"/>
+				<label>&nbsp;&nbsp;生日 </label> <input id="dbirthdate" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;性别 </label> <input id="nickname" type="text"/>
+				<label>&nbsp;&nbsp;性别 </label> <input id="dnickname" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;地址 </label> <input id="address" type="text"/>
+				<label>&nbsp;&nbsp;地址 </label> <input id="daddress" type="text"/>
 			</p>
 			<p>
-				<label> &nbsp;&nbsp;血型 </label> <input id="bloodType" type="text"/>
+				<label> &nbsp;&nbsp;血型 </label> <input id="dbloodType" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;博客地址 </label> <input id="blog" type="text"/>
+				<label>&nbsp;&nbsp;博客地址 </label> <input id="dblog" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;邮箱 </label> <input id="email" type="text"/>
+				<label>&nbsp;&nbsp;邮箱 </label> <input id="demail" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;qq </label> <input id="qq" type="text"/>
+				<label>&nbsp;&nbsp;qq </label> <input id="dqq" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;电话 </label> <input id="tel" type="text"/>
+				<label>&nbsp;&nbsp;电话 </label> <input id="dtel" type="text"/>
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;简介 </label>
-				<textarea id="brief" cols="20" rows="2"></textarea>
+				<textarea id="dbrief" cols="20" rows="3"></textarea>
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;头像 </label>
-				<img src="backimages/ali.gif" style="width:80px;height:80px" />
+				<img src="backimages/ali.gif" id ="dhead_picture" style="width:80px;height:80px" />
 			</p>
 		</form>		
 	</div>

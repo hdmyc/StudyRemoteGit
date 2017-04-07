@@ -12,7 +12,7 @@ $('#userInfo').datagrid({
         {field:'username',title:'操作',width:50,align:'center',
         	formatter: function(value,row,index){
 				//alert(row + "==>" + JSON.stringify(row));
-        		return '<a class="detailBtn" href="javascript:void(0)" onclick="showDetail('+row.nid+')">详情</a>' + 
+        		return '<a class="detailBtn" href="javascript:void(0)" onclick="showDetail('+index+')">详情</a>' + 
         		'<script>$(".detailBtn").linkbutton({iconCls: "icon-search"});</script>';	
         	}
         }
@@ -32,16 +32,17 @@ $("#usersDetail").dialog({
 
 $("#detailDiv").dialog("close");
 
-function showDetail(data){
-	url:"userDetail/listDetail",
+function showDetail(dataA){
+	/*url:"userDetail/listDetail",*/
 	$("#usersDetail").dialog("open");
-	$.post("userdetail/get?nid="+id,function(data){
+	
+	/*$.post("userdetail/listDetail?duserid="+userid,function(dataB){
 		//alert(data +"==>"+ JSON.stringify(data));
-	$("#ntname").val(data.topic.tname);
-	$("#ntitle").val(data.ntitle);
-	$("#nauthor").val(data.nauthor);
-	$("#nsummary").val(data.nsummary);
-	$("#ncontent").val(data.ncontent);
+	$("#duserid").val(dataA.userid);
+	$("#dupwd").val(dataA.upwd);
+	$("#dregistertime").val(dataA.registertime);
+	$("#dustatus").val();
+	$("#dnickname").val();
 	//$("#npicpath").val(data.ncontent);
-	},"json");
+	},"json");*/
 }
