@@ -35,13 +35,15 @@ $("#detailDiv").dialog("close");
 function showDetail(data){
 	url:"userDetail/listDetail",
 	$("#usersDetail").dialog("open");
-	$.post("userdetail/get?nid="+id,function(data){
+	
+	/*$.post("userdetail/listDetail?duserid="+userid,function(dataB){
 		//alert(data +"==>"+ JSON.stringify(data));
-	$("#ntname").val(data.topic.tname);
-	$("#ntitle").val(data.ntitle);
-	$("#nauthor").val(data.nauthor);
-	$("#nsummary").val(data.nsummary);
-	$("#ncontent").val(data.ncontent);
+	$("#duserid").val(dataA.userid);
+	$("#dupwd").val(dataA.upwd);
+	$("#dregistertime").val(dataA.registertime);
+	$("#dustatus").val();
+	$("#dnickname").val();
 	//$("#npicpath").val(data.ncontent);
-	},"json");
+	},"json");*/
+
 }

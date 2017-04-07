@@ -7,8 +7,6 @@ public interface UserDetailService {
 
 	boolean modifyUsers(UserDetail userDetail);
 
-
-	//public List<UserDetail> findAll();
 	UserDetail findDetail(UserDetail userDetail);
 
 }
