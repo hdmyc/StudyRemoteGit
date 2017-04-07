@@ -22,8 +22,8 @@ create sequence rid_seq
  SELECT * FROM root;
  
 INSERT INTO root VALUES (rid_seq.nextval,'yc','c99e178d83cdfea3c167bc1d15f9b47ff8f80145'); 
-INSERT INTO root VALUES (rid_seq.nsextval,'admin','c99e178d83cdfea3c167bc1d15f9b47ff8f80145');
 INSERT INTO root VALUES (rid_seq.nextval,'lee','c99e178d83cdfea3c167bc1d15f9b47ff8f80145');
+INSERT INTO root VALUES (rid_seq.nextval,'admin','c99e178d83cdfea3c167bc1d15f9b47ff8f80145');
 
 
 --1.用户

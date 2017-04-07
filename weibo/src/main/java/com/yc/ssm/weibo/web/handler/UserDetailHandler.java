@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.yc.ssm.weibo.entity.UserDetail;
+import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.service.UserDetailService;
 import com.yc.ssm.weibo.util.ServletUtil;
 
@@ -23,7 +24,7 @@ import com.yc.ssm.weibo.util.ServletUtil;
  *
  */
 @Controller("userDetailHandler")
-@RequestMapping("detail")
+@RequestMapping("userDetail")
 public class UserDetailHandler{
 	@Autowired
 	private UserDetailService userDetailService;
@@ -58,4 +59,23 @@ public class UserDetailHandler{
 		System.out.println("上传图片 modify user ==>"+userDetail);
 		return userDetailService.modifyUsers(userDetail);//异步数据响应
 	}
+	
+	@ResponseBody
+	@RequestMapping("listDetail")
+	public boolean listDetail(UserDetail userDetail,@RequestParam("picData")MultipartFile picData){
+		String picPath=null;
+		if(picData!=null && !picData.isEmpty()){//判断是否有图片上传
+			try {
+				picData.transferTo(ServletUtil.getUploadFile(picData.getOriginalFilename()));
+				picPath=ServletUtil.VIRTUAL_UPLOAD_DIR+picData.getOriginalFilename();
+			} catch (IllegalStateException | IOException e) {
+				e.printStackTrace();
+			}
+		}
+		userDetail.setPicPath(picPath);
+		System.out.println("上传图片 modify user ==>"+userDetail);
+		return userDetailService.modifyUsers(userDetail);//异步数据响应
+	}
+	
+	
 }
