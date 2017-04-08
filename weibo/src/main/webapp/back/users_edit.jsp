@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<base href="${deployName }">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>

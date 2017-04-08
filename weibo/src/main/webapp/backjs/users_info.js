@@ -36,7 +36,7 @@ function showDetail(data){
 	url:"userDetail/listDetail",
 	$("#usersDetail").dialog("open");
 	
-	/*$.post("userdetail/listDetail?duserid="+userid,function(dataB){
+	$.post("userdetail/listDetail?duserid="+userid,function(dataB){
 		//alert(data +"==>"+ JSON.stringify(data));
 	$("#duserid").val(dataA.userid);
 	$("#dupwd").val(dataA.upwd);
@@ -44,6 +44,5 @@ function showDetail(data){
 	$("#dustatus").val();
 	$("#dnickname").val();
 	//$("#npicpath").val(data.ncontent);
-	},"json");*/
-
+	},"json");
 }
