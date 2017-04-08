@@ -56,4 +56,5 @@ public class UserInfoServiceImpl implements UserInfoService {
 		
 		return userInfoMapper.listAllUser();
 	}
+	
 }

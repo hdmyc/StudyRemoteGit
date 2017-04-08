@@ -24,4 +24,6 @@ public class UserDetailServiceImpl implements UserDetailService {
 		System.out.println("登录之后===》"+userDetail);
 		return userDetailMapper.findDetail(userDetail);
 	}
+	
+	
 }
