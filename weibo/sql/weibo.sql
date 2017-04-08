@@ -32,14 +32,18 @@ create table userInfo(
   upwd               varchar2(50)not null,          --用户密码
   register_time      varchar2(20) DEFAULT SYSDATE,  --注册日期
   ustatus            number(1) default 0            --是否禁言
-);
+)
 SELECT * FROM userInfo;
 DELETE FROM userInfo WHERE register_time = '2017-04-02'
 
-INSERT INTO userInfo(wid,wuserid,wtime,wNote) VALUES ('1119185633@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd')); 
-INSERT INTO userInfo(wid,wuserid,wtime,wNote) VALUES ('565944701@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
-INSERT INTO userInfo(wid,wuserid,wtime,wNote) VALUES ('jaejoonglee@163.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
-INSERT INTO userInfo(wid,wuserid,wtime,wNote) VALUES ('1298237952@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd'));
+INSERT INTO userInfo VALUES ('1119185633@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0); 
+INSERT INTO userInfo VALUES ('565944701@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0);
+INSERT INTO userInfo VALUES ('jaejoonglee@163.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0);
+INSERT INTO userInfo VALUES ('1298237952@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0);
+
+INSERT INTO userInfo VALUES ('15570934077','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0); 
+
+
 
 SELECT * FROM userInfo
 DROP TABLE userInfo
@@ -70,13 +74,13 @@ create table userDetail(
  INSERT INTO userDetail 
   VALUES(userDetailId_seq.nextval,'陈奕迅','1985-01-05','林森男神经','F','香港','O','我是一个唱歌很有魅力的歌手','1.jpg','http://blog.chenyixun.com','1119185633@qq.com',1119185633,18473436246,'1119185633@qq.com',0);
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'565944701@qq.com',0);
+  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'15570934077',0);
  INSERT INTO userDetail 
   VALUES(userDetailId_seq.nextval,'周杰伦','1986-08-15','店小二奔跑吧','F','台湾','A','哎哟，不错哟','3.jpg','http://blog.com.cn/zhoujielun.com','jaejoonglee@163.com',565944701,18473436246,'565944701@qq.com',0);
 INSERT INTO userDetail 
   VALUES(userDetailId_seq.nextval,'那英','1986-09-20','喵星人的喵星球','M','台湾','A','天气好的时候适合唱歌','4.jpg','http://blog.com.cn/naying.com','1298237952@qq.com',1298237952,18473436246,'1298237952@qq.com',0);
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'15570934077',0);
+  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'565944701@qq.com',0);
 
 SELECT * FROM userDetail 
 DROP sequence userDetailId_seq
@@ -128,6 +132,20 @@ create table weibo(
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'天气热的时候就该吃冰激凌');
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'1298237952@qq.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'上课好累');
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'今天真开心');
+ 
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'考试求帮助！！');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'1298237952@qq.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'每天都要坚持运动');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'你好，旧时光');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'动吃动吃，好开心！！');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'1298237952@qq.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'我只能永远读着对白读着我给你的伤害读完了依赖我很快就离开');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'不要这么容易就想放弃 就像我说的 追不到的梦想 换个梦不就得了 为自己的人生鲜艳上色 先把爱涂上喜欢的颜色 ——周杰伦 《稻香》');
+
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'对这个世界如果你有太多的抱怨 跌倒了 就不敢继续往前走 为什么 人要这么的脆弱 堕落 请你打开电视看看 多少人 为生命在努力勇敢的走下去 我们是不是该知足 珍惜一切 就算没有拥有 ');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'1298237952@qq.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'天灰灰，会不会让你忘了我是谁');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'海鸟和鱼相爱，其实只是一场意外');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'其实我已经猜透看透不想多说');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'1298237952@qq.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'给我一首歌的时间 周杰伦 雨淋湿了天空 毁得很讲究 你说你不懂 为何在这时牵手 我晒干了沉默 悔得很冲动 就算这是做错 也只是怕错过 在一起叫梦 分开了叫痛 是不是说 没有做完的梦最痛 迷路的后果 我能承受 这最后的出口 在爱过了才有');
+  INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'琴弦断了，缘尽了，你也走了。 你是过客，温柔到这，沉默了');
 
 SELECT * FROM weibo
 DROP sequence wid_seq
