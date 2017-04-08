@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 生成验证码的Servlet
  */
-@WebServlet("/vcode.jpg")
+@WebServlet("/page/vcode.jpg")
 public class VcodeHandler extends HttpServlet {
 	private static final long serialVersionUID = 4348904329267330103L;
 

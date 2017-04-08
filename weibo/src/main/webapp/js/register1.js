@@ -227,3 +227,7 @@ window.onload=function(){
 		yanzhengmats3.style.display="none";
 	}
 }
+
+$("#yanzhengmadiv img").click(function(){
+	$(this).attr("src", "vcode.jpg?" + new  Date().getTime());
+});

@@ -2,8 +2,8 @@ CREATE USER weibo IDENTIFIED BY a
 grant connect,resource to weibo;
 
 DROP USER weibo cascade;
-
-
+select USERID, UPWD, REGISTER_TIME from UserInfo where USERID = '15570934077' 
+update UserInfo set UPWD = 'c99e178d83cdfea3c167bc1d15f9b47ff8f80145' where USERID = '15570934077'
 
 --0.管理员表
 CREATE TABLE root(
@@ -48,7 +48,7 @@ INSERT INTO userInfo VALUES ('15570934077','cb54db33854702097a70d3d88184183f7cd6
 
 SELECT * FROM userInfo
 DROP TABLE userInfo
-
+SELECT * FROM userDetail
 --2.用户详细信息表
 create table userDetail(
   userDetailId       NUMBER(10) PRIMARY KEY,        --详细用户编号
@@ -64,7 +64,7 @@ create table userDetail(
   email              varchar2(30),                  --邮箱
   qq                 number(15),                    --qq
   mobeil             number(20),                    --电话
-  ustatus            number(1) default 0   ,         --是否禁言
+  userid			 varchar2(20),
   msgStatue          number(1) default 0 constraint ck_msgStatue check(msgStatue in(0,1,2))  --个人信息权限  默认0所有人可见  1我关注的人可见   2仅自己可见
 );
 

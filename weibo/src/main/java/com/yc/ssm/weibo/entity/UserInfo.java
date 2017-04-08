@@ -1,8 +1,9 @@
 package com.yc.ssm.weibo.entity;
 
+import java.io.Serializable;
 
-public class UserInfo {//1.管理员表
-	
+public class UserInfo implements Serializable{//1.管理员表
+	private static final long serialVersionUID = -3026006662897280810L;
     private String userid;
     private String upwd;
     private String registertime;

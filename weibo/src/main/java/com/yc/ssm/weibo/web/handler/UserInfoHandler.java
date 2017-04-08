@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.ssm.weibo.entity.UserInfo;
@@ -22,7 +23,7 @@ import com.yc.ssm.weibo.util.ServletUtil;
  */
 @Controller("userInfoHandler")
 @RequestMapping("user")
-public class UserInfoHandler{
+public class UserInfoHandler{  
 	@Autowired
 	private UserInfoService userInfoService;
 
@@ -34,10 +35,10 @@ public class UserInfoHandler{
 			try {
 				 i=userInfoService.register(userInfo);
 			} catch (Exception e) {
-				if(e instanceof org.springframework.dao.DuplicateKeyException){
+				/*if(e instanceof org.springframework.dao.DuplicateKeyException){
 					System.out.println("12232543");
 					
-				}
+				}*/
 			}		
 				if( i>0){
 					return "redirect:/page/visitor.jsp";
@@ -45,32 +46,29 @@ public class UserInfoHandler{
 					return "/page/register1.jsp";
 				}
 		}
+		
+		@RequestMapping(value = "register", method = RequestMethod.POST)
+		@ResponseBody
+		public int insertUser(UserInfo userInfo) {
+			LogManager.getLogger().debug("我是register的处理");
+			return userInfoService.insertUser(userInfo);
+		}
 
+		@SuppressWarnings("unused")
 		@RequestMapping("login")
 		public String login(UserInfo user,HttpServletRequest request){
 			LogManager.getLogger().debug("login user ===>"+user);
 			user = userInfoService.login(user);
+			request.getSession().setAttribute(ServletUtil.USERID, user.getUserid());//取到登陆用户的用户编号 放到session里面去
 			if(user == null){
-				request.setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！！");
+				request.getSession().setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！！");
 				return "/page/visitor.jsp" ;
 			}else{
 				request.getSession().setAttribute(ServletUtil.LOGIN_USER, user);
+				return "redirect:/page/login.jsp" ;
 			}
-			return "redirect:/page/login.jsp" ;
 		}
-		
-		/*@RequestMapping("login")
-		public String login(UserInfo userInfo,HttpSession session,HttpServletRequest request){
-			System.out.println("login:user ==>" +userInfo);
-			userInfo = userInfoService.login(userInfo);
-			if(userInfo == null){
-				request.setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！");
-				return "login.jsp";
-			}else{
-				request.getSession().setAttribute(ServletUtil.LOGIN_USER, userInfo);
-				return "";//"redirect:/page/list.jsp";
-			}
-		}*/
+	
 		@ResponseBody
 		@RequestMapping("listAll")
 		public List<UserInfo> listAll(){

@@ -20,9 +20,9 @@ public class UserDetailServiceImpl implements UserDetailService {
 	}
 
 	@Override
-	public UserDetail findDetail(UserDetail userDetail) {
-		System.out.println("登录之后===》"+userDetail);
-		return userDetailMapper.findDetail(userDetail);
+	public UserDetail findDetail(UserDetail userid) {
+		System.out.println("登录之后===》"+userid);
+		return userDetailMapper.findDetail(userid);
 	}
 	
 	

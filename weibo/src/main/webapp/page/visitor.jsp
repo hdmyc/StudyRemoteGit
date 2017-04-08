@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<base href="/weibo/">
 <meta charset="utf-8">
 <title>微博-随时随地发现新鲜事</title>
 <link rel="icon" href="images/favicon.ico" />

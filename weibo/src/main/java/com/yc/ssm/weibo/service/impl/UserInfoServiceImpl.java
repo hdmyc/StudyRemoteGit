@@ -2,6 +2,7 @@ package com.yc.ssm.weibo.service.impl;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +21,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 
 	@Override
 	public UserInfo login(UserInfo user) {
-		//user.setPassword(Encrypt.md5AndSha(user.getPassword()));
 		System.out.println("用户进行登录操作=======>"+user);
-	//	System.out.println(userInfoMapper.findUser(user));
-		
 		return userInfoMapper.findUser(user);
 	}
 
@@ -55,6 +53,12 @@ public class UserInfoServiceImpl implements UserInfoService {
 	public List<UserInfo> listAll() {
 		
 		return userInfoMapper.listAllUser();
+	}
+
+	@Override
+	public int insertUser(UserInfo userInfo) {
+		LogManager.getLogger().debug("我是B_userService里的" + userInfo);
+		return userInfoMapper.insertUser(userInfo);
 	}
 	
 }

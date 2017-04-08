@@ -6,6 +6,9 @@
 <base href="/weibo/">
 <meta charset="utf-8">
 <title>wk语默的微博-微博</title>
+<link rel="stylesheet" type="text/css"
+	href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 <link rel="icon" href="images/favicon.ico" />
 <link rel="stylesheet" href="css/detail.css">
 </head>
@@ -174,7 +177,7 @@
 
 	<!--中间内容开始-->
 	<div id="content">
-		<form  method="post" id="detail">
+		<form method="post" id="detail" enctype="multipart/form-data" >
 			<p>
 				<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
 					type="text" name="userid" id="userid" />
@@ -225,11 +228,13 @@
 					type="text" name="mobile" id="mobile" />
 			</p>
 			<p>
-				<a href="javaScript:void(0)"><input type="submit" id="sub"
-					value="提交修改" /></a>
+				<a class="updateBtn" href="javascript:void(0)">修改</a>
 		</form>
 	</div>
-
-
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript"
+		src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="js/detail.js"></script>
 </body>
 </html>

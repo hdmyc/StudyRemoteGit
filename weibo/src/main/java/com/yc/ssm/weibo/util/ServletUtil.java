@@ -8,6 +8,7 @@ public class ServletUtil {
 	public static String VIRTUAL_UPLOAD_DIR="/upload/";
 	public static final String LOGIN_USER = "loginUser";  //登录用户
 	public static final String ERROR_MESSAGE = "errorMsg";
+	public static final String USERID = "userid";//登陆用户的id
 	
 	//获取上传文件路径
 		public static File getUploadFile(String fileName){

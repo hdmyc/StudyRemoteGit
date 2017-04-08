@@ -14,4 +14,6 @@ public interface UserInfoMapper {
 
 	public List<UserInfo> listAllUser();
 
+	int insertUser(UserInfo userInfo);
+
 }
