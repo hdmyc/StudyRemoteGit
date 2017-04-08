@@ -1,5 +1,7 @@
 package com.yc.ssm.weibo.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,17 @@ public class UserDetailServiceImpl implements UserDetailService {
 	public UserDetail findDetail(UserDetail userDetail) {
 		System.out.println("登录之后===》"+userDetail);
 		return userDetailMapper.findDetail(userDetail);
+	}
+
+	@Override
+	public List<UserDetail> listAll() {
+		
+		return userDetailMapper.listAll();
+	}
+
+	@Override
+	public UserDetail listDetail(String userid) {
+		return userDetailMapper.listDetail(userid);
 	}
 	
 	

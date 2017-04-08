@@ -174,99 +174,61 @@
 
 	<!--中间内容开始-->
 	<div id="content">
-		<div class="contenttop">
-			<p class="conttop1_1">
-				<a href=""> <img src="images/meicon.jpg" width="100px"
-					height="100px" />
-				</a>
+		<form  method="post" id="detail">
+			<p>
+				<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="text" name="userid" id="userid" />
 			</p>
-
-			<p class="conttop1_2">
-				<span>wk语默</span> <i></i>
+			<p>
+				<label>&nbsp;&nbsp;昵&nbsp;&nbsp;称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="text" name="nickname" id="nickname" />
 			</p>
-			<p class="conttop1_3">
-				<a href="" class="conttop1_31">一句话介绍一下自己吧，让别人更了解你</a>
+			<p>
+				<label>&nbsp;&nbsp;真实姓名&nbsp;&nbsp;&nbsp;</label><input type="text"
+					name="username" id="username" />
 			</p>
-			<p class="conttop1_3" style="display: none;">上传封面图</p>
-		</div>
-		<div class="conttop2">
-			<a id="conttop2_1" class="contstyle1">我的主页</a> <a id="conttop2_2"
-				class="contstyle1">我的相册</a> <a id="conttop2_3" class="contstyle1">管理中心</a>
-		</div>
-		<div class="contentcenter1" style="display: block;">
-			<div class="contentleft">
-				<div class="contleft1">
-					<div class="contleft1_1">
-						<a>
-							<p>60</p> 关注
-						</a>
-					</div>
-					<div class="contleft1_2">
-						<a>
-							<p>1</p> 粉丝
-						</a>
-					</div>
-					<div class="contleft1_3">
-						<a>
-							<p>0</p> 微博
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="contentright" id="detailDiv">
-				<form action="detail" method="post" id="detail">
-				<p>
-					<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="userid" id="userid"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;昵&nbsp;&nbsp;称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="nickname" id="nickname"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;真实姓名&nbsp;&nbsp;&nbsp;</label><input type="text" name="username" id="username"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;生&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="birthString" id="birthString"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="radio"
-						name="sex" />男&nbsp;&nbsp;<input type="radio" name="sex" id="sex"/>女
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;所&nbsp;在&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="address" id="address"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;血&nbsp;&nbsp;型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="bloodType" id="bloodType"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;简&nbsp;&nbsp;介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="brief" id="brief"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;博客地址&nbsp;&nbsp;&nbsp;</label><input type="text" name="blog" id="blog"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;邮&nbsp;&nbsp;箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="email" id="email"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;Q&nbsp;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text"
-						name="qq" id="id"/>
-				</p>
-				<p>
-					<label>&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="mobile" id="mobile" />
-				</p>
-				<p>
-					<a href="javaScript:void(0)"><input type="submit" id="sub" value="提交修改"/></a>
-				</form>
-			</div>
-		</div>
+			<p>
+				<label>&nbsp;&nbsp;生&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="text" name="birthString" id="birthString" />
+			</p>
+			<p>
+				<label>&nbsp;&nbsp;性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="radio" name="sex" />男&nbsp;&nbsp;<input type="radio"
+					name="sex" id="sex" />女
+			</p>
+			<p>
+				<label>&nbsp;&nbsp;所&nbsp;在&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="text" name="address" id="address" />
+			</p>
+			<p>
+				<label>&nbsp;&nbsp;血&nbsp;&nbsp;型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="text" name="bloodType" id="bloodType" />
+			</p>
+			<p>
+				<label>&nbsp;&nbsp;简&nbsp;&nbsp;介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="text" name="brief" id="brief" />
+			</p>
+			<p>
+				<label>&nbsp;&nbsp;博客地址&nbsp;&nbsp;&nbsp;</label><input type="text"
+					name="blog" id="blog" />
+			</p>
+			<p>
+				<label>&nbsp;&nbsp;邮&nbsp;&nbsp;箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="text" name="email" id="email" />
+			</p>
+			<p>
+				<label>&nbsp;&nbsp;Q&nbsp;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="text" name="qq" id="id" />
+			</p>
+			<p>
+				<label>&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
+					type="text" name="mobile" id="mobile" />
+			</p>
+			<p>
+				<a href="javaScript:void(0)"><input type="submit" id="sub"
+					value="提交修改" /></a>
+		</form>
 	</div>
-
 
 
 </body>

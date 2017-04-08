@@ -17,6 +17,7 @@ public class RootServiceImpl implements RootService {
 	
 	public Root rootLogin(Root root){
 		root.setRpwd(Encrypt.md5AndSha(root.getRpwd()));
+		System.out.println(root);
 		return rootMapper.findRoot(root);
 	}
 

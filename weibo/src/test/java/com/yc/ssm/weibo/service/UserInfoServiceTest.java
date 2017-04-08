@@ -38,9 +38,23 @@ public class UserInfoServiceTest {
 	
 	@Test
 	public void testListAllUser() throws Exception {	
-		List<UserInfo> userInfo = userInfoService.listAll();
+		PaginationBean<UserInfo> userInfo = userInfoService.listAll("1","2");
 		System.out.println(userInfo);
 		assertNotNull(userInfo);
+	}
+	@Test
+	public void testFindUserById() throws Exception {	
+		UserInfo userInfo = userInfoService.findUserById("1119185633@qq.com");
+		System.out.println(userInfo);
+		assertNotNull(userInfo);
+	}
+	
+	@Test
+	public void testUpdateStatus() throws Exception {	
+		UserInfo user= new UserInfo();
+		user.setUserid("1119185633@qq.com");
+		user.setUstatus(1);
+		System.out.println(userInfoService.updateStatus(user));
 	}
 
 }

@@ -1,10 +1,10 @@
 package com.yc.ssm.weibo.service.impl;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.yc.ssm.weibo.entity.PaginationBean;
 import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.mapper.UserInfoMapper;
 import com.yc.ssm.weibo.service.UserInfoService;
@@ -52,9 +52,26 @@ public class UserInfoServiceImpl implements UserInfoService {
 	}
 
 	@Override
-	public List<UserInfo> listAll() {
-		
-		return userInfoMapper.listAllUser();
+	public PaginationBean<UserInfo> listAll(String page, String rows) {
+		PaginationBean<UserInfo> pb = new PaginationBean<UserInfo>();
+		if(page != null){
+			pb.setCurrPage(Integer.parseInt(page));
+		}
+		if(rows != null){
+			pb.setPageSize(Integer.parseInt(rows));
+		}
+		System.out.println(pb);
+		return userInfoMapper.listAllUser(pb);
+	}
+
+	@Override
+	public UserInfo findUserById(String userid) {
+		return userInfoMapper.listUserById(userid);
+	}
+
+	@Override
+	public boolean updateStatus(UserInfo userInfo) {
+		return userInfoMapper.updateStatus(userInfo) > 0;
 	}
 	
 }

@@ -2,6 +2,7 @@ package com.yc.ssm.weibo.mapper;
 
 import java.util.List;
 
+import com.yc.ssm.weibo.entity.PaginationBean;
 import com.yc.ssm.weibo.entity.UserInfo;
 
 public interface UserInfoMapper {
@@ -12,6 +13,10 @@ public interface UserInfoMapper {
 	
     int insert(UserInfo record);
 
-	public List<UserInfo> listAllUser();
+	PaginationBean<UserInfo> listAllUser(PaginationBean<UserInfo> pb);
+
+	UserInfo listUserById(String userid);
+
+	int updateStatus(UserInfo userInfo);
 
 }

@@ -1,23 +1,23 @@
 $('#userInfo').datagrid({    
-    url:'user/listAll',
+	url:'user/listAll',
+	pagination :true,
 	fitColumns:true,
 	fit:true,
 	singleSelect:true,
 	border:false,
-	pagination :true,
-    columns:[[    
-        {field:'userid',title:'用户名',width:100,align:'center'}, 
-        {field:'upwd',title:'密码',width:50,align:'center'},
-        {field:'ustatus',title:'是否禁言',width:50,align:'center'},
-        {field:'username',title:'操作',width:50,align:'center',
-        	formatter: function(value,row,index){
-				//alert(row + "==>" + JSON.stringify(row));
-        		return '<a class="detailBtn" href="javascript:void(0)" onclick="showDetail('+row.nid+')">详情</a>' + 
-        		'<script>$(".detailBtn").linkbutton({iconCls: "icon-search"});</script>';	
-        	}
-        }
-    ]],
-    
+	pageList : [ 5, 10, 15, 20, 25, 30 ],
+	columns:[[    
+	          {field:'userid',title:'用户名',width:100,align:'center'}, 
+	          {field:'ustatus',title:'是否禁言',width:50,align:'center'},
+	          {field:'username',title:'操作',width:50,align:'center',
+	        	  formatter: function(value,row,index){
+	        		  //alert(row + "==>" + JSON.stringify(row));
+	        		  return '<a class="detailBtn" href="javascript:void(0)" onclick="showDetail(\''+row.userid+'\')">详情</a>' + 
+	        		  '<script>$(".detailBtn").linkbutton({iconCls: "icon-search"});</script>';	
+	        	  }
+	          }
+	          ]],
+
 });  
 
 
@@ -25,24 +25,43 @@ $('#userInfo').datagrid({
 
 $("#usersDetail").dialog({
 	title: '用户详情',        
-    closed: true,
-    maximizable:true,
-    minimizable:true,
+	closed: true,
+	maximizable:true,
+	minimizable:true,
 });
 
-$("#detailDiv").dialog("close");
+$("#usersDetail").dialog("close");
 
-function showDetail(data){
-	url:"userDetail/listDetail",
+function showDetail(userid){
 	$("#usersDetail").dialog("open");
-	
-	$.post("userdetail/listDetail?duserid="+userid,function(dataB){
-		//alert(data +"==>"+ JSON.stringify(data));
-	$("#duserid").val(dataA.userid);
-	$("#dupwd").val(dataA.upwd);
-	$("#dregistertime").val(dataA.registertime);
-	$("#dustatus").val();
-	$("#dnickname").val();
-	//$("#npicpath").val(data.ncontent);
+	$.post("user/findUserById?userid="+userid,function(dataA){
+		$("#buserid").val(dataA.userid);
+		$("#bupwd").val(dataA.upwd);
+		$("#bregistertime").val(dataA.registertime);
+		$("#bustatus").val(dataA.ustatus);
 	},"json");
+	$.post("userDetail/listDetail?userid="+userid,function(data){
+	    $("#dnickname").val(data.nickname);
+	    $("#dusername").val(data.username);
+	    $("#dnickname").val(data.nickname);
+	    $("#dbirthdate").val(data.birthdate);
+	    $("#dsex").val(data.sex);
+	    $("#daddress").val(data.address);
+	    $("#dbloodType").val(data.bloodType);
+	    $("#dblog").val(data.blog);
+	    $("#demail").val(data.email);
+	    $("#dqq").val(data.qq);
+	    $("#dmobile").val(data.mobile);
+	    $("#dbrief").val(data.brief);
+	    
+		/*
+		  $("#dhead_picture").val(backimages/ali.gif);
+		 if(data.head_picture){
+			$("#dhead_picture").attr("src", data.head_picture);
+		}else{
+			$("#dhead_picture").attr("src", "backimages/ali.gif");
+		}*/
+		
+	},"json");
+	
 }

@@ -49,4 +49,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</set>
 		where userid=#{userid}
 	</update>
+	
+	<select id="listAll" resultType="UserDetail">
+		select * from UserDetail
+	</select>
+	<select id="listDetail" resultType="UserDetail" parameterType="string">
+		select * from UserDetail where userid = #{userid}
+	</select>
 </mapper>

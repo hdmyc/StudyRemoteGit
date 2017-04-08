@@ -14,7 +14,6 @@ $(".treeNav").tree({
 		if($("#main").tabs('exists', nodeContent)){
 			$("#main").tabs('close', nodeContent)
 		}
-		
 		if(nodeContent == "用户信息"){
 			$("#main").tabs('add',{
 				title: nodeContent,
@@ -29,6 +28,20 @@ $(".treeNav").tree({
 				iconCls:"icon-mini-add",
 				closable:true,
 			});
+		}else if(nodeContent == "微博信息"){
+			$("#main").tabs('add',{
+				title: nodeContent,
+				href:"back/weibo_info.jsp",
+				iconCls:"icon-mini-add",
+				closable:true,
+			});
+		}else if(nodeContent == "微博编辑"){
+			$("#main").tabs('add',{
+				title: nodeContent,
+				href:"back/weibo_edit.jsp",
+				iconCls:"icon-mini-add",
+				closable:true,
+			});
 		}else{
 			$("#main").tabs('add',{
 				title: nodeContent,
@@ -37,7 +50,7 @@ $(".treeNav").tree({
 				closable:true,
 			});
 		}
-		
+
 	}
 });
 $.extend($.fn.layout.methods,{
@@ -47,7 +60,7 @@ $.extend($.fn.layout.methods,{
 			var center=layout.layout("panel","center");
 			center.panel("maximize");
 			center.parent().css("z-index",10);
-			
+
 			$(window).on("resize.full",function(){
 				layout.layout("unFull").layout("resize");
 			})

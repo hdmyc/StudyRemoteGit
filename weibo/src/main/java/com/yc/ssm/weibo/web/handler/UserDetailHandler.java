@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.yc.ssm.weibo.entity.UserDetail;
-import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.service.UserDetailService;
 import com.yc.ssm.weibo.util.ServletUtil;
 
@@ -25,12 +25,12 @@ import com.yc.ssm.weibo.util.ServletUtil;
  *
  */
 @Controller("userDetailHandler")
-@RequestMapping("userDetail")
+@RequestMapping("/userDetail")
 public class UserDetailHandler{
 	@Autowired
 	private UserDetailService userDetailService;
 
-	@RequestMapping(value="findDetail",method=RequestMethod.POST)
+	@RequestMapping(value="findDetail",method=RequestMethod.GET)
 	@ResponseBody
 	public UserDetail findDetail(UserDetail userDetail,HttpServletRequest request){
 		System.out.println("login:user ==>" +userDetail);
@@ -45,7 +45,7 @@ public class UserDetailHandler{
 	}
 
 	@ResponseBody
-	@RequestMapping(value="ModifyUsers",method=RequestMethod.POST)
+	@RequestMapping(value="ModifyUsers",method=RequestMethod.GET)
 	public boolean ModifyUsers(UserDetail userDetail,@RequestParam("picData")MultipartFile picData){
 		String picPath=null;
 		if(picData!=null && !picData.isEmpty()){//判断是否有图片上传
@@ -56,26 +56,28 @@ public class UserDetailHandler{
 				e.printStackTrace();
 			}
 		}
-		userDetail.setPicPath(picPath);
+		userDetail.setHead_picture(picPath);
 		System.out.println("上传图片 modify user ==>"+userDetail);
 		return userDetailService.modifyUsers(userDetail);//异步数据响应
 	}
 	
+	//列出所有用户详细信息
 	@ResponseBody
-	@RequestMapping("listDetail")
-	public boolean listDetail(UserDetail userDetail,@RequestParam("picData")MultipartFile picData){
-		String picPath=null;
-		if(picData!=null && !picData.isEmpty()){//判断是否有图片上传
-			try {
-				picData.transferTo(ServletUtil.getUploadFile(picData.getOriginalFilename()));
-				picPath=ServletUtil.VIRTUAL_UPLOAD_DIR+picData.getOriginalFilename();
-			} catch (IllegalStateException | IOException e) {
-				e.printStackTrace();
-			}
-		}
-		userDetail.setPicPath(picPath);
-		System.out.println("上传图片 modify user ==>"+userDetail);
-		return userDetailService.modifyUsers(userDetail);//异步数据响应
+	@RequestMapping("/listAll")
+	public List<UserDetail> listAll(){
+		System.out.println(userDetailService.listAll());
+		return userDetailService.listAll();
+	}
+	
+	
+	
+	//根据userid查找UserDetail表信息
+	@ResponseBody
+	@RequestMapping(value="/listDetail",method=RequestMethod.POST)
+	public UserDetail listDetail(String userid){
+		System.out.println(userid);
+		UserDetail userDetail = userDetailService.listDetail(userid);
+		return userDetailService.listDetail(userid);
 	}
 	
 	

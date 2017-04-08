@@ -3,10 +3,11 @@
 <!doctype html>
 <html>
 <head>
+<base href="${deployName}">
 <meta charset="utf-8">
 <title>我的首页 微博-随时随地发现新鲜事</title>
 <link rel="icon" href="images/favicon.ico" />
-<link  rel="stylesheet" href="../css/login.css">
+<link  rel="stylesheet" href="css/login.css">
 </head>
 
 <body onload="init()"> 

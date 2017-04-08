@@ -6,17 +6,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<resultMap id="BaseResultMap" type="com.yc.ssm.weibo.entity.UserInfo">
 		<id column="USERID" property="userid" jdbcType="VARCHAR" />
 		<result column="UPWD" property="upwd" jdbcType="VARCHAR" />
-		<result column="REGISTERTIME" property="registerTime"
-			jdbcType="TIMESTAMP" />
+		<result column="REGISTERTIME" property="registerTime" jdbcType="TIMESTAMP" />
 	</resultMap>
 	<sql id="Base_Column_List">
 		USERID, UPWD, REGISTER_TIME
 	</sql>
 
 	<insert id="insert" parameterType="UserInfo">
-		insert into UserInfo (USERID, UPWD,
+		insert into UserInfo (USERID,
+		UPWD,
 		REGISTER_TIME)
-		values (#{userid,jdbcType=VARCHAR}, #{upwd,jdbcType=VARCHAR},
+		values (#{userid,jdbcType=VARCHAR},
+		#{upwd,jdbcType=VARCHAR},
 		default)
 	</insert>
 
@@ -25,11 +26,27 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<include refid="Base_Column_List" />
 		from UserInfo
 		where USERID = #{userid,jdbcType=VARCHAR}
-		and UPWD=#{upwd,jdbcType=VARCHAR}
+		and
+		UPWD=#{upwd,jdbcType=VARCHAR}
+	</select>
+
+	<resultMap type="PaginationBean" id="PaginationBeanMap">
+		<collection property="rows" column="{pageSize}=pageSize,{currPage}=currPage" ofType="UserInfo" select="getUsers"/>
+	</resultMap>
+	<select id="listAllUser" parameterType="PaginationBean" resultMap="PaginationBeanMap">
+		select count(1) total,ceil(count(1)/${pageSize}) totalPage,${pageSize} pageSize,${currPage} currPage from userInfo
+	</select>
+	<select id="getUsers" resultType="UserInfo">
+		select t.* from (select n.* ,rownum rn from (select * from userInfo order by 1)n 
+		where ${currPage} * ${pageSize} >=rownum) t
+		where rn >=(${currPage} - 1) * ${pageSize}
+	</select>
+	<select id="listUserById" parameterType="string" resultType="UserInfo">
+		select * from userInfo where userid = #{userid}
 	</select>
 	
-	<select id="listAllUser" resultType="UserInfo" parameterType="String">
-		select * from UserInfo
-	</select>
-	
+	<update id="updateStatus" parameterType="UserInfo">
+		update userInfo set ustatus = #{ustatus} where userid = #{userid}
+	</update>
+
 </mapper>

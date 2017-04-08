@@ -1,7 +1,7 @@
 //用户详情
 alert(1);
 $("#detail").form({
-	url:"detail/findDetail",
+	url:"userDetail/findDetail",
 	onSubmit: function(){    
         alert(1)  
     },    

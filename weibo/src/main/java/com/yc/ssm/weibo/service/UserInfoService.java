@@ -2,6 +2,7 @@ package com.yc.ssm.weibo.service;
 
 import java.util.List;
 
+import com.yc.ssm.weibo.entity.PaginationBean;
 import com.yc.ssm.weibo.entity.UserInfo;
 
 public interface UserInfoService {
@@ -11,6 +12,10 @@ public interface UserInfoService {
 
 	UserInfo login(UserInfo userInfo);
 
-	List<UserInfo> listAll();
+	PaginationBean<UserInfo> listAll(String page, String rows);
+
+	public UserInfo findUserById(String userid);
+
+	boolean updateStatus(UserInfo userionfo);
 
 }

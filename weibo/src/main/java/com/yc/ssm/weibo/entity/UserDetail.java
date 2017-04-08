@@ -2,10 +2,10 @@ package com.yc.ssm.weibo.entity;
 
 public class UserDetail {
 
-	 private Integer userDetailId;
-		private String nickname;
+		private Integer userDetailId;
 		private String username;
-		private String birthString;
+		private String birthdate;
+		private String nickname;
 		private String sex;
 		private String address;
 		private String bloodType;
@@ -13,9 +13,8 @@ public class UserDetail {
 		private String head_picture;
 		private String blog;
 		private String email;
-		private Integer qq;
-		private Integer mobile;
-		private String picPath;
+		private Long qq;
+		private Long mobile;
 		private String userid;
 		private Integer msgStatue;
 		public Integer getUserDetailId() {
@@ -24,23 +23,23 @@ public class UserDetail {
 		public void setUserDetailId(Integer userDetailId) {
 			this.userDetailId = userDetailId;
 		}
-		public String getNickname() {
-			return nickname;
-		}
-		public void setNickname(String nickname) {
-			this.nickname = nickname;
-		}
 		public String getUsername() {
 			return username;
 		}
 		public void setUsername(String username) {
 			this.username = username;
 		}
-		public String getBirthString() {
-			return birthString;
+		public String getBirthdate() {
+			return birthdate;
 		}
-		public void setBirthString(String birthString) {
-			this.birthString = birthString;
+		public void setBirthdate(String birthdate) {
+			this.birthdate = birthdate;
+		}
+		public String getNickname() {
+			return nickname;
+		}
+		public void setNickname(String nickname) {
+			this.nickname = nickname;
 		}
 		public String getSex() {
 			return sex;
@@ -84,23 +83,17 @@ public class UserDetail {
 		public void setEmail(String email) {
 			this.email = email;
 		}
-		public Integer getQq() {
+		public Long getQq() {
 			return qq;
 		}
-		public void setQq(Integer qq) {
+		public void setQq(Long qq) {
 			this.qq = qq;
 		}
-		public Integer getMobile() {
+		public Long getMobile() {
 			return mobile;
 		}
-		public void setMobile(Integer mobile) {
+		public void setMobile(Long mobile) {
 			this.mobile = mobile;
-		}
-		public String getPicPath() {
-			return picPath;
-		}
-		public void setPicPath(String picPath) {
-			this.picPath = picPath;
 		}
 		public String getUserid() {
 			return userid;
@@ -116,14 +109,14 @@ public class UserDetail {
 		}
 		@Override
 		public String toString() {
-			return "UserDetail [userDetailId=" + userDetailId + ", nickname="
-					+ nickname + ", username=" + username + ", birthString="
-					+ birthString + ", sex=" + sex + ", address=" + address
+			return "UserDetail [userDetailId=" + userDetailId + ", username="
+					+ username + ", birthdate=" + birthdate + ", nickname="
+					+ nickname + ", sex=" + sex + ", address=" + address
 					+ ", bloodType=" + bloodType + ", brief=" + brief
 					+ ", head_picture=" + head_picture + ", blog=" + blog
 					+ ", email=" + email + ", qq=" + qq + ", mobile=" + mobile
-					+ ", picPath=" + picPath + ", userid=" + userid
-					+ ", msgStatue=" + msgStatue + "]";
+					+ ", userid=" + userid + ", msgStatue=" + msgStatue + "]";
 		}
+		
 		
 }

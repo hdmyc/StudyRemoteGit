@@ -2,6 +2,9 @@ package com.yc.ssm.weibo.service;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +34,20 @@ public class UserDetailServiceTest {
 		ud.setUserid("15570934077");
 		System.out.println(userDetailService.findDetail(ud));
 		assertNotNull(ud);
+	}
+	
+	@Test
+	public void testListAll() {
+		List<UserDetail> list = userDetailService.listAll() ;
+		System.out.println(list);
+		assertNotNull(list);
+	}
+	
+	@Test
+	public void testListDetail() {
+		UserDetail detail = userDetailService.listDetail("565944701@qq.com") ;
+		System.out.println(detail);
+		assertNotNull(detail);
 	}
 
 }

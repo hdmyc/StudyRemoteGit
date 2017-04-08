@@ -1,79 +1,122 @@
-var contentEditor = UE.getEditor('encontent',{
+/*var contentEditor = UE.getEditor('encontent',{
 	elementPathEnabled : false,
 	enableAutoSave : false,
 	autoSyncData : false
-});
-
+});*/
+var msg = "";
 $('#usersEdit').datagrid({    
-	url:'root/list',
+	url:'user/listAll',
+	pagination :true,
 	fitColumns:true,
 	fit:true,
 	singleSelect:true,
 	border:false,
-	pagination :true,
+	pageList : [ 5, 10, 15, 20, 25, 30 ],
 	columns:[[    
-	         {field:'userid',title:'用户名',width:100,align:'center'},  
-	         {field:'nickname',title:'昵称',width:100,align:'center'},
-	         {field:'upwd',title:'密码',width:100,align:'center'},  
-	         {field:'username',title:'姓名',width:100,align:'center'},
-	         {field:'username',title:'操作',width:50,align:'center',
-	        	 formatter: function(value,row,index){
-	        		 //alert(row + "==>" + JSON.stringify(row));
-	        		 return '<a class="editBtn" href="javascript:void(0)" onclick="showDetail('+row.nid+')">修改</a>'+
-	        		 '<a class="delBtn" href="javascript:void(0)" onclick="showDetail('+row.nid+')">删除</a>' + 
-	        		 '<script>$(".editBtn").linkbutton({iconCls: "icon-ok"});$(".delBtn").linkbutton({iconCls: "icon-cancel"});</script>';
-	}
-}
-]],
+	          {field:'userid',title:'用户名',width:100,align:'center'}, 
+	          {field:'ustatus',title:'是否禁言',width:50,align:'center'},
+	          {field:'username',title:'操作',width:50,align:'center',
+	        	  formatter: function(value,row,index){
+	        		  //alert(row + "==>" + JSON.stringify(row));
+	        		  return '<a class="editBtn" href="javascript:void(0)" onclick="showDetail(\''+row.userid+'\')">详请</a>'+
+	        		  '<a class="delBtn" href="javascript:void(0)" onclick="notSpeak(' + index + ')">禁言</a>' + 
+	        		  '<script>$(".editBtn").linkbutton({iconCls: "icon-search"});$(".delBtn").linkbutton({iconCls: "icon-cancel"});</script>';
+	        	  }
+	          }
+	          ]],
 });  
 $("#usersModify").dialog({
 	title: '用户详情',        
 	closed: true,
 	maximizable:true,
 	minimizable:true,
-	left:10,
-	height:400,
-	width:800
 });
 
-/*function showDetail(id){
-	$("#usersModify").dialog("open");
-
-
-	$.post("root/get?nid="+id,function(data){
-		//$("#entname").val(data.topic.ntname);
-		//加载所有的主题
-		$.post("topic/all?",function(d){
-			//alert(data +"==>"+ JSON.stringify(data));
-			$("#ntid").empty();//清空
-			for(var i= 0; i<d.length; i++){
-				if(data.topic.tname == d[i].tname){
-					$("#ntid").append("<option value='"+d[i].tid+"' selected>"+ d[i].tname +"</option>");
+function notSpeak(index){
+	var row = $("#usersEdit").datagrid("getRows")[index];
+	var ustatus = (row.ustatus);
+	var userid = (row.userid);
+	if(ustatus==0){
+		$.ajax({
+			type:'post',
+			url:"user/updateStatus",
+			data:{userid:userid,ustatus:1},
+			success:function(data){
+				if(data){
+					$.messager.confirm('成功提示', '修改成功！！', function(r){
+						if (r){
+						}
+					});
+					$('#usersEdit').datagrid('reload');
 				}else{
-					$("#ntid").append("<option value='"+d[i].tid+"'>"+ d[i].tname +"</option>");
+					$.messager.alert('失败提示','修改失败！！','info');
 				}
 			}
-		},"json");
-		$("#enid").val(data.nid);
-		$("#entitle").val(data.ntitle);
-		$("#enauthor").val(data.nauthor);
-		$("#ensummary").val(data.nsummary);
-		contentEditor.setContent(data.ncontent);
-		$("#encontent").val(data.ncontent);
-		//$("#npicpath").val(data.ncontent);
-		$("#epic").attr("src", data.npicPath ? "images/ali.gif" : data.npicPath);
+		});
+	}else{
+		$.ajax({
+			type:'post',
+			url:"user/updateStatus",
+			data:{userid:userid,ustatus:0},
+			success:function(data){
+				if(data){
+					$.messager.confirm('成功提示', '修改成功！！', function(r){
+						if (r){
+						}
+					});
+					$('#usersEdit').datagrid('reload');
+				}else{
+					$.messager.alert('失败提示','修改失败！！','info');
+				}
+
+			}
+		});
+	}
+
+
+}
+function showDetail(userid){
+	$("#usersModify").dialog("open");
+	$.post("user/findUserById?userid="+userid,function(dataA){
+		$("#auserid").val(dataA.userid);
+		$("#aupwd").val(dataA.upwd);
+		$("#aregistertime").val(dataA.registertime);
+		$("#austatus").val(dataA.ustatus);
 	},"json");
-}*/
+	$.post("userDetail/listDetail?userid="+userid,function(data){
+		/*$("#auserid").val(data.userid);*/
+		$("#anickname").val(data.nickname);
+		$("#ausername").val(data.username);
+		$("#anickname").val(data.nickname);
+		$("#abirthdate").val(data.birthdate);
+		$("#asex").val(data.sex);
+		$("#aaddress").val(data.address);
+		$("#abloodType").val(data.bloodType);
+		$("#ablog").val(data.blog);
+		$("#aemail").val(data.email);
+		$("#aqq").val(data.qq);
+		$("#amobile").val(data.mobile);
+		$("#abrief").val(data.brief);
+		/*if(data.head_picture){
+			$("#dhead_picture").attr("src", data.head_picture);
+		}else{
+			$("#dhead_picture").attr("src", "backimages/ali.gif");
+		}*/
+
+	},"json");
+}
+
+
 $("#modifyForm").form({
 	url:"news/modify",
 	success:function(data){
 		alert(data)
 	}
 });
-$("input#modifyBtn").click(function(){
+/*$("input#modifyBtn").click(function(){
 	$("#ncontent").val(contentEditor.getContent());
 	$("#modifyForm").submit();
-});
+});*/
 
 function chgPic(obj){
 	$("#epic").attr("src",window.URL.createObjectURL(obj.files[0]));

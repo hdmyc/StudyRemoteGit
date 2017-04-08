@@ -32,6 +32,26 @@ create table userInfo(
   userid             varchar2(20) primary key,      --登录名
   upwd               varchar2(50)not null,          --用户密码
   register_time      varchar2(20) DEFAULT SYSDATE,  --注册日期
+  ustatus            number(1) default 0            --是否禁言
+)
+SELECT * FROM userInfo;
+DELETE FROM userInfo WHERE register_time = '2017-04-02'
+
+INSERT INTO userInfo VALUES ('1119185633@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0); 
+INSERT INTO userInfo VALUES ('565944701@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0);
+INSERT INTO userInfo VALUES ('jaejoonglee@163.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0);
+INSERT INTO userInfo VALUES ('1298237952@qq.com','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0);
+
+INSERT INTO userInfo VALUES ('15570934077','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0); 
+
+
+
+SELECT * FROM userInfo
+DROP TABLE userInfo
+
+--2.用户详细信息表
+create table userDetail(
+  userDetailId       NUMBER(10) PRIMARY KEY,        --详细用户编号
   username           varchar2(10),                  --真实姓名
   birthdate          varchar2(20),                  --生日
   nickname           varchar2(50),                  --昵称
@@ -48,28 +68,30 @@ create table userInfo(
   msgStatue          number(1) default 0 constraint ck_msgStatue check(msgStatue in(0,1,2))  --个人信息权限  默认0所有人可见  1我关注的人可见   2仅自己可见
 );
 
-SELECT * FROM userInfo;
-INSERT INTO userInfo(userid,upwd,register_time,username,birthdate,nickname,
+  )
+  
+ create sequence userDetailId_seq          
+        increment by 1          
+        start with 10001       
+        
+ drop sequence userDetailId_seq
+ drop table userDetail
+          
+ INSERT INTO userDetail 
+  VALUES(userDetailId_seq.nextval,'陈奕迅','1985-01-05','林森男神经','F','香港','O','我是一个唱歌很有魅力的歌手','1.jpg','http://blog.chenyixun.com','1119185633@qq.com',1119185633,18473436246,'1119185633@qq.com',0);
+ INSERT INTO userDetail 
+  VALUES(userDetailId_seq.nextval,'周杰伦','1986-08-15','店小二奔跑吧','F','台湾','A','哎哟，不错哟','3.jpg','http://blog.com.cn/zhoujielun.com','jaejoonglee@163.com',565944701,18473436246,'jaejoonglee@163.com',0);
+INSERT INTO userDetail 
+  VALUES(userDetailId_seq.nextval,'那英','1986-09-20','喵星人的喵星球','M','台湾','A','天气好的时候适合唱歌','4.jpg','http://blog.com.cn/naying.com','1298237952@qq.com',1298237952,18473436246,'1298237952@qq.com',0);
+ INSERT INTO userDetail 
+  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'565944701@qq.com',0);
 
-INSERT INTO userInfo VALUES ('1119185633@qq.com','c99e178d83cdfea3c167bc1d15f9b47ff8f80145',
-to_char(SYSDATE,'yyyy-mm-dd'),'陈奕迅','1875-05-23',
-'林森男神经','F','香港','O','我是一个唱歌很有魅力的歌手','1.jpg','http://blog.chenyixun.com','1119185633@qq.com',1119185633,18473436246,0,0);
+ INSERT INTO userDetail 
+  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'15570934077',0);
 
-INSERT INTO userInfo VALUES ('565944701@qq.com','c99e178d83cdfea3c167bc1d15f9b47ff8f80145',
-to_char(SYSDATE,'yyyy-mm-dd'),'梁静茹','1986-08-15',
-'萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,0,0);
-
-INSERT INTO userInfo VALUES ('jaejoonglee@163.com','c99e178d83cdfea3c167bc1d15f9b47ff8f80145',
-to_char(SYSDATE,'yyyy-mm-dd'),'周杰伦','1986-08-15',
-'店小二奔跑吧','F','台湾','A','哎哟，不错哟','3.jpg','http://blog.com.cn/zhoujielun.com','jaejoonglee@163.com',565944701,18473436246,0,0);
-
-INSERT INTO userInfo VALUES ('1298237952@qq.com','c99e178d83cdfea3c167bc1d15f9b47ff8f80145',
-to_char(SYSDATE,'yyyy-mm-dd'),'那英','1986-09-20',
-'喵星人的喵星球','M','台湾','A','天气好的时候适合唱歌','4.jpg','http://blog.com.cn/naying.com','1298237952@qq.com',1298237952,18473436246,0,0);
+  SELECT * FROM userDetail where userDetailId = 10001;
 
 
-SELECT * FROM userInfo
-DROP TABLE userInfo
 
         
 --3.私信表
@@ -131,7 +153,10 @@ create table weibo(
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'其实我已经猜透看透不想多说');
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'1298237952@qq.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'给我一首歌的时间 周杰伦 雨淋湿了天空 毁得很讲究 你说你不懂 为何在这时牵手 我晒干了沉默 悔得很冲动 就算这是做错 也只是怕错过 在一起叫梦 分开了叫痛 是不是说 没有做完的梦最痛 迷路的后果 我能承受 这最后的出口 在爱过了才有');
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'琴弦断了，缘尽了，你也走了。 你是过客，温柔到这，沉默了');
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of ssh://git@github.com/hdmyc/StudyRemoteGit
 
 SELECT * FROM weibo
 DROP sequence wid_seq

@@ -7,21 +7,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table id="userInfo"></table>
-	<div id="usersDetail">
+	<table id="weiboInfo"></table>
+	<div id="weiboDetail">
 		<form action="#" method="post">
 			<p>
-				<label>&nbsp;&nbsp;用户名 </label> <input id="buserid" type="text"/>
+				<label>&nbsp;&nbsp;用户名 </label> <input id="duserid" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;密码 </label> <input id="bupwd" type="text"/>
+				<label>&nbsp;&nbsp;密码 </label> <input id="dupwd" type="text"/>
 			</p>
 			<p>
 
-				<label>&nbsp;&nbsp;注册日期 </label> <input id="bregistertime" type="text"/>
+				<label>&nbsp;&nbsp;注册日期 </label> <input id="dregistertime" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;是否禁言 </label> <input id="bustatus" type="text"/>
+				<label>&nbsp;&nbsp;是否禁言 </label> <input id="dustatus" type="text"/>
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;昵称 </label> <input id="dnickname" type="text"/>
@@ -33,7 +33,7 @@
 				<label>&nbsp;&nbsp;生日 </label> <input id="dbirthdate" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;性别 </label> <input id="dsex" type="text"/>
+				<label>&nbsp;&nbsp;性别 </label> <input id="dnickname" type="text"/>
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;地址 </label> <input id="daddress" type="text"/>
@@ -51,7 +51,7 @@
 				<label>&nbsp;&nbsp;qq </label> <input id="dqq" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;电话 </label> <input id="dmobile" type="text"/>
+				<label>&nbsp;&nbsp;电话 </label> <input id="dtel" type="text"/>
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;简介 </label>
