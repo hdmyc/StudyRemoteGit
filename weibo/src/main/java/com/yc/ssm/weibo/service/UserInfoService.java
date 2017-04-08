@@ -13,6 +13,4 @@ public interface UserInfoService {
 
 	List<UserInfo> listAll();
 
-	int insertUser(UserInfo userInfo);
-
 }

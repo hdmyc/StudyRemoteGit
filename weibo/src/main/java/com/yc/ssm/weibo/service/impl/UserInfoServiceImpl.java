@@ -55,10 +55,4 @@ public class UserInfoServiceImpl implements UserInfoService {
 		return userInfoMapper.listAllUser();
 	}
 
-	@Override
-	public int insertUser(UserInfo userInfo) {
-		LogManager.getLogger().debug("我是B_userService里的" + userInfo);
-		return userInfoMapper.insertUser(userInfo);
-	}
-	
 }

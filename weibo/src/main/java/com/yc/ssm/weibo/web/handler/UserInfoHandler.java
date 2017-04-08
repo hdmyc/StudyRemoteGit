@@ -46,13 +46,6 @@ public class UserInfoHandler{
 					return "/page/register1.jsp";
 				}
 		}
-		
-		@RequestMapping(value = "register", method = RequestMethod.POST)
-		@ResponseBody
-		public int insertUser(UserInfo userInfo) {
-			LogManager.getLogger().debug("我是register的处理");
-			return userInfoService.insertUser(userInfo);
-		}
 
 		@SuppressWarnings("unused")
 		@RequestMapping("login")

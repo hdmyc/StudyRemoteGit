@@ -32,9 +32,4 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from UserInfo
 	</select>
 	
-	<insert id="insertUser" parameterType="UserInfo">
-		insert into
-		UserInfo(userid,upwd,register_time)
-		values(#{userid},#{upwd},#{register_time})
-	</insert>
 </mapper>
