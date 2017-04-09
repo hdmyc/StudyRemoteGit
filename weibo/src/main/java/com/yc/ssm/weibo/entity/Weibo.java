@@ -3,8 +3,8 @@ package com.yc.ssm.weibo.entity;
 
 public class Weibo {//4.微博消息
 	
-    private Integer wid;
     private String wuserid;
+    private Integer wid;
     private String wtime;
     private String wnote;
     private String wpic;

@@ -44,11 +44,13 @@ INSERT INTO userInfo VALUES ('1298237952@qq.com','cb54db33854702097a70d3d8818418
 
 INSERT INTO userInfo VALUES ('15570934077','cb54db33854702097a70d3d88184183f7cd630c7',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0); 
 
+ 1119185633@qq.com cb54db33854702097a70d3d88184183f7cd630c7 2017-04-08 12:04:02       0
 
 
 SELECT * FROM userInfo
 DROP TABLE userInfo
 SELECT * FROM userDetail
+DROP TABLE userDetail
 --2.用户详细信息表
 create table userDetail(
   userDetailId       NUMBER(10) PRIMARY KEY,        --详细用户编号
@@ -63,7 +65,7 @@ create table userDetail(
   blog               VARCHAR2(50),                  --博客地址
   email              varchar2(30),                  --邮箱
   qq                 number(15),                    --qq
-  mobeil             number(20),                    --电话
+  mobile             number(20),                    --电话
   userid			 varchar2(20),
   msgStatue          number(1) default 0 constraint ck_msgStatue check(msgStatue in(0,1,2))  --个人信息权限  默认0所有人可见  1我关注的人可见   2仅自己可见
 );
@@ -86,7 +88,7 @@ INSERT INTO userDetail
   VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'565944701@qq.com',0);
 
 
-SELECT * FROM userInfo;
+SELECT * FROM userDetail;
 INSERT INTO userInfo(userid,upwd,register_time,username,birthdate,nickname,
 
 INSERT INTO userInfo VALUES ('1119185633@qq.com','c99e178d83cdfea3c167bc1d15f9b47ff8f80145',
@@ -141,13 +143,14 @@ create table weibo(
      commentNum      number(10) DEFAULT 0,                  --评论数
      wstatus         number(1) default 0 constraint ck_wstatus check(wstatus in(0,1,2))       -- 权限（默认0公开  1好友圈可见  2仅自己可见）
   ); 
+SELECT * FROM weibo
 
   
   DELETE FROM weibo WHERE wid = 10000001
    create sequence wid_seq          
         increment by 1          
         start with 10000001            
-          
+         INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'15570934077',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'不要悲伤');   
     
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'1119185633@qq.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'你好夏天');
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'1119185633@qq.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'不要悲伤');
@@ -169,10 +172,7 @@ create table weibo(
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'其实我已经猜透看透不想多说');
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'1298237952@qq.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'给我一首歌的时间 周杰伦 雨淋湿了天空 毁得很讲究 你说你不懂 为何在这时牵手 我晒干了沉默 悔得很冲动 就算这是做错 也只是怕错过 在一起叫梦 分开了叫痛 是不是说 没有做完的梦最痛 迷路的后果 我能承受 这最后的出口 在爱过了才有');
   INSERT INTO weibo(wid,wuserid,wtime,wNote) VALUES (wid_seq.nextval,'jaejoonglee@163.com',to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'),'琴弦断了，缘尽了，你也走了。 你是过客，温柔到这，沉默了');
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of ssh://git@github.com/hdmyc/StudyRemoteGit
 
 SELECT * FROM weibo
 DROP sequence wid_seq
@@ -254,6 +254,8 @@ create table follow(
      increment by 1          
      start with 10000001 
      DROP TABLE zan
+     
+     select * from zan
 
 --10.评论回复表
      create table reply(

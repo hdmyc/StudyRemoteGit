@@ -47,7 +47,6 @@ public class UserInfoHandler{
 				}
 		}
 
-		@SuppressWarnings("unused")
 		@RequestMapping("login")
 		public String login(UserInfo user,HttpServletRequest request){
 			LogManager.getLogger().debug("login user ===>"+user);

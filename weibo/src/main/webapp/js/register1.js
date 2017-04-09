@@ -73,7 +73,7 @@ mima.onblur=function(){
 }
 
 
-
+//获取密码框的文本内容
 var mimad=document.getElementById("pwdd");
 var mimadts1=document.getElementById("mimadts1");
 var mimadts2=document.getElementById("mimadts2");
@@ -81,7 +81,6 @@ var mimadts3=document.getElementById("mimadts3");
 var mimadts4=document.getElementById("mimadts4");
 var mimadts4=document.getElementById("mimadts5");
 mimad.onfocus=function(){
-	
 	mimadts1.style.display="block";
 	mimaddts2.style.display="none";
 	mimadts3.style.display="none";
@@ -228,6 +227,6 @@ window.onload=function(){
 	}
 }
 
-$("#yanzhengmadiv img").click(function(){
+/*$("#yanzhengmadiv img").click(function(){
 	$(this).attr("src", "vcode.jpg?" + new  Date().getTime());
-});
+});*/

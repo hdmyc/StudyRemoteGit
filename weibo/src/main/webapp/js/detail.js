@@ -5,26 +5,25 @@ function loaduserDetail(){
 	$.get("userDetail/findDetail", function(data){
 		//alert("请求响应成功..."+data);
 		//alert(JSON.stringify(data));  //JSON.stringify() ,把json对象转换成json字符串
-		$("#userid").val(data.userid);
-		$("#nickname").val(data.nickname);
-		$("#username").val(data.username);
-		$("#birthString").val(data.birthString);
-		$("#sex").val(data.sex);
-		$("#address").val(data.address);
-		$("#bloodType").val(data.bloodType);
-		$("#brief").val(data.brief);
-		$("#head_picture").val(data.head_picture);
-		$("#email").val(data.email);
-		$("#blog").val(data.blog);
-		$("#qq").val(data.qq);
-		$("#mobile").val(data.mobile);
+		$("#duserid").val(data.userid);
+		$("#dnickname").val(data.nickname);
+		$("#dusername").val(data.username);
+		$("#dbirthdate").val(data.birthdate);
+		$("#dsex").val(data.sex);
+		$("#daddress").val(data.address);
+		$("#dbloodType").val(data.bloodType);
+		$("#dbrief").val(data.brief);
+		$("#demail").val(data.email);
+		$("#dblog").val(data.blog);
+		$("#dqq").val(data.qq);
+		$("#dmobile").val(data.mobile);
 		
 	}, "json");
 }
 
-$('#birthString').datebox({    
+/*$('#birthdate').datebox({    
     required:true   
-}); 
+});*/
 
 //修改用户信息
 $("#detail").form({

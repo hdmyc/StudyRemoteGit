@@ -481,4 +481,7 @@ window.onscroll = function(){
 		contLeft.style.position="position";  
 		contLeft.style.top=(realTop-t-200)+"px";  
 	}  
-}  
+}
+
+
+

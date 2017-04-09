@@ -21,6 +21,7 @@ public class UserDetailServiceTest {
 	public void testModifyUsers() {
 		UserDetail ud=new UserDetail();
 		ud.setUserid("15570934077");
+		ud.setNickname("语句");
 		System.out.println(userDetailService.modifyUsers(ud));
 		assertNotNull(ud);
 	}

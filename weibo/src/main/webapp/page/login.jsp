@@ -3,17 +3,21 @@
 <!doctype html>
 <html>
 <head>
+<base href="/weibo/">
 <meta charset="utf-8">
 <title>我的首页 微博-随时随地发现新鲜事</title>
+<link rel="stylesheet" type="text/css"
+	href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 <link rel="icon" href="images/favicon.ico" />
-<link  rel="stylesheet" href="../css/login.css">
+<link  rel="stylesheet" href="css/login.css">
 </head>
 
 <body onload="init()"> 
     <!--头部开始-->
     <div id="head">
         <div class="head_logo">
-            <img src="../images/WB_logo.png" />
+            <img src="images/WB_logo.png" />
         </div>
         <div class="head_search">
             <input type="text" id="text" placeholder="大家正在搜索：" />
@@ -38,7 +42,7 @@
                   <li><a href=""><span style="font-size:15px;position:relative;top:-2px;left:3px">视频</span></a></li>
                   <li><a href="">F<span style="font-size:15px;position:relative;top:-2px;left:3px">发现</span></a></li>
                   <li><a href="">G<span style="font-size:15px;position:relative;top:-2px;left:3px">游戏</span></a></li>
-                  <li><a href="weibozones.jsp">H<span style="font-size:15px;position:relative;top:-2px;left:3px">语默</span></a></li>
+                  <li><a href="page/weibozones.jsp">H<span style="font-size:15px;position:relative;top:-2px;left:3px">语默</span></a></li>
                </ul>
            </div>
            <div class="head_set">
@@ -73,7 +77,7 @@
                        <li><a href="">隐私设置</a></li>
                        <li><a href="">消息设置</a></li>
                        <li class="hideinfo27"><a href="">帮助中心</a></li>
-                       <li class="hideinfo28"><a href="index.jsp">退出</a></li>
+                       <li class="hideinfo28"><a href="../新浪微博官网/index.html">退出</a></li>
                     </ul>     
                </div>
                <div class="hideinfo3">
@@ -92,8 +96,8 @@
         <!--内容导航栏开始-->
         <div class="content_left">
            <div class="content_left_me">
-               <a href="login.jsp"><span>首页</span></a>
-               <a href="mycollection.jsp"><span>我的收藏</span></a>
+               <a href=""><span>首页</span></a>
+               <a href="mycollection.html"><span>我的收藏</span></a>
                <a href=""><span>我的赞</span></a>
            </div>
            <div class="content_left_hotwb">
@@ -148,12 +152,12 @@
               </div>  
            </div>
            
-           <div class="content0" >
+          <div class="content0" id="contentWeibo">
                <div class="content01">
-                   <img src="../images/contMe.png" width="50px" height="50px"/>
+                   <img src="images/contMe.png" width="50px" height="50px"/>
                </div>
                <div class="content02">
-                   <h4><a href="weibozones.jsp">wk语默</a></h4>
+                   <h4><a href="">wk语默</a></h4>
                    <p><span>10分钟前</span>来自<span>微博weibo.com</span></p>
                    <div class="shuru"></div>
                </div>
@@ -162,7 +166,8 @@
                    <ul>
                       <li>推广</li>
                       <li><b></b>转发</li>
-                      <li><b></b>评论</li>
+                     <!--  <li><b></b>评论</li> -->
+                      <li><span></span>5</li>
                       <li><b>ñ</b>赞</li>
                    </ul>
                </div>
@@ -171,10 +176,10 @@
                    <p>转换为好友圈可见</p>
                    <p>转换为仅自己可见</p>
                </div>
-           </div>
+           </div> 
            
            <div class="content2" style="top:203px">
-               <a href=""><img src="../images/600x80_img57ee27a383ca0.png"></a>
+               <a href=""><img src="images/600x80_img57ee27a383ca0.png"></a>
                <p class="con2_btn">X</p>
            </div>
            <div class="content3">
@@ -193,7 +198,7 @@
            
            <div class="content4">
                <div class="cont4-top">
-                   <img src="../images/cont4-cen.png" id="cont4pic"/>
+                   <img src="images/cont4-cen.png" id="cont4pic"/>
                    <div class="cont4-top-wenzi">
                       <h4>我的朋友是个呆B</h4>
                       <i class="WB_icon_app" title="微博个人认证"><a href="http://verified.weibo.com/verify"></a></i>
@@ -206,12 +211,12 @@
                <div class="cont4-cen">
                    <div class="WB_text_01">牵手</div>
                    <div class="cont4-cen-pic">
-                       <li><img src="../images/cont4-cen01.jpg"></li>
-                       <li><img src="../images/cont4-cen02.jpg"></li>
-                       <li><img src="../images/cont4-cen03.jpg"></li>
-                       <li><img src="../images/cont4-cen04.jpg"></li>
-                       <li><img src="../images/cont4-cen05.jpg"></li>
-                       <li><img src="../images/cont4-cen06.jpg"></li>
+                       <li><img src="images/cont4-cen01.jpg"></li>
+                       <li><img src="images/cont4-cen02.jpg"></li>
+                       <li><img src="images/cont4-cen03.jpg"></li>
+                       <li><img src="images/cont4-cen04.jpg"></li>
+                       <li><img src="images/cont4-cen05.jpg"></li>
+                       <li><img src="images/cont4-cen06.jpg"></li>
                    </div>
                </div>
                <div class="cont4-foot">
@@ -222,8 +227,8 @@
                </div>
                 <div class="cont4_ying">      <!--content4隐藏的部分-->
                     <div class="cont4_ying_pic">
-                       <img src="../images/profile_cover_m.jpg" class="cont4_ying_pic1"/>
-                       <img src="../images/cont4-cen.png" class="cont4_ying_pic2" title="TopShop穿搭"/>
+                       <img src="images/profile_cover_m.jpg" class="cont4_ying_pic1"/>
+                       <img src="images/cont4-cen.png" class="cont4_ying_pic2" title="TopShop穿搭"/>
                        <i class="cont4_ying_pic_icon" title="深圳高飞传媒有限公司设计师"></i>
                        <p class="PChuan">TopShop穿搭（设置备注）</p>
                        <span class="cont4span1" title="男"></span>
@@ -289,7 +294,7 @@
                   </div>
                   <div class="cont4_zhuan_WB_five">
                       <b class="face">o</b>
-                      <img src="../images/tupian.png" />
+                      <img src="images/tupian.png" />
                       <input type="checkbox" value=""><span>同时评论给 中国新闻周刊</span>                      <a href="">
                          <code>公开</code>
                          <i>c</i>
@@ -305,7 +310,7 @@
                       <p class="pinglun1_close">X</p>
                   </div>
                   <div class="cont4_pinglun2">
-                      <img src="../images/meicon.jpg" width="30px" height="30px">
+                      <img src="images/meicon.jpg" width="30px" height="30px">
                       <input type="text" style="width:490px;height:23px;padding: 5px 2px 0px 6px;">
                   </div>
                   <div class="cont4_pinglun3">
@@ -326,20 +331,20 @@
            
            <div class="content5">
                <div class="cont5-top">
-                   <img src="../images/cont5.png" id="cont5-icon"/>
+                   <img src="images/cont5.png" id="cont5-icon"/>
                    <div class="cont5-top-wenzi">
                       <h4>环球搞笑视频</h4>
                       <i class="WB_icon_member6" title="微博会员"><a href="http://vip.weibo.com/"></a></i>
                       <i class="WB_icon_airball" title="带着微博去旅行"><a href="ong.weibo.com/travel2016?ref=icon"></a></i> 
                       <p>今天14:25来自<a href="">微博weibo.com</a></p>
-                      <img src="../images/star_165_pc_x2.png" class="cont5-pic" />
+                      <img src="images/star_165_pc_x2.png" class="cont5-pic" />
                       <span>c</span>    
                    </div>
                </div>
                <!--http://weibo.com/u/5760843730/home?wvr=5&lf=reg-->
                <div class="cont5-cen">
-                   <div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜<img src="../images/hearta_org.gif" /><a href=""><span>L</span>秒拍视频</a></div>
-                   <img src="../images/content5.jpg" width="500px" height="281px"/> 
+                   <div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜<img src="images/hearta_org.gif" /><a href=""><span>L</span>秒拍视频</a></div>
+                   <img src="images/content5.jpg" width="500px" height="281px"/> 
                    <div class="cont5-cen-vid"><embed width="500" height="281.25" wmode="transparent" type="application/x-shockwave-flash" src="http://js.t.sinajs.cn/t5/album/static/swf/video/player.swf?v1441960309059836241438531565" quality="high" allowfullscreen="true" flashvars="list=http%3A%2F%2Fus.sinaimg.cn%2F003K0dAFjx0759H375IY0504010000220k01.m3u8%3FExpires%3D1475655052%26ssig%3DEsFu8wxIaS%26KID%3Dunistore%2Cvideo&amp;fid=1034:713ad1e6d7766bb6e1513ea8dbf58c4e&amp;logo=2&amp;uid=5760843730&amp;vf=feed&amp;ext=%7B%22object_id%22%3A%221034%3A713ad1e6d7766bb6e1513ea8dbf58c4e%22%2C%22mid%22%3A%224027219875132793%22%2C%22mark%22%3Anull%7D" pluginspage="http://get.adobe.com/cn/flashplayer/" allowscriptaccess="always" style="width: 500px; height: 281.25px;position:absolute;left:50px;top:21px"></div>         
                </div>
                <div class="cont5-foot">
@@ -351,7 +356,7 @@
            </div>
            <div class="content6">
                <div class="cont6-top">
-                   <img src="../images/cont6.png" class="cont6pic"/>
+                   <img src="images/cont6.png" class="cont6pic"/>
                    <div class="cont6-top-wenzi">
                       <h4>华尔街日报中文网</h4>
                       <i class="WB_icon_app" title="微博个人认证"><a href="http://verified.weibo.com/verify"></a></i>
@@ -364,7 +369,7 @@
                <div class="cont6-cen">
                    <div class="WB_text_01">【中国央行面临政策放松压力，但房地产泡沫令人担忧】- 中国在今年余下时间运用宽松货币政策来扶持经济增长的能力主要取决于政府如何应对不断膨胀的房地产泡沫。今年到目前为止，中国央行都没有采取降息及其他强有力的信贷宽松措施来促进经济增长。<a href=""><span>°</span> 中国央行面临政策放松压力，但房地产泡沫令人...</a></div>
                    <div class="WB_text_02">
-                       <img src="../images/cont6-test02.jpg" class="WB_text_021"/>
+                       <img src="images/cont6-test02.jpg" class="WB_text_021"/>
                        <p class="WB_text_022">华尔街日报中文网</p>
                        <p class="WB_text_023">中国央行面临政策放松压力，但房地产泡沫令人担忧</p>
                        <div class="WB_text_024"><span ></span></div>
@@ -379,7 +384,7 @@
            </div>
            <div class="content7">
                <div class="cont7-top">
-                   <img src="../images/cont7.png" class="cont7pic"/>
+                   <img src="images/cont7.png" class="cont7pic"/>
                    <div class="cont7-top-wenzi">
                       <h4>华尔街日报中文网</h4>
                       <i class="WB_icon_app" title="微博个人认证"><a href="http://verified.weibo.com/verify"></a></i>
@@ -397,7 +402,7 @@
                       </div>
                       <div class="WB_text_022">
                           <p>好脾气都是磨出来的，坏毛病都是惯出来的，治的了你脾气的是你爱的人，受的了你脾气的是爱你的人。每个人都有自己的脾气，为你忍下所有的怒气，仅仅因为那个人比你更心疼你。每一段爱情都需要忍耐，能相互包容迁就才能长久，如果有个人对你特别好，一定要好好珍惜。</p>
-                          <img src="../images/cont7-test01.jpg" ondblclick="enlargeImage1()" onclick="dropImage1()" name="oImg" height="239" width="239px"/>
+                          <img src="images/cont7-test01.jpg" ondblclick="enlargeImage1()" onclick="dropImage1()" name="oImg" height="239" width="239px"/>
                       </div>
                       <div class="WB_text_023">
                           <p>今天20:00来自<a href="">微博weibo.com</a></p>
@@ -442,11 +447,11 @@
         <div class="content_right">
             <div class="cont-intro-me">
                 <div class="cont-intro-me1">
-                    <img src="../images/008_s.jpg" />
-                    <a href="weibozones.jsp"><img src="../images/contMe.png" alt="wk语默"/></a>
+                    <img src="images/008_s.jpg" />
+                    <a href="page/weibozones.jsp"><img src="images/contMe.png" alt="wk语默"/></a>
                 </div>
                 <div class="cont-intro-me2">
-                    <div class="nameBox"><a href="weibozones.jsp">
+                    <div class="nameBox"><a href="">
                         <h4>wk语默</h4>
                         <span></span>
                         <i>Lv7</i>
@@ -477,7 +482,7 @@
                         </div>
                         <div class="filetype12">
                             <div  class="film-cen121">
-                               <img src="../images/vertical1.jpg" width="72px";height="96px"/>
+                               <img src="images/vertical1.jpg" width="72px";height="96px"/>
                            </div>
                            <div  class="film-cen122">
                                <b>1</b>
@@ -498,7 +503,7 @@
                         </div>
                         <div class="filetype22">
                            <div  class="film-cen221">
-                               <img src="../images/vertical2.jpg" width="72px";height="96px"/>
+                               <img src="images/vertical2.jpg" width="72px";height="96px"/>
                            </div>
                            <div  class="film-cen222">
                                <b>2</b>
@@ -519,7 +524,7 @@
                         </div>
                         <div class="filetype32">
                            <div  class="film-cen321">
-                               <img src="../images/vertical3.jpg" width="72px";height="96" />
+                               <img src="images/vertical3.jpg" width="72px";height="96" />
                            </div>
                            <div  class="film-cen322">
                                <b>3</b>
@@ -537,7 +542,7 @@
             
             <div class="cont-Sina-News">
             <a href="http://weibo.com/p/100808a652694e926b42b5ea87296a5a8c5fde">
-               <img src="../images/SinaNew.jpg" />
+               <img src="images/SinaNew.jpg" />
             </a></div>
             <div class="cont-hot-topic">
                 <div class="topic-top">
@@ -569,7 +574,7 @@
                         </div>
                         <div class="frie-cen12">
                             <div class="frie-cen121">
-                                <img src="../images/frie-cen121.jpg">
+                                <img src="images/frie-cen121.jpg">
                             </div>
                             <div class="frie-cen122">
                                 <a href="http://weibo.com/u/5894023999?from=friends_dynamic&refer_flag=0000011002_">小小酥with</a>
@@ -583,7 +588,7 @@
                         <div class="frie-cen21">你赞过他的微博</div>
                         <div class="frie-cen22">
                             <div class="frie-cen221">
-                                <img src="../images/frie-cen122.jpg">
+                                <img src="images/frie-cen122.jpg">
                             </div>
                             <div class="frie-cen222">
                                 <a href="">博露齿一笑<span></span></a>
@@ -600,7 +605,7 @@
                         </div>
                         <div class="frie-cen32">
                             <div class="frie-cen321">
-                                <img src="../images/frie-cen123.jpg">
+                                <img src="images/frie-cen123.jpg">
                             </div>
                             <div class="frie-cen322">
                                 <a href="">小英sanity</a>
@@ -618,7 +623,7 @@
             </div>
             <div class="cont-hot-goods">
                 <h4><a>热门商品推荐</a></h4>
-                <img src="../images/goods.gif" />
+                <img src="images/goods.gif" />
             </div>
             <div class="cont-VIP-pref">
                 <div class="cont-VIP-pref1">
@@ -629,13 +634,13 @@
                 <div class="cont-VIP-pref2">
                     <div class="cont-VIP-pref21">
                         <div class="cont-VIP-pref211">
-                            <img src="../images/VIP1.jpg" />
+                            <img src="images/VIP1.jpg" />
                             <a href="" class="FuKangWZ">张FuKang</a>
                             <b></b>     <!--背景图片-->
                             <a href="" class="guanzhu1"><span style="color:#FA7D3C">+</span>关注</a>
                         </div>
                         <div class="cont-VIP-pref212">
-                            <img src="../images/VIP2.jpg" />
+                            <img src="images/VIP2.jpg" />
                             <a href="" class="WuYanZuWZ">黑山吴彦祖</a>
                             <b></b>     <!--背景图片-->
                             <a href="" class="guanzhu2"><span style="color:#FA7D3C">+</span>关注</a>
@@ -644,7 +649,7 @@
                     <div class="cont-VIP-pref22">
                         <p>亲爱的<a href="">wk语默</a></p>
                         <p>尊享会员特权，一起放肆精彩！</p>
-                        <img src="../images/VIP3bg.jpg" />
+                        <img src="images/VIP3bg.jpg" />
                         <input type="button" value="立即体验" class="input1" />
                         <input type="button" value="开通会员" class="input2" />
                     </div>
@@ -658,19 +663,19 @@
                         <div class="cont-VIP-pref312">
                             <li class="paiming1">
                                <b>1</b>
-                               <img src="../images/paiming1.jpg" />
+                               <img src="images/paiming1.jpg" />
                                <a href="">TFBOYS...</a>
                                <span>94.34</span>
                             </li>
                             <li class="paiming2">
                                <b>2</b>
-                               <img src="../images/paiming2.jpg" />
+                               <img src="images/paiming2.jpg" />
                                <a href="">TFBOYS...</a>
                                <span>91.98</span>
                             </li>
                             <li class="paiming3">
                                <b>3</b>
-                               <img src="../images/paiming3.jpg" />
+                               <img src="images/paiming3.jpg" />
                                <a href="">杨洋icon...</a>
                                <span>91.95</span>
                             </li>
@@ -683,7 +688,7 @@
                         </div>
                         <div class="cont-VIP-pref322">
                             <b>1</b>
-                            <img src="../images/paiming4.jpg" />
+                            <img src="images/paiming4.jpg" />
                             <a href="">William...</a>
                             <span>98.95</span>
                         </div>
@@ -701,12 +706,12 @@
     
     <!--内容的内容最底部的广告-->
     <div class="ad"><a href="">
-       <img src="../images/ad.jpg" class="ad-ad1" />
-       <img src="../images/ad1.jpg" class="ad-ad2" />
+       <img src="images/ad.jpg" class="ad-ad1" />
+       <img src="images/ad1.jpg" class="ad-ad2" />
        <div class="ad-ad3">
            <span>淘宝商品</span>
-           <img src="../images/ad2.png" style="width:20px;height:13px"/>
-           <img src="../images/ad2.png" style="width:20px;height:13px"/>
+           <img src="images/ad2.png" style="width:20px;height:13px"/>
+           <img src="images/ad2.png" style="width:20px;height:13px"/>
        </div>
     </a></div>  
     <!--内容的内容最底部的广告结束-->
@@ -741,9 +746,42 @@
 
     <!--脚注开始-->
     <div id="foot">
+        <div class="foot-top">
+           <div class="splendid-WB">
+              <p>微博精彩</p>
+              <a href="" class="a1">热门微博</a>
+              <a href="" class="a2">热门话题</a>
+              <a href="" class="a1">名人堂</a>
+              <a href="" class="a2">微博会员</a>
+              <a href="" class="a1">微相册</a>
+              <a href="" class="a2">微游戏</a>
+              <a href="" class="a1">微指数</a>
+           </div>
+           <div class="phone-WB">
+              <p>手机玩微博</p>
+              <img src="images/footer_code.jpg" />
+              <a href="">扫码下载，更多版本戳这里</a>
+           </div>
+           <div class="authenticate_WB">
+              <p>认证&amp;合作</p>
+              <a href="" class="a1">申请认证</a>
+              <a href="" class="a2">开放平台</a>
+              <a href="" class="a1">企业微博</a>
+              <a href="" class="a2">链接网站</a>
+              <a href="" class="a1">微博标识</a>
+              <a href="" class="a2">广告服务</a>
+              <a href="" class="a1">微博商学院</a>
+              <a href="" class="a2">广告代理商</a>
+           </div>
+           <div class="help-WB">
+              <p>微博帮助</p>
+              <a href="">常见问题</a>
+              <a href="">自助服务</a>
+           </div>
+        </div>
         <div class="foot-bottom">
            <div class="notice">
-              <a href=""><img src="../images/foot-wb-logo.png" />微博客服</a>
+              <a href=""><img src="images/foot-wb-logo.png" />微博客服</a>
               <a href="" class="a2">意见反馈</a>
               <a href="" class="a2">舞弊举报</a>
               <a href="" class="a2">开放平台</a>
@@ -767,7 +805,7 @@
            </div>
            <div class="copyright">
               <p>Copyright &copy; 2009-2016 WEIBO 北京微梦创科网络技术有限公司</p>
-              <a href=""><img src="../images/emblem.png" />京公网安备11000002000019号</a>
+              <a href=""><img src="images/emblem.png" />京公网安备11000002000019号</a>
            </div>
         </div>
     </div>
@@ -775,6 +813,11 @@
    
     
     
-    <script type="text/javascript" src="../js/login.js"></script>
+     <script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript"
+		src="easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/login2.js"></script>
 </body>
 </html>

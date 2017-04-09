@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.ssm.weibo.mapper.WeiboMapper">
+	
+	<insert id="insertWeibo" parameterType="com.yc.ssm.weibo.entity.Weibo">
+		INSERT INTO weibo(wid,wuserid,wtime,wNote)
+		 VALUES
+		  (wid_seq.nextval,#{wuserid,jdbcType=VARCHAR},#{wtime,jdbcType=VARCHAR},#{wnote,jdbcType=VARCHAR})
+	</insert>
+
+	<select id="findWeibo" parameterType="string" resultType="Weibo">
+		select * from weibo where wuserid=#{wuserid}
+	</select>
+</mapper>
