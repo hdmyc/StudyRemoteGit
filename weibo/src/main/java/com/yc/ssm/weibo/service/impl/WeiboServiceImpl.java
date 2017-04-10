@@ -23,7 +23,8 @@ public class WeiboServiceImpl implements WeiboService{
 		if(rows != null){
 			pb.setPageSize(Integer.parseInt(rows));
 		}
-		return weiboMapper.listAll(page, rows);
+		
+		return weiboMapper.listAll(pb);
 	}
 
 	@Override
