@@ -3,7 +3,7 @@ grant connect,resource to weibo;
 
 DROP USER weibo cascade;
 
-
+select * root;
 
 --0.管理员表
 CREATE TABLE root(
