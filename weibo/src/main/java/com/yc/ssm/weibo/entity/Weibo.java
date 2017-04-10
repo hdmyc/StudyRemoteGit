@@ -6,7 +6,7 @@ public class Weibo {//4.微博消息
     private Integer wid;
     private String wuserid;
     private String wtime;
-    private String wnote;
+    private String wNote;
     private String wpic;
     private Integer zanNum;
     private Integer transmitNum;
@@ -31,11 +31,11 @@ public class Weibo {//4.微博消息
 	public void setWtime(String wtime) {
 		this.wtime = wtime;
 	}
-	public String getWnote() {
-		return wnote;
+	public String getWNote() {
+		return wNote;
 	}
-	public void setWnote(String wnote) {
-		this.wnote = wnote;
+	public void setWNote(String wNote) {
+		this.wNote = wNote;
 	}
 	public String getWpic() {
 		return wpic;
@@ -71,7 +71,7 @@ public class Weibo {//4.微博消息
 	@Override
 	public String toString() {
 		return "Weibo [wid=" + wid + ", wuserid=" + wuserid + ", wtime="
-				+ wtime + ", wnote=" + wnote + ", wpic=" + wpic + ", zanNum="
+				+ wtime + ", wNote=" + wNote + ", wpic=" + wpic + ", zanNum="
 				+ zanNum + ", transmitNum=" + transmitNum + ", commentNum="
 				+ commentNum + ", wstatus=" + wstatus + "]";
 	}

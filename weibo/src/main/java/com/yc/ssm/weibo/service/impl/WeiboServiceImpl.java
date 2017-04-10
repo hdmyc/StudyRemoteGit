@@ -1,12 +1,14 @@
 package com.yc.ssm.weibo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.yc.ssm.weibo.entity.PaginationBean;
 import com.yc.ssm.weibo.entity.Weibo;
 import com.yc.ssm.weibo.mapper.WeiboMapper;
 import com.yc.ssm.weibo.service.WeiboService;
 
+@Service("weiboService")
 public class WeiboServiceImpl implements WeiboService{
 
 	@Autowired
@@ -22,6 +24,17 @@ public class WeiboServiceImpl implements WeiboService{
 			pb.setPageSize(Integer.parseInt(rows));
 		}
 		return weiboMapper.listAll(page, rows);
+	}
+
+	@Override
+	public boolean insertWeibo(Weibo weibo) {
+		
+		return weiboMapper.insertWeibo(weibo);
+	}
+	
+	@Override
+	public Weibo findWeibo(String wuserid) {
+		return weiboMapper.findWeibo(wuserid);
 	}
 
 }

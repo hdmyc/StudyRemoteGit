@@ -7,4 +7,8 @@ public interface WeiboMapper {
 
 	PaginationBean<Weibo> listAll(String page, String rows);
 
+	boolean insertWeibo(Weibo weibo);
+
+	Weibo findWeibo(String wuserid);
+
 }
