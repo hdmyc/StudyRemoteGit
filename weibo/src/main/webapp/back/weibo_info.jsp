@@ -9,60 +9,39 @@
 <body>
 	<table id="weiboInfo"></table>
 	<div id="weiboDetail">
-		<form action="#" method="post">
+		<form action="weibo/findById" method="post">
 			<p>
-				<label>&nbsp;&nbsp;用户名 </label> <input id="duserid" type="text"/>
+				<label>&nbsp;&nbsp;微博编号 </label> <input id="bwid" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;密码 </label> <input id="dupwd" type="text"/>
+				<label>&nbsp;&nbsp;编辑人 </label> <input id="bwuserid" type="text"/>
 			</p>
 			<p>
 
-				<label>&nbsp;&nbsp;注册日期 </label> <input id="dregistertime" type="text"/>
+				<label>&nbsp;&nbsp;发送时间 </label> <input id="bwtime" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;是否禁言 </label> <input id="dustatus" type="text"/>
+				<label>&nbsp;&nbsp;微博内容 </label>
+				<textarea id="bwnote" cols="20" rows="3"></textarea>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;昵称 </label> <input id="dnickname" type="text"/>
+				<label>&nbsp;&nbsp;点赞数 </label> <input id="bzanNum" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;真实姓名 </label> <input id="dusername" type="text"/>
+				<label>&nbsp;&nbsp;转发数 </label> <input id="btransmitNum" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;生日 </label> <input id="dbirthdate" type="text"/>
+				<label>&nbsp;&nbsp;收藏数 </label> <input id="bcommentNum" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;性别 </label> <input id="dnickname" type="text"/>
+				<label>&nbsp;&nbsp;是否屏蔽 </label> <input id="bwstatus" type="text"/>
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;地址 </label> <input id="daddress" type="text"/>
-			</p>
-			<p>
-				<label> &nbsp;&nbsp;血型 </label> <input id="dbloodType" type="text"/>
-			</p>
-			<p>
-				<label>&nbsp;&nbsp;博客地址 </label> <input id="dblog" type="text"/>
-			</p>
-			<p>
-				<label>&nbsp;&nbsp;邮箱 </label> <input id="demail" type="text"/>
-			</p>
-			<p>
-				<label>&nbsp;&nbsp;qq </label> <input id="dqq" type="text"/>
-			</p>
-			<p>
-				<label>&nbsp;&nbsp;电话 </label> <input id="dtel" type="text"/>
-			</p>
-			<p>
-				<label>&nbsp;&nbsp;简介 </label>
-				<textarea id="dbrief" cols="20" rows="3"></textarea>
-			</p>
-			<p>
-				<label>&nbsp;&nbsp;头像 </label>
-				<img src="backimages/ali.gif" id ="dhead_picture" style="width:80px;height:80px" />
+				<label>&nbsp;&nbsp;图片 </label>
+				<img src="backimages/ali.gif" id ="bwpic" style="width:80px;height:80px" />
 			</p>
 		</form>		
 	</div>
-	<script type="text/javascript" src="backjs/users_info.js"></script>
+	<script type="text/javascript" src="backjs/weibo_info.js"></script>
 </body>
 </html>

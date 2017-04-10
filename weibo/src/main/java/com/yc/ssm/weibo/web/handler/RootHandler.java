@@ -19,15 +19,22 @@ public class RootHandler {
 
 	@RequestMapping("/login")
 	public String rootLogin(Root root,HttpServletRequest request){
-		System.out.println("rootLogin root ===>"+root);
 		root = rootService.rootLogin(root);
 		if(root == null){
 			request.setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！！");
 			return "/back/login.jsp" ;
 		}else{
-			request.getSession().setAttribute(ServletUtil.LOGIN_USER, root);
+			request.getSession().setAttribute(ServletUtil.LOGIN_ROOT, root);
 		}
 		return "redirect:/back/manage.jsp" ;
 	}
 	
+	/*//退出系统
+	@RequestMapping("/login")
+	public String logoutFun(Root root,HttpServletRequest request){
+		root = rootService.rootLogin(root);
+		request.getSession().setAttribute(ServletUtil.LOGIN_ROOT, "");
+			
+		return "redirect:/back/login.jsp" ;
+	}	*/
 }

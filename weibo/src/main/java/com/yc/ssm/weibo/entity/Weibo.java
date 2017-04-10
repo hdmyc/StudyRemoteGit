@@ -70,7 +70,7 @@ public class Weibo {//4.微博消息
 	
 	@Override
 	public String toString() {
-		return "Weibo [wid=" + wid + ", wuserid=" + wuserid + ", wtime="
+		return "\nWeibo [wid=" + wid + ", wuserid=" + wuserid + ", wtime="
 				+ wtime + ", wnote=" + wnote + ", wpic=" + wpic + ", zanNum="
 				+ zanNum + ", transmitNum=" + transmitNum + ", commentNum="
 				+ commentNum + ", wstatus=" + wstatus + "]";

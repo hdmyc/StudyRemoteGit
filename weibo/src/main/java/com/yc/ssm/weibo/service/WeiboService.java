@@ -7,4 +7,8 @@ public interface WeiboService {
 
 	public PaginationBean<Weibo> listAll(String page, String rows);
 
+	public Weibo findById(int wid);
+
+	public boolean updateStatus(Weibo weibo);
+
 }

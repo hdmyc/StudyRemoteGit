@@ -43,7 +43,7 @@ function notSpeak(index){
 			data:{userid:userid,ustatus:1},
 			success:function(data){
 				if(data){
-					$.messager.confirm('成功提示', '修改成功！！', function(r){
+					$.messager.confirm('成功提示', '设置禁言成功！！', function(r){
 						if (r){
 						}
 					});
@@ -60,7 +60,7 @@ function notSpeak(index){
 			data:{userid:userid,ustatus:0},
 			success:function(data){
 				if(data){
-					$.messager.confirm('成功提示', '修改成功！！', function(r){
+					$.messager.confirm('成功提示', '取消禁言成功！！', function(r){
 						if (r){
 						}
 					});
@@ -108,10 +108,10 @@ function showDetail(userid){
 
 
 $("#modifyForm").form({
-	url:"news/modify",
+	/*url:"news/modify",
 	success:function(data){
 		alert(data)
-	}
+	}*/
 });
 /*$("input#modifyBtn").click(function(){
 	$("#ncontent").val(contentEditor.getContent());
