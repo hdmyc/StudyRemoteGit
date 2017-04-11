@@ -4,6 +4,11 @@ grant connect,resource to weibo;
 DROP USER weibo cascade;
 
 select USERID, UPWD, REGISTER_TIME from UserInfo where USERID ='15570934077' and UPWD='aa'
+<<<<<<< HEAD
+=======
+
+select * from root;
+>>>>>>> branch 'master' of git@github.com:hdmyc/StudyRemoteGit.git
 --0.管理员表
 CREATE TABLE root(
     rid    VARCHAR2(4) PRIMARY KEY, --管理员编号
