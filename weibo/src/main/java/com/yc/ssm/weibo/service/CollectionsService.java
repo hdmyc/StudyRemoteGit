@@ -8,6 +8,6 @@ public interface CollectionsService {
 
 	Collections insertC(Collections collections);
 
-	List<Collections> findC(String cuserid);
+	Collections findC(String cuserid);
 
 }

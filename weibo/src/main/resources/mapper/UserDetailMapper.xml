@@ -16,8 +16,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="username != null">
 				username=#{username},
 			</if>
-			<if test="birthString != null">
-				birthString=#{birthString},
+			<if test="birthdate != null">
+				birthdate=#{birthdate},
 			</if>
 			<if test="sex != null">
 				sex=#{sex},
@@ -43,8 +43,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="qq != null">
 				qq=#{qq}
 			</if>
-			<if test="mobeil != null">
-				mobeil=#{mobeil}
+			<if test="mobile != null">
+				mobile=#{mobile}
 			</if>
 		</set>
 		where userid=#{userid}

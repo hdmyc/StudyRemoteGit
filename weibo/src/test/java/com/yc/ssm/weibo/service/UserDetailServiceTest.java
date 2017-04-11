@@ -2,7 +2,6 @@ package com.yc.ssm.weibo.service;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -24,6 +23,7 @@ public class UserDetailServiceTest {
 	public void testModifyUsers() {
 		UserDetail ud=new UserDetail();
 		ud.setUserid("15570934077");
+		ud.setNickname("语墨");
 		System.out.println(userDetailService.modifyUsers(ud));
 		assertNotNull(ud);
 	}

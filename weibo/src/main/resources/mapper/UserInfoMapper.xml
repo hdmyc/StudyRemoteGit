@@ -13,12 +13,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</sql>
 
 	<insert id="insert" parameterType="UserInfo">
-		insert into UserInfo (USERID,
+		insert into userInfo (USERID,
 		UPWD,
 		REGISTER_TIME)
-		values (#{userid,jdbcType=VARCHAR},
-		#{upwd,jdbcType=VARCHAR},
-		default)
+		values (#{userid},
+		#{upwd},
+		sysdate)
 	</insert>
 
 	<select id="findUser" resultMap="BaseResultMap" parameterType="String">

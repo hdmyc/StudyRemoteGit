@@ -8,6 +8,7 @@ import com.yc.ssm.weibo.entity.PaginationBean;
 import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.mapper.UserInfoMapper;
 import com.yc.ssm.weibo.service.UserInfoService;
+import com.yc.ssm.weibo.util.Encrypt;
 
 
 /*@Component		//一般bean
@@ -21,6 +22,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 	@Override
 	public UserInfo login(UserInfo user) {
 		//user.setPassword(Encrypt.md5AndSha(user.getPassword()));
+		user.setUpwd(Encrypt.md5AndSha(user.getUpwd()));
 		System.out.println("用户进行登录操作=======>"+user);
 	//	System.out.println(userInfoMapper.findUser(user));
 		
@@ -37,17 +39,18 @@ public class UserInfoServiceImpl implements UserInfoService {
     }
 
 	@Override
-	public int register(UserInfo user) throws Exception {
+	public int register(UserInfo user) {
 		System.out.println("用户进行注册操作==》" +user);
+		user.setUpwd(Encrypt.md5AndSha(user.getUpwd()));
 		int i=0;
-		try {
+	//	try {
 			 i=userInfoMapper.insert(user);
-		} catch (Exception e) {
+	//	} catch (Exception e) {
 			/*if(e instanceof org.springframework.dao.DuplicateKeyException){
 				System.out.println("12232543");
 				
 			}*/
-		}
+		//}
 		return i;
 	}
 

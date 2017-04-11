@@ -31,7 +31,7 @@ public class CollectionsHandler {
 	
 	@ResponseBody
 	@RequestMapping(value="findC",method=RequestMethod.GET)
-	public List<Collections> findC(HttpServletRequest request){
+	public Collections findC(HttpServletRequest request){
 		LogManager.getLogger().debug("listC=====进来了");
 		String cuserid=(String) request.getSession().getAttribute(ServletUtil.USERID);
 		return collectionsService.findC(cuserid);

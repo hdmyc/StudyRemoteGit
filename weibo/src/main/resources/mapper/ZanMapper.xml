@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		INSERT INTO zan(zid,zuseriA,zwid,) VALUES (#{zid},#{zuseriA},#{zwid})
 	</insert>
 	
-	<select id="listZan" parameterType="string" resultType="list" >
+	<select id="listZan" parameterType="string" resultType="Zan" >
 		select * from zan where zuseriA=#{zuseriA}
 	</select>
 </mapper>

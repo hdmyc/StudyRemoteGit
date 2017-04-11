@@ -8,7 +8,7 @@ import com.yc.ssm.weibo.entity.UserInfo;
 public interface UserInfoService {
 	public UserInfo checkLogin(String userid, String upwd);
 
-	int register(UserInfo userInfo) throws Exception;
+	int register(UserInfo userInfo);
 
 	UserInfo login(UserInfo userInfo);
 

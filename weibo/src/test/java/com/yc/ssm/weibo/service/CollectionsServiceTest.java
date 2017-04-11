@@ -19,7 +19,7 @@ public class CollectionsServiceTest {
 	@Test
 	public void testInsertC() {
 		Collections c=new Collections();
-		c.setWid(10000001);
+		c.setWid(10000002);
 		System.out.println(collectionsService.insertC(c));
 		assertNotNull(c);
 	}
@@ -27,8 +27,8 @@ public class CollectionsServiceTest {
 	@Test
 	public void testFindC() {
 		Collections c=new Collections();
-		c.setCuserid("15570934077");
-		System.out.println(collectionsService.findC("15570934077"));
+		//c.setCuserid("1119185633@qq.com");
+		System.out.println(collectionsService.findC("1119185633@qq.com"));
 		assertNotNull(c);
 	}
 

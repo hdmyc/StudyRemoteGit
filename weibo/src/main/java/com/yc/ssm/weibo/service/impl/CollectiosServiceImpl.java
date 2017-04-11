@@ -21,7 +21,7 @@ public class CollectiosServiceImpl implements CollectionsService {
 	}
 
 	@Override
-	public List<Collections> findC(String cuserid) {
+	public Collections findC(String cuserid) {
 		return collectionsMapper.findC(cuserid);
 	}
 }

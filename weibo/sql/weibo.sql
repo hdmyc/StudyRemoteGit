@@ -3,7 +3,7 @@ grant connect,resource to weibo;
 
 DROP USER weibo cascade;
 
-
+select USERID, UPWD, REGISTER_TIME from UserInfo where USERID ='15570934077' and UPWD='aa'
 
 --0.管理员表
 CREATE TABLE root(
@@ -160,7 +160,7 @@ DROP table weibo
   
   
    --5.消息收藏表
-   CREATE TABLE collection(
+   CREATE TABLE collections(
          coid       number(10) PRIMARY KEY,   --收藏编号
          cuserid    varchar2(20) constraint fk_cuserid  references userInfo(userid) ,      --用户
          wid        number(10) CONSTRAINT fk_weibo REFERENCES weibo(wid),      --微博消息
@@ -170,8 +170,9 @@ DROP table weibo
       create sequence coid_seq          
         increment by 1          
         start with 10000001            
-          
-        SELECT * FROM collection
+ 
+ INSERT INTO collections(coid,cuserid,wid,cptime) VALUES (coid_seq.nextval,'1119185633@qq.com',10000001,to_char(SYSDATE,'yyyy-MM-dd hh:mm:ss'));
+        SELECT * FROM collections
         DROP sequence collection_seq
         DROP TABLE collection
    
