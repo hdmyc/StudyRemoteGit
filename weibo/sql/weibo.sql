@@ -108,7 +108,8 @@ create table chatInfo(
  create sequence cid_seq          
         increment by 1          
         start with 10000001            
-          
+
+insert into chatInfo values(cid_seq.nextval,'1119185633@qq.com','15570934077','你好啊','1.jpg',to_char(SYSDATE,'yyyy-mm-dd HH:mm:ss'),0)
 SELECT * FROM chatInfo
 DROP sequence chatInfo_seq
 DROP table chatInfo
@@ -234,8 +235,11 @@ create table follow(
     create sequence zid_seq          
      increment by 1          
      start with 10000001 
+     
+     insert into zan(zid,zuseriA,zwid) values(zid_seq.nextval,'1119185633@qq.com',10000001)
      DROP TABLE zan
-
+	select * from zan
+	
 --10.评论回复表
      create table reply(
        reid     number(8) primary key,   --回复评论的编号

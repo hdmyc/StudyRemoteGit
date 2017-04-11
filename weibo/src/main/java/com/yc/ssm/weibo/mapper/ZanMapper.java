@@ -6,7 +6,7 @@ import com.yc.ssm.weibo.entity.Zan;
 
 public interface ZanMapper {
 
-	boolean insertZan(Zan zwid);
+	int insertZan(Zan zwid);
 
 	List<Zan> listZan(String zuseriA);
 }

@@ -1,8 +1,6 @@
 package com.yc.ssm.weibo.web.handler;
 
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.logging.log4j.LogManager;

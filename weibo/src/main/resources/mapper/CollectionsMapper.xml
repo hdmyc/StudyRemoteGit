@@ -3,12 +3,12 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.ssm.weibo.mapper.CollectionsMapper">
-	<insert id="insertC" parameterType="Collections">
+	<insert id="insertC" parameterType="com.yc.ssm.weibo.entity.Collections">
 		INSERT INTO
-		collections(coid,cuserid,wid,cptime) VALUES (coid_seq.nextval,#{cuserid},#{wid},sysdate)
+		collections(coid,cuserid,wid,cptime) VALUES (coid_seq.nextval,#{cuserid,jdbcType=VARCHAR},#{wid,jdbcType=INTEGER},sysdate)
 	</insert>
 	
-	<select id="findC" parameterType="string" resultType="Collections">
+	<select id="findC" parameterType="string" resultType="com.yc.ssm.weibo.entity.Collections">
 		select * from collections where cuserid=#{cuserid}
 	</select>
 

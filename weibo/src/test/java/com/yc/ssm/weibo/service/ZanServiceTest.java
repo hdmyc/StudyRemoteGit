@@ -19,7 +19,7 @@ public class ZanServiceTest {
 	@Test
 	public void testInsertZan() {
 		Zan zan=new Zan();
-		zan.setZwid(10000001);
+		zan.setZwid(10000002);
 		System.out.println(zanService.insertZan(zan));
 		assertNotNull(zan);
 	}

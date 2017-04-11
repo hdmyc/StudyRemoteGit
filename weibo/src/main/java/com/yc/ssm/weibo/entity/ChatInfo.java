@@ -6,7 +6,7 @@ public class ChatInfo {//3.私信表
     private Integer cid;
     private String sendid;
     private String receivedid;
-    private String msgStatue;
+    private String chatNote;
     private String chatFile;
     private String chatdate;
     private Integer cstatus;
@@ -35,12 +35,12 @@ public class ChatInfo {//3.私信表
         this.receivedid = receivedid == null ? null : receivedid.trim();
     }
 
-    public String getmsgStatue() {
-        return msgStatue;
+    public String getChatNote() {
+        return chatNote;
     }
 
-    public void setmsgStatue(String msgStatue) {
-        this.msgStatue = msgStatue == null ? null : msgStatue.trim();
+    public void setChatNote(String chatNote) {
+        this.chatNote = chatNote == null ? null : chatNote.trim();
     }
 
     public String getchatFile() {
@@ -69,8 +69,8 @@ public class ChatInfo {//3.私信表
 
 	@Override
 	public String toString() {
-		return "ChatInfo [cid=" + cid + ", sendid=" + sendid + ", receivedid="
-				+ receivedid + ", msgStatue=" + msgStatue + ", chatFile="
+		return "\nChatInfo [cid=" + cid + ", sendid=" + sendid + ", receivedid="
+				+ receivedid + ", chatNote=" + chatNote + ", chatFile="
 				+ chatFile + ", chatdate=" + chatdate + ", cstatus=" + cstatus
 				+ "]";
 	}

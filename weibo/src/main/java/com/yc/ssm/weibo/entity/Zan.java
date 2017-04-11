@@ -27,7 +27,7 @@ public class Zan {//9.点赞表
 	
 	@Override
 	public String toString() {
-		return "Zan [zid=" + zid + ", zuseriA=" + zuseriA + ", zwid=" + zwid
+		return "\nZan [zid=" + zid + ", zuseriA=" + zuseriA + ", zwid=" + zwid
 				+ "]";
 	}
 }
