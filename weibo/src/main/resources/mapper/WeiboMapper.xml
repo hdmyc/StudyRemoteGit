@@ -3,11 +3,6 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.ssm.weibo.mapper.WeiboMapper">
-
-	<!-- <select id="listAll" resultType="Weibo">
-		select * from weibo
-	</select> -->
-
 	<insert id="insertWeibo" parameterType="Weibo">
 		INSERT INTO
 		weibo(wid,wuserid,wtime,wNote) VALUES
@@ -34,4 +29,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where rn > (${currPage} - 1) *
 		${pageSize}
 	</select>
+	<select id="getWeibo" resultType="Weibo">
+		select t.* from (select n.* ,rownum rn from (select * from weibo order by 1) n 
+		where ${currPage} * ${pageSize} >=rownum) t
+		where rn > (${currPage} - 1) * ${pageSize}
+	</select>
+	
+	<select id="findById" resultType="Weibo">
+		select * from Weibo where wid = #{wid}
+	</select>
+	
+	<update id="updateStatus" parameterType="Weibo">
+		update weibo set wstatus = #{wstatus} where wid = #{wid}
+	</update>
 </mapper>

@@ -17,7 +17,7 @@
 	<img style="padding-left: 20px;" height="80px" width="337px" class="mainpage_head_img" src="" />
 		<div style="float: right; margin-top: 40px; margin-right: 20px; color: #082C5A;">
 			<div>
-				管理员：[<strong style="font-size: 140%; color: green;">${loginUser.rname}</strong>]，欢迎您进入微博后台管理系统
+				管理员：[<strong style="font-size: 140%; color: green;">${loginRoot.rname}</strong>]，欢迎您进入微博后台管理系统
 			</div>
 			<div style="margin-top: 8px;">
 				<a href="javascript:void(0);" class="easyui-menubutton"
@@ -60,7 +60,7 @@
 		<div id="main" style="width: 500px; height: 250px;">
 			<div title="欢迎"  data-options="iconCls:'icon-mini-add'">
 				<h1 style="width: 100%; text-align: center; margin-top: 80px">
-					<label> 欢迎【<span>${loginUser.rname}</span>】使用微博后台管理系统
+					<label> 欢迎【<span>${loginRoot.rname}</span>】使用微博后台管理系统
 					</label>
 				</h1>
 			</div>

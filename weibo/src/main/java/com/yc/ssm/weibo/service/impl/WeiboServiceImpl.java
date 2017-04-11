@@ -23,8 +23,17 @@ public class WeiboServiceImpl implements WeiboService{
 		if(rows != null){
 			pb.setPageSize(Integer.parseInt(rows));
 		}
-		
 		return weiboMapper.listAll(pb);
+	}
+
+	@Override
+	public Weibo findById(int wid) {
+		return weiboMapper.findById(wid);
+	}
+
+	@Override
+	public boolean updateStatus(Weibo weibo) {
+		return weiboMapper.updateStatus(weibo)>0;
 	}
 
 	@Override

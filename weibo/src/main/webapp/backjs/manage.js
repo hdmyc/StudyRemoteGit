@@ -85,3 +85,13 @@ function full(){
 function unfull(){
 	$("body").layout("unfull");
 }
+
+function reLogin(){
+	href:"root/reLogin"
+}
+
+function logoutFun(){
+	$.post("root/logoutFun",function(data){
+		
+	});
+}

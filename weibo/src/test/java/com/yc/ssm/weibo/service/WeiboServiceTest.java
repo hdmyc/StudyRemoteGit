@@ -10,13 +10,30 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.yc.ssm.weibo.entity.PaginationBean;
 import com.yc.ssm.weibo.entity.Weibo;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring.xml")
 public class WeiboServiceTest {
 
 	@Autowired
 	private WeiboService weiboService;
+	
+	@Test
+	public void testFindById() {
+		Weibo weibo = weiboService.findById(10000001);
+		System.out.println(weibo);
+		assertNotNull(weibo);
+	}
+	
+	@Test
+	public void testUpdateStatus() {
+		Weibo weibo = new Weibo();
+		weibo.setWid(10000001);
+		weibo.setWstatus(1);
+		weiboService.updateStatus(weibo);
+		System.out.println(weibo);
+		assertNotNull(weibo);
+	}
+	
 	@Test
 	public void testInsertWeibo() {
 		Weibo  weibo=new Weibo();
