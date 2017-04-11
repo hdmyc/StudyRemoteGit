@@ -1,6 +1,5 @@
 package com.yc.ssm.weibo.web.handler;
 
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -24,7 +23,7 @@ public class CollectionsHandler {
 	
 	@ResponseBody
 	@RequestMapping(value="insertC",method=RequestMethod.POST)
-	public Collections insertC(Collections collections){
+	public boolean insertC(Collections collections){
 		LogManager.getLogger().debug("collections=====进来了"+collections);
 		return collectionsService.insertC(collections);
 	}

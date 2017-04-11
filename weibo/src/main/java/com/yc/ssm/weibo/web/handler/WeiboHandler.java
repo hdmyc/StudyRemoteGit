@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.yc.ssm.weibo.entity.PaginationBean;
 import com.yc.ssm.weibo.entity.Weibo;
 import com.yc.ssm.weibo.service.WeiboService;
-import com.yc.ssm.weibo.util.ServletUtil;
 
 @Controller("weiboHandler")
 @RequestMapping("weibo")

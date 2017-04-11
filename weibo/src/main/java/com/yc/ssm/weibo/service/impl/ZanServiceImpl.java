@@ -19,11 +19,12 @@ public class ZanServiceImpl implements ZanService {
 	@Override
 	public boolean insertZan(Zan zwid) {
 		LogManager.getLogger().debug("插入一条数据==="+zwid);
-		return zanMapper.insertZan(zwid);
+		return zanMapper.insertZan(zwid)>0;
 	}
 
 	@Override
 	public List<Zan> listZan(String zuseriA) {
+		LogManager.getLogger().debug("显示表中数据==="+zuseriA);
 		return zanMapper.listZan(zuseriA);
 	}
 

@@ -7,11 +7,11 @@ public interface WeiboMapper {
 
 	PaginationBean<Weibo> listAll(PaginationBean<Weibo> pb);
 
+	int insertWeibo(Weibo weibo);
+	
 	Weibo findById(int wid);
 
 	int updateStatus(Weibo weibo);
-
-	boolean insertWeibo(Weibo weibo);
 
 	Weibo findWeibo(String wuserid);
 

@@ -16,8 +16,8 @@ public class CollectiosServiceImpl implements CollectionsService {
 	private CollectionsMapper collectionsMapper;
 	
 	@Override
-	public Collections insertC(Collections collections) {
-		return collectionsMapper.insertC(collections);
+	public boolean insertC(Collections collections) {
+		return collectionsMapper.insertC(collections)>0;
 	}
 
 	@Override

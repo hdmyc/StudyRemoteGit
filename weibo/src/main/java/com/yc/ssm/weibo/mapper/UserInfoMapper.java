@@ -1,7 +1,5 @@
 package com.yc.ssm.weibo.mapper;
 
-import java.util.List;
-
 import com.yc.ssm.weibo.entity.PaginationBean;
 import com.yc.ssm.weibo.entity.UserInfo;
 

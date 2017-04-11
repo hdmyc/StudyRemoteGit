@@ -35,7 +35,6 @@ public class Collections {//5.消息收藏表
 	
 	@Override
 	public String toString() {
-		return "Collection [coid=" + coid + ", cuserid=" + cuserid + ", wid="
-				+ wid + ", cptime=" + cptime + "]";
+		return "\nCollections [coid=" + coid + ", cuserid=" + cuserid + ", wid=" + wid + ", cptime=" + cptime + "]";
 	}
 }
