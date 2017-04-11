@@ -4,7 +4,6 @@ grant connect,resource to weibo;
 DROP USER weibo cascade;
 
 select USERID, UPWD, REGISTER_TIME from UserInfo where USERID ='15570934077' and UPWD='aa'
-
 --0.管理员表
 CREATE TABLE root(
     rid    VARCHAR2(4) PRIMARY KEY, --管理员编号
@@ -237,7 +236,9 @@ create table follow(
      increment by 1          
      start with 10000001 
      
+     INSERT INTO zan(zid,zuseriA,zwid) VALUES (zid_seq.nextval,'15570934077',10000002)
      insert into zan(zid,zuseriA,zwid) values(zid_seq.nextval,'1119185633@qq.com',10000001)
+     
      DROP TABLE zan
 	select * from zan
 	

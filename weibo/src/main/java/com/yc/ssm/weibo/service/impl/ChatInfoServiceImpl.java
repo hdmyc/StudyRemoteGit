@@ -23,7 +23,7 @@ public class ChatInfoServiceImpl implements ChatInfoService {
 	}
 
 	@Override
-	public List<ChatInfo> findChat(Integer cid) {
+	public List<ChatInfo> findChat(int cid) {
 		return chatInfoMapper.findChat(cid);
 	}
 

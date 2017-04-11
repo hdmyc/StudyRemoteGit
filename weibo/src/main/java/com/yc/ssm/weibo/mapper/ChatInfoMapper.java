@@ -10,7 +10,7 @@ public interface ChatInfoMapper {
 	
 	int insertChat(ChatInfo chatInfo);
 
-	List<ChatInfo> findChat(Integer cid);
+	List<ChatInfo> findChat(int cid);
 
 	PaginationBean<ChatInfo> listAll(PaginationBean<Weibo> pb);
 

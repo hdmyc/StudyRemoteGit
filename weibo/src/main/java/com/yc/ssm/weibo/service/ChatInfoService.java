@@ -9,7 +9,7 @@ public interface ChatInfoService {
 
 	boolean insertChat(ChatInfo chatInfo);
 
-	List<ChatInfo> findChat(Integer cid);
+	List<ChatInfo> findChat(int cid);
 
 	PaginationBean<ChatInfo> listAll(String page, String rows);
 

@@ -4,9 +4,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.ssm.weibo.mapper.ChatInfoMapper">
 
-	<!-- <select id="listAll" resultType="Weibo">
-		select * from weibo
-	</select> -->
 
 	<insert id="insertChat" parameterType="ChatInfo">
 		INSERT INTO
@@ -14,23 +11,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		(wid_seq.nextval,#{sendid,jdbcType=VARCHAR},#{receivedid,jdbcType=VARCHAR},#{chatNote,jdbcType=VARCHAR},#{chatFile,jdbcType=VARCHAR},sysdate)
 	</insert>
 
-	<select id="findChat" parameterType="integer" resultType="ChatInfo">
+	<select id="findChat" parameterType="int" resultType="ChatInfo">
 		select
-		* from chatInfo where cid=#{cid}
+		*
+		from chatInfo where cid=#{cid}
 	</select>
+	
 	<resultMap type="PaginationBean" id="PaginationBeanMap">
 		<collection property="rows"
 			column="{pageSize}=pageSize,{currPage}=currPage" ofType="ChatInfo"
 			select="getChatInfo" />
 	</resultMap>
+	
 	<select id="listAll" parameterType="PaginationBean" resultMap="PaginationBeanMap">
 		select count(1) total,ceil(count(1)/${pageSize}) totalPage,${pageSize}
 		pageSize,${currPage} currPage from chatInfo
 	</select>
+	
 	<select id="getChatInfo" resultType="ChatInfo">
 		select t.* from (select n.*
 		,rownum rn from (select * from chatInfo order by 1) n
-		where ${currPage} * ${pageSize} >=rownum) t
+		where ${currPage}
+		* ${pageSize} >=rownum) t
 		where rn > (${currPage} - 1) *
 		${pageSize}
 	</select>
