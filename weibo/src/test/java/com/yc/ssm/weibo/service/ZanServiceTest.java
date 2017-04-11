@@ -8,23 +8,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.yc.ssm.weibo.entity.Root;
+import com.yc.ssm.weibo.entity.Zan;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring.xml")
-public class RootServiceTest {
+public class ZanServiceTest {
 
 	@Autowired
-	private RootService rootService;
-	
+	private ZanService zanService;
 	@Test
-	public void testLogin() {
-		Root root = new Root();
-		root.setRname("1001");
-		root.setRpwd("aa");
-		root = rootService.rootLogin(root);
-		System.out.println(root);
-		assertNotNull(root);
+	public void testInsertZan() {
+		Zan zan=new Zan();
+		zan.setZwid(10000001);
+		System.out.println(zanService.insertZan(zan));
+		assertNotNull(zan);
+	}
+
+	@Test
+	public void testListZan() {
+		Zan zan=new Zan();
+		zan.setZuseriA("1119185633@qq.com");
+		System.out.println(zanService.listZan("1119185633@qq.com"));
+		assertNotNull(zan);
 	}
 
 }

@@ -11,4 +11,8 @@ public interface WeiboMapper {
 
 	int updateStatus(Weibo weibo);
 
+	boolean insertWeibo(Weibo weibo);
+
+	Weibo findWeibo(String wuserid);
+
 }

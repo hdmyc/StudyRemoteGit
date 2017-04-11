@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.ssm.weibo.mapper.CollectionsMapper">
+	<insert id="insertC" parameterType="Collections">
+		INSERT INTO
+		collections(coid,cuserid,wid,cptime) VALUES (coid_seq.nextval,#{cuserid},#{wid},sysdate)
+	</insert>
+	
+	<select id="findC" parameterType="string" resultType="Collections">
+		select * from collections where cuserid=#{cuserid}
+	</select>
+
+</mapper>

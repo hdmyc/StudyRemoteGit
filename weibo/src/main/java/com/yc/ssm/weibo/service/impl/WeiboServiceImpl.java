@@ -36,4 +36,15 @@ public class WeiboServiceImpl implements WeiboService{
 		return weiboMapper.updateStatus(weibo)>0;
 	}
 
+	@Override
+	public boolean insertWeibo(Weibo weibo) {
+		
+		return weiboMapper.insertWeibo(weibo);
+	}
+	
+	@Override
+	public Weibo findWeibo(String wuserid) {
+		return weiboMapper.findWeibo(wuserid);
+	}
+
 }

@@ -11,4 +11,8 @@ public interface WeiboService {
 
 	public boolean updateStatus(Weibo weibo);
 
+	boolean insertWeibo(Weibo weibo);
+
+	public Weibo findWeibo(String wuserid);
+
 }

@@ -18,13 +18,6 @@ public class WeiboServiceTest {
 	private WeiboService weiboService;
 	
 	@Test
-	public void testListAll() {
-		PaginationBean<Weibo> pb = weiboService.listAll("1", "5");
-		System.out.println(pb);
-		assertNotNull(pb);
-	}
-	
-	@Test
 	public void testFindById() {
 		Weibo weibo = weiboService.findById(10000001);
 		System.out.println(weibo);
@@ -39,6 +32,31 @@ public class WeiboServiceTest {
 		weiboService.updateStatus(weibo);
 		System.out.println(weibo);
 		assertNotNull(weibo);
+	}
+	
+	@Test
+	public void testInsertWeibo() {
+		Weibo  weibo=new Weibo();
+		weibo.setWuserid("15570934077");
+		System.out.println(weiboService.insertWeibo(weibo));
+		assertNotNull(weibo);
+	}
+
+	@Test
+	public void testFindWeibo() {
+		/*Weibo  weibo=new Weibo();
+		weibo.setWuserid("1119185633@qq.com");
+		System.out.println();*/
+		Weibo  weibo = weiboService.findWeibo("1119185633@qq.com");
+		System.out.println(weibo);
+		assertNotNull(weibo);
+	}
+	
+	@Test
+	public void testListAll() {
+		PaginationBean<Weibo> pb = weiboService.listAll("1", "2");
+		System.out.println(pb);
+		assertNotNull(pb);
 	}
 
 }
