@@ -30,7 +30,7 @@ public class ChatInfoHandler {
 
 	@ResponseBody
 	@RequestMapping(value="findChat",method=RequestMethod.GET)
-	public List<ChatInfo> findChat(Integer cid) throws UnsupportedEncodingException{
+	public List<ChatInfo> findChat(int cid) throws UnsupportedEncodingException{
 		LogManager.getLogger().debug("ChatInfoHandler()hello......");
 		return chatInfoService.findChat(cid);
 	}

@@ -4,19 +4,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.ssm.weibo.mapper.ChatInfoMapper">
 
-	<!-- <select id="listAll" resultType="Weibo">
-		select * from weibo
-	</select> -->
-
 	<insert id="insertChat" parameterType="ChatInfo">
 		INSERT INTO
 		chatInfo(cid,sendid,receivedid,chatNote,chatFile,chatdate) VALUES
-		(wid_seq.nextval,#{sendid,jdbcType=VARCHAR},#{receivedid,jdbcType=VARCHAR},#{chatNote,jdbcType=VARCHAR},#{chatFile,jdbcType=VARCHAR},sysdate)
+		(wid_seq.nextval,#{sendid,jdbcType=VARCHAR},#{receivedid,jdbcType=VARCHAR},#{chatNote,jdbcType=VARCHAR},#{chatFile,jdbcType=VARCHAR},to_char(sysdate,'yyyy-MM-dd HH:mm:ss'))
 	</insert>
 
-	<select id="findChat" parameterType="integer" resultType="ChatInfo">
-		select
-		* from chatInfo where cid=#{cid}
+	<select id="findChat" parameterType="int" resultType="ChatInfo">
+		select * from chatInfo where cid=#{cid}
 	</select>
 	<resultMap type="PaginationBean" id="PaginationBeanMap">
 		<collection property="rows"

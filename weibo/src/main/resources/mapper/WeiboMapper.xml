@@ -23,13 +23,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		pageSize,${currPage} currPage from weibo
 	</select>
 	<select id="getWeibo" resultType="Weibo">
-		select t.* from (select n.*
-		,rownum rn from (select * from weibo order by 1) n
-		where ${currPage} * ${pageSize} >=rownum) t
-		where rn > (${currPage} - 1) *
-		${pageSize}
-	</select>
-	<select id="getWeibo" resultType="Weibo">
 		select t.* from (select n.* ,rownum rn from (select * from weibo order by 1) n 
 		where ${currPage} * ${pageSize} >=rownum) t
 		where rn > (${currPage} - 1) * ${pageSize}
