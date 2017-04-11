@@ -3,11 +3,11 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.ssm.weibo.mapper.ZanMapper">
-	<insert id="insertZan" parameterType="Zan">
-		INSERT INTO zan(zid,zuseriA,zwid,) VALUES (zid_seq.nextval,#{zuseriA,jdbcType=VARCHAR},#{zwid,jdbcType=INTEGER})
+	<insert id="insertZan" parameterType="com.yc.ssm.weibo.entity.Zan">
+		INSERT INTO zan(zid,zuseriA,zwid) VALUES (zid_seq.nextval,#{zuseriA,jdbcType=VARCHAR},#{zwid,jdbcType=INTEGER})
 	</insert>
 	
-	<select id="listZan" parameterType="string" resultType="Zan" >
+	<select id="listZan" parameterType="string" resultType="com.yc.ssm.weibo.entity.Zan" >
 		select * from zan where zuseriA=#{zuseriA}
 	</select>
 </mapper>
