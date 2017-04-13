@@ -476,75 +476,17 @@ body {
 	text-decoration: none;
 	color: #EB7350;
 }
-
-.register .other {
-	font-size: 14px;
-	color: #808080;
-	margin-left: 15px;
-	margin-top: 8px;
-}
-
-.register .other .taobao {
-	width: 16px;
-	height: 14px;
-	float: right;
-	margin-right: 130px;
-	margin-top: -17px;
-}
-
-.register .other .qq {
-	width: 16px;
-	height: 14px;
-	background: url(../images/sprite_login.png) no-repeat -52px -52px;
-	float: right;
-	margin-right: 108px;
-	margin-top: -16px;
-}
-
-.register .other .tianyi {
-	width: 16px;
-	height: 14px;
-	background: url(../images/sprite_login.png) no-repeat -100px -52px;
-	float: right;
-	margin-right: 91px;
-	margin-top: -15px;
-}
-
-.register .other .zh360 {
-	width: 16px;
-	height: 14px;
-	background: url(../images/sprite_login.png) no-repeat -151px -52px;
-	float: right;
-	margin-right: 70px;
-	margin-top: -15px;
-}
-
-.register .other .OAUTH {
-	width: 16px;
-	height: 14px;
-	background: url(../images/sprite_login.png) no-repeat -200px -52px;
-	float: right;
-	margin-right: 50px;
-	margin-top: -15px;
-}
-
-.register .other .baidu {
-	width: 16px;
-	height: 14px;
-	background: url(../images/sprite_login.png) no-repeat -252px -52px;
-	float: right;
-	margin-right: 27px;
-	margin-top: -15px;
-}
 /*注册登录结束*/
 
 /*下载部分开始*/
 .download {
-	width: 230px;
+	float:left;
+	width: 230px;	
 	height: 66px;
 	background-color: white;
-	margin-top: 14px;
+	margin-top: 40px;
 	border-radius: 2px;
+	padding-top: 10px;
 }
 
 .download .iPone {

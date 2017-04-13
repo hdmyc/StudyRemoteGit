@@ -212,12 +212,6 @@
 						<div class="noweb">
 							还没有微博？<a href="page/register1.jsp">立即注册!</a>
 						</div>
-						<div class="other">
-							其他登陆： <a href="" class="taobao"><img src="images/taobao.png" /></a>
-							<a href="" class="qq"></a> <a href="" class="tianyi"></a> <a
-								href="" class="zh360"></a> <a href="" class="OAUTH"></a> <a
-								href="" class="baidu"></a>
-						</div>
 					</form>
 				</div>
 				<!--登陆 end  -->
