@@ -39,7 +39,7 @@
                   <li><a href=""><span style="font-size:15px;position:relative;top:-2px;left:3px">视频</span></a></li>
                   <li><a href="">F<span style="font-size:15px;position:relative;top:-2px;left:3px">发现</span></a></li>
                   <li><a href="">G<span style="font-size:15px;position:relative;top:-2px;left:3px">游戏</span></a></li>
-                  <li><a href="weibozones.jsp">H<span style="font-size:15px;position:relative;top:-2px;left:3px">语默</span></a></li>
+                  <li><a href="page/weibozones.jsp">H<span style="font-size:15px;position:relative;top:-2px;left:3px">语默</span></a></li>
                </ul>
            </div>
            <div class="head_set">
@@ -154,7 +154,7 @@
                    <img src="images/contMe.png" width="50px" height="50px"/>
                </div>
                <div class="content02">
-                   <h4><a href="weibozones.jsp">wk语默</a></h4>
+                   <h4><a href="page/weibozones.jsp">wk语默</a></h4>
                    <p><span>10分钟前</span>来自<span>微博weibo.com</span></p>
                    <div class="shuru"></div>
                </div>
@@ -444,10 +444,10 @@
             <div class="cont-intro-me">
                 <div class="cont-intro-me1">
                     <img src="images/008_s.jpg" />
-                    <a href="weibozones.jsp"><img src="images/contMe.png" alt="wk语默"/></a>
+                    <a href="page/weibozones.jsp"><img src="images/contMe.png" alt="wk语默"/></a>
                 </div>
                 <div class="cont-intro-me2">
-                    <div class="nameBox"><a href="weibozones.jsp">
+                    <div class="nameBox"><a href="page/weibozones.jsp">
                         <h4>wk语默</h4>
                         <span></span>
                         <i>Lv7</i>
@@ -773,9 +773,8 @@
         </div>
     </div>
     <!--脚注结束-->
-   
     
     
-    <script type="text/javascript" src="../js/login.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

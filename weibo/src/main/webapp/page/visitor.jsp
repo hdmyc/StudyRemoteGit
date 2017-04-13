@@ -565,6 +565,6 @@
 	</div>
 	<!--返回顶部结束-->
 
-	<script src="js/visitor.js"></script>
+	<script type="text/javascript" src="js/visitor.js"></script>
 </body>
 </html>

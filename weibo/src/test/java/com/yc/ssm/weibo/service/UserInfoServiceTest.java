@@ -19,7 +19,7 @@ public class UserInfoServiceTest {
 	@Test
 	public void testRegister() throws Exception {	
 		UserInfo ui=new UserInfo();
-		ui.setUserid("15570934077");
+		ui.setUserid("12345678901");
 		ui.setUpwd("aa");
 		System.out.println(userInfoService.register(ui));
 		assertNotNull(ui);

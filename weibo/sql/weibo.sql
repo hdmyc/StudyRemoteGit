@@ -4,11 +4,8 @@ grant connect,resource to weibo;
 DROP USER weibo cascade;
 
 select USERID, UPWD, REGISTER_TIME from UserInfo where USERID ='15570934077' and UPWD='aa'
-<<<<<<< HEAD
-=======
 
 select * from root;
->>>>>>> branch 'master' of git@github.com:hdmyc/StudyRemoteGit.git
 --0.管理员表
 CREATE TABLE root(
     rid    VARCHAR2(4) PRIMARY KEY, --管理员编号
@@ -206,6 +203,8 @@ DROP table weibo
           copyuserid    varchar2(20) constraint fk_copyuserid  references userInfo(userid) ,  --用户
           cptime       varchar2(20) default SYSDATE   --转发时间
    )
+   drop table copy
+   select  * from copy;
      create sequence copyid_seq          
      increment by 1          
      start with 10000001    

@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.ssm.weibo.entity.PaginationBean;
@@ -26,18 +27,18 @@ public class UserInfoHandler{
 	private UserInfoService userInfoService;
 
 	//@RequestMapping(value="register",method=RequestMethod.POST)
-	@RequestMapping(value="register")
+	@RequestMapping(value="register",method=RequestMethod.POST)
 	public String register(String userid,UserInfo userInfo){
 		System.out.println("==============register====================");
 		int i=0;
-		try {
+		//try {
 			i=userInfoService.register(userInfo);
-		} catch (Exception e) {
+		/*} catch (Exception e) {
 			if(e instanceof org.springframework.dao.DuplicateKeyException){
 				System.out.println("12232543");
 
 			}
-		}		
+		}	*/	
 		if( i>0){
 			return "redirect:/page/visitor.jsp";
 		}else{

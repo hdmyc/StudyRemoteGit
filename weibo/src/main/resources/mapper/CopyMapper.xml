@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.ssm.weibo.mapper.CopyMapper">
+	<insert id="insertcopy" parameterType="Copy">
+		INSERT INTO
+		copy(copyid,cwid,copyuserid,cptime) VALUES
+		(copyid_seq.nextval,#{cwid,jdbcType=INTEGER},#{copyuserid,jdbcType=VARCHAR},sysdate)
+	</insert>
+
+	<select id="findcopy" parameterType="int" resultType="Copy">
+		select
+		* from copy where cwid=#{cwid}
+	</select>
+</mapper>

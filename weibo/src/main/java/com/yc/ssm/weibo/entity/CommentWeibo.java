@@ -41,9 +41,7 @@ public class CommentWeibo {//6.评论表
 	}
 	@Override
 	public String toString() {
-		return "commentWeibo [cwid=" + cwid + ", wid=" + wid + ", couserid="
-				+ couserid + ", cptime=" + cptime + ", cpcontent=" + cpcontent
-				+ "]";
+		return "\nCommentWeibo [cwid=" + cwid + ", wid=" + wid + ", couserid=" + couserid + ", cptime=" + cptime
+				+ ", cpcontent=" + cpcontent + "]";
 	}
-	
 }

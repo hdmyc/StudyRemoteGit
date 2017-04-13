@@ -45,8 +45,8 @@ public class UserDetailHandler{
 
 	@ResponseBody
 	@RequestMapping(value="ModifyUsers",method=RequestMethod.GET)
-	public boolean ModifyUsers(UserDetail userDetail,@RequestParam("picData")MultipartFile picData){
-		String picPath=null;
+	public boolean ModifyUsers(UserDetail userDetail){
+		/*String picPath=null;
 		if(picData!=null && !picData.isEmpty()){//判断是否有图片上传
 			try {
 				picData.transferTo(ServletUtil.getUploadFile(picData.getOriginalFilename()));
@@ -55,7 +55,7 @@ public class UserDetailHandler{
 				e.printStackTrace();
 			}
 		}
-		userDetail.setHead_picture(picPath);
+		userDetail.setHead_picture(picPath);*/
 		System.out.println("上传图片 modify user ==>"+userDetail);
 		return userDetailService.modifyUsers(userDetail);//异步数据响应
 	}
