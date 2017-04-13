@@ -60,9 +60,8 @@
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;头像 </label>
-				<img src="backimages/ali.gif" id ="ahead_picture" style="width:80px;height:80px" />
+				<img src="backimages/not_pic.jpg" id ="ahead_picture" style="width:80px;height:80px" />
 			</p>
-			<input type="button" value="修改" id="modifyBtn"/>
 		</form>		
 	</div>
 	<script type="text/javascript" src="backjs/users_edit.js"></script>

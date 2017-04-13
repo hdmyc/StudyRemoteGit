@@ -7,14 +7,14 @@
 <meta charset="utf-8">
 <title>我的首页 微博-随时随地发现新鲜事</title>
 <link rel="icon" href="images/favicon.ico" />
-<link  rel="stylesheet" href="../css/mycollection.css">
+<link  rel="stylesheet" href="css/zan.css">
 </head>
 
 <body> 
     <!--头部开始-->
     <div id="head">
         <div class="head_logo">
-            <img src="../images/WB_logo.png" />
+            <img src="images/WB_logo.png" />
         </div>
         <div class="head_search">
             <input type="text" id="text" placeholder="大家正在搜索：" />
@@ -381,7 +381,7 @@
            	<div class="content3" style="display: none;">
            		<div class="contentd4" style="display: block;">
 	               <div class="cont4-top">
-	                   <img src="../images/cont4-cen.png" id="cont4pic"/>
+	                   <img src="images/cont4-cen.png" id="cont4pic"/>
 	                   <div class="cont4-top-wenzi">
 	                      <h4>我的朋友是个呆B</h4>
 	                      <i class="WB_icon_app" title="微博个人认证"><a href="http://verified.weibo.com/verify"></a></i>
@@ -394,12 +394,12 @@
 	               <div class="cont4-cen">
 	                   <div class="WB_text_01">牵手</div>
 	                   <div class="cont4-cen-pic">
-	                       <li><img src="../images/cont4-cen01.jpg"></li>
-	                       <li><img src="../images/cont4-cen02.jpg"></li>
-	                       <li><img src="../images/cont4-cen03.jpg"></li>
-	                       <li><img src="../images/cont4-cen04.jpg"></li>
-	                       <li><img src="../images/cont4-cen05.jpg"></li>
-	                       <li><img src="../images/cont4-cen06.jpg"></li>
+	                       <li><img src="images/cont4-cen01.jpg"></li>
+	                       <li><img src="images/cont4-cen02.jpg"></li>
+	                       <li><img src="images/cont4-cen03.jpg"></li>
+	                       <li><img src="images/cont4-cen04.jpg"></li>
+	                       <li><img src="images/cont4-cen05.jpg"></li>
+	                       <li><img src="images/cont4-cen06.jpg"></li>
 	                   </div>
 	               </div>
 	               <div class="cont4-bot">
@@ -447,8 +447,8 @@
 	               </div>
 	                <div class="cont4_ying">      <!--content4隐藏的部分-->
 	                    <div class="cont4_ying_pic">
-	                       <img src="../images/profile_cover_m.jpg" class="cont4_ying_pic1"/>
-	                       <img src="../images/cont4-cen.png" class="cont4_ying_pic2" title="TopShop穿搭"/>
+	                       <img src="images/profile_cover_m.jpg" class="cont4_ying_pic1"/>
+	                       <img src="images/cont4-cen.png" class="cont4_ying_pic2" title="TopShop穿搭"/>
 	                       <i class="cont4_ying_pic_icon" title="深圳高飞传媒有限公司设计师"></i>
 	                       <p class="PChuan">TopShop穿搭（设置备注）</p>
 	                       <span class="cont4span1" title="男"></span>
@@ -495,7 +495,7 @@
 	           	</div>
 	           	<div class="contentd6">
 		            <div class="cont6-top">
-		                <img src="../images/cont6.png" class="cont6pic"/>
+		                <img src="images/cont6.png" class="cont6pic"/>
 		                <div class="cont6-top-wenzi">
 		              	    <h4>华尔街日报中文网</h4>
 		                    <i class="WB_icon_app" title="微博个人认证"><a href="http://verified.weibo.com/verify"></a></i>
@@ -508,7 +508,7 @@
 		            <div class="cont6-cen">
 		                <div class="WB_text_01">【中国央行面临政策放松压力，但房地产泡沫令人担忧】- 中国在今年余下时间运用宽松货币政策来扶持经济增长的能力主要取决于政府如何应对不断膨胀的房地产泡沫。今年到目前为止，中国央行都没有采取降息及其他强有力的信贷宽松措施来促进经济增长。<a href=""><span>°</span> 中国央行面临政策放松压力，但房地产泡沫令人...</a></div>
 		                <div class="WB_text_02">
-		                    <img src="../images/cont6-test02.jpg" class="WB_text_021"/>
+		                    <img src="images/cont6-test02.jpg" class="WB_text_021"/>
 		                    <p class="WB_text_022">华尔街日报中文网</p>
 		                    <p class="WB_text_023">中国央行面临政策放松压力，但房地产泡沫令人担忧</p>
 		                    <div class="WB_text_024"><span ></span></div>
@@ -636,7 +636,7 @@
                </div>
                <div class="phone-WB">
                   <p>手机玩微博</p>
-                  <img src="../images/footer_code.jpg" />
+                  <img src="images/footer_code.jpg" />
                   <a href="">扫码下载，更多版本戳这里</a>
                </div>
                <div class="authenticate_WB">
@@ -658,7 +658,7 @@
             </div>
             <div class="foot-bottom">
                <div class="notice">
-                  <a href=""><img src="../images/foot-wb-logo.png" />微博客服</a>
+                  <a href=""><img src="images/foot-wb-logo.png" />微博客服</a>
                   <a href="" class="a2">意见反馈</a>
                   <a href="" class="a2">舞弊举报</a>
                   <a href="" class="a2">开放平台</a>
@@ -682,12 +682,12 @@
                </div>
                <div class="copyright">
                   <p>Copyright &copy; 2009-2016 WEIBO 北京微梦创科网络技术有限公司</p>
-                  <a href=""><img src="../images/emblem.png" />京公网安备11000002000019号</a>
+                  <a href=""><img src="images/emblem.png" />京公网安备11000002000019号</a>
                </div>
             </div>
         
         <!--脚注结束-->
 	    
-   		<script type="text/javascript" src="../js/mycollection.js" ></script>
+   		<script type="text/javascript" src="js/zan.js" ></script>
 </body>
 </html>

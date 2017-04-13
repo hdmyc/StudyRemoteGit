@@ -3,14 +3,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<base href="${deployName}">
 		<meta charset="UTF-8">
 		<title>注册官方微博</title>
 		<link rel="icon" href="images/reg.ico1.png" />
-		<link  rel="stylesheet" href="../css/register2.css">
+		<link  rel="stylesheet" href="css/register2.css">
 	</head>
 	<body>
 		<div id="logo">
-			<img src="../images/logo_big.png" />
+			<img src="images/logo_big.png" />
 		</div>
 		<div id="content">
 			<div id="con1">
@@ -83,7 +84,7 @@
 					<div id="yanzhengmadiv">
 						<span id="span3"><i>*</i>验证码：</span>
 						<input type="text" name="yanzhengma"  id="yanzhengma"  class="color1"/>
-						<img src="../images/yanzheng_1.png" id="yanzheng" />
+						<img src="images/yanzheng_1.png" id="yanzheng" />
 						<a id="huanyihuan">换一换</a>
 						<span id="yanzhengmats1" style="display: none;">请输入验证码</span>
 						<span id="yanzhengmats2" style="display: none;">请输入验证码</span>
@@ -179,7 +180,7 @@
 				<img src="../images/reg_vline.png" />
 				<div id="con3">
 					<div id="cont3">
-						已有帐号，<a href="../index.jsp">直接登录>></a>
+						已有帐号，<a href="index.jsp">直接登录>></a>
 					</div>
 					<p>微博注册帮助</p>
 					<ul>
@@ -204,6 +205,6 @@
 				</select>
 			</form>
 		</div>
-		<script src="../js/register2.js"></script>
+		<script src="js/register2.js"></script>
 	</body>
 </html>

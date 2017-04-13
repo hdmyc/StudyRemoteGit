@@ -12,15 +12,6 @@
 <link type="text/css" rel="stylesheet" href="backcss/login.css">
 </head>
 <body>
-	<%-- <div id="loginDiv">
-		<form id="loginForm" action="root/login">
-			<p><label>${errorMsg }&nbsp;</label></p><c:remove var="errorMsg" scope="session"/>
-			<p><input name="rname" placeholder="请输入用户名" required="required"/></p>
-			<p><input type="password" name="rpwd" placeholder="请输入密码"  required="required"/></p>
-			<p><img src="vcode.jpg" title="看不清，换一张"/><input name="vcode" placeholder="请输入验证码" id="vcode"  required="required"/></p>
-			<p><input type="submit" value="登录" id="loginBtn"/></p>
-		</form>
-	</div> --%>
 	<div id="loginDiv">
 		<form id="loginForm" action="root/login" method="post">
 			<p><label>${errorMsg }&nbsp;</label></p><c:remove var="errorMsg" scope="session"/>

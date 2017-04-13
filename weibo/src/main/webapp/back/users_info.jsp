@@ -59,7 +59,7 @@
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;头像 </label>
-				<img src="backimages/ali.gif" id ="dhead_picture" style="width:80px;height:80px" />
+				<img src="backimages/not_pic.jpg" id ="dhead_picture" style="width:80px;height:80px" />
 			</p>
 		</form>		
 	</div>

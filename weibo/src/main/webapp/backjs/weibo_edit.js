@@ -11,20 +11,27 @@ $('#weiboEdit').datagrid({
 	          {field:'wuserid',title:'编辑人',width:100,align:'center'},
 	          {field:'wtime',title:'发送时间',width:100,align:'center'},
 	          {field:'wnote',title:'微博内容',width:150,align:'center'},
-	          {field:'wpic',title:'图片',width:30,align:'center'},
-	          {field:'zanNum',title:'点赞数',width:30,align:'center'},
-	          {field:'transmitNum',title:'转发数',width:30,align:'center'},
-	          {field:'commentNum',title:'收藏数',width:30,align:'center'},
-	          {field:'wstatus',title:'是否屏蔽',width:50,align:'center'},
-	          {field:'wop',title:'操作',width:100,align:'center',
+	          {field:'wpic',title:'图片',width:100,align:'center',
 	        	  formatter: function(value,row,index){
-	        		  //alert(row + "==>" + JSON.stringify(row));
-	        		  return '<a class="editBtn" href="javascript:void(0)" onclick="showDetail(' + row.wid + ')">详请</a>'+
-	        		  '<a class="delBtn" href="javascript:void(0)" onclick="notSpeak(' + index + ')">屏蔽</a>' + 
-	        		  '<script>$(".editBtn").linkbutton({iconCls: "icon-search"});$(".delBtn").linkbutton({iconCls: "icon-cancel"});</script>';
+	        		  if(value == null){
+	        			  return "<img width='100' src='backimages/not_pic.jpg'/>"
+	        		  }else{
+	        			  return "<img width='100' src='" + value + "'/>"
+	        		  }
+	        	  }},
+	        	  {field:'zanNum',title:'点赞数',width:30,align:'center'},
+	        	  {field:'transmitNum',title:'转发数',width:30,align:'center'},
+	        	  {field:'commentNum',title:'收藏数',width:30,align:'center'},
+	        	  {field:'wstatus',title:'是否屏蔽',width:50,align:'center'},
+	        	  {field:'wop',title:'操作',width:100,align:'center',
+	        		  formatter: function(value,row,index){
+	        			  //alert(row + "==>" + JSON.stringify(row));
+	        			  return '<a class="editBtn" href="javascript:void(0)" onclick="showDetail(' + row.wid + ')">详请</a>'+
+	        			  '<a class="delBtn" href="javascript:void(0)" onclick="notSpeak(' + index + ')">屏蔽</a>' + 
+	        			  '<script>$(".editBtn").linkbutton({iconCls: "icon-search"});$(".delBtn").linkbutton({iconCls: "icon-cancel"});</script>';
+	        		  }
 	        	  }
-	          }
-	          ]]
+	        	  ]]
 
 });  
 
@@ -49,7 +56,12 @@ function showDetail(wid){
 		$("#atransmitNum").val(data.transmitNum);
 		$("#acommentNum").val(data.commentNum);
 		$("#awstatus").val(data.wstatus);
-		/*$("bwpic").val(row.wpic);*/
+		$("#awpic").val("");
+		if(data.wpic){
+			$("#awpic").attr("src", data.wpic);
+		}else{
+			$("#awpic").attr("src", "backimages/not_pic.jpg");
+		}
 	},"json");
 }
 

@@ -3,7 +3,7 @@
 <!doctype html>
 <html>
 <head>
-<base href="/weibo/">
+<base href="${deployName}">
 <meta charset="utf-8">
 <title>wk语默的微博-微博</title>
 <link rel="icon" href="images/favicon.ico" />
@@ -113,17 +113,8 @@
 		<div class="head_position">
 			<div class="head_nav">
 				<ul>
-					<li class="head_nav_li1"><a href="login.jsp">E<span
-							style="font-size: 15px; position: relative; top: -2px; left: 3px">首页</span></a></li>
-					<li><a href=""><span
-							style="font-size: 15px; position: relative; top: -2px; left: 3px">视频</span></a></li>
-					<li><a href="">F<span
-							style="font-size: 15px; position: relative; top: -2px; left: 3px">发现</span></a></li>
-					<li><a href="">G<span
-							style="font-size: 15px; position: relative; top: -2px; left: 3px">游戏</span></a></li>
-					<li><a href="">H<span
-							style="font-size: 15px; position: relative; top: -2px; left: 3px"
-							class="uname">语默</span></a></li>
+					<li class="head_nav_li1"><a href="login.jsp">E<span style="font-size: 15px; position: relative; top: -2px; left: 3px">首页</span></a></li>
+					<li><a href="">H<span style="font-size: 15px; position: relative; top: -2px; left: 3px" class="uname">语默</span></a></li>
 				</ul>
 			</div>
 			<div class="head_set">
@@ -174,7 +165,7 @@
 
 	<!--中间内容开始-->
 	<div id="content">
-		<form  method="post" id="detail">
+		<form method="get" id="detail">
 			<p>
 				<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
 					type="text" name="userid" id="userid" />
@@ -229,7 +220,6 @@
 					value="提交修改" /></a>
 		</form>
 	</div>
-
-
+<script type="text/javascript" src="js/detail.js"></script>
 </body>
 </html>
