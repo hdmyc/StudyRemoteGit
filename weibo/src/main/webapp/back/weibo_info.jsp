@@ -38,7 +38,7 @@
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;图片 </label>
-				<img src="backimages/ali.gif" id ="bwpic" style="width:80px;height:80px" />
+				<img src="backimages/not_pic.jpg" id ="bwpic" style="width:80px;height:80px" />
 			</p>
 		</form>		
 	</div>
