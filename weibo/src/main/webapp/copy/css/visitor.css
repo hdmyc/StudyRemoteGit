@@ -187,7 +187,7 @@ body{
 .content{
 	width:600px;
 	float:left;
-	margin-left:80px;
+	margin-left:150px;
 }
 .content_1{
 	height:130px;
@@ -815,11 +815,8 @@ body{
 }
 .register .select .span1{  /*这里有空的*/
 	font-weight:bold;
+	border-bottom:1px solid #FA7D3C;
 	color:#000;
-	width:135px;
-}
-.register .select .span1 a{  /*这里有空的*/
-	margin-left:50px;
 }
 .register .select a .pic11{
 	width:40px;
@@ -906,23 +903,17 @@ body{
 	margin-top:10px;
 	border-radius:2px;
 }
-.register .regst .subdiv p{
+.register .regst .subdiv input{
 	width:200px;
 	height:34px;
 	border:none;
 	background:none;
-}
-.register .regst .subdiv p:hover{
-	background-color:#FA6F29;
-}
-.register .regst .subdiv p a{
-	float:left;
 	color:white;
 	font-size:15px;
 	cursor:pointer;
-	text-decoration: none;
-	margin-left: 85px;
-	margin-top:8px;
+}
+.register .regst .subdiv input:hover{
+	background-color:#FA6F29;
 }
 
 .register .noweb{
@@ -1303,7 +1294,7 @@ body{
 	width:840px;
 	float:left;
 	background:#FFF;
-	margin-left:80px;
+	margin-left:150px;
 	margin-top:10px;
 	border-radius:2px;
 }

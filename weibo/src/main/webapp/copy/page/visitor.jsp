@@ -27,18 +27,19 @@
 				</div>
 			</div>
 			<div id="con2">
-				<form action="../新浪登录界面/index.html" method="post">
+				<!--弹框登陆界面 statr  -->
+				<form id="login" action="user/login" method="post">
 					<div class="phonediv1">
 						<a href=""><div class="pic12"></div></a> <input type="text"
-							name="uname" placeholder="邮箱/会员账号/手机号登录" id="phone" />
+							name="userid" placeholder="邮箱/会员账号/手机号登录" id="phone" />
 					</div>
 					<div class="pwddiv">
 						<a href=""><div class="pic13"></div></a> <input type="password"
-							name="uname" placeholder="请输入密码" id="pwd" />
+							name="upwd" placeholder="请输入密码" id="pwd" />
 					</div>
 					<div class="remember">
 						<input type="checkbox" />&nbsp;&nbsp;下次自动登录 <a
-							href="password.html">忘记密码</a>
+							href="page/password.jsp">忘记密码</a>
 					</div>
 					<div class="subdiv">
 						<input type="submit" value="登录" id="sub" />
@@ -48,9 +49,10 @@
 							name="uname" value="使用QQ直接登录" id="phone1" />
 					</div>
 					<div class="noweb">
-						<a href="register1.html">立即注册</a><a class="duanxin">短信登录</a>
+						<a href="page/register1.jsp">立即注册</a><a class="duanxin">短信登录</a>
 					</div>
 				</form>
+				<!--弹框登陆界面 statr  -->
 			</div>
 		</div>
 		<div id="content2" style="display: none;">
@@ -66,14 +68,14 @@
 				</div>
 			</div>
 			<div id="con2">
-				<form action="" method="post">
+				<form action="page/login.jsp" method="post">
 					<div class="saoyisao">
 						<a href=""><div class="saoma"></div></a>
 						<p>请打开微博客户端"扫一扫"</p>
 					</div>
 
 					<div class="noweb">
-						<a href="register1.html">立即注册</a><a class="duanxin">短信登录</a>
+						<a href="page/register1.jsp">立即注册</a><a class="duanxin">短信登录</a>
 					</div>
 				</form>
 			</div>
@@ -91,14 +93,10 @@
 				</div>
 			</div>
 			<div id="con2">
-				<form action="../新浪登录界面/index.html" method="post">
+				<form action="login.jsp" method="post">
 					<div class="phonediv2" style="border: 1px solid #ccc;">
 						<a href=""><div class="pic123"></div></a> <input type="text"
 							name="uname" placeholder="请输入您的手机号码" id="phone2" />
-					</div>
-					<div class="pwddiv2">
-						<input type="submit" value="获取短信验证码" id="duanxin" /> <input
-							type="password" name="uname" placeholder="短信验证码" id="pwd2" />
 					</div>
 					<div class="remember">
 						<input type="checkbox" />&nbsp;&nbsp;下次自动登录
@@ -142,6 +140,36 @@
 
 	<!--内容开始-->
 	<div id="center">
+		 <!--导航栏部分开始-->
+		<!--<div class="nav">
+			<ul>
+				<li class="li1"><a href=""><img src="images/introd.png" />推荐</a></li>
+				<li class="li2"><a href=""><img src="images/star.png" />明星</a></li>
+				<li class="li3"><a href=""><img src="images/view.png" />视频</a></li>
+				<li class="li4"><a href=""><img src="images/smile.png" />搞笑</a></li>
+				<li class="li5"><a href=""><img src="images/mood .png" />情感</a></li>
+				<li class="li6"><a href=""><img src="images/exercise.png" />社会</a></li>
+				<li class="li7"><a href=""><img src="images/variety.png" />综艺</a></li>
+				<li class="li8"><a href=""><img src="images/makeup .png" />美妆</a></li>
+				<li class="li9"><a href=""><img src="images/cate.png" />美食</a></li>
+				<li class="li10"><a href=""><img src="images/girl.png" />美女</a></li>
+				<li class="li11"><a href=""><img src="images/more.png" />更多</a></li>
+			</ul>
+			<img src="images/nav_move0.png" class="navMove0" />
+			<div class="nav_more">
+				<li><a href=""><img src="images/nav_more_1.png" />电影</a></li>
+				<li class="li12"><a href=""><img
+						src="images/nav_more_3.png" class="more_img" />萌宠</a></li>
+				<li><a href=""><img src="images/nav_more_5.png" />时尚</a></li>
+				<li class="li12"><a href=""><img
+						src="images/nav_more_7.png" class="more_img" />体育</a></li>
+				<li><a href=""><img src="images/nav_more_9.png" />数码</a></li>
+				<li class="li12"><a href=""><img
+						src="images/nav_more_11.png" class="more_img" />星座</a></li>
+			</div>
+		</div>
+		导航栏部分结束 -->
+
 		<!--内容部分开始-->
 		<div class="content">
 			<div class="content_1">
@@ -179,6 +207,11 @@
 					</p> <span class="chara_3"><p>8601&nbsp;&nbsp;|</p></span> <span
 					class="chara_4"><p>234&nbsp;&nbsp;|</p></span> <span
 					class="chara_5"><p>6789</p></span>
+				</a>
+			</div>
+			<div class="content_4">
+				<a href="http://weibo.com/sinabook?refer_flag=1001030103_"> <img
+					src="images/webpic.png" />
 				</a>
 			</div>
 			<div class="content_5">
@@ -235,9 +268,8 @@
 			<div class="content_9">
 				<a href="http://weibo.com/dengchao?from=feed&loc=nickname&is_hot=1">
 					<p class="chara_1">我媳妇用12天又发明出了一种叫”黑蒜“的物种，说给我补身体，哪位好心人能收留我几天？</p> <img
-					src="images/suan1.jpg" class="suan1" /> <img
-					src="images/suan2.jpg" class="suan" /> <img src="images/suan3.jpg"
-					class="suan" />
+					src="images/suan1.jpg" class="suan1" /> <img src="images/suan2.jpg"
+					class="suan" /> <img src="images/suan3.jpg" class="suan" />
 					<p class="chara_2">
 						<img src="images/chao.jpg" style="width: 18px; height: 18px" /><span>@邓超
 							今天17:15</span>
@@ -256,12 +288,12 @@
 			<!--注册登录开始-->
 			<div class="register">
 				<div class="select">
-					<span class="span1"><a href="">账号登录</a></span> <a href=""><div
-							class="pic11"></div></a>
+					<span class="span1"><a href="">账号登录</a></span> <span class="span2"><a
+						href="">安全登录</a></span> <a href=""><div class="pic11"></div></a>
 				</div>
 				<!--登陆 start  -->
 				<div class="regst">
-					<form id="loginForm" action="user/login" method="post">
+					<form action="user/login" method="post">
 						<div class="phonediv">
 							<a href=""><div class="pic12"></div></a> <input type="text"
 								name="userid" placeholder="邮箱/会员账号/手机号登录" id="phone" />
@@ -275,10 +307,7 @@
 								href="page/password.jsp">忘记密码</a>
 						</div>
 						<div class="subdiv">
-							<!-- <input type="submit" value="登录" id="sub""/> -->
-							<p>
-								<a id="loginBtn" type="submit" href="javascript:void(0)">登录</a>
-							</p>
+							<input type="submit" value="登录" id="sub" />
 						</div>
 						<div class="noweb">
 							还没有微博？<a href="page/register1.jsp">立即注册!</a>
@@ -296,7 +325,7 @@
 			<!--注册登录结束-->
 
 			<!--下载部分开始-->
-			<div class="download">
+			<!-- <div class="download">
 				<div class="iPone">
 					<a href=""> <img src="images/ipone.png" />
 						<p>
@@ -310,8 +339,38 @@
 							Android<br />客户端下载
 						</p> </a>
 				</div>
-			</div>
+			</div> -->
 			<!--下载部分结束-->
+
+			<!--热门话题开始-->
+			<!-- <div class="hot">
+				<div class="title_hot">
+					<h4>热门话题</h4>
+					<a href="" class="ah">换一换</a>
+				</div>
+				<ul>
+					<li><a
+						href="http://weibo.com/p/1008080f40b089dde4bc56c92a2068f1d07e0a?k=%E5%A4%A7%E5%AD%A6%E6%AC%A0%E6%88%91%E4%B8%80%E4%B8%AA%E8%82%96%E5%A5%88&from=trendtop_api">
+							#大学欠我一个肖奈#</a><span>3.1亿</span></li>
+					<li><a
+						href="http://weibo.com/p/100808499113e6f1dd61f8b92d19bcc1bdf2f6?k=%E4%B8%AD%E5%9B%BD%E5%BC%8F%E6%A0%A1%E6%9C%8D&from=trendtop_api">#中国式校服#</a><span>123万</span></li>
+					<li><a
+						href="http://weibo.com/p/10080847dc5c801897f171422c47141905da4c?k=%E5%BC%80%E5%AD%A6%E5%AD%A3&from=trendtop_api">#开学季#</a><span>13亿</span></li>
+					<li><a href="">#反贪风暴2提档914#</a><span>5.1亿</span></li>
+					<li><a href="">#九州天城#</a><span>456.8万</span></li>
+					<li><a href="">#与刘雯在一起的8年#</a><span>34万</span></li>
+					<li><a href="">#看尚品牌季#</a><span>990万</span></li>
+					<li><a href="">#欧弟回归芒果台#</a><span>2.0亿</span></li>
+				</ul>
+			</div> -->
+			<!--热门话题结束-->
+
+			<!--广告图片开始-->
+			<!-- <div class="ad">
+				<a href="http://weibo.com/p/1004041196010"><img
+					src="images/4.jpg.png" /></a>
+			</div> -->
+			<!--广告图片结束-->
 
 			<!--头条部分开始-->
 			<div class="headline">
@@ -332,7 +391,7 @@
 			<!--头条部分结束-->
 
 			<!--微博找人开始-->
-			<div class="findpeople">
+			<!-- <div class="findpeople">
 				<h4>微博找人</h4>
 				<div class="famous">
 					<h5>名人</h5>
@@ -440,7 +499,7 @@
 								src="images/1087030002_558_3_5007.png">&nbsp;&nbsp;媒体</a></li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 			<!--微博找人结束-->
 		</div>
 		<!--新闻部分结束-->
@@ -478,6 +537,12 @@
 						href="" class="a2">意见反馈</a> <a href="" class="a2">舞弊举报</a> <a
 						href="" class="a2">开放平台</a> <a href="" class="a2">微博招聘</a> <a
 						href="" class="a2">新浪网导航</a> <a href="" class="a2">举报处理大厅</a>
+					<!-- <select>
+                      <option>中文(简体)</option>
+                      <option>中文(繁体)</option>
+                      <option>中文(香港)</option>
+                      <option>English</option>
+                  </select> -->
 				</div>
 				<div class="address">
 					<a href="">京ICP证100780号</a> <a href="">互联网药品服务许可证</a> <a href="">互联网医疗保健许可证</a>
@@ -499,9 +564,7 @@
 		<a href="#top"></a>
 	</div>
 	<!--返回顶部结束-->
-	<script type="text/javascript" src="easyui/jquery.min.js"></script>
-	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+
 	<script src="js/visitor.js"></script>
 </body>
 </html>

@@ -1,5 +1,29 @@
 // JavaScript Document
 
+var li11=document.getElementsByClassName("li11")[0];
+var navMove0=document.getElementsByClassName("navMove0")[0];
+var navMore=document.getElementsByClassName("nav_more")[0];
+
+li11.onmouseover=function(){
+	navMore.style.display='block';
+	navMove0.style.display='block';
+}
+li11.onmouseout=function(){
+	navMore.style.display='none';
+	navMove0.style.display='none';
+}
+navMore.onmouseover=function(){
+	navMore.style.display='block';
+	navMove0.style.display='block';
+}
+navMore.onmouseout=function(){
+	navMore.style.display='none';
+	navMove0.style.display='none';
+}
+
+
+
+
 /*加载登录*/
 window.onload = function() {
 
@@ -142,9 +166,7 @@ for (var m= 0; m< quit.length; m++) {
 	}
 }	
 
-$('#loginBtn').linkbutton({    
-    onClick: function(){    	
-    	$("#loginForm").submit();
-    }
-}); 
+$.post(function(data){
+	alert(1);
+});
 

@@ -7,7 +7,7 @@
 		<meta charset="UTF-8">
 		<title>找回账号密码</title>
 		<link rel="icon" href="images/favicon.ico" />
-		<link  rel="stylesheet" href="css/password.css">
+		<link  rel="stylesheet" href="../css/password.css">
 	</head>
 	<body>
 		<div class="top">
@@ -36,7 +36,7 @@
 					<div class="content2_2">
 						<span class="content2_21">验证码：</span>
 						<input type="text" id="yanzhengma" />
-						<img src="images/yanzheng_1.png" id="yanzhengtu"/>
+						<img src="../images/yanzheng_1.png" id="yanzhengtu"/>
 						<a id="huanyihuan">换一换</a>
 						<span id="huan1" style="display:none;">请输入验证码</span>
 						<span id="huan2" style="display: none;">请输入正确的验证码</span>
@@ -70,6 +70,6 @@
 				<a href="">京ICP证100780号</a>
 			</div>
 		</div>
-		<script type="text/javascript" src="js/password.js" ></script>
+		<script type="text/javascript" src="../js/password.js" ></script>
 	</body>
 </html>
