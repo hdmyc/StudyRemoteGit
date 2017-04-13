@@ -97,27 +97,14 @@ function showDetail(userid){
 		$("#aqq").val(data.qq);
 		$("#amobile").val(data.mobile);
 		$("#abrief").val(data.brief);
-		/*if(data.head_picture){
-			$("#dhead_picture").attr("src", data.head_picture);
+		$("#ahead_picture").val("");
+
+		if(data.head_picture){
+			$("#ahead_picture").attr("src", data.head_picture);
 		}else{
-			$("#dhead_picture").attr("src", "backimages/ali.gif");
-		}*/
+			$("#ahead_picture").attr("src", "backimages/not_pic.jpg");
+		}
 
 	},"json");
 }
 
-
-$("#modifyForm").form({
-	/*url:"news/modify",
-	success:function(data){
-		alert(data)
-	}*/
-});
-/*$("input#modifyBtn").click(function(){
-	$("#ncontent").val(contentEditor.getContent());
-	$("#modifyForm").submit();
-});*/
-
-function chgPic(obj){
-	$("#epic").attr("src",window.URL.createObjectURL(obj.files[0]));
-}

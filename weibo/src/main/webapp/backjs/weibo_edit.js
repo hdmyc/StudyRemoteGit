@@ -50,6 +50,7 @@ function showDetail(wid){
 		$("#acommentNum").val(data.commentNum);
 		$("#awstatus").val(data.wstatus);
 		/*$("bwpic").val(row.wpic);*/
+		
 	},"json");
 }
 

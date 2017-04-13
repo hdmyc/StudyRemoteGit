@@ -41,27 +41,27 @@ function showDetail(userid){
 		$("#bustatus").val(dataA.ustatus);
 	},"json");
 	$.post("userDetail/listDetail?userid="+userid,function(data){
-	    $("#dnickname").val(data.nickname);
-	    $("#dusername").val(data.username);
-	    $("#dnickname").val(data.nickname);
-	    $("#dbirthdate").val(data.birthdate);
-	    $("#dsex").val(data.sex);
-	    $("#daddress").val(data.address);
-	    $("#dbloodType").val(data.bloodType);
-	    $("#dblog").val(data.blog);
-	    $("#demail").val(data.email);
-	    $("#dqq").val(data.qq);
-	    $("#dmobile").val(data.mobile);
-	    $("#dbrief").val(data.brief);
-	    
-		/*
-		  $("#dhead_picture").val(backimages/ali.gif);
-		 if(data.head_picture){
+		$("#dnickname").val(data.nickname);
+		$("#dusername").val(data.username);
+		$("#dnickname").val(data.nickname);
+		$("#dbirthdate").val(data.birthdate);
+		$("#dsex").val(data.sex);
+		$("#daddress").val(data.address);
+		$("#dbloodType").val(data.bloodType);
+		$("#dblog").val(data.blog);
+		$("#demail").val(data.email);
+		$("#dqq").val(data.qq);
+		$("#dmobile").val(data.mobile);
+		$("#dbrief").val(data.brief);
+
+
+		$("#dhead_picture").val("");
+		if(data.head_picture){
 			$("#dhead_picture").attr("src", data.head_picture);
 		}else{
-			$("#dhead_picture").attr("src", "backimages/ali.gif");
-		}*/
-		
+			$("#dhead_picture").attr("src", "backimages/not_pic.jpg");
+		}
+
 	},"json");
-	
+
 }
