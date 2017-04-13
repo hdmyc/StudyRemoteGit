@@ -13,7 +13,6 @@
 <body>
 	<div id="login" style="display: none">
 		<div id="lo"></div>
-
 		<div id="content1" style="display: block;">
 			<div id="quitlogin">
 				<span class="quit">X</span>
@@ -155,98 +154,28 @@
 					class="chara_5"><p>43万</p></span>
 				</a>
 			</div>
-			<div class="content_2">
-				<a
-					href="http://s.weibo.com/weibo/%25E9%259F%25A9%25E5%259B%25BD%25E6%2598%258E%25E6%2598%259F%25E8%25A1%2597%25E6%258B%258D?topnav=1&wvr=6&topsug=1">
-					<p class="tit_1">
-						<span>#杨洋ico#</span>大家最近迷不迷肖奈学长啊
-					</p>
-					<p class="tit_2">衬衫：Thom Browne</p> <img src="images/yang1.jpg" />
-					<img src="images/yang2.jpg" /> <img src="images/yang3.jpg" />
-					<p class="tit_3">韩国明星街拍 8月17日 5：31</p> <span class="chara_3"><p>3亿&nbsp;&nbsp;|</p></span>
-					<span class="chara_4"><p>2309万&nbsp;&nbsp;|</p></span> <span
-					class="chara_5"><p>999万</p></span>
-				</a>
-			</div>
-			<div class="content_3">
-				<a
-					href="http://weibo.com/u/5329322528?refer_flag=1001030001_&nick=%E7%A5%9E%E9%87%87%E9%A3%9E%E6%89%AC&is_all=1">
-					<img src="images/yu_1.jpg" style="width: 120px; height: 90px" />
-					<h3>两款家常鲤鱼做法 让你轻松享受美味</h3>
-					<p class="chara_1">做鲤鱼需要一定的技巧才会更加好吃，下面我们就给大家介绍几 种简单好吃的家常鱼做法</p>
+			<div class="content_1">
+				<a href="http://weibo.com/shenqiUSA?topnav=1&wvr=6&topsug=1"> <img
+					src="images/intro_1.jpg" style="width: 120px; height: 90px" />
+					<p class="chara_1">我爱吃，怎么就惹到男朋友了？</p>
 					<p class="chara_2">
-						<img src="images/yu_2.png" /> 神采飞扬1688 今天15:06
-					</p> <span class="chara_3"><p>8601&nbsp;&nbsp;|</p></span> <span
-					class="chara_4"><p>234&nbsp;&nbsp;|</p></span> <span
-					class="chara_5"><p>6789</p></span>
+						<img src="images/intro_2.png" />北美吐槽君 今天06:15
+					</p> <span class="chara_3"><p>2.1万&nbsp;&nbsp;|</p></span> <span
+					class="chara_4"><p>9999&nbsp;&nbsp;|</p></span> <span
+					class="chara_5"><p>43万</p></span>
 				</a>
 			</div>
-			<div class="content_5">
-				<a href="http://weibo.com/512789686?topnav=1&wvr=6&topsug=1"> <img
-					src="images/yifei.jpg" style="width: 120px; height: 90px" /> <!--这里有空的，这是一个视频-->
-					<p class="chara_1">"年轻的爱情常有遗憾，错过了就是错过了。只是喜欢你，没说非
-						要在一起。谢谢你的微笑，曾经慌乱过我的年华。微笑着，让他从你的</p>
+			<div class="content_1">
+				<a href="http://weibo.com/shenqiUSA?topnav=1&wvr=6&topsug=1"> <img
+					src="images/intro_1.jpg" style="width: 120px; height: 90px" />
+					<p class="chara_1">我爱吃，怎么就惹到男朋友了？</p>
 					<p class="chara_2">
-						<img src="images/yifei2.png" />治愈系心理学 8月28日 09.12
-					</p> <span class="chara_3"><p>4301&nbsp;&nbsp;|</p></span> <span
-					class="chara_4"><p>232&nbsp;&nbsp;|</p></span> <span
-					class="chara_5"><p>675</p></span>
+						<img src="images/intro_2.png" />北美吐槽君 今天06:15
+					</p> <span class="chara_3"><p>2.1万&nbsp;&nbsp;|</p></span> <span
+					class="chara_4"><p>9999&nbsp;&nbsp;|</p></span> <span
+					class="chara_5"><p>43万</p></span>
 				</a>
 			</div>
-			<div class="content_6">
-				<a href="http://weibo.com/u/5157296803?refer_flag=1001030102_">
-					<img src="images/yun1.jpg" style="width: 120px; height: 90px" />
-					<h3>健身十年,出差?工作忙?从来都不是借口!</h3>
-					<p class="chara_1">健身十年，之后还有下一个十年，下下个十年</p>
-					<p class="chara_2">
-						<img src="images/yun2.png" /> 健身硬派 8月28日 22：18
-					</p> <span class="chara_3"><p>2万&nbsp;&nbsp;|</p></span> <span
-					class="chara_4"><p>1230&nbsp;&nbsp;|</p></span> <span
-					class="chara_5"><p>2万</p></span>
-				</a>
-			</div>
-			<div class="content_7">
-				<a href="http://weibo.com/u/1227328177?refer_flag=1001030103_">
-					<p class="tit_1">
-						有时。。。我也会。。思考。。到底。。哪个才是。。。真正的。。。我<img src="images/ee9082.png" />!今晚十点<img
-							src="images/ee9084.png" />我又要去上学了<img src="images/ee90ba.png" />
-					</p> <img src="images/feng1.jpg" /> <img src="images/feng2.jpg" /> <img
-					src="images/feng3.jpg" />
-					<p class="tit_3">
-						<img src="images/feng4.png" class="feng4" />张丹峰 8月28日 18:45
-					</p> <span class="chara_3"><p>2亿&nbsp;&nbsp;|</p></span> <span
-					class="chara_4"><p>1230万&nbsp;&nbsp;|</p></span> <span
-					class="chara_5"><p>1.8亿</p></span>
-				</a>
-			</div>
-			<div class="content_8">
-				<a
-					href="http://weibo.com/u/1815418641?from=feed&loc=nickname&is_hot=1">
-					<img src="images/yyang1.jpg" style="width: 120px; height: 90px" />
-					<p class="chara_1">是时候用美色来“贿赂”你们了</p>
-					<p class="chara_2">
-						<img src="images/yyang2.jpg" style="width: 18px; height: 18px" /><span>@杨洋
-							今天09:37</span>
-					</p> <span class="chara_3"><p>52549&nbsp;&nbsp;|</p></span> <span
-					class="chara_4"><p>77901&nbsp;&nbsp;|</p></span> <span
-					class="chara_5"><p>31490</p></span>
-				</a>
-			</div>
-			<div class="content_9">
-				<a href="http://weibo.com/dengchao?from=feed&loc=nickname&is_hot=1">
-					<p class="chara_1">我媳妇用12天又发明出了一种叫”黑蒜“的物种，说给我补身体，哪位好心人能收留我几天？</p> <img
-					src="images/suan1.jpg" class="suan1" /> <img
-					src="images/suan2.jpg" class="suan" /> <img src="images/suan3.jpg"
-					class="suan" />
-					<p class="chara_2">
-						<img src="images/chao.jpg" style="width: 18px; height: 18px" /><span>@邓超
-							今天17:15</span>
-					</p> <span class="chara_3"><p>2095&nbsp;&nbsp;|</p></span> <span
-					class="chara_4"><p>29549&nbsp;&nbsp;|</p></span> <span
-					class="chara_5"><p>185342</p></span>
-				</a>
-			</div>
-			<div class="content_10">正在加载，请稍后</div>
 		</div>
 
 		<!--内容部分结束-->
@@ -313,139 +242,12 @@
 			</div>
 			<!--下载部分结束-->
 
-			<!--头条部分开始-->
-			<div class="headline">
-				<h4>
-					<a href="">新浪头条</a>
-				</h4>
-				<ul>
-					<!--有没写完的-->
-					<li><a href=""><img src="images/record.png" />热榜要闻</a></li>
-					<li class="hl3"><a href=""><img src="images/picture .png" />我爱看图</a></li>
-					<li><a href=""><img src="images/like.png" />猜你喜欢</a></li>
-					<li class="hl3"><a href=""><img src="images/screen.png" />精彩视频</a></li>
-					<li><a href=""><img src="images/hear.png" />李治廷疑认昔日与范冰冰恋情</a></li>
-					<li><a href=""><img src="images/hp.png" />杨洋郑爽心机情侣装甜一脸</a></li>
-					<li><a href=""><img src="images/vie .png" />娜扎呛黑粉:丑忍着恶心你吐呀</a></li>
-				</ul>
-			</div>
-			<!--头条部分结束-->
-
-			<!--微博找人开始-->
-			<div class="findpeople">
-				<h4>微博找人</h4>
-				<div class="famous">
-					<h5>名人</h5>
-					<ul>
-						<li><a href=""><img
-								src="images/1087030002_892_1003_0.png">&nbsp;&nbsp;明星</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_892_1001_0.png">&nbsp;&nbsp;商界</a></li>
-						<li><a href=""><img
-								src="images/1087030002_854_2025_0.png">&nbsp;&nbsp;媒体精英</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_892_1005_0.png">&nbsp;&nbsp;作家</a></li>
-						<li><a href=""><img
-								src="images/1087030002_892_1004_0.png">&nbsp;&nbsp;政府官员</a></li>
-					</ul>
-				</div>
-				<div class="expert">
-					<h5>专家</h5>
-					<ul>
-						<li><a href=""><img
-								src="images/1087030002_558_3_2017.png">&nbsp;&nbsp;医疗</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_2018.png">&nbsp;&nbsp;育儿</a></li>
-						<li><a href=""><img
-								src="images/1087030002_558_3_5002.png">&nbsp;&nbsp;IT互联网</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_5012.png">&nbsp;&nbsp;电台</a></li>
-						<li><a href=""><img
-								src="images/1087030002_558_3_5001.png">&nbsp;&nbsp;财经</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_2016.png">&nbsp;&nbsp;教育</a></li>
-						<li><a href=""><img
-								src="images/1087030002_558_3_5013.png">&nbsp;&nbsp;法律</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_2014.png">&nbsp;&nbsp;美妆</a></li>
-						<li><a href=""><img
-								src="images/1087030002_854_2024_0.png">&nbsp;&nbsp;艺术</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_5015.png">&nbsp;&nbsp;设计</a></li>
-						<li><a href=""><img
-								src="images/1087030002_558_3_5005.png">&nbsp;&nbsp;房产家装</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_5006.png">&nbsp;&nbsp;汽车</a></li>
-						<li><a href=""><img
-								src="images/1087030002_558_3_5008.png">&nbsp;&nbsp;交通</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_2013.png">&nbsp;&nbsp;职业招聘</a></li>
-						<li><a href=""><img
-								src="images/1087030002_558_3_5011.png">&nbsp;&nbsp;婚庆</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_5014.png">&nbsp;&nbsp;家教</a></li>
-					</ul>
-				</div>
-				<div class="interest">
-					<h5>兴趣</h5>
-					<ul>
-						<li><a href=""><img
-								src="images/1087030002_854_2025_0.png">&nbsp;&nbsp;时尚</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_854_2006_0.png">&nbsp;&nbsp;美女</a></li>
-						<li><a href=""><img
-								src="images/1087030002_854_2012_0.png">&nbsp;&nbsp;电影</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_854_2021_0.png">&nbsp;&nbsp;电视剧</a></li>
-						<li><a href=""><img
-								src="images/1087030002_854_2011_0.png">&nbsp;&nbsp;音乐</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_854_2001_0.png">&nbsp;&nbsp;动漫</a></li>
-						<li><a href=""><img
-								src="images/1087030002_854_2019_0.png">&nbsp;&nbsp;游戏</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_5012.png">&nbsp;&nbsp;星座</a></li>
-						<li><a href=""><img
-								src="images/1087030002_854_2004_0.png">&nbsp;&nbsp;搞笑</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_854_2007_0.png">&nbsp;&nbsp;情感两性</a></li>
-						<li><a href=""><img
-								src="images/1087030002_854_2020_0.png">&nbsp;&nbsp;运动健身</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_854_2008_0.png">&nbsp;&nbsp;体育</a></li>
-						<li><a href=""><img
-								src="images/1087030002_854_2002_0.png">&nbsp;&nbsp;萌宠</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_854_2023_0.png">&nbsp;&nbsp;美食</a></li>
-						<li><a href=""><img
-								src="images/1087030002_558_3_5003.png">&nbsp;&nbsp;旅游</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_2015.png">&nbsp;&nbsp;摄影</a></li>
-						<li><a href=""><img
-								src="images/1087030002_854_2026_0.png">&nbsp;&nbsp;历史</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_854_2026_0.png">&nbsp;&nbsp;军事</a></li>
-						<li><a href=""><img
-								src="images/1087030002_558_3_5009.png">&nbsp;&nbsp;科学</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_854_2009_0.png">&nbsp;&nbsp;数码</a></li>
-					</ul>
-				</div>
-				<div class="document">
-					<h5>机构</h5>
-					<ul>
-						<li class="li1"><a href=""><img
-								src="images/1087030002_558_3_5004.png">&nbsp;&nbsp;政务</a></li>
-						<li class="li2"><a href=""><img
-								src="images/1087030002_558_3_5007.png">&nbsp;&nbsp;媒体</a></li>
-					</ul>
-				</div>
-			</div>
-			<!--微博找人结束-->
 		</div>
 		<!--新闻部分结束-->
 
-
+		<div id="nextPage">
+			<div class="content_2">正在加载，请稍后</div>
+		</div>
 		<!--脚注开始-->
 		<div id="foot">
 			<div class="foot-top">
