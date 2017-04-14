@@ -166,7 +166,7 @@ function loadWeibo(){
 				}
 
 				weiboStr += '<p class="chara_1">'+ data[i].wnote +'</p>';
-				weiboStr += '<p class="chara_2">@'+ data[i].userid/*nickname*/ +'&nbsp;&nbsp;'+ data[i].wtime +'</p>';
+				weiboStr += '<p class="chara_2">@'+ data[i].wuserid/*nickname*/ +'&nbsp;&nbsp;'+ data[i].wtime +'</p>';
 				weiboStr += '<span class="chara_3"><p>'+ data[i].transmitNum +'&nbsp;&nbsp;|</p></span>'; 
 				weiboStr += '<span class="chara_4"><p>'+ data[i].commentNum +'&nbsp;&nbsp;|</p></span>';
 				weiboStr += '<span class="chara_5"><p>'+ data[i].zanNum +'</p></span></a></div>';
