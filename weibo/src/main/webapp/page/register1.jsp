@@ -24,16 +24,16 @@
 			<div id="con2">
 				<form  method="post" id="form1" action="user/register" style="display: block;">
 					<div id="shoujidiv">
-						<span id="span1" ><i id="spani">*</i>手机：</span>
+						<span id="span1" ><i id="spani">*</i>邮箱：</span>
 						<span id="guoqi" class="color1"></span>
 						<div id="number"  class="color1">
-							<span id="diquhao">+86</span>
-							<input type="text" name="userid"  placeholder="请输入您的手机号" id="shouji"/>
+							<span id="diquhao"></span>
+							<input type="text" name="userid"  placeholder="请输入您的邮箱" id="shouji"/>
 						</div>
 						
-						<span id="shoujits1" style="display: none;">请输入您的手机号码</span>
-						<span id="shoujits2" style="display: none;">手机号长度11位，以13/14/15/17/18开头</span>
-						<span id="shoujits3" style="display: none;">请输入手机号码</span>
+						<span id="shoujits1" style="display: none;">请输入您的邮箱</span>
+						<span id="shoujits2" style="display: none;">邮箱号长度11位，以13/14/15/17/18开头</span>
+						<span id="shoujits3" style="display: none;">输入您的邮箱</span>
 						<span id="shoujits4" style="display: none;"></span>
 					</div>
 

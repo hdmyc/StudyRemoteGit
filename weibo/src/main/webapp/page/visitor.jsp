@@ -42,12 +42,12 @@
 					<div class="subdiv">
 						<input type="submit" value="登录" id="sub" />
 					</div>
-					<div class="qqdengludiv">
+					<!-- <div class="qqdengludiv">
 						<a href=""><div class="qq1"></div></a> <input type="submit"
 							name="uname" value="使用QQ直接登录" id="phone1" />
-					</div>
+					</div> -->
 					<div class="noweb">
-						<a href="register1.html">立即注册</a><a class="duanxin">短信登录</a>
+						<a href="page/register1.jsp">立即注册</a><a class="duanxin">短信登录</a>
 					</div>
 				</form>
 			</div>
@@ -143,7 +143,7 @@
 	<div id="center">
 		<!--内容部分开始-->
 		<div class="content">
-			<div class="content_1">
+			<!-- <div class="content_1">
 				<a href="http://weibo.com/shenqiUSA?topnav=1&wvr=6&topsug=1"> <img
 					src="images/intro_1.jpg" style="width: 120px; height: 90px" />
 					<p class="chara_1">我爱吃，怎么就惹到男朋友了？</p>
@@ -153,30 +153,9 @@
 					class="chara_4"><p>9999&nbsp;&nbsp;|</p></span> <span
 					class="chara_5"><p>43万</p></span>
 				</a>
-			</div>
-			<div class="content_1">
-				<a href="http://weibo.com/shenqiUSA?topnav=1&wvr=6&topsug=1"> <img
-					src="images/intro_1.jpg" style="width: 120px; height: 90px" />
-					<p class="chara_1">我爱吃，怎么就惹到男朋友了？</p>
-					<p class="chara_2">
-						<img src="images/intro_2.png" />北美吐槽君 今天06:15
-					</p> <span class="chara_3"><p>2.1万&nbsp;&nbsp;|</p></span> <span
-					class="chara_4"><p>9999&nbsp;&nbsp;|</p></span> <span
-					class="chara_5"><p>43万</p></span>
-				</a>
-			</div>
-			<div class="content_1">
-				<a href="http://weibo.com/shenqiUSA?topnav=1&wvr=6&topsug=1"> <img
-					src="images/intro_1.jpg" style="width: 120px; height: 90px" />
-					<p class="chara_1">我爱吃，怎么就惹到男朋友了？</p>
-					<p class="chara_2">
-						<img src="images/intro_2.png" />北美吐槽君 今天06:15
-					</p> <span class="chara_3"><p>2.1万&nbsp;&nbsp;|</p></span> <span
-					class="chara_4"><p>9999&nbsp;&nbsp;|</p></span> <span
-					class="chara_5"><p>43万</p></span>
-				</a>
-			</div>
+			</div> -->
 		</div>
+		
 
 		<!--内容部分结束-->
 
@@ -294,9 +273,15 @@
 		<a href="#top"></a>
 	</div>
 	<!--返回顶部结束-->
+	
 	<script type="text/javascript" src="easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	
+	<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
+	
 	<script src="js/visitor.js"></script>
 </body>
 </html>
