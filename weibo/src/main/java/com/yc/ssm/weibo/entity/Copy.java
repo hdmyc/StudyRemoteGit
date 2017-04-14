@@ -32,11 +32,9 @@ public class Copy {//7.转发表
 	public void setCptime(String cptime) {
 		this.cptime = cptime;
 	}
-	
 	@Override
 	public String toString() {
-		return "Copy [copyid=" + copyid + ", cwid=" + cwid + ", copyuserid="
-				+ copyuserid + ", cptime=" + cptime + "]";
+		return "\nCopy [copyid=" + copyid + ", cwid=" + cwid + ", copyuserid=" + copyuserid + ", cptime=" + cptime + "]";
 	}
 	
 }

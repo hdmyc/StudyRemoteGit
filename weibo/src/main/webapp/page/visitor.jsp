@@ -164,8 +164,7 @@
 			<!--注册登录开始-->
 			<div class="register">
 				<div class="select">
-					<span class="span1"><a href="">账号登录</a></span> <a href=""><div
-							class="pic11"></div></a>
+					<span class="span1"><a href="">账号登录</a></span> <a href=""><div class="pic11"></div></a>
 				</div>
 				<!--登陆 start  -->
 				<div class="regst">

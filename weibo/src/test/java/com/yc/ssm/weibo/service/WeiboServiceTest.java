@@ -44,9 +44,6 @@ public class WeiboServiceTest {
 
 	@Test
 	public void testFindWeibo() {
-		/*Weibo  weibo=new Weibo();
-		weibo.setWuserid("1119185633@qq.com");
-		System.out.println();*/
 		Weibo  weibo = weiboService.findWeibo("1119185633@qq.com");
 		System.out.println(weibo);
 		assertNotNull(weibo);

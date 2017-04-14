@@ -5,6 +5,8 @@ DROP USER weibo cascade;
 
 select USERID, UPWD, REGISTER_TIME from UserInfo where USERID ='15570934077' and UPWD='aa'
 
+select * from root;
+
 --0.管理员表
 CREATE TABLE root(
     rid    VARCHAR2(4) PRIMARY KEY, --管理员编号
@@ -48,7 +50,7 @@ INSERT INTO userInfo VALUES ('15570934077','cb54db33854702097a70d3d88184183f7cd6
 
 SELECT * FROM userInfo
 DROP TABLE userInfo
-
+select * from userDetail
 --2.用户详细信息表
 create table userDetail(
   userDetailId       NUMBER(10) PRIMARY KEY,        --详细用户编号
@@ -68,8 +70,6 @@ create table userDetail(
   msgStatue          number(1) default 0 constraint ck_msgStatue check(msgStatue in(0,1,2))  --个人信息权限  默认0所有人可见  1我关注的人可见   2仅自己可见
 );
 
-  )
-  
  create sequence userDetailId_seq          
         increment by 1          
         start with 10001       
@@ -202,6 +202,8 @@ DROP table weibo
           copyuserid    varchar2(20) constraint fk_copyuserid  references userInfo(userid) ,  --用户
           cptime       varchar2(20) default SYSDATE   --转发时间
    )
+   drop table copy
+   select  * from copy;
      create sequence copyid_seq          
      increment by 1          
      start with 10000001    

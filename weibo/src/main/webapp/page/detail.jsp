@@ -165,7 +165,7 @@
 
 	<!--中间内容开始-->
 	<div id="content">
-		<form method="post" id="detail">
+		<form method="get" id="detail">
 			<p>
 				<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
 					type="text" name="userid" id="userid" />
@@ -220,6 +220,6 @@
 					value="提交修改" /></a>
 		</form>
 	</div>
-
+<script type="text/javascript" src="js/detail.js"></script>
 </body>
 </html>

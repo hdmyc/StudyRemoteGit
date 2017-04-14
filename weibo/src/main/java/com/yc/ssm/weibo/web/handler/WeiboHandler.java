@@ -50,9 +50,8 @@ public class WeiboHandler {
 	
 	@ResponseBody
 	@RequestMapping(value="findWeibo",method=RequestMethod.GET)
-	public Weibo findWeibo(HttpServletRequest request,HttpSession session){
-		//String wuserid = (String) request.getSession().getAttribute(ServletUtil.USERID);
-		String wuserid = "1119185633@qq.com";
+	public Weibo findWeibo(String wuserid){
+		LogManager.getLogger().debug("找到微博信息..............");
 		return weiboService.findWeibo(wuserid);
 	}
 }

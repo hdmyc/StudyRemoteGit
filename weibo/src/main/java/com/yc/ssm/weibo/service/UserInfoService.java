@@ -1,6 +1,5 @@
 package com.yc.ssm.weibo.service;
 
-import java.util.List;
 
 import com.yc.ssm.weibo.entity.PaginationBean;
 import com.yc.ssm.weibo.entity.UserInfo;
