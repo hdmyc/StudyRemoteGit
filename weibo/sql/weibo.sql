@@ -61,7 +61,7 @@ create table userDetail(
   address            varchar2(200),                 --地址
   bloodType          varchar2(4),                   --血型
   brief              varchar2(100) ,                --简介
-  head_picture       varchar2(100),                 --头像
+  head_picture       varchar2(1000),                 --头像
   blog               VARCHAR2(50),                  --博客地址
   email              varchar2(30),                  --邮箱
   qq                 number(15),                    --qq
@@ -69,7 +69,6 @@ create table userDetail(
   ustatus            number(1) default 0   ,         --是否禁言
   msgStatue          number(1) default 0 constraint ck_msgStatue check(msgStatue in(0,1,2))  --个人信息权限  默认0所有人可见  1我关注的人可见   2仅自己可见
 );
-
  create sequence userDetailId_seq          
         increment by 1          
         start with 10001       
@@ -78,16 +77,16 @@ create table userDetail(
  drop table userDetail
           
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'陈奕迅','1985-01-05','林森男神经','F','香港','O','我是一个唱歌很有魅力的歌手','1.jpg','http://blog.chenyixun.com','1119185633@qq.com',1119185633,18473436246,'1119185633@qq.com',0);
+  VALUES(userDetailId_seq.nextval,'陈奕迅','1985-01-05','林森男神经','F','香港','O','我是一个唱歌很有魅力的歌手','/uploadWeibo/','http://blog.chenyixun.com','1119185633@qq.com',1119185633,18473436246,'1119185633@qq.com',0);
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'周杰伦','1986-08-15','店小二奔跑吧','F','台湾','A','哎哟，不错哟','3.jpg','http://blog.com.cn/zhoujielun.com','jaejoonglee@163.com',565944701,18473436246,'jaejoonglee@163.com',0);
+  VALUES(userDetailId_seq.nextval,'周杰伦','1986-08-15','店小二奔跑吧','F','台湾','A','哎哟，不错哟','/uploadWeibo/','http://blog.com.cn/zhoujielun.com','jaejoonglee@163.com',565944701,18473436246,'jaejoonglee@163.com',0);
 INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'那英','1986-09-20','喵星人的喵星球','M','台湾','A','天气好的时候适合唱歌','4.jpg','http://blog.com.cn/naying.com','1298237952@qq.com',1298237952,18473436246,'1298237952@qq.com',0);
+  VALUES(userDetailId_seq.nextval,'那英','1986-09-20','喵星人的喵星球','M','台湾','A','天气好的时候适合唱歌','/uploadWeibo/','http://blog.com.cn/naying.com','1298237952@qq.com',1298237952,18473436246,'1298237952@qq.com',0);
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'565944701@qq.com',0);
+  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','/uploadWeibo/','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'565944701@qq.com',0);
 
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'15570934077',0);
+  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','1.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'15570934077',0);
 
   SELECT * FROM userDetail where userDetailId = 10001;
 
@@ -258,3 +257,4 @@ create table follow(
      increment by 1          
      start with 10000001 
      DROP TABLE reply
+select * from reply

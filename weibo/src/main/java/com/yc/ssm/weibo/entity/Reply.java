@@ -4,7 +4,7 @@ package com.yc.ssm.weibo.entity;
 public class Reply {
 
 	private Integer reid;
-	private String recwid;
+	private Integer recwid;
 	private String reuserid;
 	private String recontent;
 	private String retime;
@@ -14,10 +14,10 @@ public class Reply {
 	public void setReid(Integer reid) {
 		this.reid = reid;
 	}
-	public String getRecwid() {
+	public Integer getRecwid() {
 		return recwid;
 	}
-	public void setRecwid(String recwid) {
+	public void setRecwid(Integer recwid) {
 		this.recwid = recwid;
 	}
 	public String getReuserid() {
@@ -40,7 +40,7 @@ public class Reply {
 	}
 	@Override
 	public String toString() {
-		return "Reply [reid=" + reid + ", recwid=" + recwid + ", reuserid=" + reuserid + ", recontent=" + recontent
+		return "\nReply [reid=" + reid + ", recwid=" + recwid + ", reuserid=" + reuserid + ", recontent=" + recontent
 				+ ", retime=" + retime + "]";
 	}
 	
