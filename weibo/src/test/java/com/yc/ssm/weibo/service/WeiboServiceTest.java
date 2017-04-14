@@ -55,5 +55,7 @@ public class WeiboServiceTest {
 		System.out.println(pb);
 		assertNotNull(pb);
 	}
+	
+
 
 }

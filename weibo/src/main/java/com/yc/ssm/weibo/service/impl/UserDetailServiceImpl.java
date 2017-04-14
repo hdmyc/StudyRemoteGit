@@ -37,6 +37,11 @@ public class UserDetailServiceImpl implements UserDetailService {
 	public UserDetail listDetail(String userid) {
 		return userDetailMapper.listDetail(userid);
 	}
+
+	@Override
+	public String findNickname(String userid) {
+		return userDetailMapper.findNickname(userid);
+	}
 	
 	
 }

@@ -472,7 +472,6 @@ body {
 	color: #808080;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #E5E5E5;
-	background-color: blue;
 }
 
 .register .noweb a {
@@ -1043,15 +1042,15 @@ body {
 	background-color: #FA6F29;
 }
 
-#login #con2 form .qqdengludiv {
+/* #login #con2 form .qqdengludiv {
 	width: 232px;
 	height: 36px;
 	margin-left: 185px;
 	margin-top: 16px;
 	border: 1px solid #ccc;
-}
+} */
 
-#login #con2 form .qqdengludiv #phone1, #login #con2 form .qqdengludiv #phone3
+/* #login #con2 form .qqdengludiv #phone1, #login #con2 form .qqdengludiv #phone3
 	{
 	height: 36px;
 	width: 162px;
@@ -1060,16 +1059,16 @@ body {
 	left: 38px;
 	border: none;
 	background: none;
-}
+} */
 
-#login #con2 form .qqdengludiv a .qq1 {
+/* #login #con2 form .qqdengludiv a .qq1 {
 	width: 18px;
 	height: 21px;
 	position: relative;
 	left: -60px;
 	top: 8px;
 	background: url(../images/qq1.png) no-repeat;
-}
+} */
 
 #login #content2 .saoyisao {
 	width: 208px;

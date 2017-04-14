@@ -49,5 +49,12 @@ public class UserDetailServiceTest {
 		System.out.println(detail);
 		assertNotNull(detail);
 	}
+	
+	@Test
+	public void testFindNickname() {
+		String nickname = userDetailService.findNickname("1119185633@qq.com") ;
+		System.out.println(nickname);
+		assertNotNull(nickname);
+	}
 
 }

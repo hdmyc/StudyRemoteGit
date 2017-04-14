@@ -57,13 +57,20 @@ public class UserDetailHandler{
 	
 	
 	//根据userid查找UserDetail表信息
-	@SuppressWarnings("unused")
 	@ResponseBody
 	@RequestMapping(value="/listDetail",method=RequestMethod.POST)
 	public UserDetail listDetail(String userid){
 		System.out.println(userid);
 		UserDetail userDetail = userDetailService.listDetail(userid);
 		return userDetailService.listDetail(userid);
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="/findNickname",method=RequestMethod.GET)
+	public String findNickname(String userid){
+		System.out.println(userid);
+		UserDetail userDetail = userDetailService.listDetail(userid);
+		return userDetailService.findNickname(userid);
 	}
 	
 	

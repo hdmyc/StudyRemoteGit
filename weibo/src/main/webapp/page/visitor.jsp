@@ -42,12 +42,12 @@
 					<div class="subdiv">
 						<input type="submit" value="登录" id="sub" />
 					</div>
-					<div class="qqdengludiv">
+					<!-- <div class="qqdengludiv">
 						<a href=""><div class="qq1"></div></a> <input type="submit"
 							name="uname" value="使用QQ直接登录" id="phone1" />
-					</div>
+					</div> -->
 					<div class="noweb">
-						<a href="register1.html">立即注册</a><a class="duanxin">短信登录</a>
+						<a href="page/register1.jsp">立即注册</a><a class="duanxin">短信登录</a>
 					</div>
 				</form>
 			</div>

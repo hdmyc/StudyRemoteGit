@@ -13,4 +13,6 @@ public interface UserDetailMapper {
 	List<UserDetail> listAll();
 
 	UserDetail listDetail(String userid);
+
+	String findNickname(String userid);
 }

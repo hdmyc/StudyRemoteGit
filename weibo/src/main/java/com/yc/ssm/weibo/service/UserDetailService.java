@@ -15,4 +15,6 @@ public interface UserDetailService {
 
 	UserDetail listDetail(String userid);
 
+	String findNickname(String userid);
+
 }
