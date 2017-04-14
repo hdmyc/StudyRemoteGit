@@ -24,7 +24,7 @@ public class WeiboHandler {
 
 	//列出所有微博消息
 	@ResponseBody
-	@RequestMapping("listAll")
+	@RequestMapping(value="/listAll",method=RequestMethod.GET)
 	public PaginationBean<Weibo> listAll(String page,String rows){
 		return weiboService.listAll(page,rows);
 	}

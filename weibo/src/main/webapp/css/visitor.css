@@ -107,7 +107,7 @@ body {
 /*中间部分开始*/
 #center {
 	width: 1000px;
-	height: 2185px;
+	height: 1600px;
 	background-color: #A3ABBB;
 }
 /*中间导航栏开始*/
@@ -204,9 +204,9 @@ body {
 
 /*中间内容开始*/
 .content {
-	width: 600px;
+	width: 720px;
 	float: left;
-	margin-left: 80px;
+	margin-left: 20px;
 	margin-top:50px;
 }
 
@@ -228,18 +228,13 @@ body {
 }
 
 .content_1 a .chara_1 {
-	padding-top: 43px;
+	padding-top: 18px;
 	color: #333;
 }
 
 .content_1 a .chara_2 {
 	color: #808080;
-	margin-top: 10px;
-}
-
-.content_1 a .chara_2 img {
-	margin-left: -15px;
-	margin-top: -15px;
+	margin-top: 40px;
 }
 
 .content_1 a .chara_3 p, .chara_4 p, .chara_5 p {
@@ -247,16 +242,21 @@ body {
 	font-size: 13px;
 	float: right;
 	position: relative;
-	left: 18px;
+	left: 42px;
 	top: -2px;
+	width:40px;
+}
+.content_1 a .chara_3 p, .chara_4 p{
+	border-right: #808080;
 }
 
 .content_1 a .chara_3 {
 	float: right;
 	background: url(../images/trans1.png) no-repeat;
 	position: relative;
-	left: -150px;
+	left: -190px;
 	top: -17px;
+	width:20px;
 }
 
 .content_1 a .chara_3:hover {
@@ -267,8 +267,9 @@ body {
 	float: right;
 	background: url(../images/eval1.png) no-repeat;
 	position: relative;
-	left: -40px;
+	left: -105px;
 	top: -17px;
+	width:20px;
 }
 
 .content_1 a .chara_4:hover {
@@ -279,8 +280,9 @@ body {
 	float: right;
 	background: url(../images/thumb1.png) no-repeat;
 	position: relative;
-	left: 60px;
+	left: -20px;
 	top: -17px;
+	width:20px;
 }
 
 .content_1 a .chara_5:hover {
@@ -288,12 +290,12 @@ body {
 }
 
 #nextPage {
-	margin-left: 80px;
+	margin-left: 20px;
 	float: left;
 }
 
 .content_2 {
-	width: 600px;
+	width: 720px;
 	height: 50px;
 	background-color: white;
 	border-radius: 2px;
@@ -609,10 +611,10 @@ body {
 /*脚注部分开始*/
 #foot {
 	height: 300px;
-	width: 840px;
+	width: 960px;
 	float: left;
 	background: #FFF;
-	margin-left: 80px;
+	margin-left: 20px;
 	margin-top: 10px;
 	border-radius: 2px;
 }
@@ -624,7 +626,7 @@ body {
 #foot .foot-top .splendid-WB {
 	width: 120px;
 	float: left;
-	margin-left: 35px;
+	margin-left: 108px;
 	margin-top: 25px;
 }
 

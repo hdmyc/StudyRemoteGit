@@ -142,9 +142,50 @@ for (var m= 0; m< quit.length; m++) {
 	}
 }	
 
+/*----------------------自己写的visitor.js-------------------------*/
 $('#loginBtn').linkbutton({    
     onClick: function(){    	
     	$("#loginForm").submit();
     }
 }); 
+
+/*function loadTagInfo(){
+	//以异步的方式取到所有书签的信息
+	$.get("tag", function(data){
+		var tagTagetStr = "";
+		for (var i = 0; i < data.length; i++) {
+			tagTagetStr+='<tr><td><a href="javascript:void(0)" onclick="loadFavInfo(\''+ data[i].tname +'\')">'+ 
+			data[i].tname + '('+  data[i].tcount +')' + '</a></td></tr>';
+		}
+
+		$("#labelContent")[0].innerHTML = tagTagetStr;
+		$("#labels_table td").hover(selecrLabel);
+	}, "json");
+}*/
+loadWeibo();
+function loadWeibo(){
+	var page = "1";
+	var rows = "8";
+	$.get("weibo/listAll?page="+page+"&rows="+rows,function(d){
+		var data = d.rows;
+		var weiboStr = "";
+		for(var i = 0; i < data.length; i++){
+			weiboStr += '<div class="content_1">';
+			weiboStr += '<a href="http://weibo.com/shenqiUSA?topnav=1&wvr=6&topsug=1">';
+			if(data[i].wpic !=null){
+				weiboStr += '<img src="'+ data[i].wpic +'" style="width: 120px; height: 90px" />';
+			}
+			
+			weiboStr += '<p class="chara_1">'+ data[i].wnote +'</p>';
+			weiboStr += '<p class="chara_2">@'+ data[i].wuserid +'&nbsp;&nbsp;'+ data[i].wtime +'</p>';
+			weiboStr += '<span class="chara_3"><p>'+ data[i].transmitNum +'&nbsp;&nbsp;|</p></span>'; 
+			weiboStr += '<span class="chara_4"><p>'+ data[i].commentNum +'&nbsp;&nbsp;|</p></span>';
+			weiboStr += '<span class="chara_5"><p>'+ data[i].zanNum +'</p></span></a></div>';
+		}
+		$(".content").html(weiboStr);
+	}, "json");
+}
+
+
+
 

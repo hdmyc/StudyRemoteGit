@@ -54,7 +54,7 @@ public class WeiboServiceTest {
 	
 	@Test
 	public void testListAll() {
-		PaginationBean<Weibo> pb = weiboService.listAll("1", "2");
+		PaginationBean<Weibo> pb = weiboService.listAll("2", "4");
 		System.out.println(pb);
 		assertNotNull(pb);
 	}
