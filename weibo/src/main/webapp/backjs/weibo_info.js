@@ -10,7 +10,7 @@ $('#weiboInfo').datagrid({
 	          {field:'wid',title:'微博编号',width:50,align:'center'}, 
 	          {field:'wuserid',title:'编辑人',width:100,align:'center'},
 	          {field:'wtime',title:'发送时间',width:100,align:'center'},
-	          {field:'wnote',title:'微博内容',width:200,align:'center'},
+	          {field:'wNote',title:'微博内容',width:200,align:'center'},
 	          {field:'wpic',title:'图片',width:100,align:'center',
 	        	  formatter: function(value,row,index){
 	        		  if(value == null){
@@ -51,7 +51,7 @@ function openDetail(wid){
 		$("#bwid").val(data.wid);
 		$("#bwuserid").val(data.wuserid);
 		$("#bwtime").val(data.wtime);
-		$("#bwnote").val(data.wnote);
+		$("#bwnote").val(data.wNote);
 		$("#bzanNum").val(data.zanNum);
 		$("#btransmitNum").val(data.transmitNum);
 		$("#bcommentNum").val(data.commentNum);

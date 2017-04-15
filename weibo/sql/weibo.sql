@@ -125,8 +125,6 @@ create table weibo(
      wstatus         number(1) default 0 constraint ck_wstatus check(wstatus in(0,1,2))       -- 权限（默认0公开  1好友圈可见  2仅自己可见）
   ); 
 
-  update weibo set zanNum = ""
-  
   DELETE FROM weibo WHERE wid = 10000001
    create sequence wid_seq          
         increment by 1          
