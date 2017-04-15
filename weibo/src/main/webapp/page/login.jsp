@@ -91,8 +91,8 @@
 		<!--内容导航栏开始-->
 		<div class="content_left">
 			<div class="content_left_me">
-				<a href="login.jsp"><span>首页</span></a> <a href="page/mycollection.jsp"><span>我的收藏</span></a>
-				<a href=""><span>我的赞</span></a>
+				<a href="login.jsp"><span>首页</span></a> <a
+					href="page/mycollection.jsp"><span>我的收藏</span></a> <a href=""><span>我的赞</span></a>
 			</div>
 			<div class="content_left_hotwb">
 				<a href=""><em>ì</em><span>热门微博</span></a>
@@ -145,7 +145,7 @@
 				</div>
 			</div>
 
-			<!-- <div class="content0">
+			<div class="content0">
 				<div class="content01">
 					<img src="images/contMe.png" width="50px" height="50px" />
 				</div>
@@ -156,6 +156,7 @@
 					<p>
 						<span>10分钟前</span>
 					</p>
+					<br />
 					<div class="shuru"></div>
 				</div>
 				<div class="content03">c</div>
@@ -172,7 +173,7 @@
 					<p>转换为好友圈可见</p>
 					<p>转换为仅自己可见</p>
 				</div>
-			</div> -->
+			</div>
 
 			<div class="content2" style="top: 203px">
 				<a href=""><img src="images/600x80_img57ee27a383ca0.png"></a>
@@ -205,26 +206,18 @@
 				</div>
 				<div class="cont4-cen">
 					<div class="WB_text_01">牵手</div>
-					<div class="cont4-cen-pic">
-						<li><img src="images/cont4-cen01.jpg"></li>
-						<li><img src="images/cont4-cen02.jpg"></li>
-						<li><img src="images/cont4-cen03.jpg"></li>
-						<li><img src="images/cont4-cen04.jpg"></li>
-						<li><img src="images/cont4-cen05.jpg"></li>
-						<li><img src="images/cont4-cen06.jpg"></li>
-					</div>
 				</div>
 				<div class="cont4-foot">
-					<li><span>û</span><a>收藏</a></li>
-					<li><span></span>5</li>
-					<li><span></span>1</li>
-					<li class="cont4-foot-li4"><span>ñ</span>3</li>
+					<li><span>û</span>收藏</li>
+					<li><span></span>38</li>
+					<li><span></span>76</li>
+					<li class="cont4-foot-li4"><span>ñ</span>21</li>
 				</div>
 				<div class="cont4_ying">
 					<!--content4隐藏的部分-->
 					<div class="cont4_ying_pic">
-						<img src="images/profile_cover_m.jpg" class="cont4_ying_pic1" /> <img
-							src="images/cont4-cen.png" class="cont4_ying_pic2"
+						<img src="images/profile_cover_m.jpg" class="cont4_ying_pic1" />
+						<img src="images/cont4-cen.png" class="cont4_ying_pic2"
 							title="TopShop穿搭" /> <i class="cont4_ying_pic_icon"
 							title="深圳高飞传媒有限公司设计师"></i>
 						<p class="PChuan">TopShop穿搭（设置备注）</p>
@@ -248,26 +241,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="cont4_jian_ying" style="display: none">
-					<li>帮上头条</li>
-					<li>屏蔽</li>
-					<li>取消关注TopShop穿搭</li>
-					<li>用次卡片背景</li>
-					<li>举报</li>
-				</div>
+				<div class="cont4_jian_ying" style="display: none"></div>
 				<div class="cont4_ying_ying1">
 					<li>取消关注</li>
-					<li>设置分组</li>
 				</div>
-				<div class="cont4_ying_ying3">
-					<li>设置备注</li>
-					<li>@他</li>
-					<li>悄悄关注</li>
-					<li>推荐给朋友</li>
-					<li>加入黑名单</li>
-					<li>屏蔽TA的微博</li>
-					<li>举报他</li>
-				</div>
+				<div class="cont4_ying_ying3"></div>
 
 				<div class="cont4_zhuan_WB">
 					<div class="cont4_zhuan_WB_first">
@@ -277,8 +255,6 @@
 					<div class="cont4_zhuan_WB_two">
 						<span>转发到：</span>
 						<li class="MyWB"><a href="">我的微博</a></li>
-						<li class="friends"><a href="">好友圈</a><span></span></li>
-						<li class="secreat"><a href="">私信</a></li>
 					</div>
 					<div class="cont4_zhuan_WB_three">
 						<a href="" class="CNew">@中国新闻周刊</a>
@@ -293,9 +269,8 @@
 						<span>140</span>
 					</div>
 					<div class="cont4_zhuan_WB_five">
-						<b class="face">o</b> <img src="images/tupian.png" /> <input
-							type="checkbox" value=""><span>同时评论给 中国新闻周刊</span> <a
-							href=""> <code>公开</code> <i>c</i>
+						<b class="face">o</b> <img src="images/tupian.png" /> <a href="">
+							<code>公开</code> <i>c</i>
 						</a>
 						<p>转发</p>
 					</div>
@@ -316,12 +291,6 @@
 					</div>
 					<div class="cont4_pinglun3">
 						<span class="pinglun31">o</span> <span class="pinglun32"></span>
-						<li class="li1"><input type="checkbox"
-							style="width: 13px; height: 13px; color: black" /> <span>同时转发到我的微博</span>
-						</li>
-						<li class="li2"><input type="checkbox"
-							style="width: 13px; height: 13px; color: black" /> <span>同时评论给原文作者
-								潮发型君</span></li>
 						<p>评论</p>
 					</div>
 				</div>
@@ -343,27 +312,14 @@
 				</div>
 				<!--http://weibo.com/u/5760843730/home?wvr=5&lf=reg-->
 				<div class="cont5-cen">
-					<div class="WB_text_01">
-						《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜<img
-							src="images/hearta_org.gif" /><a href=""><span>L</span>秒拍视频</a>
-					</div>
-					<img src="images/content5.jpg" width="500px" height="281px" />
-					<div class="cont5-cen-vid">
-						<embed width="500" height="281.25" wmode="transparent"
-							type="application/x-shockwave-flash"
-							src="http://js.t.sinajs.cn/t5/album/static/swf/video/player.swf?v1441960309059836241438531565"
-							quality="high" allowfullscreen="true"
-							flashvars="list=http%3A%2F%2Fus.sinaimg.cn%2F003K0dAFjx0759H375IY0504010000220k01.m3u8%3FExpires%3D1475655052%26ssig%3DEsFu8wxIaS%26KID%3Dunistore%2Cvideo&amp;fid=1034:713ad1e6d7766bb6e1513ea8dbf58c4e&amp;logo=2&amp;uid=5760843730&amp;vf=feed&amp;ext=%7B%22object_id%22%3A%221034%3A713ad1e6d7766bb6e1513ea8dbf58c4e%22%2C%22mid%22%3A%224027219875132793%22%2C%22mark%22%3Anull%7D"
-							pluginspage="http://get.adobe.com/cn/flashplayer/"
-							allowscriptaccess="always"
-							style="width: 500px; height: 281.25px; position: absolute; left: 50px; top: 21px">
+					<div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜
 					</div>
 				</div>
 				<div class="cont5-foot">
 					<li><span>û</span>收藏</li>
-					<li><span></span>7</li>
-					<li><span></span>评论</li>
-					<li class="cont5-foot-li5"><span>ñ</span>8</li>
+					<li><span></span>56</li>
+					<li><span></span>23</li>
+					<li class="cont5-foot-li5"><span>ñ</span>71</li>
 				</div>
 			</div>
 			<div class="content6">
@@ -385,16 +341,7 @@
 				<div class="cont6-cen">
 					<div class="WB_text_01">
 						【中国央行面临政策放松压力，但房地产泡沫令人担忧】-
-						中国在今年余下时间运用宽松货币政策来扶持经济增长的能力主要取决于政府如何应对不断膨胀的房地产泡沫。今年到目前为止，中国央行都没有采取降息及其他强有力的信贷宽松措施来促进经济增长。<a
-							href=""><span>°</span> 中国央行面临政策放松压力，但房地产泡沫令人...</a>
-					</div>
-					<div class="WB_text_02">
-						<img src="images/cont6-test02.jpg" class="WB_text_021" />
-						<p class="WB_text_022">华尔街日报中文网</p>
-						<p class="WB_text_023">中国央行面临政策放松压力，但房地产泡沫令人担忧</p>
-						<div class="WB_text_024">
-							<span></span>
-						</div>
+						中国在今年余下时间运用宽松货币政策来扶持经济增长的能力主要取决于政府如何应对不断膨胀的房地产泡沫。今年到目前为止，中国央行都没有采取降息及其他强有力的信贷宽松措施来促进经济增长。
 					</div>
 				</div>
 				<div class="cont6-foot">
@@ -506,331 +453,53 @@
 				</div>
 			</div>
 
-			<div class="cont-micro-film">
-				<div class="film-top">
-					<a href="">微博电影热议榜</a>
-				</div>
-				<div class="film-cen">
-					<div class="filetype">
-						<div class="filetype1">
-							<div class="filetype11">
-								<b>1</b>
-								<p>从你的全世界路过</p>
-								<span>99.4</span>
-							</div>
-							<div class="filetype12">
-								<div class="film-cen121">
-									<img src="images/vertical1.jpg" width="72px" ;height="96px" />
-								</div>
-								<div class="film-cen122">
-									<b>1</b>
-									<h4>
-										<a href="">从你的全世界...</a>
-									</h4>
-									<p class="daoyan">导演：张一白</p>
-									<p class="zhuyan">主演：邓超/白百合/...</p>
-									<span>99.4</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="filetype">
-						<div class="filetype2">
-							<div class="filetype21">
-								<b>2</b>
-								<p>湄公河行动</p>
-								<span>98.9</span>
-							</div>
-							<div class="filetype22">
-								<div class="film-cen221">
-									<img src="images/vertical2.jpg" width="72px" ;height="96px" />
-								</div>
-								<div class="film-cen222">
-									<b>2</b>
-									<h4>
-										<a href="">湄公河行动</a>
-									</h4>
-									<p class="daoyan">导演：林超贤</p>
-									<p class="zhuyan">主演：张涵予/彭于晏/...</p>
-									<span>99.4</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="filetype">
-						<div class="filetype3">
-							<div class="filetype31">
-								<b>3</b>
-								<p>爵迹</p>
-								<span>98.0</span>
-							</div>
-							<div class="filetype32">
-								<div class="film-cen321">
-									<img src="images/vertical3.jpg" width="72px" ;height="96" />
-								</div>
-								<div class="film-cen322">
-									<b>3</b>
-									<h4>
-										<a href="">爵迹</a>
-									</h4>
-									<p class="daoyan">导演：郭敬明</p>
-									<p class="zhuyan">主演：范冰冰/吴亦凡...</p>
-									<span>98.0</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="film-foot">
-					查看更多<span>a</span>
-				</div>
-			</div>
+			<!--内容的右边结束-->
+		</div>
 
-			<div class="cont-Sina-News">
-				<a href="http://weibo.com/p/100808a652694e926b42b5ea87296a5a8c5fde">
-					<img src="images/SinaNew.jpg" />
-				</a>
-			</div>
-			<div class="cont-hot-topic">
-				<div class="topic-top">
-					<p class="topic-top1">
-						<a href="">热门话题</a>
-					</p>
-					<p class="topic-top2">
-						<a href=""><span>e</span>换一换</a>
-					</p>
-				</div>
-				<div class="topic-cen">
-					<ul>
-						<li><a href="">#湄公河行动#</a><b>4.9亿</b></li>
-						<li><a href="">#识汝不识丁#</a><b>15.1亿</b></li>
-						<li><a href="">#张艺兴1007生日快乐#</a><b>9.6亿</b></li>
-						<li><a href="">#电影从你的全世界路过#</a><b>20亿</b></li>
-						<li><a href="">#我的追星故事#</a><b>2.1亿</b></li>
-						<li><a href="">#粉丝嘉年华#</a><b>3.6亿</b></li>
-						<li><a href="">#喀纳斯失联女生遇难#</a><b>1万</b></li>
-						<li><a href="">#音乐人先锋榜#</a><b>1.2亿</b></li>
-					</ul>
-				</div>
-				<div class="topic-foot">
-					查看更多<span>a</span>
-				</div>
-			</div>
-			<div class="cont-atten-frie">
-				<div class="frie-top">
-					<a href="">好友关注动态</a>
-				</div>
-				<div class="frie-cen">
-					<div class="frie-cen1">
-						<div class="frie-cen11">
-							<a
-								href="http://weibo.com/u/5894023999?from=friends_dynamic&refer_flag=0000011002_">@小小酥with</a>
-						</div>
-						<div class="frie-cen12">
-							<div class="frie-cen121">
-								<img src="images/frie-cen121.jpg">
-							</div>
-							<div class="frie-cen122">
-								<a
-									href="http://weibo.com/u/5894023999?from=friends_dynamic&refer_flag=0000011002_">小小酥with</a>
-							</div>
-							<div class="frie-cen123">
-								<a><span style="color: #FA7D3C; font-size: 16px;">+</span>关注</a>
-							</div>
-						</div>
-					</div>
-					<div class="frie-cen2">
-						<div class="frie-cen21">你赞过他的微博</div>
-						<div class="frie-cen22">
-							<div class="frie-cen221">
-								<img src="images/frie-cen122.jpg">
-							</div>
-							<div class="frie-cen222">
-								<a href="">博露齿一笑<span></span></a>
-								<p>微博知名搞笑幽默...</p>
-							</div>
-							<div class="frie-cen223">
-								<a><span style="color: #FA7D3C; font-size: 16px;">+</span>关注</a>
-							</div>
-						</div>
-					</div>
-					<div class="frie-cen3">
-						<div class="frie-cen31">
-							<a href="">@小英sanity</a>
-						</div>
-						<div class="frie-cen32">
-							<div class="frie-cen321">
-								<img src="images/frie-cen123.jpg">
-							</div>
-							<div class="frie-cen322">
-								<a href="">小英sanity</a>
-								<p>心中有江山的人...</p>
-							</div>
-							<div class="frie-cen323">
-								<a><span style="color: #FA7D3C; font-size: 16px;">+</span>关注</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="frie-foot">
-					<a href="http://weibo.com/p/230672?from=interest"> 查看更多<span>a</span>
-					</a>
-				</div>
-			</div>
-			<div class="cont-hot-goods">
-				<h4>
-					<a>热门商品推荐</a>
-				</h4>
-				<img src="images/goods.gif" />
-			</div>
-			<div class="cont-VIP-pref">
-				<div class="cont-VIP-pref1">
-					<div class="VIP-pref" id="sub1">会员专区</div>
-					<div class="star-charts" id="sub1">明星势力榜</div>
-					<div class="refresh">e</div>
-				</div>
-				<div class="cont-VIP-pref2">
-					<div class="cont-VIP-pref21">
-						<div class="cont-VIP-pref211">
-							<img src="images/VIP1.jpg" /> <a href="" class="FuKangWZ">张FuKang</a>
-							<b></b>
-							<!--背景图片-->
-							<a href="" class="guanzhu1"><span style="color: #FA7D3C">+</span>关注</a>
-						</div>
-						<div class="cont-VIP-pref212">
-							<img src="images/VIP2.jpg" /> <a href="" class="WuYanZuWZ">黑山吴彦祖</a>
-							<b></b>
-							<!--背景图片-->
-							<a href="" class="guanzhu2"><span style="color: #FA7D3C">+</span>关注</a>
-						</div>
-					</div>
-					<div class="cont-VIP-pref22">
-						<p>
-							亲爱的<a href="">wk语默</a>
-						</p>
-						<p>尊享会员特权，一起放肆精彩！</p>
-						<img src="images/VIP3bg.jpg" /> <input type="button" value="立即体验"
-							class="input1" /> <input type="button" value="开通会员"
-							class="input2" />
-					</div>
-				</div>
-				<div class="cont-VIP-pref3">
-					<div class="cont-VIP-pref31">
-						<div class="cont-VIP-pref311">
-							<p>内地榜</p>
-							<span><a href="http://chart.weibo.com/?rank_type=5">a</a></span>
-						</div>
-						<div class="cont-VIP-pref312">
-							<li class="paiming1"><b>1</b> <img src="images/paiming1.jpg" />
-								<a href="">TFBOYS...</a> <span>94.34</span></li>
-							<li class="paiming2"><b>2</b> <img src="images/paiming2.jpg" />
-								<a href="">TFBOYS...</a> <span>91.98</span></li>
-							<li class="paiming3"><b>3</b> <img src="images/paiming3.jpg" />
-								<a href="">杨洋icon...</a> <span>91.95</span></li>
-						</div>
-					</div>
-					<div class="cont-VIP-pref32">
-						<div class="cont-VIP-pref321">
-							<p>港澳台榜</p>
-							<span>a</span>
-						</div>
-						<div class="cont-VIP-pref322">
-							<b>1</b> <img src="images/paiming4.jpg" /> <a href="">William...</a>
-							<span>98.95</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="cont-bulletin">
-				<h4 class="bulletin1">
-					<span>公告栏</span>
-				</h4>
-				<p>
-					<a
-						href="http://service.account.weibo.com/derumor?rightmod=1&wvr=6&mod=noticeboard"
-						class="bulletin2">《全国辟谣平台》</a>
-				</p>
-				<p>
-					<a href="" class="bulletin3">《首都互联网协会发布坚守七条底线倡议书》</a>
-				</p>
+
+		<!--内容右边的一个回到顶部事件-->
+		<div class="To-Top">
+			<a href="#top">Ú</a>
+		</div>
+		<!--内容右边的一个回到顶部事件结束-->
+
+		<!--网页右边底下的私信聊天-->
+		<div class="RB-PriChat">
+			<span></span> <b>私信聊天</b>
+			<div class="PriChat1">
+				<em></em>
 			</div>
 		</div>
-		<!--内容的右边结束-->
-	</div>
+		<!--网页右边底下的私信聊天结束-->
 
-	<!--内容的内容最底部的广告-->
-	<div class="ad">
-		<a href=""> <img src="images/ad.jpg" class="ad-ad1" /> <img
-			src="images/ad1.jpg" class="ad-ad2" />
-			<div class="ad-ad3">
-				<span>淘宝商品</span> <img src="images/ad2.png"
-					style="width: 20px; height: 13px" /> <img src="images/ad2.png"
-					style="width: 20px; height: 13px" />
-			</div>
-		</a>
-	</div>
-	<!--内容的内容最底部的广告结束-->
-
-	<!--内容右边的一个回到顶部事件-->
-	<div class="To-Top">
-		<a href="#top">Ú</a>
-	</div>
-	<!--内容右边的一个回到顶部事件结束-->
-
-	<!--网页右边底下的私信聊天-->
-	<div class="RB-PriChat">
-		<span></span> <b>私信聊天</b>
-		<div class="PriChat1">
-			<em></em>
-		</div>
-	</div>
-	<!--网页右边底下的私信聊天结束-->
-
-	<!--内容content1隐藏的点击事件开始-->
-	<div class="view_btn" style="display: none;">
-		<div class="jiantou"></div>
-		<a href="" class="view-local"><span>É</span>本地视频</a> <a href=""
-			class="view-online"><span>Ð</span>在线视频</a>
-	</div>
-	<div class="open_btn" style="display: none;">
-		<li class="open_li1"><a><span class="open_icon"></span>公开</a></li>
-		<li><a><span class="frient_icon"></span>好友圈</a></li>
-		<li><a><span class="me_icon"></span>仅自己可见</a></li>
-		<li><a><span class="qun_icon"></span>群可见</a></li>
-	</div>
-	<!--内容content1隐藏的点击事件结束-->
-	<!--中间内容结束-->
+		<!--中间内容结束-->
 
 
-	<!--脚注开始-->
-	<div id="foot">
-		<div class="foot-bottom">
-			<div class="notice">
-				<a href=""><img src="images/foot-wb-logo.png" />微博客服</a> <a href=""
-					class="a2">意见反馈</a> <a href="" class="a2">舞弊举报</a> <a href=""
-					class="a2">开放平台</a> <a href="" class="a2">微博招聘</a> <a href=""
-					class="a2">新浪网导航</a> <a href="" class="a2">举报处理大厅</a> <select>
-					<option>中文(简体)</option>
-					<option>中文(繁体)</option>
-					<option>中文(香港)</option>
-					<option>English</option>
-				</select>
-			</div>
-			<div class="address">
-				<a href="">京ICP证100780号</a> <a href="">互联网药品服务许可证</a> <a href="">互联网医疗保健许可证</a>
-				<a href="">京网文[2014]2046-296号</a> <a href="">京ICP备12002058号</a> <a
-					href="">增值电信业务经营许可证B2-20140447</a>
-			</div>
-			<div class="copyright">
-				<p>Copyright &copy; 2009-2016 WEIBO 北京微梦创科网络技术有限公司</p>
-				<a href=""><img src="images/emblem.png" />京公网安备11000002000019号</a>
+		<!--脚注开始-->
+		<div id="foot">
+
+			<div class="foot-bottom">
+				<div class="notice">
+					<a href=""><img src="images/foot-wb-logo.png" />微博客服</a> <a
+						href="" class="a2">意见反馈</a> <a href="" class="a2">舞弊举报</a> <a
+						href="" class="a2">开放平台</a> <a href="" class="a2">微博招聘</a> <a
+						href="" class="a2">新浪网导航</a> <a href="" class="a2">举报处理大厅</a>
+				</div>
+				<div class="address">
+					<a href="">京ICP证100780号</a> <a href="">互联网药品服务许可证</a> <a href="">互联网医疗保健许可证</a>
+					<a href="">京网文[2014]2046-296号</a> <a href="">京ICP备12002058号</a> <a
+						href="">增值电信业务经营许可证B2-20140447</a>
+				</div>
+				<div class="copyright">
+					<p>Copyright &copy; 2009-2016 WEIBO 北京微梦创科网络技术有限公司</p>
+					<a href=""><img src="images/emblem.png" />京公网安备11000002000019号</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!--脚注结束-->
+		<!--脚注结束-->
 
 
 
-	<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

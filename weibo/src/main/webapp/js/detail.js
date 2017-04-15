@@ -5,19 +5,19 @@ function loaduserDetail(){
 	$.get("userDetail/findDetail", function(data){
 		//alert("请求响应成功..."+data);
 		//alert(JSON.stringify(data));  //JSON.stringify() ,把json对象转换成json字符串
-		$("#userid").val(data.userid);
-		$("#nickname").val(data.nickname);
-		$("#username").val(data.username);
-		$("#birthdate").val(data.birthdate);
-		$("#sex").val(data.sex);
-		$("#address").val(data.address);
-		$("#bloodType").val(data.bloodType);
-		$("#brief").val(data.brief);
-		$("#head_picture").val(data.head_picture);
-		$("#email").val(data.email);
-		$("#blog").val(data.blog);
-		$("#QQ").val(data.QQ);
-		$("#mobile").val(data.mobile);
+		$("#duserid").val(data.userid);
+		$("#dnickname").val(data.nickname);
+		$("#dusername").val(data.username);
+		$("#dbirthdate").val(data.birthdate);
+		$("#dsex").val(data.sex);
+		$("#daddress").val(data.address);
+		$("#dbloodType").val(data.bloodType);
+		$("#dbrief").val(data.brief);
+		$("#dhead_picture").val(data.head_picture);
+		$("#demail").val(data.email);
+		$("#dblog").val(data.blog);
+		$("#dqq").val(data.qq);
+		$("#dmobile").val(data.mobile);
 		
 	}, "json");
 }
@@ -36,7 +36,7 @@ $("#detail").form({
     	}
 
     	if(data.trim() == "true"){
-    		$("#content").datagrid("reload"); //刷新修改数据
+    		$("#detail").datagrid("reload"); //刷新修改数据
     	}else{
     		$.messager.show({
     			title:'修改信息',

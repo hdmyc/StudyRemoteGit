@@ -29,19 +29,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				bloodType=#{bloodType},
 			</if>
 			<if test="brief != null">
-				brief=#{brief}
+				brief=#{brief},
 			</if>
 			<if test="head_picture != null">
-				head_picture=#{head_picture}
+				head_picture=#{head_picture},
 			</if>
 			<if test="blog != null">
-				blog=#{blog}
+				blog=#{blog},
 			</if>
 			<if test="email != null">
-				email=#{email}
+				email=#{email},
 			</if>
-			<if test="QQ != null">
-				QQ=#{QQ}
+			<if test="qq != null">
+				qq=#{qq},
 			</if>
 			<if test="mobile != null">
 				mobile=#{mobile}

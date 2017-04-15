@@ -13,7 +13,7 @@ public class UserDetail {
 		private String head_picture;
 		private String blog;
 		private String email;
-		private Long QQ;
+		private Long qq;
 		private Long mobile;
 		private String userid;
 		private Integer msgStatue;
@@ -83,11 +83,11 @@ public class UserDetail {
 		public void setEmail(String email) {
 			this.email = email;
 		}
-		public Long getQQ() {
-			return QQ;
+		public Long getQq() {
+			return qq;
 		}
-		public void setQQ(Long QQ) {
-			this.QQ = QQ;
+		public void setQq(Long qq) {
+			this.qq = qq;
 		}
 		public Long getMobile() {
 			return mobile;
@@ -114,7 +114,7 @@ public class UserDetail {
 					+ nickname + ", sex=" + sex + ", address=" + address
 					+ ", bloodType=" + bloodType + ", brief=" + brief
 					+ ", head_picture=" + head_picture + ", blog=" + blog
-					+ ", email=" + email + ", QQ=" + QQ + ", mobile=" + mobile
+					+ ", email=" + email + ", qq=" + qq + ", mobile=" + mobile
 					+ ", userid=" + userid + ", msgStatue=" + msgStatue + "]";
 		}
 		

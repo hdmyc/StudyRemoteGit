@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
 <html>
 <head>
 <base href="${deployName}">
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>wk语默的微博-微博</title>
 <link rel="stylesheet" type="text/css"
 	href="easyui/themes/default/easyui.css">
@@ -174,52 +174,51 @@
 		<form action="" method="get" id="detail">
 			<p>
 				<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="userid" id="userid" />
+					type="text" name="userid" id="duserid" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;昵&nbsp;&nbsp;称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="nickname" id="nickname" />
+					type="text" name="nickname" id="dnickname" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;真实姓名&nbsp;&nbsp;&nbsp;</label><input type="text"
-					name="username" id="username" />
+					name="username" id="dusername" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;生&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="birthdate" id="birthdate" />
+					type="text" name="birthdate" id="dbirthdate" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="radio" name="sex" />男&nbsp;&nbsp;<input type="radio"
-					name="sex" id="sex" />女
+					type="text" name="dsex" id="sex"/>
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;所&nbsp;在&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="address" id="address" />
+					type="text" name="address" id="daddress" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;血&nbsp;&nbsp;型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="bloodType" id="bloodType" />
+					type="text" name="bloodType" id="dbloodType" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;简&nbsp;&nbsp;介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="brief" id="brief" />
+					type="text" name="brief" id="dbrief" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;博客地址&nbsp;&nbsp;&nbsp;</label><input type="text"
-					name="blog" id="blog" />
+					name="blog" id="dblog" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;邮&nbsp;&nbsp;箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="email" id="email" />
+					type="text" name="email" id="demail" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;Q&nbsp;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="QQ" id="QQ" />
+					type="text" name="qq" id="dqq" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="mobile" id="mobile" />
+					type="text" name="mobile" id="dmobile" />
 			</p>
 			<p>
 				<a href="javaScript:void(0)"><input type="submit" id="sub"
