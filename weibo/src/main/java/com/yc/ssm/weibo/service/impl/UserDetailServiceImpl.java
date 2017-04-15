@@ -39,7 +39,7 @@ public class UserDetailServiceImpl implements UserDetailService {
 	}
 
 	@Override
-	public String findNickname(String userid) {
+	public UserDetail findNickname(String userid) {
 		return userDetailMapper.findNickname(userid);
 	}
 	

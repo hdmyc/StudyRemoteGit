@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="javax.servlet.http.Cookie"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -155,30 +158,78 @@
 				</a>
 			</div> -->
 		</div>
-		
+
 
 		<!--内容部分结束-->
-
+		<%-- <%
+			String [] loginStatus = request.getParameterValues("loginStatus");
+					if(loginStatus != null && loginStatus.length>0){
+						String userid = request.getParameter("userid");
+						String upwd = request.getParameter("upwd");
+						
+						Cookie useridcookie = new Cookie("userid",userid);
+						Cookie upwdcookie = new Cookie("upwd",upwd);
+						useridcookie.setMaxAge(24*60*60);
+						upwdcookie.setMaxAge(24*60*60);
+						response.addCookie(useridcookie);
+						response.addCookie(upwdcookie);
+					}else{
+						Cookie [] cookies = request.getCookies();
+						if(cookies != null && cookies.length>0){
+							for(Cookie c :cookies){
+								if(c.getName().equals("userid") || c.getName().equals("upwd")){
+									c.setMaxAge(0);
+									response.addCookie(c);
+								}
+							}
+						}
+					}
+		%> --%>
 		<!--新闻部分开始-->
 		<div class="news">
 			<!--注册登录开始-->
 			<div class="register">
 				<div class="select">
-					<span class="span1"><a href="">账号登录</a></span> <a href=""><div class="pic11"></div></a>
+					<span class="span1"><a href="">账号登录</a></span> <a href=""><div
+							class="pic11"></div></a>
 				</div>
 				<!--登陆 start  -->
 				<div class="regst">
 					<form id="loginForm" action="user/login" method="post">
+						<p id="msg">
+							<label>${errorMsg}</label>
+						</p>
+						<c:remove var="errorMsg" scope="session" />
 						<div class="phonediv">
 							<a href=""><div class="pic12"></div></a> <input type="text"
-								name="userid" placeholder="邮箱/会员账号/手机号登录" id="phone" />
+								name="userid" placeholder="邮箱/会员账号/手机号登录" id="phone"
+								<%-- value="<%
+								Cookie cookies [] = request.getCookies();
+								for(int i=0;i<cookies.length;i++){
+									Cookie ucookie = cookies[i];
+									if(ucookie.getName().equals("userid")){
+										out.print(ucookie.getValue());
+									}
+								}
+								%>" --%>
+								 />
 						</div>
 						<div class="pwddiv">
 							<a href=""><div class="pic13"></div></a> <input type="password"
-								name="upwd" placeholder="请输入密码" id="pwd" />
+								name="upwd" placeholder="请输入密码" id="pwd" 
+								<%-- value="<%
+								Cookie cookie [] = request.getCookies();
+								for(int i=0;i<cookie.length;i++){
+									Cookie ucookie = cookies[i];
+									if(ucookie.getName().equals("upwd")){
+										out.print(ucookie.getValue());
+									}
+								}
+								%> --%>
+								"/>
 						</div>
 						<div class="remember">
-							<input type="checkbox" />&nbsp;&nbsp;记住我 <a
+							<input type="checkbox" id="loginStatus" />&nbsp;&nbsp;记住我 <a
 								href="page/password.jsp">忘记密码</a>
 						</div>
 						<div class="subdiv">
@@ -192,6 +243,7 @@
 						</div>
 					</form>
 				</div>
+
 				<!--登陆 end  -->
 			</div>
 			<!--注册登录结束-->
@@ -273,15 +325,20 @@
 		<a href="#top"></a>
 	</div>
 	<!--返回顶部结束-->
-	
+
 	<script type="text/javascript" src="easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
-	
-	<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"> </script>
-    <script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
-	
+
+	<script type="text/javascript" charset="utf-8"
+		src="ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8"
+		src="ueditor/ueditor.all.min.js">
+		
+	</script>
+	<script type="text/javascript" charset="utf-8"
+		src="ueditor/lang/zh-cn/zh-cn.js"></script>
+
 	<script src="js/visitor.js"></script>
 </body>
 </html>

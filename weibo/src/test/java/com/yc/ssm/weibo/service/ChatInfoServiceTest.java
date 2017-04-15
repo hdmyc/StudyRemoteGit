@@ -25,7 +25,6 @@ public class ChatInfoServiceTest {
 		ci.setSendid("15570934077");
 		ci.setReceivedid("1119185633@qq.com");
 		ci.setChatNote("我很好，你好啊");
-		ci.setchatFile("2.jpg");
 		ci.setCstatus(0);
 		System.out.println(chatInfoServie.insertChat(ci));
 		assertNotNull(ci);

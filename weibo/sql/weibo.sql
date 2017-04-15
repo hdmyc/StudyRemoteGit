@@ -258,3 +258,4 @@ create table follow(
      increment by 1          
      start with 10000001 
      DROP TABLE reply
+select t.* from (select n.* ,rownum rn from (select * from weibo w,userDetail u  where w.wuserid = u.userid order by 1) n where 2 * 4 >=rownum) t where rn > (2 - 1) * 4

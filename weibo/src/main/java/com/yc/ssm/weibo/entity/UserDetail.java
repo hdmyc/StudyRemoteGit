@@ -16,6 +16,7 @@ public class UserDetail {
 		private Long qq;
 		private Long mobile;
 		private String userid;
+		private UserInfo userInfo;
 		private Integer msgStatue;
 		public Integer getUserDetailId() {
 			return userDetailId;
@@ -101,6 +102,12 @@ public class UserDetail {
 		public void setUserid(String userid) {
 			this.userid = userid;
 		}
+		public UserInfo getUserInfo() {
+			return userInfo;
+		}
+		public void setUserInfo(UserInfo userInfo) {
+			this.userInfo = userInfo;
+		}
 		public Integer getMsgStatue() {
 			return msgStatue;
 		}
@@ -115,8 +122,10 @@ public class UserDetail {
 					+ ", bloodType=" + bloodType + ", brief=" + brief
 					+ ", head_picture=" + head_picture + ", blog=" + blog
 					+ ", email=" + email + ", qq=" + qq + ", mobile=" + mobile
-					+ ", userid=" + userid + ", msgStatue=" + msgStatue + "]";
+					+ ", userid=" + userid + ", userInfo=" + userInfo
+					+ ", msgStatue=" + msgStatue + "]";
 		}
+		
 		
 		
 }
