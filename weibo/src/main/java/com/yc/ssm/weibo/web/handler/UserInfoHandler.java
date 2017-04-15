@@ -3,6 +3,7 @@ package com.yc.ssm.weibo.web.handler;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,12 +43,13 @@ public class UserInfoHandler{
 	@RequestMapping("login")
 	public String login(UserInfo user,HttpServletRequest request,HttpServletResponse response){
 		LogManager.getLogger().debug("login user ===>"+user);
+		HttpSession session = request.getSession();
 		user = userInfoService.login(user);
 		if(user == null){
 			request.setAttribute(ServletUtil.ERROR_MESSAGE, "用户名或密码错误！！");
 			return "/page/visitor.jsp" ;
 		}else{
-			request.getSession().setAttribute(ServletUtil.LOGIN_USER, user);
+			session.setAttribute(ServletUtil.LOGIN_USER, user);
 		}
 		return "redirect:/page/login.jsp" ;
 	}

@@ -32,7 +32,7 @@ public class UserDetailServiceTest {
 	public void testFindDetail() {
 		UserDetail ud=new UserDetail();
 		ud.setUserid("15570934077");
-		System.out.println(userDetailService.findDetail(ud));
+		System.out.println(userDetailService.findDetail("15570934077"));
 		assertNotNull(ud);
 	}
 	

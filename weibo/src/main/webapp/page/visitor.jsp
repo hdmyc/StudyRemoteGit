@@ -9,6 +9,9 @@
 <base href="${deployName}">
 <meta charset="utf-8">
 <title>微博-随时随地发现新鲜事</title>
+<link rel="stylesheet" type="text/css"
+	href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 <link rel="icon" href="images/favicon.ico" />
 <link rel="stylesheet" href="css/visitor.css">
 </head>
@@ -249,21 +252,7 @@
 			<!--注册登录结束-->
 
 			<!--下载部分开始-->
-			<div class="download">
-				<div class="iPone">
-					<a href=""> <img src="images/ipone.png" />
-						<p>
-							iPone<br />客户端下载
-						</p>
-					</a>
-				</div>
-				<div class="Android">
-					<a href=""><img src="images/android.png" />
-						<p class="An">
-							Android<br />客户端下载
-						</p> </a>
-				</div>
-			</div>
+			
 			<!--下载部分结束-->
 
 		</div>
@@ -274,30 +263,7 @@
 		</div>
 		<!--脚注开始-->
 		<div id="foot">
-			<div class="foot-top">
-				<div class="splendid-WB">
-					<p>微博精彩</p>
-					<a href="" class="a1">热门微博</a> <a href="" class="a2">热门话题</a> <a
-						href="" class="a1">名人堂</a> <a href="" class="a2">微博会员</a> <a
-						href="" class="a1">微相册</a> <a href="" class="a2">微游戏</a> <a
-						href="" class="a1">微指数</a>
-				</div>
-				<div class="phone-WB">
-					<p>手机玩微博</p>
-					<img src="images/footer_code.jpg" /> <a href="">扫码下载，更多版本戳这里</a>
-				</div>
-				<div class="authenticate_WB">
-					<p>认证&amp;合作</p>
-					<a href="" class="a1">申请认证</a> <a href="" class="a2">开放平台</a> <a
-						href="" class="a1">企业微博</a> <a href="" class="a2">链接网站</a> <a
-						href="" class="a1">微博标识</a> <a href="" class="a2">广告服务</a> <a
-						href="" class="a1">微博商学院</a> <a href="" class="a2">广告代理商</a>
-				</div>
-				<div class="help-WB">
-					<p>微博帮助</p>
-					<a href="">常见问题</a> <a href="">自助服务</a>
-				</div>
-			</div>
+			
 			<div class="foot-bottom">
 				<div class="notice">
 					<a href=""><img src="images/foot-wb-logo.png" />微博客服</a> <a
@@ -339,6 +305,6 @@
 	<script type="text/javascript" charset="utf-8"
 		src="ueditor/lang/zh-cn/zh-cn.js"></script>
 
-	<script src="js/visitor.js"></script>
+	<script type="text/javascript" src="js/visitor.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ import com.yc.ssm.weibo.entity.UserDetail;
 
 public interface UserDetailMapper {
 
-	UserDetail findDetail(UserDetail userDetail);
+	UserDetail findDetail(String userid);
 
 	int updateDetail(UserDetail userDetail);
 

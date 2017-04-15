@@ -116,7 +116,7 @@ public class UserDetail {
 		}
 		@Override
 		public String toString() {
-			return "UserDetail [userDetailId=" + userDetailId + ", username="
+			return "\nUserDetail [userDetailId=" + userDetailId + ", username="
 					+ username + ", birthdate=" + birthdate + ", nickname="
 					+ nickname + ", sex=" + sex + ", address=" + address
 					+ ", bloodType=" + bloodType + ", brief=" + brief
