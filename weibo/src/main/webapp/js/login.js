@@ -1,9 +1,9 @@
-// JavaScript Document
+/*// JavaScript Document
 window.onload=function(){
 	showInfo();
 }
 
-/*head_search搜索栏*/
+head_search搜索栏
 function showInfo(){
 	var SCs=document.getElementsByClassName("search_contant")[0].getElementsByTagName("ul")[0].getElementsByTagName("li");
 	var text=document.getElementById("text");
@@ -413,7 +413,7 @@ for(var i=0; i<3; i++) {
 			//打开门
 			for(var j=2; j>i; j--) {
 				var translate = filmHeight + exposeHeight*(j-1);
-				films[j].style.top = /*parseInt(films[j].style.top, 10) -*/ translate + "px";
+				films[j].style.top = parseInt(films[j].style.top, 10) - translate + "px";
 			}	
 			for(var k=0;k<3;k++){
 				if(k==i){
@@ -461,8 +461,6 @@ SC.onmouseover=function(){
 	VP.id="sub1";
 }
 
-
-
 //实现整个网页向下拉的效果    
 var contLeft=document.getElementsByClassName("content_left")[0];
 var contMiddle=document.getElementsByClassName("content_middle")[0];
@@ -481,4 +479,56 @@ window.onscroll = function(){
 		contLeft.style.position="position";  
 		contLeft.style.top=(realTop-t-200)+"px";  
 	}  
-}  
+}  */
+
+
+
+//============================================================
+showUser();
+function showUser(){
+	var userid = $("#uname").text();
+	$.post("userDetail/listDetail?userid="+userid,function(data){
+		$("#uname").text(data.nickname);
+		$("#userPic").attr("src",data.head_picture);
+		$("#titleName").text(data.nickname);
+		
+	},"json");
+	$.post("follow/findAttention?userid="+userid,function(data){
+		$("#attention").text(data);
+	},"json");
+	$.post("follow/findFans?userid="+userid,function(data){
+		$("#fans").text(data);
+	},"json");
+	$.post("weibo/findNum?userid="+userid,function(data){
+		$("#weiboNum").text(data);
+	},"json");
+}
+
+loadWeibo();
+function loadWeibo(){
+	var page = "1";
+	var rows = "8";
+	$.post("weibo/listAll?page="+page+"&rows="+rows,function(d){
+		var data = d.rows;
+		alert(JSON.stringify(data));
+		var weiboStr = "";
+		for(var i = 0; i < data.length; i++){
+			weiboStr += '<div class="content5"><div class="cont5-top">';
+			weiboStr += '<img src="'+ data[i].userDetail.head_picture +'" width="20px" height="20px" id="cont5-icon" />';
+			weiboStr += '<div class="cont5-top-wenzi"><h4>'+ data[i].userDetail.nickname +'</h4>';
+			weiboStr += '<i class="WB_icon_member6" title="微博会员"><a href="http://vip.weibo.com/"></a></i>';
+			weiboStr += '<i class="WB_icon_airball" title="带着微博去旅行"><a href="ong.weibo.com/travel2016?ref=icon"></a></i>';
+			weiboStr += '<p>'+ data[i].wtime +'</p><span>c</span></div></div>';
+			weiboStr += '<div class="cont5-cen"><div class="WB_text_01">'+ data[i].wNote +'</div>';
+			if(data[i].wpic != null){
+				weiboStr += '<div id="WB_img"><img src="'+ data[i].wpic +'" width="180px" height="180px"></div></div>';
+			}
+			weiboStr += '<div class="cont5-foot"><li><span>û</span>收藏</li>';
+			weiboStr += '<li><span></span>56</li><li><span></span>23</li>';
+			weiboStr += '<li class="cont5-foot-li5"><span>ñ</span>71</li></div></div>';
+		}
+		$(".content5").html(weiboStr);
+	}, "json");
+}
+
+

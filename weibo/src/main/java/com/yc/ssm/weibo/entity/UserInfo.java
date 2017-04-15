@@ -33,7 +33,7 @@ public class UserInfo {//1.管理员表
 	}
 	@Override
 	public String toString() {
-		return "UserInfo [userid=" + userid + ", upwd=" + upwd
+		return "\nUserInfo [userid=" + userid + ", upwd=" + upwd
 				+ ", registertime=" + registertime + ", ustatus=" + ustatus
 				+ "]";
 	}

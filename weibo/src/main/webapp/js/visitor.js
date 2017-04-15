@@ -143,21 +143,17 @@ for (var m= 0; m< quit.length; m++) {
 }	
 
 /*----------------------自己写的js-------------------------*/
-$('#loginBtn').linkbutton({    
-	onClick: function(){    	
-		$("#loginForm").submit();
-	}
-}); 
 
+$("#loginBtn").click(function(){
+	$("#loginForm").submit();
+});
 
 loadWeibo();
 function loadWeibo(){
 	var page = "1";
 	var rows = "8";
 	$.post("weibo/listAll?page="+page+"&rows="+rows,function(d){
-		
 		var data = d.rows;
-		alert(JSON.stringify(data));
 		var weiboStr = "";
 		for(var i = 0; i < data.length; i++){
 			var userid = data[i].wuserid;

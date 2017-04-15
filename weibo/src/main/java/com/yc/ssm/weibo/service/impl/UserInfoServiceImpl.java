@@ -21,11 +21,11 @@ public class UserInfoServiceImpl implements UserInfoService {
 
 	@Override
 	public UserInfo login(UserInfo user) {
-		//user.setPassword(Encrypt.md5AndSha(user.getPassword()));
-		user.setUpwd(Encrypt.md5AndSha(user.getUpwd()));
+		System.out.println(user.getUpwd());
+		if((user.getUpwd() != "") && (user.getUpwd() != null)){
+			user.setUpwd(Encrypt.md5AndSha(user.getUpwd()));
+		}
 		System.out.println("用户进行登录操作=======>"+user);
-	//	System.out.println(userInfoMapper.findUser(user));
-		
 		return userInfoMapper.findUser(user);
 	}
 

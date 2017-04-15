@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.ssm.weibo.mapper.FollowMapper">
+	<insert id="insertF" parameterType="Follow">
+		INSERT INTO
+		follow(fid,fuseriA,fuseridB) VALUES
+		(fid_seq.nextval,#{fuseriA,jdbcType=VARCHAR},#{fuseridB,jdbcType=VARCHAR})
+	</insert>
+
+	<select id="findF" parameterType="string" resultType="Follow">
+		select * from follow where fuseriA=#{fuseriA}
+	</select>
+	
+	<resultMap type="PaginationBean" id="PaginationBeanMap">
+		<collection property="rows"
+			column="{pageSize}=pageSize,{currPage}=currPage" ofType="Follow"
+			select="getFollow" />
+	</resultMap>
+	
+	<select id="listAll" parameterType="PaginationBean" resultMap="PaginationBeanMap">
+		select count(1) total,ceil(count(1)/${pageSize}) totalPage,${pageSize}
+		pageSize,${currPage} currPage from follow
+	</select>
+	
+	<select id="getFollow" resultType="Follow">
+		select t.* from (select n.* ,rownum rn from (select * from follow order by 1) n 
+		where ${currPage} * ${pageSize} >=rownum) t
+		where rn > (${currPage} - 1) * ${pageSize}
+	</select>
+	
+	<select id="findAttention" resultType="string" parameterType="string">
+		select count(1) from follow where fuseridA=#{userid}
+	</select>
+	<select id="findFans" resultType="string" parameterType="string">
+		select count(1) from follow where fuseridB=#{userid}
+	</select>
+	
+</mapper>

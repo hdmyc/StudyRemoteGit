@@ -3,7 +3,7 @@ package com.yc.ssm.weibo.web.handler;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.ssm.weibo.entity.UserDetail;
+import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.service.UserDetailService;
 
 /**
@@ -27,22 +28,17 @@ public class UserDetailHandler{
 	private UserDetailService userDetailService;
 
 	@ResponseBody
-	@RequestMapping(value="findDetail",method=RequestMethod.GET)
-	public UserDetail findDetail(UserDetail userDetail,HttpServletRequest request){
-		System.out.println("login:user ==>" +userDetail);
-		userDetail = userDetailService.findDetail(userDetail);
-		if(userDetail == null){
-			request.setAttribute("该用户还未填写个人详情", userDetail);
-			//return "login.jsp";
-		}else{
-			return userDetail;
-		}
-		return null;
+	@RequestMapping(value="findDetail",method=RequestMethod.POST)
+	public UserDetail findDetail(HttpSession session){
+		UserInfo userInfo =  (UserInfo) session.getAttribute("loginUser");
+		String userid = userInfo.getUserid();
+		return userDetailService.findDetail(userid);
 	}
 
 	@ResponseBody
-	@RequestMapping(value="ModifyUsers",method=RequestMethod.GET)
+	@RequestMapping(value="ModifyUsers",method=RequestMethod.POST)
 	public boolean ModifyUsers(UserDetail userDetail){
+		//userDetail = new String(userDetail.getBytes("ISO-8859-1"), "UTF-8");
 		System.out.println("上传图片 modify user ==>"+userDetail);
 		return userDetailService.modifyUsers(userDetail);//异步数据响应
 	}
@@ -62,15 +58,15 @@ public class UserDetailHandler{
 	@RequestMapping(value="/listDetail",method=RequestMethod.POST)
 	public UserDetail listDetail(String userid){
 		System.out.println(userid);
-		UserDetail userDetail = userDetailService.listDetail(userid);
+		//UserDetail userDetail = userDetailService.listDetail(userid);
 		return userDetailService.listDetail(userid);
 	}
 	
 	@ResponseBody
 	@RequestMapping(value="/findNickname",method=RequestMethod.POST)
-	public UserDetail findNickname(String userid){
+	public String findNickname(String userid){
 		System.out.println(userid);
-		UserDetail userDetail = userDetailService.listDetail(userid);
+		//UserDetail userDetail = userDetailService.listDetail(userid);
 		return userDetailService.findNickname(userid);
 	}
 	

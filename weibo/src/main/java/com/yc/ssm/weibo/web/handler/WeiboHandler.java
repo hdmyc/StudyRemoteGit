@@ -1,8 +1,5 @@
 package com.yc.ssm.weibo.web.handler;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -53,5 +50,12 @@ public class WeiboHandler {
 	public Weibo findWeibo(String wuserid){
 		LogManager.getLogger().debug("找到微博信息..............");
 		return weiboService.findWeibo(wuserid);
+	}
+	
+	//微博数量
+	@ResponseBody
+	@RequestMapping(value="findNum",method=RequestMethod.POST)
+	public String findNum(String userid){
+		return weiboService.findNum(userid);
 	}
 }

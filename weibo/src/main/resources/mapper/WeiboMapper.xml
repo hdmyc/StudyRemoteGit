@@ -13,25 +13,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select
 		* from weibo where wuserid=#{wuserid}
 	</select>
-	
-	<!-- <resultMap type="PaginationBean" id="PaginationBeanMap">
-		<result column="pageSize" property="pageSize"/>
-		<result column="currPage" property="currPage"/>
-		<collection property="rows"
-			column="{pageSize}=pageSize,{currPage}=currPage" ofType="Weibo"
-			select="getWeibo" />
-	</resultMap>
-	
-	<select id="listAll" parameterType="PaginationBean" resultMap="PaginationBeanMap">
-		select count(1) total, ceil(count(1)/${pageSize}) totalPage, ${pageSize} pageSize, ${currPage} currPage from weibo
-	</select>
-	
-	<select id="getWeibo" resultType="Weibo">
-		select t.* from (select n.* ,rownum rn from (select * from weibo order by 1) n 
-		where ${currPage} * ${pageSize} >=rownum) t
-		where rn > (${currPage} - 1) * ${pageSize}
-	</select> -->
-	
 
 	<select id="findById" resultType="Weibo">
 		select * from Weibo where wid =
@@ -39,8 +20,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<update id="updateStatus" parameterType="Weibo">
-		update weibo set wstatus
-		= #{wstatus} where wid = #{wid}
+		update weibo set wstatus= #{wstatus} where wid = #{wid}
 	</update>
 	
 	<resultMap type="PaginationBean" id="PaginationBeanMap">
@@ -59,7 +39,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where w.wuserid = u.userid order by 1 ) n 
 		where ${currPage} * ${pageSize} >=rownum) t
 		where rn > (${currPage} - 1) * ${pageSize}
-		
 	</select>
 	
 	<resultMap type="Weibo" id="WeiboMap">
@@ -74,7 +53,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="wstatus" property="wstatus" />
 		<association property="userDetail" column="userDetailId" javaType="UserDetail">
 			<id column="userDetailId" property="userDetailId" />
-			<id column="nickname" property="nickname" />
+			<result column="nickname" property="nickname" />
+			<result column="head_picture" property="head_picture"/>
 		</association>
 	</resultMap>
+	
+	<select id="findNum" parameterType="string" resultType="string">
+		select count(1) from weibo where wuserid=#{userid}
+	</select>
+	
 </mapper>

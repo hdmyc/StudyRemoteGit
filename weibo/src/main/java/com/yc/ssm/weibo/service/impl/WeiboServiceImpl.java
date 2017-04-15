@@ -47,4 +47,9 @@ public class WeiboServiceImpl implements WeiboService{
 		return weiboMapper.findWeibo(wuserid);
 	}
 
+	@Override
+	public String findNum(String wuserid) {
+		return weiboMapper.findNum(wuserid);
+	}
+
 }

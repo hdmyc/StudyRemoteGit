@@ -22,9 +22,9 @@ public class UserDetailServiceImpl implements UserDetailService {
 	}
 
 	@Override
-	public UserDetail findDetail(UserDetail userDetail) {
-		System.out.println("登录之后===》"+userDetail);
-		return userDetailMapper.findDetail(userDetail);
+	public UserDetail findDetail(String userid) {
+		System.out.println("登录之后===》"+userid);
+		return userDetailMapper.findDetail(userid);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class UserDetailServiceImpl implements UserDetailService {
 	}
 
 	@Override
-	public UserDetail findNickname(String userid) {
+	public String findNickname(String userid) {
 		return userDetailMapper.findNickname(userid);
 	}
 	

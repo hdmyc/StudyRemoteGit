@@ -223,79 +223,7 @@
 							<a href="page/detail.jsp">编辑个人资料  ></a>
 						</div>
 					</div>
-					<div class="contleft5">
-						<i class="contleft5_1"><img src="images/fensi.jpg"/></i>
-						<a class="contleft5_2">添加粉丝群</a>
-					</div>
-					<div class="contleft3">
-						<div class="contleft3_1">
-							<p>赞</p>
-						</div>
-						<div class="contleft3_2">
-							<a href="" class="contleft3_21">
-								<img src="images/zan.jpg" width="92px" height="92px" />
-							</a>
-							<a class="contleft3_22">
-	    						TopShop穿搭
-	    					</a>
-							<a class="contleft3_23"></a><br />
-							<a class="contleft3_24">
-	    						风衣世家
-	    					</a>
-						</div>
-						<div class="contleft3_3">
-							<a href=" ">查看更多  ></a>
-						</div>
-					</div>
-					<div class="contleft4">
-						<div class="contleft4_1">
-							<p>我的微博人气</p>
-						</div>
-						<div class="contleft4_2" style="display:none;">
-							<p></p>
-							<span>您的数据暂时无法算出，明天再来吧 。</span>
-						</div>
-						<div class="contleft4_3" style="display:block;">
-							<div class="contleft4_31">
-								<div id="contleft4_31_1" class="contstyle4">
-									主页访问
-								</div>
-								<div id="contleft4_31_2" class="contstyle3">
-									转发评论
-								</div>
-							</div>
-							<div class="contleft4_32" style="display: block;">
-								<div class="contleft4_32_1" >
-									<span>本周我的主页被访问次数</span>
-									<a><span></span>分享</a>
-								</div>
-								<div class="contleft4_32_2">
-									<i class="contleft4_32_21"></i>
-									<span class="contleft4_32_22">70</span>
-									<i class="contleft4_32_23"></i>
-								</div>
-								<div class="contleft4_32_3"></div>
-								<div class="contleft4_32_4">
-									在你的互粉好友中排名第<span>1</span>位
-								</div>
-							</div>
-							<div class="contleft4_33" style="display: none;">
-								<div class="contleft4_33_1">
-									<span>本周我的微博被转发和评论数</span>
-									<a><span></span>分享</a>
-								</div>
-								<div class="contleft4_33_2">
-									<i class="contleft4_33_21"></i>
-									<span class="contleft4_33_22">0</span>
-									<i class="contleft4_33_23"></i>
-								</div>
-								<div class="contleft4_33_3"></div>
-								<div class="contleft4_33_4">
-									在你的互粉好友中排名第<span>1</span>位
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 				<div class="contentright">
 					<div class="contright1" style="display: block;">
@@ -341,11 +269,6 @@
 									关键字：
 									<input type="text" placeholder="搜我的微博" id="contright2_21" class="border1" />
 								</p>
-								<p>
-									时&nbsp;&nbsp;&nbsp;间：
-									<input type="text" id="contright2_22" class="border1" /> 到
-									<input type="text" placeholder="2016-10-10" id="contright2_23" class="border1" />
-								</p>
 								<p class="contright2_24">
 									<input type="submit" value="搜索" class="contright2_25" />
 								</p>
@@ -390,9 +313,7 @@
 				           </div>
 				           <!--http://weibo.com/u/5760843730/home?wvr=5&lf=reg-->
 				           <div class="cont5-cen">
-				               <div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜<img src="images/hearta_org.gif" /><a href=""><span>L</span>秒拍视频</a></div>
-				               <img src="images/content5.jpg" width="500px" height="281px"/>
-				               <div class="cont5-cen-vid"><embed width="500" height="281.25" wmode="transparent" type="application/x-shockwave-flash" src="http://js.t.sinajs.cn/t5/album/static/swf/video/player.swf?v1441960309059836241438531565" quality="high" allowfullscreen="true" flashvars="list=http%3A%2F%2Fus.sinaimg.cn%2F003K0dAFjx0759H375IY0504010000220k01.m3u8%3FExpires%3D1475655052%26ssig%3DEsFu8wxIaS%26KID%3Dunistore%2Cvideo&amp;fid=1034:713ad1e6d7766bb6e1513ea8dbf58c4e&amp;logo=2&amp;uid=5760843730&amp;vf=feed&amp;ext=%7B%22object_id%22%3A%221034%3A713ad1e6d7766bb6e1513ea8dbf58c4e%22%2C%22mid%22%3A%224027219875132793%22%2C%22mark%22%3Anull%7D" pluginspage="http://get.adobe.com/cn/flashplayer/" allowscriptaccess="always" style="width: 500px; height: 281.25px;position:absolute;left:50px;top:21px"></div>    
+				               <div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜</div>
 				           </div>
 				           <div class="cont5-foot">
 				               <li class="cont5-foot-li1">推广</li>

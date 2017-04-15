@@ -9,12 +9,12 @@ public interface UserDetailService {
 
 	boolean modifyUsers(UserDetail userDetail);
 
-	UserDetail findDetail(UserDetail userDetail);
+	UserDetail findDetail(String userid);
 
 	List<UserDetail> listAll();
 
 	UserDetail listDetail(String userid);
 
-	UserDetail findNickname(String userid);
+	String findNickname(String userid);
 
 }

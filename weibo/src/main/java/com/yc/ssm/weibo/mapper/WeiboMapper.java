@@ -15,4 +15,6 @@ public interface WeiboMapper {
 
 	Weibo findWeibo(String wuserid);
 
+	String findNum(String wuserid);
+
 }

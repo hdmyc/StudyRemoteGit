@@ -1,4 +1,4 @@
-CREATE USER weibo IDENTIFIED BY a
+ CREATE USER weibo IDENTIFIED BY a
 grant connect,resource to weibo;
 
 DROP USER weibo cascade;
@@ -54,45 +54,45 @@ select * from userDetail
 --2.用户详细信息表
 create table userDetail(
   userDetailId       NUMBER(10) PRIMARY KEY,        --详细用户编号
-  username           varchar2(10),                  --真实姓名
+  username           varchar2(40),                  --真实姓名
   birthdate          varchar2(20),                  --生日
-  nickname           varchar2(50),                  --昵称
-  sex                char(2) constraint ck_sex check(sex in('M','F')) ,   --性别  (m为女 ，f为男)
+  nickname           varchar2(60),                  --昵称
+  sex                char(4),   					--性别 
   address            varchar2(200),                 --地址
   bloodType          varchar2(4),                   --血型
   brief              varchar2(100) ,                --简介
-  head_picture       varchar2(100),                 --头像
+  head_picture       varchar2(1000),                 --头像
   blog               VARCHAR2(50),                  --博客地址
   email              varchar2(30),                  --邮箱
   qq                 number(15),                    --qq
-  mobeil             number(20),                    --电话
-  ustatus            number(1) default 0   ,         --是否禁言
+  mobile             number(20),                    --电话
+  userid            varchar2(20),
   msgStatue          number(1) default 0 constraint ck_msgStatue check(msgStatue in(0,1,2))  --个人信息权限  默认0所有人可见  1我关注的人可见   2仅自己可见
 );
-
  create sequence userDetailId_seq          
         increment by 1          
         start with 10001       
         
  drop sequence userDetailId_seq
  drop table userDetail
+ truncate table userDetail
           
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'陈奕迅','1985-01-05','林森男神经','F','香港','O','我是一个唱歌很有魅力的歌手','1.jpg','http://blog.chenyixun.com','1119185633@qq.com',1119185633,18473436246,'1119185633@qq.com',0);
+  VALUES(userDetailId_seq.nextval,'陈奕迅','1985-01-05','林森男神','男','香港','O','我是一个唱歌很有魅力的歌手','/uploadWeibo/','http://blog.chenyixun.com','1119185633@qq.com',1119185633,18473436246,'1119185633@qq.com',0);
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'周杰伦','1986-08-15','店小二奔跑吧','F','台湾','A','哎哟，不错哟','3.jpg','http://blog.com.cn/zhoujielun.com','jaejoonglee@163.com',565944701,18473436246,'jaejoonglee@163.com',0);
+  VALUES(userDetailId_seq.nextval,'周杰伦','1986-08-15','店小二','男','台湾','A','哎哟，不错哟','/uploadWeibo/','http://blog.com.cn/zhoujielun.com','jaejoonglee@163.com',565944701,18473436246,'jaejoonglee@163.com',0);
 INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'那英','1986-09-20','喵星人的喵星球','M','台湾','A','天气好的时候适合唱歌','4.jpg','http://blog.com.cn/naying.com','1298237952@qq.com',1298237952,18473436246,'1298237952@qq.com',0);
+  VALUES(userDetailId_seq.nextval,'那英','1986-09-20','喵星人','女','台湾','A','天气好的时候适合唱歌','/uploadWeibo/','http://blog.com.cn/naying.com','1298237952@qq.com',1298237952,18473436246,'1298237952@qq.com',0);
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'565944701@qq.com',0);
+  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美','女','马来西亚','A','天气很好，我很好','/uploadWeibo/','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'565944701@qq.com',0);
 
  INSERT INTO userDetail 
-  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','M','马来西亚','A','天气很好，我很好','2.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'15570934077',0);
+  VALUES(userDetailId_seq.nextval,'梁静茹','1986-08-15','萌小美Monkey','女','马来西亚','A','天气很好，我很好','1.jpg','http://blog.com.cn/liangjingru.com','565944701@qq.com',565944701,18473436246,'15570934077',0);
 
   SELECT * FROM userDetail where userDetailId = 10001;
 
-
-
+alter table userDetail  modify (sex varchar(15));
+alter table userDetail  modify (username varchar(50));
         
 --3.私信表
 create table chatInfo(
@@ -213,7 +213,7 @@ DROP table weibo
 --8.关注表
 create table follow(
        fid       number(8) PRIMARY KEY,  --关注编号
-       fuseriA   varchar2(20)  constraint fk_fuseriA  references userInfo(userid),--用户
+       fuseridA   varchar2(20)  constraint fk_fuseriA  references userInfo(userid),--用户
        fuseridB  varchar2(20)  constraint fk_fuseridB  references userInfo(userid) --关注用户
   );
    create sequence fid_seq          
@@ -225,7 +225,7 @@ create table follow(
   INSERT INTO follow VALUES(fid_seq.nextval,'jaejoonglee@163.com','565944701@qq.com');
   INSERT INTO follow VALUES(fid_seq.nextval,'1298237952@qq.com','565944701@qq.com');
   
-   
+   select count(1) from follow where fuseridA='1119185633@qq.com'
   SELECT * FROM follow
   DROP SEQUENCE fid_seq
   DROP TABLE follow
@@ -258,4 +258,4 @@ create table follow(
      increment by 1          
      start with 10000001 
      DROP TABLE reply
-select t.* from (select n.* ,rownum rn from (select * from weibo w,userDetail u  where w.wuserid = u.userid order by 1) n where 2 * 4 >=rownum) t where rn > (2 - 1) * 4
+select * from reply
