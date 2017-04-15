@@ -6,6 +6,9 @@
 <base href="${deployName}">
 <meta charset="utf-8">
 <title>wk语默的微博-微博</title>
+<link rel="stylesheet" type="text/css"
+	href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 <link rel="icon" href="images/favicon.ico" />
 <link rel="stylesheet" href="css/detail.css">
 </head>
@@ -113,8 +116,11 @@
 		<div class="head_position">
 			<div class="head_nav">
 				<ul>
-					<li class="head_nav_li1"><a href="login.jsp">E<span style="font-size: 15px; position: relative; top: -2px; left: 3px">首页</span></a></li>
-					<li><a href="">H<span style="font-size: 15px; position: relative; top: -2px; left: 3px" class="uname">语默</span></a></li>
+					<li class="head_nav_li1"><a href="login.jsp">E<span
+							style="font-size: 15px; position: relative; top: -2px; left: 3px">首页</span></a></li>
+					<li><a href="">H<span
+							style="font-size: 15px; position: relative; top: -2px; left: 3px"
+							class="uname">语默</span></a></li>
 				</ul>
 			</div>
 			<div class="head_set">
@@ -165,7 +171,7 @@
 
 	<!--中间内容开始-->
 	<div id="content">
-		<form method="get" id="detail">
+		<form action="" method="get" id="detail">
 			<p>
 				<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
 					type="text" name="userid" id="userid" />
@@ -180,7 +186,7 @@
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;生&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="birthString" id="birthString" />
+					type="text" name="birthdate" id="birthdate" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
@@ -209,7 +215,7 @@
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;Q&nbsp;Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="qq" id="id" />
+					type="text" name="QQ" id="QQ" />
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;电&nbsp;&nbsp;话&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
@@ -220,6 +226,9 @@
 					value="提交修改" /></a>
 		</form>
 	</div>
-<script type="text/javascript" src="js/detail.js"></script>
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="js/detail.js"></script>
 </body>
 </html>

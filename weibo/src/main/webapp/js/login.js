@@ -482,3 +482,9 @@ window.onscroll = function(){
 		contLeft.style.top=(realTop-t-200)+"px";  
 	}  
 }  
+
+
+
+//============================================================
+alert(1);
+

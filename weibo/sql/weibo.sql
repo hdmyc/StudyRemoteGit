@@ -64,9 +64,9 @@ create table userDetail(
   head_picture       varchar2(1000),                 --头像
   blog               VARCHAR2(50),                  --博客地址
   email              varchar2(30),                  --邮箱
-  qq                 number(15),                    --qq
-  mobeil             number(20),                    --电话
-  ustatus            number(1) default 0   ,         --是否禁言
+  QQ                 number(15),                    --qq
+  mobile             number(20),                    --电话
+  userid            varchar2(20),
   msgStatue          number(1) default 0 constraint ck_msgStatue check(msgStatue in(0,1,2))  --个人信息权限  默认0所有人可见  1我关注的人可见   2仅自己可见
 );
  create sequence userDetailId_seq          

@@ -145,7 +145,7 @@
 				</div>
 			</div>
 
-			<!-- <div class="content0">
+			<div class="content0">
 				<div class="content01">
 					<img src="images/contMe.png" width="50px" height="50px" />
 				</div>
@@ -172,7 +172,7 @@
 					<p>转换为好友圈可见</p>
 					<p>转换为仅自己可见</p>
 				</div>
-			</div> -->
+			</div>
 
 			<div class="content2" style="top: 203px">
 				<a href=""><img src="images/600x80_img57ee27a383ca0.png"></a>

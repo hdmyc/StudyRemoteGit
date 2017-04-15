@@ -3,7 +3,7 @@ package com.yc.ssm.weibo.web.handler;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.ssm.weibo.entity.UserDetail;
+import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.service.UserDetailService;
 
 /**
@@ -27,16 +28,10 @@ public class UserDetailHandler{
 
 	@ResponseBody
 	@RequestMapping(value="findDetail",method=RequestMethod.GET)
-	public UserDetail findDetail(UserDetail userDetail,HttpServletRequest request){
-		System.out.println("login:user ==>" +userDetail);
-		userDetail = userDetailService.findDetail(userDetail);
-		if(userDetail == null){
-			request.setAttribute("该用户还未填写个人详情", userDetail);
-			//return "login.jsp";
-		}else{
-			return userDetail;
-		}
-		return null;
+	public UserDetail findDetail(HttpSession session){
+		UserInfo userInfo =  (UserInfo) session.getAttribute("loginUser");
+		String userid = userInfo.getUserid();
+		return userDetailService.findDetail(userid);
 	}
 
 	@ResponseBody
@@ -61,7 +56,7 @@ public class UserDetailHandler{
 	@RequestMapping(value="/listDetail",method=RequestMethod.POST)
 	public UserDetail listDetail(String userid){
 		System.out.println(userid);
-		UserDetail userDetail = userDetailService.listDetail(userid);
+		//UserDetail userDetail = userDetailService.listDetail(userid);
 		return userDetailService.listDetail(userid);
 	}
 	
@@ -69,7 +64,7 @@ public class UserDetailHandler{
 	@RequestMapping(value="/findNickname",method=RequestMethod.GET)
 	public String findNickname(String userid){
 		System.out.println(userid);
-		UserDetail userDetail = userDetailService.listDetail(userid);
+		//UserDetail userDetail = userDetailService.listDetail(userid);
 		return userDetailService.findNickname(userid);
 	}
 	

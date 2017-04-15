@@ -9,7 +9,7 @@ public interface UserDetailService {
 
 	boolean modifyUsers(UserDetail userDetail);
 
-	UserDetail findDetail(UserDetail userDetail);
+	UserDetail findDetail(String userid);
 
 	List<UserDetail> listAll();
 
