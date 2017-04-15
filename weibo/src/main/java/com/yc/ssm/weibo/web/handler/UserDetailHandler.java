@@ -27,7 +27,7 @@ public class UserDetailHandler{
 	private UserDetailService userDetailService;
 
 	@ResponseBody
-	@RequestMapping(value="findDetail",method=RequestMethod.GET)
+	@RequestMapping(value="findDetail",method=RequestMethod.POST)
 	public UserDetail findDetail(HttpSession session){
 		UserInfo userInfo =  (UserInfo) session.getAttribute("loginUser");
 		String userid = userInfo.getUserid();
@@ -35,8 +35,9 @@ public class UserDetailHandler{
 	}
 
 	@ResponseBody
-	@RequestMapping(value="ModifyUsers",method=RequestMethod.GET)
+	@RequestMapping(value="ModifyUsers",method=RequestMethod.POST)
 	public boolean ModifyUsers(UserDetail userDetail){
+		//userDetail = new String(userDetail.getBytes("ISO-8859-1"), "UTF-8");
 		System.out.println("上传图片 modify user ==>"+userDetail);
 		return userDetailService.modifyUsers(userDetail);//异步数据响应
 	}

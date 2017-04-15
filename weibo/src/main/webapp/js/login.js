@@ -487,4 +487,31 @@ window.onscroll = function(){
 
 //============================================================
 alert(1);
+$('#btn').linkbutton({    
+	onClick: function(){    	
+		$("#weibo").open();
+	}
+});
+loadWeiboInfo();
+function loadWeiboInfo(){
+	$.get("weibo/findWeibo",function(data){
+		var weiboInfoStr = "";
+		for(var i = 0; i < data.length; i++){
+			weiboInfoStr='<div class="content01">';
+			if(data[i].wpic !=null){
+				weiboStr += '<img src="'+ data[i].wpic +'" style="width: 120px; height: 90px" />';
+			}
+			weiboInfoStr='</div><div class="content02"><h4><a href="page/weibozones.jsp">'+ data[i].wuserid+'</a></h4>';
+			weiboInfoStr='<p><span>'+ data[i].wtime +'</span></p><br /><div class="shuru">'+ data[i].wnote +'</div></div>';
+			weiboInfoStr='<div class="content03">c</div><div class="content04"><ul>';
+			weiboInfoStr='<li>推广</li>';
+			weiboInfoStr='<li><b></b>'+ data[i].transmitNum +'</li>';
+			weiboInfoStr='<li><b></b>'+ data[i].commentNum +'</li>';
+			weiboInfoStr='<li><b>ñ</b>'+ data[i].zanNum +'</li>';
+			weiboInfoStr='</ul></div><div class="cont0_ying" style="display: none;"><p>删除</p></div>';
+		}
+		$(".content0").html(weiboInfoStr);
+	}, "json");
+}
+
 

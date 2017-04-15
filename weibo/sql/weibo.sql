@@ -54,10 +54,10 @@ select * from userDetail
 --2.用户详细信息表
 create table userDetail(
   userDetailId       NUMBER(10) PRIMARY KEY,        --详细用户编号
-  username           varchar2(20),                  --真实姓名
+  username           varchar2(40),                  --真实姓名
   birthdate          varchar2(20),                  --生日
-  nickname           varchar2(50),                  --昵称
-  sex                char(8) constraint ck_sex check(sex in('女','男')) ,   --性别  (m为女 ，f为男)
+  nickname           varchar2(60),                  --昵称
+  sex                char(4),   					--性别 
   address            varchar2(200),                 --地址
   bloodType          varchar2(4),                   --血型
   brief              varchar2(100) ,                --简介
@@ -75,6 +75,7 @@ create table userDetail(
         
  drop sequence userDetailId_seq
  drop table userDetail
+ truncate table userDetail
           
  INSERT INTO userDetail 
   VALUES(userDetailId_seq.nextval,'陈奕迅','1985-01-05','林森男神','男','香港','O','我是一个唱歌很有魅力的歌手','/uploadWeibo/','http://blog.chenyixun.com','1119185633@qq.com',1119185633,18473436246,'1119185633@qq.com',0);
@@ -90,8 +91,8 @@ INSERT INTO userDetail
 
   SELECT * FROM userDetail where userDetailId = 10001;
 
-
-
+alter table userDetail  modify (sex varchar(15));
+alter table userDetail  modify (username varchar(50));
         
 --3.私信表
 create table chatInfo(

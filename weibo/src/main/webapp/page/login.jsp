@@ -145,7 +145,7 @@
 				</div>
 			</div>
 
-			<div class="content0">
+			 <div class="content0" id="weibo">
 				<div class="content01">
 					<img src="images/contMe.png" width="50px" height="50px" />
 				</div>
@@ -170,8 +170,6 @@
 				</div>
 				<div class="cont0_ying" style="display: none;">
 					<p>删除</p>
-					<p>转换为好友圈可见</p>
-					<p>转换为仅自己可见</p>
 				</div>
 			</div>
 

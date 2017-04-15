@@ -171,7 +171,7 @@
 
 	<!--中间内容开始-->
 	<div id="content">
-		<form action="" method="get" id="detail">
+		<form action="" method="post" id="detail">
 			<p>
 				<label>&nbsp;&nbsp;登&nbsp;录&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
 					type="text" name="userid" id="duserid" />
@@ -190,7 +190,7 @@
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="dsex" id="sex"/>
+					type="text" name="sex" id="dsex"/>
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;所&nbsp;在&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input

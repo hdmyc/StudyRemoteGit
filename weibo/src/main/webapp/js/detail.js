@@ -2,7 +2,7 @@
 loaduserDetail();
 function loaduserDetail(){
 	//以异步的方式取到所有用户的信息
-	$.get("userDetail/findDetail", function(data){
+	$.post("userDetail/findDetail", function(data){
 		//alert("请求响应成功..."+data);
 		//alert(JSON.stringify(data));  //JSON.stringify() ,把json对象转换成json字符串
 		$("#duserid").val(data.userid);
@@ -30,13 +30,16 @@ $('#birthdate').datebox({
 $("#detail").form({
 	url:"userDetail/ModifyUsers",    
     success:function(data){ 
-    	if(data == ""){
-    		$.messager.alert('用户修改主','当前用户没有修改用户的权限 ！','warning');
-    		return ;
-    	}
-
-    	if(data.trim() == "true"){
+    	if(data){
     		$("#detail").datagrid("reload"); //刷新修改数据
+    		$.messager.show({
+    			title:'修改信息',
+    			msg:'修改成功！！！',
+    			showType:'show',
+    			style:{
+    				top:document.body.scrollTop+document.documentElement.scrollTop,
+    			}
+    		});
     	}else{
     		$.messager.show({
     			title:'修改信息',
