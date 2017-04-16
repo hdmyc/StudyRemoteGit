@@ -11,4 +11,8 @@ public interface FollowService {
 
 	PaginationBean<Follow> listAll(String page, String rows);
 
+	String findAttention(String userid);
+
+	String findFans(String userid);
+
 }

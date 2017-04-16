@@ -13,6 +13,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select
 		* from weibo where wuserid=#{wuserid}
 	</select>
+
+	<select id="findById" resultType="Weibo">
+		select * from Weibo where wid =
+		#{wid}
+	</select>
+
+	<update id="updateStatus" parameterType="Weibo">
+		update weibo set wstatus= #{wstatus} where wid = #{wid}
+	</update>
 	
 	<resultMap type="PaginationBean" id="PaginationBeanMap">
 		<result column="pageSize" property="pageSize"/>
@@ -25,22 +34,32 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="listAll" parameterType="PaginationBean" resultMap="PaginationBeanMap">
 		select count(1) total, ceil(count(1)/${pageSize}) totalPage, ${pageSize} pageSize, ${currPage} currPage from weibo
 	</select>
-	
-	<select id="getWeibo" resultType="Weibo">
-		select t.* from (select n.* ,rownum rn from (select * from weibo order by 1) n 
+	<select id="getWeibo" resultMap="WeiboMap">
+		select t.* from (select n.* ,rownum rn from (select * from weibo w,userDetail u 
+		where w.wuserid = u.userid order by 1 ) n 
 		where ${currPage} * ${pageSize} >=rownum) t
 		where rn > (${currPage} - 1) * ${pageSize}
 	</select>
 	
-
-	<select id="findById" resultType="Weibo">
-		select * from Weibo where wid =
-		#{wid}
+	<resultMap type="Weibo" id="WeiboMap">
+		<id column="wid" property="wid" />
+		<result column="wuserid" property="wuserid" /><!--column为取到的值的名字 property为类中的名称 -->
+		<result column="wtime" property="wtime" />
+		<result column="wNote" property="wNote" />
+		<result column="wpic" property="wpic" />
+		<result column="zanNum" property="zanNum" />
+		<result column="transmitNum" property="transmitNum" />
+		<result column="commentNum" property="commentNum" />
+		<result column="wstatus" property="wstatus" />
+		<association property="userDetail" column="userDetailId" javaType="UserDetail">
+			<id column="userDetailId" property="userDetailId" />
+			<result column="nickname" property="nickname" />
+			<result column="head_picture" property="head_picture"/>
+		</association>
+	</resultMap>
+	
+	<select id="findNum" parameterType="string" resultType="string">
+		select count(1) from weibo where wuserid=#{userid}
 	</select>
-
-	<update id="updateStatus" parameterType="Weibo">
-		update weibo set wstatus
-		= #{wstatus} where wid = #{wid}
-	</update>
 	
 </mapper>

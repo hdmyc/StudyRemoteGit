@@ -21,7 +21,7 @@ public class WeiboHandler {
 
 	//列出所有微博消息
 	@ResponseBody
-	@RequestMapping(value="/listAll",method=RequestMethod.GET)
+	@RequestMapping(value="/listAll",method=RequestMethod.POST)
 	public PaginationBean<Weibo> listAll(String page,String rows){
 		return weiboService.listAll(page,rows);
 	}
@@ -50,5 +50,12 @@ public class WeiboHandler {
 	public Weibo findWeibo(String wuserid){
 		LogManager.getLogger().debug("找到微博信息..............");
 		return weiboService.findWeibo(wuserid);
+	}
+	
+	//微博数量
+	@ResponseBody
+	@RequestMapping(value="findNum",method=RequestMethod.POST)
+	public String findNum(String userid){
+		return weiboService.findNum(userid);
 	}
 }

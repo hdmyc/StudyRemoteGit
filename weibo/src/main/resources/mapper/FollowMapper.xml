@@ -10,8 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<select id="findF" parameterType="string" resultType="Follow">
-		select
-		* from follow where fuseriA=#{fuseriA}
+		select * from follow where fuseriA=#{fuseriA}
 	</select>
 	
 	<resultMap type="PaginationBean" id="PaginationBeanMap">
@@ -30,4 +29,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where ${currPage} * ${pageSize} >=rownum) t
 		where rn > (${currPage} - 1) * ${pageSize}
 	</select>
+	
+	<select id="findAttention" resultType="string" parameterType="string">
+		select count(1) from follow where fuseridA=#{userid}
+	</select>
+	<select id="findFans" resultType="string" parameterType="string">
+		select count(1) from follow where fuseridB=#{userid}
+	</select>
+	
 </mapper>

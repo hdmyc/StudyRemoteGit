@@ -37,4 +37,16 @@ public class FollowHandler {
 		LogManager.getLogger().debug("获取我关注的所有用户.....");
 		return followService.listAll(page,rows);
 	}
+	
+	@ResponseBody
+	@RequestMapping("findAttention")
+	public String findAttention(String userid){
+		return followService.findAttention(userid);
+	}
+	
+	@ResponseBody
+	@RequestMapping("findFans")
+	public String findFans(String userid){
+		return followService.findFans(userid);
+	}
 }

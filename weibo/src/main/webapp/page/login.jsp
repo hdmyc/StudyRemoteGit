@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html>
 <head>
@@ -12,7 +12,7 @@
 <link rel="icon" href="images/favicon.ico" />
 <link rel="stylesheet" href="css/login.css">
 </head>
-<body onload="init()">
+<body><!-- onload="init()" -->
 	<!--头部开始-->
 	<div id="head">
 		<div class="head_logo">
@@ -30,7 +30,7 @@
 					<li class="head_nav_li1"><a href="">E<span
 							style="font-size: 15px; position: relative; top: -2px; left: 3px">首页</span></a></li>
 					<li><a href="page/weibozones.jsp">H<span
-							style="font-size: 15px; position: relative; top: -2px; left: 3px">语默</span></a></li>
+							style="font-size: 15px; position: relative; top: -2px; left: 3px" id="titleName">语默</span></a></li>
 				</ul>
 			</div>
 			<div class="head_set">
@@ -98,9 +98,6 @@
 						<em>有什么新</em> <em class="WZ_em2">鲜</em> <em>事想告诉大家</em> <em
 							class="WZ_em4"><sub>?</sub></em>
 					</div>
-					<div class="content112">
-						<a href="">高校成艾滋病重灾区：学生艾滋病疫情年增长43.16%</a> <a href="">热门微博</a>
-					</div>
 					<div class="content113">
 						还可以输入<span style="font-size: 20px" id="count">140</span>字
 					</div>
@@ -153,200 +150,33 @@
 				</div> -->
 			</div>
 
-			<div class="addpinglun">
-				<a href="javascript:void(0)" onclick="add();">评论</a>
-			</div>
-			<div id="addFav">
-				<form method="post" id="addFavForm">
-					<div class="topTitle">评论</div>
-					<table class="input_table">
-						<tr>
-							<td></td>
-							<td><textarea id="fdesc" name="fdesc" rows="4" cols="39"
-									placeholder="输入评论信息"></textarea></td>
-						</tr>
-						<tr>
-							<td colspan="2" align="right">
-								<button onclick="return addWinClose();">&nbsp;&nbsp;取
-									消&nbsp;&nbsp;</button>&nbsp;&nbsp;
-								<button onclick="return addFavorite()">&nbsp;&nbsp;提
-									交&nbsp;&nbsp;</button>&nbsp;
-							</td>
-						</tr>
-					</table>
-				</form>
-			</div>
-			<div class="content2" style="top: 203px">
-				<a href=""><img src="images/600x80_img57ee27a383ca0.png"></a>
-				<p class="con2_btn">X</p>
-			</div>
-			<div class="content3">
-				<span class="content31"> <i class="Wb_ficon"
-					style="color: #F95858;">ì</i> 精彩微博推荐 <span> <span
-						class="content32"> <a>c</a> <span>
-								<div class="cont3_ying" style="display: none;">
-									<!--content3隐藏的部分-->
-									<p class="cont3-tod">仅今天关闭</p>
-									<p class="cont3-pro">永久关闭</p>
-								</div>
-			</div>
-
-			<div class="content4">
-				<div class="cont4-top">
-					<img src="images/cont4-cen.png" id="cont4pic" />
-					<div class="cont4-top-wenzi">
-						<h4>我的朋友是个呆B</h4>
-						<i class="WB_icon_app" title="微博个人认证"><a
-							href="http://verified.weibo.com/verify"></a></i> <i
-							class="WB_icon_member6" title="微博会员"><a
-							href="http://vip.weibo.com/"></a></i> <i class="WB_icon_airball"
-							title="带着微博去旅行"><a href="ong.weibo.com/travel2016?ref=icon"></a></i>
-						<p>15:01</p>
-						<span>c</span>
-					</div>
-				</div>
-				<div class="cont4-cen">
-					<div class="WB_text_01">牵手</div>
-				</div>
-				<div class="cont4-foot">
-					<li><span>û</span>收藏</li>
-					<li><span></span>38</li>
-					<li><span></span>76</li>
-					<li class="cont4-foot-li4"><span>ñ</span>21</li>
-				</div>
-				<div class="cont4_ying">
-					<!--content4隐藏的部分-->
-					<div class="cont4_ying_pic">
-						<img src="images/profile_cover_m.jpg" class="cont4_ying_pic1" />
-						<img src="images/cont4-cen.png" class="cont4_ying_pic2"
-							title="TopShop穿搭" /> <i class="cont4_ying_pic_icon"
-							title="深圳高飞传媒有限公司设计师"></i>
-						<p class="PChuan">TopShop穿搭（设置备注）</p>
-						<span class="cont4span1" title="男"></span> <span
-							class="cont4span2" title="微博会员"></span> <span class="cont4span3"
-							title="带着微博去旅行"></span>
-						<p class="PJian">简介：深圳高飞传媒有限公司 设计师</p>
-					</div>
-					<div class="cont4_ying_wenzi">
-						<div class="cont4_ying_wenzi1">
-							<li class="li1"><a href="">关注<span>113</span></a></li>
-							<li class="li2"><a href="">粉丝<span>988万</span></a></li>
-							<li class="li3"><a href="">微博<span>74368</span></a></li>
-						</div>
-						<div class="cont4_ying_wenzi2">
-							<a href="">内蒙古呼和...</a>
-						</div>
-						<div class="cont4_ying_wenzi3">
-							<a href="" class="wenzi31"><span>Y</span>已关注<span>g</span></a> <a
-								href="" class="wenzi32">私信</a> <a href="" class="wenzi33">=</a>
-						</div>
-					</div>
-				</div>
-				<div class="cont4_jian_ying" style="display: none"></div>
-				<div class="cont4_ying_ying1">
-					<li>取消关注</li>
-				</div>
-				<div class="cont4_ying_ying3"></div>
-
-				<div class="cont4_zhuan_WB">
-					<div class="cont4_zhuan_WB_first">
-						<h4>转发微博</h4>
-						<a href="">X</a>
-					</div>
-					<div class="cont4_zhuan_WB_two">
-						<span>转发到：</span>
-						<li class="MyWB"><a href="">我的微博</a></li>
-					</div>
-					<div class="cont4_zhuan_WB_three"></div>
-					<div class="cont4_zhuan_WB_four">
-						<textarea title="转发微博内容" class="WB_input"
-							style="height: 80px; width: 466px; border: 1px solid #ccc; padding: 5px 6px 0px; font-size: 12px; word-wrap: break-word; line-height: 18px; overflow: hidden; outline: medium none;"
-							range="0&amp;0" placeholder="转发微博内容"></textarea>
-						<span>140</span>
-					</div>
-					<div class="cont4_zhuan_WB_five">
-						<b class="face">o</b> <img src="images/tupian.png" /> <a href="">
-							<code>公开</code> <i>c</i>
-						</a>
-						<p>转发</p>
-					</div>
-				</div>
-				<!--content4的评论事件-->
-				<div class="cont4_pinglun" style="display: none">
-					<div class="cont4_pinglun1">
-						<p class="pinglun1_icon"></p>
-						<p class="pinglun1_text">
-							#微博辟谣#平台，<a href="">欢迎查阅！</a>
-						</p>
-						<p class="pinglun1_close">X</p>
-					</div>
-					<div class="cont4_pinglun2">
-						<img src="images/meicon.jpg" width="30px" height="30px"> <input
-							type="text"
-							style="width: 490px; height: 23px; padding: 5px 2px 0px 6px;">
-					</div>
-					<div class="cont4_pinglun3">
-						<span class="pinglun31">o</span> <span class="pinglun32"></span>
-						<p>评论</p>
-					</div>
-				</div>
-			</div>
-
 			<div class="content5">
-				<div class="cont5-top">
+				<!-- <div class="cont5-top">
 					<img src="images/cont5.png" id="cont5-icon" />
 					<div class="cont5-top-wenzi">
 						<h4>环球搞笑视频</h4>
 						<i class="WB_icon_member6" title="微博会员"><a
 							href="http://vip.weibo.com/"></a></i> <i class="WB_icon_airball"
 							title="带着微博去旅行"><a href="ong.weibo.com/travel2016?ref=icon"></a></i>
-						<p>
-							今天14:25来自<a href="">微博weibo.com</a>
-						</p>
-						<img src="images/star_165_pc_x2.png" class="cont5-pic" /> <span>c</span>
+						<p>今天14:25</p>
+						<img src="images/star_165_pc_x2.png" class="cont5-pic" /> 
+						<span>c</span>
 					</div>
 				</div>
-				<!--http://weibo.com/u/5760843730/home?wvr=5&lf=reg-->
+
+				http://weibo.com/u/5760843730/home?wvr=5&lf=reg
 				<div class="cont5-cen">
-					<div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜
-					</div>
+					<div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜</div>
+					<div id="WB_img"><img src="images/cont4-cen01.jpg" width="180px" height="180px"></div>
 				</div>
 				<div class="cont5-foot">
 					<li><span>û</span>收藏</li>
 					<li><span></span>56</li>
 					<li><span></span>23</li>
 					<li class="cont5-foot-li5"><span>ñ</span>71</li>
-				</div>
+				</div> -->
 			</div>
-			<div class="content6">
-				<div class="cont6-top">
-					<img src="images/cont6.png" class="cont6pic" />
-					<div class="cont6-top-wenzi">
-						<h4>华尔街日报中文网</h4>
-						<i class="WB_icon_app" title="微博个人认证"><a
-							href="http://verified.weibo.com/verify"></a></i> <i
-							class="WB_icon_member6" title="微博会员"><a
-							href="http://vip.weibo.com/"></a></i> <i class="WB_icon_airball"
-							title="带着微博去旅行"><a href="ong.weibo.com/travel2016?ref=icon"></a></i>
-						<p>
-							今天13:49来自<a href="">微博weibo.com</a>
-						</p>
-						<span>c</span>
-					</div>
-				</div>
-				<div class="cont6-cen">
-					<div class="WB_text_01">【中国央行面临政策放松压力，但房地产泡沫令人担忧】-
-						中国在今年余下时间运用宽松货币政策来扶持经济增长的能力主要取决于政府如何应对不断膨胀的房地产泡沫。今年到目前为止，中国央行都没有采取降息及其他强有力的信贷宽松措施来促进经济增长。
-					</div>
-				</div>
-				<div class="cont6-foot">
-					<li><span>û</span>收藏</li>
-					<li><span></span>74</li>
-					<li><span></span>38</li>
-					<li class="cont6-foot-li6"><span>ñ</span>77</li>
-				</div>
-			</div>
-			<div class="content7">
+			<!-- <div class="content7">
 				<div class="cont7-top">
 					<img src="images/cont7.png" class="cont7pic" />
 					<div class="cont7-top-wenzi">
@@ -356,9 +186,7 @@
 							class="WB_icon_member6" title="微博会员"><a
 							href="http://vip.weibo.com/"></a></i> <i class="WB_icon_airball"
 							title="带着微博去旅行"><a href="ong.weibo.com/travel2016?ref=icon"></a></i>
-						<p>
-							今天13:49来自<a href="">微博weibo.com</a>
-						</p>
+						<p>今天13:49</p>
 						<span>c</span>
 					</div>
 				</div>
@@ -389,23 +217,10 @@
 					<li><span></span>2</li>
 					<li class="cont7-foot-li7"><span>ñ</span>41</li>
 				</div>
-			</div>
-			<div class="content8">
-				<div class="cont81">
-					<span class="cont81-WB-icon"></span>
-					<p>
-						被不想看到的微博刷屏， <a
-							href="http://vip.weibo.com/paycenter?from=pbkeyword">开通微博会员</a>
-						可设置关键词来屏蔽相关微博内容
-					</p>
-				</div>
-				<div class="cont82">
-					<a href="">J</a>
-				</div>
-			</div>
-			<div class="content9">
+			</div> -->
+			<!-- <div class="content9">
 				<div class="cont91">
-					<a href="">第一页<span>c</span></a>
+					<a href="">上一页</a>
 				</div>
 				<div class="cont92">
 					<a href="">下一页</a>
@@ -417,7 +232,7 @@
 					<li><a href="">第二页</a></li>
 					<li class="cont9li1"><a href="">第一页</a></li>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<!--内容的内容结束-->
 
@@ -426,22 +241,22 @@
 			<div class="cont-intro-me">
 				<div class="cont-intro-me1">
 					<img src="images/008_s.jpg" /> <a href="page/weibozones.jsp"><img
-						src="images/contMe.png" alt="wk语默" /></a>
+						src="images/contMe.png" alt="用户" id="userPic"/></a>
 				</div>
 				<div class="cont-intro-me2">
 					<div class="nameBox">
 						<a href="page/weibozones.jsp">
-							<h4>wk语默</h4> <span></span> <i>Lv7</i>
+							<h4 id="uname">${loginUser.userid}</h4>
 						</a>
 					</div>
 					<ul>
-						<li class="S_line1"><a href=""> <strong class="stro1">49</strong><strong
+						<li class="S_line1"><a href=""> <strong class="stro1" id="attention">49</strong><strong
 								class="stro2">关注</strong>
 						</a></li>
-						<li class="S_line2"><a href=""> <strong class="stro1">5</strong><strong
+						<li class="S_line2"><a href=""> <strong class="stro1" id="fans">5</strong><strong
 								class="stro2">粉丝</strong>
 						</a></li>
-						<li class="S_line3"><a href=""> <strong class="stro1">4</strong><strong
+						<li class="S_line3"><a href=""> <strong class="stro1" id="weiboNum">4</strong><strong
 								class="stro2">微博</strong>
 						</a></li>
 					</ul>
@@ -450,7 +265,6 @@
 
 			<!--内容的右边结束-->
 		</div>
-
 
 		<!--内容右边的一个回到顶部事件-->
 		<div class="To-Top">
@@ -471,8 +285,7 @@
 
 
 		<!--脚注开始-->
-		<div id="foot">
-
+		<!-- <div id="foot">
 			<div class="foot-bottom">
 				<div class="notice">
 					<a href=""><img src="images/foot-wb-logo.png" />微博客服</a> <a
@@ -490,13 +303,18 @@
 					<a href=""><img src="images/emblem.png" />京公网安备11000002000019号</a>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!--脚注结束-->
-
 		<script type="text/javascript" src="easyui/jquery.min.js"></script>
 		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
-		<script type="text/javascript"
-			src="easyui/locale/easyui-lang-zh_CN.js"></script>
+		<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+		<script type="text/javascript" charset="utf-8"
+			src="ueditor/ueditor.config.js"></script>
+		<script type="text/javascript" charset="utf-8"
+			src="ueditor/ueditor.all.min.js"></script>
+		<script type="text/javascript" charset="utf-8"
+			src="ueditor/lang/zh-cn/zh-cn.js"></script>
+
 		<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

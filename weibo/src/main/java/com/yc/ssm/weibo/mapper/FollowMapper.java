@@ -11,4 +11,8 @@ public interface FollowMapper {
 
 	PaginationBean<Follow> listAll(PaginationBean<Follow> pb);
 
+	String findAttention(String userid);
+
+	String findFans(String userid);
+
 }

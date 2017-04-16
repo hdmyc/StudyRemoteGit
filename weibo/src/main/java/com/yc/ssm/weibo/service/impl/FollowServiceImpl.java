@@ -39,4 +39,14 @@ public class FollowServiceImpl implements FollowService {
 		return followMapper.listAll(pb);
 	}
 
+	@Override
+	public String findAttention(String userid) {
+		return followMapper.findAttention(userid);
+	}
+
+	@Override
+	public String findFans(String userid) {
+		return followMapper.findFans(userid);
+	}
+
 }

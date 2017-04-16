@@ -58,6 +58,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<select id="findNickname" resultType="string" parameterType="string">
-		select nickname from UserDetail where userid = #{userid}
+		select u.nickname from UserDetail u where u.userid = #{userid}
 	</select>
 </mapper>

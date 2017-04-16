@@ -143,7 +143,12 @@ for (var m= 0; m< quit.length; m++) {
 }	
 
 /*----------------------自己写的js-------------------------*/
+<<<<<<< HEAD
 $('#loginBtn').Click(function(){    
+=======
+
+$("#loginBtn").click(function(){
+>>>>>>> branch 'master' of git@github.com:hdmyc/StudyRemoteGit.git
 	$("#loginForm").submit();
 });
 
@@ -151,10 +156,11 @@ loadWeibo();
 function loadWeibo(){
 	var page = "1";
 	var rows = "8";
-	$.get("weibo/listAll?page="+page+"&rows="+rows,function(d){
+	$.post("weibo/listAll?page="+page+"&rows="+rows,function(d){
 		var data = d.rows;
 		var weiboStr = "";
 		for(var i = 0; i < data.length; i++){
+<<<<<<< HEAD
 			/*var userid = data[i].wuserid;*/
 			/*$.get("userDetail/findNickname?userid="+userid,function(nickname){*/
 			weiboStr += '<div class="content_1">';
@@ -171,6 +177,19 @@ function loadWeibo(){
 
 			/*},"json");*/
 
+=======
+			var userid = data[i].wuserid;
+			weiboStr += '<div class="content_1">';
+			weiboStr += '<a href="http://weibo.com/shenqiUSA?topnav=1&wvr=6&topsug=1">';
+			if(data[i].wpic !=null){
+				weiboStr += '<img src="'+ data[i].wpic +'" style="width: 120px; height: 90px" />';
+			}
+			weiboStr += '<p class="chara_1">'+ data[i].wNote +'</p>';
+			weiboStr += '<p class="chara_2">@'+ data[i].userDetail.nickname +'&nbsp;&nbsp;'+ data[i].wtime +'</p>';
+			weiboStr += '<span class="chara_3"><p>'+ data[i].transmitNum +'&nbsp;&nbsp;|</p></span>'; 
+			weiboStr += '<span class="chara_4"><p>'+ data[i].commentNum +'&nbsp;&nbsp;|</p></span>';
+			weiboStr += '<span class="chara_5"><p>'+ data[i].zanNum +'</p></span></a></div>';
+>>>>>>> branch 'master' of git@github.com:hdmyc/StudyRemoteGit.git
 		}
 		$(".content").html(weiboStr);
 	}, "json");

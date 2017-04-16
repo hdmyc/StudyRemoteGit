@@ -38,5 +38,17 @@ public class FollowServiceTest {
 		System.out.println(pb);
 		assertNotNull(pb);
 	}
+	@Test
+	public void testFindAttention() {
+		String num = followService.findAttention("1119185633@qq.com");
+		System.out.println(num);
+		assertNotNull(num);
+	}
+	@Test
+	public void testFindfans() {
+		String num = followService.findFans("565944701@qq.com");
+		System.out.println(num);
+		assertNotNull(num);
+	}
 
 }

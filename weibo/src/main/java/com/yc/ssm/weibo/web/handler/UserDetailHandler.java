@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -62,7 +63,7 @@ public class UserDetailHandler{
 	}
 	
 	@ResponseBody
-	@RequestMapping(value="/findNickname",method=RequestMethod.GET)
+	@RequestMapping(value="/findNickname",method=RequestMethod.POST)
 	public String findNickname(String userid){
 		System.out.println(userid);
 		//UserDetail userDetail = userDetailService.listDetail(userid);

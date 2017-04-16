@@ -56,6 +56,13 @@ public class WeiboServiceTest {
 		assertNotNull(pb);
 	}
 	
+	@Test
+	public void testFindNum() {
+		String num = weiboService.findNum("1298237952@qq.com");
+		System.out.println(num);
+		assertNotNull(num);
+	}
+	
 
 
 }

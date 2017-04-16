@@ -1,12 +1,10 @@
-CREATE USER weibo IDENTIFIED BY a
+ CREATE USER weibo IDENTIFIED BY a
 grant connect,resource to weibo;
 
 DROP USER weibo cascade;
 
 select USERID, UPWD, REGISTER_TIME from UserInfo where USERID ='15570934077' and UPWD='aa'
-
 select * from root;
-
 --0.管理员表
 CREATE TABLE root(
     rid    VARCHAR2(4) PRIMARY KEY, --管理员编号
@@ -127,8 +125,6 @@ create table weibo(
      wstatus         number(1) default 0 constraint ck_wstatus check(wstatus in(0,1,2))       -- 权限（默认0公开  1好友圈可见  2仅自己可见）
   ); 
 
-  update weibo set zanNum = ""
-  
   DELETE FROM weibo WHERE wid = 10000001
    create sequence wid_seq          
         increment by 1          
@@ -213,7 +209,7 @@ DROP table weibo
 --8.关注表
 create table follow(
        fid       number(8) PRIMARY KEY,  --关注编号
-       fuseriA   varchar2(20)  constraint fk_fuseriA  references userInfo(userid),--用户
+       fuseridA   varchar2(20)  constraint fk_fuseriA  references userInfo(userid),--用户
        fuseridB  varchar2(20)  constraint fk_fuseridB  references userInfo(userid) --关注用户
   );
    create sequence fid_seq          
@@ -225,7 +221,7 @@ create table follow(
   INSERT INTO follow VALUES(fid_seq.nextval,'jaejoonglee@163.com','565944701@qq.com');
   INSERT INTO follow VALUES(fid_seq.nextval,'1298237952@qq.com','565944701@qq.com');
   
-   
+   select count(1) from follow where fuseridA='1119185633@qq.com'
   SELECT * FROM follow
   DROP SEQUENCE fid_seq
   DROP TABLE follow
