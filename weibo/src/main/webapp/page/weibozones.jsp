@@ -123,25 +123,16 @@
 					<div class="hideinfo1">
 						<em class="line_bg1"></em>
 						<ul>
-							<li><a href="">&#64;我</a></li>
 							<li><a href="">评论</a></li>
 							<li class="hideinfoli2"><a href="">赞</a></li>
 							<li><a href="">私信</a></li>
-							<li><a href="">未关注人私信</a></li>
-							<li class="hideinfoli6"><a href="">群消息</a></li>
-							<li class="hideinfoli7"><a href="">消息设置</a></li>
 						</ul>
 					</div>
 					<div class="hideinfo2">
 						<em class="line_bg2"></em>
 						<ul>
 							<li><a href="">账号设置</a></li>
-							<li><a href="">会员中心</a></li>
-							<li><a href="">V认证</a></li>
-							<li><a href="">账号安全</a></li>
-							<li><a href="">隐私设置</a></li>
 							<li><a href="">消息设置</a></li>
-							<li class="hideinfo27"><a href="">帮助中心</a></li>
 							<li class="hideinfo28"><a href="index.jsp">退出</a></li>
 						</ul>
 					</div>
@@ -315,11 +306,11 @@
 				           <div class="cont5-cen">
 				               <div class="WB_text_01">《有点甜》，这歌词真虐心，都快忘记原唱了…… 一直在单曲循环，不是一般的甜</div>
 				           </div>
-				           <div class="cont5-foot">
-				               <li class="cont5-foot-li1">推广</li>
+				            <div class="cont5-foot">
+				               <li class="cont4-foot-li1">推广</li>
 				               <li><span></span>转发</li>
 				               <li><span></span>评论</li>
-				               <li  class="cont5-foot-li5"><span>ñ</span>赞</li>
+				               <li  class="cont4-foot-li5"><span>ñ</span>赞</li>
 				           </div>
 				           <p class="cont5_1">阅读 <span>99</span></p>
 				       	</div>

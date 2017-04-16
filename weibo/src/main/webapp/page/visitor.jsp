@@ -188,7 +188,7 @@
 						<div class="subdiv">
 							<!-- <input type="submit" value="登录" id="sub""/> -->
 							<p>
-								<a id="loginBtn" type="submit" href="javascript:void(0)">登录</a>
+								<a id="loginBtn" type="submit" href="page/login.jsp">登录</a>
 							</p>
 						</div>
 						<div class="noweb">

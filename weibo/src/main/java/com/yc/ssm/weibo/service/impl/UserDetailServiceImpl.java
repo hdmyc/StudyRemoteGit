@@ -17,7 +17,7 @@ public class UserDetailServiceImpl implements UserDetailService {
 
 	@Override
 	public boolean modifyUsers(UserDetail userDetail) {
-		System.out.println("修改之前====>"+userDetail);
+		System.out.println("修改之后====>"+userDetail);
 		return userDetailMapper.updateDetail(userDetail)>0;
 	}
 

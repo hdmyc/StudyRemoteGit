@@ -6,6 +6,9 @@
 <base href="${deployName}">
 <meta charset="utf-8">
 <title>我的首页 微博-随时随地发现新鲜事</title>
+<link rel="stylesheet" type="text/css"
+	href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 <link rel="icon" href="images/favicon.ico" />
 <link rel="stylesheet" href="css/login.css">
 </head>
@@ -19,17 +22,7 @@
 			<input type="text" id="text" placeholder="大家正在搜索：" />
 			<div class="search_icon">f</div>
 			<!--搜索隐藏的部分-->
-			<div class="search_contant" style="display: none">
-				<ul>
-					<li><a href="" style="color: #FA7D3C">查看完整热搜榜&laquo;</a></li>
-					<li><a href=""><span style="color: red">&#49;</span>、高圆圆</a></li>
-					<li><a href=""><span style="color: #FA7D3C">&#50;</span>、修杰楷</a></li>
-					<li><a href="">&#51;、徐歌阳</a></li>
-					<li><a href="">&#52;、吴亦凡造型师</a></li>
-					<li><a href="">&#53;、人民币将成世界货币</a></li>
-					<li><a href="">&#54;、马航MH17航班</a></li>
-				</ul>
-			</div>
+			<div class="search_contant" style="display: none"></div>
 		</div>
 		<div class="head_position">
 			<div class="head_nav">
@@ -53,25 +46,16 @@
 				<div class="hideinfo1">
 					<em class="line_bg1"></em>
 					<ul>
-						<li><a href="">&#64;我</a></li>
 						<li><a href="">评论</a></li>
 						<li class="hideinfoli2"><a href="">赞</a></li>
 						<li><a href="">私信</a></li>
-						<li><a href="">未关注人私信</a></li>
-						<li class="hideinfoli6"><a href="">群消息</a></li>
-						<li class="hideinfoli7"><a href="">消息设置</a></li>
 					</ul>
 				</div>
 				<div class="hideinfo2">
 					<em class="line_bg2"></em>
 					<ul>
 						<li><a href="">账号设置</a></li>
-						<li><a href="">会员中心</a></li>
-						<li><a href="">V认证</a></li>
-						<li><a href="">账号安全</a></li>
-						<li><a href="">隐私设置</a></li>
 						<li><a href="">消息设置</a></li>
-						<li class="hideinfo27"><a href="">帮助中心</a></li>
 						<li class="hideinfo28"><a href="index.jsp">退出</a></li>
 					</ul>
 				</div>
@@ -131,10 +115,6 @@
 					<div class="content131">
 						<li><em style="color: #FFB705; font-size: 18px;">o</em><a>表情</a></li>
 						<li><em style="color: #84C002; font-size: 18px;">p</em><a>图片</a></li>
-						<li><em style="color: #737EA2; font-size: 18px;">q</em><a>视频</a></li>
-						<li><em style="color: #5A8CE7; font-size: 18px;">"</em><a>话题</a></li>
-						<li><em style="color: #FF8200; font-size: 18px;"></em><a>头条文章</a></li>
-						<li><a style="position: relative; top: -10px;">...</a></li>
 					</div>
 					<div class="content132">
 						<div class="cont1321">
@@ -145,8 +125,8 @@
 				</div>
 			</div>
 
-			 <div class="content0" id="weibo">
-				<div class="content01">
+			<div class="content0" id="weibo">
+				<!-- <div class="content01">
 					<img src="images/contMe.png" width="50px" height="50px" />
 				</div>
 				<div class="content02">
@@ -170,9 +150,32 @@
 				</div>
 				<div class="cont0_ying" style="display: none;">
 					<p>删除</p>
-				</div>
+				</div> -->
 			</div>
 
+			<div class="addpinglun">
+				<a href="javascript:void(0)" onclick="add();">评论</a>
+			</div>
+			<div id="addFav">
+				<form method="post" id="addFavForm">
+					<div class="topTitle">评论</div>
+					<table class="input_table">
+						<tr>
+							<td></td>
+							<td><textarea id="fdesc" name="fdesc" rows="4" cols="39"
+									placeholder="输入评论信息"></textarea></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="right">
+								<button onclick="return addWinClose();">&nbsp;&nbsp;取
+									消&nbsp;&nbsp;</button>&nbsp;&nbsp;
+								<button onclick="return addFavorite()">&nbsp;&nbsp;提
+									交&nbsp;&nbsp;</button>&nbsp;
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
 			<div class="content2" style="top: 203px">
 				<a href=""><img src="images/600x80_img57ee27a383ca0.png"></a>
 				<p class="con2_btn">X</p>
@@ -254,12 +257,7 @@
 						<span>转发到：</span>
 						<li class="MyWB"><a href="">我的微博</a></li>
 					</div>
-					<div class="cont4_zhuan_WB_three">
-						<a href="" class="CNew">@中国新闻周刊</a>
-						<p>
-							<a href="" class="ZChina">#早安中国#</a>实在放不下的时候，去趟重症病房或者墓地，你容易明白，你已经得到太多，再要就是贪婪，时间太少，好玩儿的事儿太多，从尊重生命的角度，不必纠缠。——冯唐
-						</p>
-					</div>
+					<div class="cont4_zhuan_WB_three"></div>
 					<div class="cont4_zhuan_WB_four">
 						<textarea title="转发微博内容" class="WB_input"
 							style="height: 80px; width: 466px; border: 1px solid #ccc; padding: 5px 6px 0px; font-size: 12px; word-wrap: break-word; line-height: 18px; overflow: hidden; outline: medium none;"
@@ -337,8 +335,7 @@
 					</div>
 				</div>
 				<div class="cont6-cen">
-					<div class="WB_text_01">
-						【中国央行面临政策放松压力，但房地产泡沫令人担忧】-
+					<div class="WB_text_01">【中国央行面临政策放松压力，但房地产泡沫令人担忧】-
 						中国在今年余下时间运用宽松货币政策来扶持经济增长的能力主要取决于政府如何应对不断膨胀的房地产泡沫。今年到目前为止，中国央行都没有采取降息及其他强有力的信贷宽松措施来促进经济增长。
 					</div>
 				</div>
@@ -496,8 +493,10 @@
 		</div>
 		<!--脚注结束-->
 
-
-
+		<script type="text/javascript" src="easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript"
+			src="easyui/locale/easyui-lang-zh_CN.js"></script>
 		<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

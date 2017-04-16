@@ -487,10 +487,8 @@ window.onscroll = function(){
 
 //============================================================
 alert(1);
-$('#btn').linkbutton({    
-	onClick: function(){    	
+$('#btn').Click(function(){    
 		$("#weibo").open();
-	}
 });
 loadWeiboInfo();
 function loadWeiboInfo(){
