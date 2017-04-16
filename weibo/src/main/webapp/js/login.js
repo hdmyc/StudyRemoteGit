@@ -484,9 +484,10 @@ window.onscroll = function(){
 
 
 //============================================================
+var userid = "";
 showUser();
 function showUser(){
-	var userid = $("#uname").text();
+	userid = $("#uname").text();
 	$.post("userDetail/listDetail?userid="+userid,function(data){
 		$("#uname").text(data.nickname);
 		$("#userPic").attr("src",data.head_picture);
@@ -508,9 +509,8 @@ loadWeibo();
 function loadWeibo(){
 	var page = "1";
 	var rows = "8";
-	$.post("weibo/listAll?page="+page+"&rows="+rows,function(d){
+	$.post("weibo/findAttentionWeibo?page="+page+"&rows="+rows+"&fuserid="+userid,function(d){
 		var data = d.rows;
-		alert(JSON.stringify(data));
 		var weiboStr = "";
 		for(var i = 0; i < data.length; i++){
 			weiboStr += '<div class="content5"><div class="cont5-top">';

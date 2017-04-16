@@ -63,6 +63,12 @@ public class WeiboServiceTest {
 		assertNotNull(num);
 	}
 	
+	@Test
+	public void testFindAttentionWeibo() {
+		PaginationBean<Weibo> weibo = weiboService.findAttentionWeibo("1", "10", "jaejoonglee@163.com");
+		System.out.println(weibo);
+	}
+	
 
 
 }

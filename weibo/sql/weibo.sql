@@ -255,3 +255,10 @@ create table follow(
      start with 10000001 
      DROP TABLE reply
 select * from reply
+select t.* from 
+(select n.* ,rownum rn from 
+(SELECT * FROM weibo WHERE wuserid IN 
+(SELECT DISTINCT fuseridb FROM follow WHERE fuserida='jaejoonglee@163.com' )) n 
+where 1 * 10 >=rownum) t 
+where rn > (1 - 1) * 10 
+

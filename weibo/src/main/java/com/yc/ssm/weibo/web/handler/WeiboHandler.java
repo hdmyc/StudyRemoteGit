@@ -37,25 +37,32 @@ public class WeiboHandler {
 	public boolean updateStatus(Weibo weibo){
 		return weiboService.updateStatus(weibo);
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value="insertWeibo",method=RequestMethod.POST)
 	public boolean insertWeibo(Weibo weibo){
 		LogManager.getLogger().debug("WeiboHandler()....进来了");
 		return weiboService.insertWeibo(weibo);
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value="findWeibo",method=RequestMethod.GET)
 	public Weibo findWeibo(String wuserid){
 		LogManager.getLogger().debug("找到微博信息..............");
 		return weiboService.findWeibo(wuserid);
 	}
-	
+
 	//微博数量
 	@ResponseBody
 	@RequestMapping(value="findNum",method=RequestMethod.POST)
 	public String findNum(String userid){
 		return weiboService.findNum(userid);
 	}
+	//查找所有好友微博
+	@ResponseBody
+	@RequestMapping(value="findAttentionWeibo",method=RequestMethod.POST)
+	public PaginationBean<Weibo> findAttentionWeibo(String page,String rows,String fuserid){
+		return weiboService.findAttentionWeibo(page,rows,fuserid);
+	}
+
 }

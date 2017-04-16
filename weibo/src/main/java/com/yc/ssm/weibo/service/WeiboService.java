@@ -16,5 +16,7 @@ public interface WeiboService {
 	public Weibo findWeibo(String wuserid);
 
 	public String findNum(String wuserid);
+	
+	public PaginationBean<Weibo> findAttentionWeibo(String page, String rows,String fuserida);
 
 }

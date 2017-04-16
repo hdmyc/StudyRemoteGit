@@ -10,13 +10,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<select id="findWeibo" parameterType="string" resultType="Weibo">
-		select
-		* from weibo where wuserid=#{wuserid}
+		select * from weibo where wuserid=#{wuserid}
 	</select>
 
 	<select id="findById" resultType="Weibo">
-		select * from Weibo where wid =
-		#{wid}
+		select * from Weibo where wid = #{wid}
 	</select>
 
 	<update id="updateStatus" parameterType="Weibo">
@@ -36,7 +34,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	<select id="getWeibo" resultMap="WeiboMap">
 		select t.* from (select n.* ,rownum rn from (select * from weibo w,userDetail u 
-		where w.wuserid = u.userid order by 1 ) n 
+		where wstatus = 0 and w.wuserid = u.userid order by 1 ) n 
 		where ${currPage} * ${pageSize} >=rownum) t
 		where rn > (${currPage} - 1) * ${pageSize}
 	</select>
@@ -59,7 +57,34 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	
 	<select id="findNum" parameterType="string" resultType="string">
-		select count(1) from weibo where wuserid=#{userid}
+		select count(1) from weibo where wuserid=#{userid} 
 	</select>
+	
+	<select id="findAttentionWeibo" parameterType="string" resultMap="findFriendMap">
+		SELECT count(1) total, ceil(count(1) /${pageSize}) totalPage,
+		${pageSize} pageSize,${currPage} currPage
+		<if test="fuserida!=null">
+			,'${fuserida}' fuserida
+		</if>
+		<if test="fuserida==null">
+			,'' fuserida
+		</if> FROM weibo WHERE wuserid IN (SELECT DISTINCT fuseridb FROM follow WHERE fuserida='${fuserida}')
+	</select>
+	
+	<resultMap type="PaginationBean" id="findFriendMap">
+		<result column="pageSize" property="pageSize" />
+		<result column="currPage" property="currPage" />
+		<collection property="rows"
+			column="{pageSize=pageSize,currPage=currPage,fuserida=fuserida}"
+			select="getfriendweibo" />
+	</resultMap>
+		<select id="getfriendweibo" resultMap="WeiboMap">
+		 select t.* from (select n.* ,rownum rn from (SELECT * FROM weibo w,userDetail u 
+ 		 WHERE w.wstatus = 0 and w.wuserid = u.userid and w.wuserid IN 
+		(SELECT DISTINCT fuseridb FROM follow WHERE fuserida='${fuserida}' )) n 
+		where ${currPage} * ${pageSize} >=rownum) t
+		where rn > (${currPage} - 1) * ${pageSize}
+	</select>
+	
 	
 </mapper>
