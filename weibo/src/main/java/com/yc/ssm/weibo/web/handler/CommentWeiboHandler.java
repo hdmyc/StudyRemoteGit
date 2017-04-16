@@ -32,7 +32,7 @@ public class CommentWeiboHandler {
 		return commentWeiboService.findCW(wid);
 	}
 
-	//列出所有微博消息
+	//列出所有评论消息
 	@ResponseBody
 	@RequestMapping("listAll")
 	public PaginationBean<CommentWeibo> listAll(String page,String rows){

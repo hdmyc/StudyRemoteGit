@@ -484,16 +484,6 @@ window.onscroll = function(){
 
 
 //============================================================
-<<<<<<< HEAD
-alert(1);
-$('#btn').Click(function(){    
-		$("#weibo").open();
-});
-loadWeiboInfo();
-function loadWeiboInfo(){
-	$.get("weibo/findWeibo",function(data){
-		var weiboInfoStr = "";
-=======
 showUser();
 function showUser(){
 	var userid = $("#uname").text();
@@ -522,7 +512,6 @@ function loadWeibo(){
 		var data = d.rows;
 		alert(JSON.stringify(data));
 		var weiboStr = "";
->>>>>>> branch 'master' of git@github.com:hdmyc/StudyRemoteGit.git
 		for(var i = 0; i < data.length; i++){
 			weiboStr += '<div class="content5"><div class="cont5-top">';
 			weiboStr += '<img src="'+ data[i].userDetail.head_picture +'" width="20px" height="20px" id="cont5-icon" />';

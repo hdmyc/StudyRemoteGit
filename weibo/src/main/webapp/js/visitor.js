@@ -143,14 +143,35 @@ for (var m= 0; m< quit.length; m++) {
 }	
 
 /*----------------------自己写的js-------------------------*/
-<<<<<<< HEAD
-$('#loginBtn').Click(function(){    
-=======
 
 $("#loginBtn").click(function(){
->>>>>>> branch 'master' of git@github.com:hdmyc/StudyRemoteGit.git
 	$("#loginForm").submit();
 });
+
+//记住密码
+$(document).ready(function () {
+    if ($.cookie("loginStatus") == "true") {
+    $("#loginStatus").attr("checked", true);
+    $("#phone").val($.cookie("userid"));
+    $("#pwd").val($.cookie("upwd"));
+    }
+  });
+ 
+  //记住用户名密码
+  function Save() {
+    if ($("#loginStatus").attr("checked")) {
+      var str_username = $("#phone").val();
+      var str_password = $("#pwd").val();
+      $.cookie("loginStatus", "true", { expires: 7 }); //存储一个带7天期限的cookie
+      $.cookie("userid", str_username, { expires: 7 });
+      $.cookie("upwd", str_password, { expires: 7 });
+    }
+    else {
+      $.cookie("loginStatus", "false", { expire: -1 });
+      $.cookie("userid", "", { expires: -1 });
+      $.cookie("upwd", "", { expires: -1 });
+    }
+  };
 
 loadWeibo();
 function loadWeibo(){
@@ -160,24 +181,6 @@ function loadWeibo(){
 		var data = d.rows;
 		var weiboStr = "";
 		for(var i = 0; i < data.length; i++){
-<<<<<<< HEAD
-			/*var userid = data[i].wuserid;*/
-			/*$.get("userDetail/findNickname?userid="+userid,function(nickname){*/
-			weiboStr += '<div class="content_1">';
-			weiboStr += '<a href="http://weibo.com/shenqiUSA?topnav=1&wvr=6&topsug=1">';
-			if(data[i].wpic !=null){
-				weiboStr += '<img src="'+ data[i].wpic +'" style="width: 120px; height: 90px" />';
-			}
-
-			weiboStr += '<p class="chara_1">'+ data[i].wnote +'</p>';
-			weiboStr += '<p class="chara_2">@'+ data[i].wuserid/*nickname*/ +'&nbsp;&nbsp;'+ data[i].wtime +'</p>';
-			weiboStr += '<span class="chara_3"><p>'+ data[i].transmitNum +'&nbsp;&nbsp;|</p></span>'; 
-			weiboStr += '<span class="chara_4"><p>'+ data[i].commentNum +'&nbsp;&nbsp;|</p></span>';
-			weiboStr += '<span class="chara_5"><p>'+ data[i].zanNum +'</p></span></a></div>';
-
-			/*},"json");*/
-
-=======
 			var userid = data[i].wuserid;
 			weiboStr += '<div class="content_1">';
 			weiboStr += '<a href="http://weibo.com/shenqiUSA?topnav=1&wvr=6&topsug=1">';
@@ -189,7 +192,6 @@ function loadWeibo(){
 			weiboStr += '<span class="chara_3"><p>'+ data[i].transmitNum +'&nbsp;&nbsp;|</p></span>'; 
 			weiboStr += '<span class="chara_4"><p>'+ data[i].commentNum +'&nbsp;&nbsp;|</p></span>';
 			weiboStr += '<span class="chara_5"><p>'+ data[i].zanNum +'</p></span></a></div>';
->>>>>>> branch 'master' of git@github.com:hdmyc/StudyRemoteGit.git
 		}
 		$(".content").html(weiboStr);
 	}, "json");
