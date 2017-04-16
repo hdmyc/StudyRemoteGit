@@ -230,13 +230,13 @@
 								/>
 						</div>
 						<div class="remember">
-							<input type="checkbox" id="loginStatus" />&nbsp;&nbsp;记住我 <a
+							<input type="checkbox" id="loginStatus"/>&nbsp;&nbsp;记住我 <a
 								href="page/password.jsp">忘记密码</a>
 						</div>
 						<div class="subdiv">
 							<!-- <input type="submit" value="登录" id="sub""/> -->
 							<p>
-								<a id="loginBtn" href="javascript:void(0)">登录</a>
+								<a id="loginBtn" href="javascript:void(0)" onclick="Save()">登录</a>
 							</p>
 						</div>
 						<div class="noweb">
@@ -289,7 +289,9 @@
 		<a href="#top"></a>
 	</div>
 	<!--返回顶部结束-->
-
+	<!-- 记住密码 -->
+	<script src="scripts/jquery.cookie.js" type="text/javascript"></script>
+	
 	<script type="text/javascript" src="easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>

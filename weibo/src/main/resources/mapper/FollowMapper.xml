@@ -5,12 +5,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.yc.ssm.weibo.mapper.FollowMapper">
 	<insert id="insertF" parameterType="Follow">
 		INSERT INTO
-		follow(fid,fuseriA,fuseridB) VALUES
-		(fid_seq.nextval,#{fuseriA,jdbcType=VARCHAR},#{fuseridB,jdbcType=VARCHAR})
+		follow(fid,fuseridA,fuseridB) VALUES
+		(fid_seq.nextval,#{fuseridA,jdbcType=VARCHAR},#{fuseridB,jdbcType=VARCHAR})
 	</insert>
 
 	<select id="findF" parameterType="string" resultType="Follow">
-		select * from follow where fuseriA=#{fuseriA}
+		select * from follow where fuseridA=#{fuseridA}
 	</select>
 	
 	<resultMap type="PaginationBean" id="PaginationBeanMap">

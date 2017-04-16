@@ -25,7 +25,7 @@ public class Follow {//8.关注表
 	}
 	@Override
 	public String toString() {
-		return "Follow [fid=" + fid + ", fuseridA=" + fuseridA + ", fuseridB="
+		return "\nFollow [fid=" + fid + ", fuseridA=" + fuseridA + ", fuseridB="
 				+ fuseridB + "]";
 	}
     

@@ -42,52 +42,8 @@
 					<input type="button" value="发布" class="xiang2_29" />
 				</form>
 			</div>
-			<!--内容xiang2_2隐藏的点击事件开始-->
-			<div class="open_btn" style="display: block;">
-				<li class="open_li1"><a><span class="open_icon"></span>公开</a></li>
-				<li><a><span class="frient_icon"></span>好友圈</a></li>
-				<li><a><span class="me_icon"></span>仅自己可见</a></li>
-				<li><a><span class="qun_icon"></span>群可见</a></li>
-			</div>
-			<!--内容xiang2_2隐藏的点击事件结束-->
 			<!--中间内容结束-->
 			<div class="xiang2_3">
-				<span>X</span>
-			</div>
-		</div>
-	</div>
-	<!--弹框（视频）-->
-	<div class="shipin" style="display: none;">
-		<div class="shipin1"></div>
-		<div class="shipin2">
-			<div class="shipin2_1">
-				<p>上传视频</p>
-			</div>
-			<div class="shipin2_2">
-				<form action="" method="post" class="shipin2_21">
-					<p class="shipin2_22">支持上传时长在15分钟以内的视频，请勿上传色情、反动等违法视频</p>
-					<div class="shipin2_23">
-						<textarea id="shipintextarea" class="W_input2" title="微博输入框"
-							value="点击此处输入微博正文" range="0&amp;0"
-							style="border: none; font-size: 14px;"></textarea>
-
-						<div class="shipin2_25">
-							<div class="shipin2_26">
-								<span>+</span>
-							</div>
-							<span class="shipin2_27" style="display: none;">-</span> <span
-								class="shipin2_27_1">130</span>
-						</div>
-					</div>
-
-					<p class="shipin2_28">
-						隐私： <input type="radio" name="yinsi" />公开 <input type="radio"
-							name="yinsi" />好友圈 <input type="radio" name="yinsi" />仅自己可见
-					</p>
-					<input type="button" value="开始上传" class="shipin2_29" />
-				</form>
-			</div>
-			<div class="shipin2_3">
 				<span>X</span>
 			</div>
 		</div>
@@ -100,18 +56,6 @@
 		<div class="head_search">
 			<input type="text" id="text" placeholder="大家正在搜索：" />
 			<div class="search_icon">f</div>
-			<!--搜索隐藏的部分-->
-			<div class="search_contant" style="display: none">
-				<ul>
-					<li><a href="" style="color: #FA7D3C">查看完整热搜榜&laquo;</a></li>
-					<li><a href=""><span style="color: red">&#49;</span>、高圆圆</a></li>
-					<li><a href=""><span style="color: #FA7D3C">&#50;</span>、修杰楷</a></li>
-					<li><a href="">&#51;、徐歌阳</a></li>
-					<li><a href="">&#52;、吴亦凡造型师</a></li>
-					<li><a href="">&#53;、人民币将成世界货币</a></li>
-					<li><a href="">&#54;、马航MH17航班</a></li>
-				</ul>
-			</div>
 		</div>
 		<div class="head_position">
 			<div class="head_nav">
@@ -136,25 +80,15 @@
 				<div class="hideinfo1">
 					<em class="line_bg1"></em>
 					<ul>
-						<li><a href="">&#64;我</a></li>
 						<li><a href="">评论</a></li>
 						<li class="hideinfoli2"><a href="">赞</a></li>
 						<li><a href="">私信</a></li>
-						<li><a href="">未关注人私信</a></li>
-						<li class="hideinfoli6"><a href="">群消息</a></li>
-						<li class="hideinfoli7"><a href="">消息设置</a></li>
 					</ul>
 				</div>
 				<div class="hideinfo2">
 					<em class="line_bg2"></em>
 					<ul>
 						<li><a href="">账号设置</a></li>
-						<li><a href="">会员中心</a></li>
-						<li><a href="">V认证</a></li>
-						<li><a href="">账号安全</a></li>
-						<li><a href="">隐私设置</a></li>
-						<li><a href="">消息设置</a></li>
-						<li class="hideinfo27"><a href="">帮助中心</a></li>
 						<li class="hideinfo28"><a href="index.jsp">退出</a></li>
 					</ul>
 				</div>
@@ -201,8 +135,7 @@
 					type="text" name="bloodType" id="dbloodType" />
 			</p>
 			<p>
-				<label>&nbsp;&nbsp;简&nbsp;&nbsp;介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input
-					type="text" name="brief" id="dbrief" />
+				<label>&nbsp;&nbsp;简&nbsp;&nbsp;介&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><textarea rows="1" cols="20" name="brief" id="dbrief"></textarea>
 			</p>
 			<p>
 				<label>&nbsp;&nbsp;博客地址&nbsp;&nbsp;&nbsp;</label><input type="text"

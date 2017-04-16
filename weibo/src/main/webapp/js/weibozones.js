@@ -1,9 +1,9 @@
-// JavaScript Document
+/*// JavaScript Document
 window.onload=function(){
 	showInfo();
 }
 
-/*head_search搜索栏*/
+head_search搜索栏
 function showInfo(){
 	var SCs=document.getElementsByClassName("search_contant")[0].getElementsByTagName("ul")[0].getElementsByTagName("li");
 	var text=document.getElementById("text");
@@ -98,7 +98,7 @@ function showInfo(){
 		     HIs3.style.display="none";
 	    }
 }
-/*content右边上部*/
+content右边上部
 var contright1_33=document.getElementById("contright1_33");
 var contright1=document.getElementsByClassName("contright1")[0];
 var contright2_3=document.getElementsByClassName("contright2_31")[0];
@@ -114,7 +114,7 @@ contright2_3.onclick=function(){
 
 
 
-/*主题更换*/
+主题更换
 var conttop2_1=document.getElementById("conttop2_1");
 var conttop2_2=document.getElementById("conttop2_2");
 var conttop2_3=document.getElementById("conttop2_3");
@@ -146,7 +146,7 @@ conttop2_3.onclick=function(){
 	conttop2_1.className="contstyle1";
 }
 
-/*相册转换*/
+相册转换
 var contxiang1_1=document.getElementById("contxiang1_1");
 var contxiang1_2=document.getElementById("contxiang1_2");
 var contxiang1_3=document.getElementById("contxiang1_3");
@@ -197,7 +197,7 @@ shipin2_3.addEventListener("click",function(){
 	shipin.style.display="none";
 },false);
 
-/*更多*/
+更多
 var contright1_2=document.getElementById("contright1_2");
 var contright1_4=document.getElementById("contright1_4");
 console.log(contright1_2);
@@ -211,7 +211,7 @@ contright1_2.addEventListener("click",function(){
 	},false);
 	
 
-/*微博人气*/
+微博人气
 var contleft4_31_1=document.getElementById("contleft4_31_1");
 var contleft4_31_2=document.getElementById("contleft4_31_2");
 var contleft4_32=document.getElementsByClassName("contleft4_32")[0];
@@ -295,7 +295,7 @@ OBtn.onclick=function(){
 }
 
 
-/*多选*/
+多选
 (function () {
 	var contright2_2_p1=document.getElementById("contright2_2_p1");
 	var contright2_2_p1_inp=contright2_2_p1.getElementsByTagName("input");
@@ -304,4 +304,42 @@ OBtn.onclick=function(){
 			
 		
 	}
-})()
+})
+*/
+/*===========================*/
+/*showUser();
+function showUser(){
+	var userid = $("#uname").text();
+	$.post("userDetail/listDetail?userid="+userid,function(data){
+		$("#uname").text(data.nickname);
+		$("#userPic").attr("src",data.head_picture);
+		$("#titleName").text(data.nickname);
+	},"json");
+}*/
+loadWeibo();
+function loadWeibo(){
+	var page = "1";
+	var rows = "8";
+	$.post("weibo/listAll?page="+page+"&rows="+rows,function(d){
+		var data = d.rows;
+		/*alert(JSON.stringify(data));*/
+		var weiboStr = "";
+		
+		for(var i = 0; i < data.length; i++){
+			weiboStr += '<div class="content5"><div class="cont5-top"><img src="'+ data[i].userDetail.head_picture +'" id="cont5-icon"/>';
+			weiboStr += '<div class="cont5-top-wenzi"><h4>'+ data[i].userDetail.nickname +'</h4>';
+			weiboStr += '<p>'+ data[i].wtime +'</p>';
+			if(data[i].wpic != null){
+				weiboStr += '<img src="'+ data[i].wpic +'" width="180px" height="180px"  class="cont5-pic">';
+			}
+			weiboStr += '<span>c</span></div></div><div class="cont5-cen">';
+			weiboStr += '<div class="WB_text_01">'+ data[i].wNote +'</div></div>';
+			weiboStr += '<div class="cont5-foot"><li class="cont4-foot-li1">推广</li>';
+			weiboStr += '<li><span></span>转发</li><li><span></span>评论</li>';
+			weiboStr += '<li  class="cont4-foot-li5"><span>ñ</span>赞</li></div>';
+			weiboStr += '<p class="cont5_1">阅读 <span>99</span></p></div>';
+		}
+		alert(weiboStr);
+		$(".content5").html(weiboStr);
+	}, "json");
+}

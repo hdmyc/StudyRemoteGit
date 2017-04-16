@@ -6,6 +6,9 @@
 <base href="${deployName}">
 <meta charset="utf-8">
 <title>我的首页 微博-随时随地发现新鲜事</title>
+<link rel="stylesheet" type="text/css"
+	href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 <link rel="icon" href="images/favicon.ico" />
 <link rel="stylesheet" href="css/login.css">
 </head>
@@ -19,17 +22,7 @@
 			<input type="text" id="text" placeholder="大家正在搜索：" />
 			<div class="search_icon">f</div>
 			<!--搜索隐藏的部分-->
-			<div class="search_contant" style="display: none">
-				<ul>
-					<li><a href="" style="color: #FA7D3C">查看完整热搜榜&laquo;</a></li>
-					<li><a href=""><span style="color: red">&#49;</span>、高圆圆</a></li>
-					<li><a href=""><span style="color: #FA7D3C">&#50;</span>、修杰楷</a></li>
-					<li><a href="">&#51;、徐歌阳</a></li>
-					<li><a href="">&#52;、吴亦凡造型师</a></li>
-					<li><a href="">&#53;、人民币将成世界货币</a></li>
-					<li><a href="">&#54;、马航MH17航班</a></li>
-				</ul>
-			</div>
+			<div class="search_contant" style="display: none"></div>
 		</div>
 		<div class="head_position">
 			<div class="head_nav">
@@ -53,25 +46,16 @@
 				<div class="hideinfo1">
 					<em class="line_bg1"></em>
 					<ul>
-						<li><a href="">&#64;我</a></li>
 						<li><a href="">评论</a></li>
 						<li class="hideinfoli2"><a href="">赞</a></li>
 						<li><a href="">私信</a></li>
-						<li><a href="">未关注人私信</a></li>
-						<li class="hideinfoli6"><a href="">群消息</a></li>
-						<li class="hideinfoli7"><a href="">消息设置</a></li>
 					</ul>
 				</div>
 				<div class="hideinfo2">
 					<em class="line_bg2"></em>
 					<ul>
 						<li><a href="">账号设置</a></li>
-						<li><a href="">会员中心</a></li>
-						<li><a href="">V认证</a></li>
-						<li><a href="">账号安全</a></li>
-						<li><a href="">隐私设置</a></li>
 						<li><a href="">消息设置</a></li>
-						<li class="hideinfo27"><a href="">帮助中心</a></li>
 						<li class="hideinfo28"><a href="index.jsp">退出</a></li>
 					</ul>
 				</div>
@@ -139,7 +123,7 @@
 			</div>
 
 			<div class="content0" id="weibo">
-				<div class="content01">
+				<!-- <div class="content01">
 					<img src="images/contMe.png" width="50px" height="50px" />
 				</div>
 				<div class="content02">
@@ -163,7 +147,7 @@
 				</div>
 				<div class="cont0_ying" style="display: none;">
 					<p>删除</p>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="content5">
@@ -192,7 +176,6 @@
 					<li class="cont5-foot-li5"><span>ñ</span>71</li>
 				</div> -->
 			</div>
-			
 			<!-- <div class="content7">
 				<div class="cont7-top">
 					<img src="images/cont7.png" class="cont7pic" />
@@ -325,7 +308,6 @@
 		<script type="text/javascript" src="easyui/jquery.min.js"></script>
 		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 		<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
-
 		<script type="text/javascript" charset="utf-8"
 			src="ueditor/ueditor.config.js"></script>
 		<script type="text/javascript" charset="utf-8"
