@@ -37,7 +37,7 @@ function showDetail(userid){
 	$.post("user/findUserById?userid="+userid,function(dataA){
 		$("#buserid").val(dataA.userid);
 		$("#bupwd").val(dataA.upwd);
-		$("#bregistertime").val(dataA.registertime);
+		$("#bregistertime").val(dataA.register_time);
 		$("#bustatus").val(dataA.ustatus);
 	},"json");
 	$.post("userDetail/listDetail?userid="+userid,function(data){

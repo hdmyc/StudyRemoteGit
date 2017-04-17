@@ -307,39 +307,50 @@ OBtn.onclick=function(){
 })
 */
 /*===========================*/
-/*showUser();
+var userid = "";
+showUser();
 function showUser(){
-	var userid = $("#uname").text();
+	userid = $("#uname").text();
 	$.post("userDetail/listDetail?userid="+userid,function(data){
 		$("#uname").text(data.nickname);
 		$("#userPic").attr("src",data.head_picture);
 		$("#titleName").text(data.nickname);
+		$("#ubrief").text(data.brief);
 	},"json");
-}*/
+	$.post("follow/findAttention?userid="+userid,function(data){
+		$("#attention").text(data);
+	},"json");
+	$.post("follow/findFans?userid="+userid,function(data){
+		$("#fans").text(data);
+	},"json");
+	$.post("weibo/findNum?userid="+userid,function(data){
+		$("#weiboNum").text(data);
+	},"json");
+}
 loadWeibo();
 function loadWeibo(){
 	var page = "1";
 	var rows = "8";
-	$.post("weibo/listAll?page="+page+"&rows="+rows,function(d){
+	$.post("weibo/findWeiboByid?page="+page+"&rows="+rows+"&wuserid="+userid,function(d){
 		var data = d.rows;
-		/*alert(JSON.stringify(data));*/
 		var weiboStr = "";
-		
 		for(var i = 0; i < data.length; i++){
-			weiboStr += '<div class="content5"><div class="cont5-top"><img src="'+ data[i].userDetail.head_picture +'" id="cont5-icon"/>';
-			weiboStr += '<div class="cont5-top-wenzi"><h4>'+ data[i].userDetail.nickname +'</h4>';
-			weiboStr += '<p>'+ data[i].wtime +'</p>';
-			if(data[i].wpic != null){
-				weiboStr += '<img src="'+ data[i].wpic +'" width="180px" height="180px"  class="cont5-pic">';
+			weiboStr += '<div class="content4"><div class="cont4-top">';
+			weiboStr += '<img src="' +data[i].userDetail.head_picture+ '" width="20px" height="20px" id="cont4-icon"/>';
+			weiboStr += '<div class="cont4-top-wenzi"><h4>'+ data[i].userDetail.nickname +'</h4><p>'+ data[i].wtime +'</p></div></div>';
+			weiboStr += '<div class="cont4-cen"><span>'+ data[i].wNote +'</span>';
+			if(data[i].wpic!=null){
+				weiboStr += '<div><img src="'+ data[i].wpic +'" id="weiboPic"/></div>';
 			}
-			weiboStr += '<span>c</span></div></div><div class="cont5-cen">';
-			weiboStr += '<div class="WB_text_01">'+ data[i].wNote +'</div></div>';
-			weiboStr += '<div class="cont5-foot"><li class="cont4-foot-li1">推广</li>';
+			weiboStr += '</div><div class="cont4-foot"> <li class="cont4-foot-li1">推广</li>';
 			weiboStr += '<li><span></span>转发</li><li><span></span>评论</li>';
 			weiboStr += '<li  class="cont4-foot-li5"><span>ñ</span>赞</li></div>';
-			weiboStr += '<p class="cont5_1">阅读 <span>99</span></p></div>';
+			weiboStr += '<p class="cont4_1">阅读   <span>68</span></p></div> ';
 		}
-		alert(weiboStr);
-		$(".content5").html(weiboStr);
+		$(".contright3").html(weiboStr);
 	}, "json");
 }
+
+
+
+

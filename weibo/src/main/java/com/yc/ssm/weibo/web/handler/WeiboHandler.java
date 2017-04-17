@@ -22,8 +22,8 @@ public class WeiboHandler {
 	//列出所有微博消息
 	@ResponseBody
 	@RequestMapping(value="/listAll",method=RequestMethod.POST)
-	public PaginationBean<Weibo> listAll(String page,String rows){
-		return weiboService.listAll(page,rows);
+	public PaginationBean<Weibo> listAll(String page,String rows,String wstatus){
+		return weiboService.listAll(page,rows,wstatus);
 	}
 	//根据id找对应微博信息
 	@ResponseBody
@@ -45,13 +45,6 @@ public class WeiboHandler {
 		return weiboService.insertWeibo(weibo);
 	}
 
-	@ResponseBody
-	@RequestMapping(value="findWeibo",method=RequestMethod.GET)
-	public Weibo findWeibo(String wuserid){
-		LogManager.getLogger().debug("找到微博信息..............");
-		return weiboService.findWeibo(wuserid);
-	}
-
 	//微博数量
 	@ResponseBody
 	@RequestMapping(value="findNum",method=RequestMethod.POST)
@@ -63,6 +56,13 @@ public class WeiboHandler {
 	@RequestMapping(value="findAttentionWeibo",method=RequestMethod.POST)
 	public PaginationBean<Weibo> findAttentionWeibo(String page,String rows,String fuserid){
 		return weiboService.findAttentionWeibo(page,rows,fuserid);
+	}
+	
+	//根据用户id找所有微博
+	@ResponseBody
+	@RequestMapping(value="findWeiboByid",method=RequestMethod.POST)
+	public PaginationBean<Weibo> findWeiboByid(String page,String rows,String wuserid){
+		return weiboService.findWeiboByid(page,rows,wuserid);
 	}
 
 }

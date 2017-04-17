@@ -177,7 +177,7 @@ loadWeibo();
 function loadWeibo(){
 	var page = "1";
 	var rows = "8";
-	$.post("weibo/listAll?page="+page+"&rows="+rows,function(d){
+	$.post("weibo/listAll?page="+page+"&rows="+rows+"&wstatus=0",function(d){
 		var data = d.rows;
 		var weiboStr = "";
 		for(var i = 0; i < data.length; i++){

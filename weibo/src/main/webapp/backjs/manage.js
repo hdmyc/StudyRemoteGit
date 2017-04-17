@@ -35,10 +35,17 @@ $(".treeNav").tree({
 				iconCls:"icon-mini-add",
 				closable:true,
 			});
-		}else if(nodeContent == "微博编辑"){
+		}else if(nodeContent == "微博屏蔽"){
 			$("#main").tabs('add',{
 				title: nodeContent,
 				href:"back/weibo_edit.jsp",
+				iconCls:"icon-mini-add",
+				closable:true,
+			});
+		}else if(nodeContent == "微博恢复"){
+			$("#main").tabs('add',{
+				title: nodeContent,
+				href:"back/weibo_recover.jsp",
 				iconCls:"icon-mini-add",
 				closable:true,
 			});

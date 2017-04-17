@@ -7,7 +7,7 @@ import com.yc.ssm.weibo.entity.Weibo;
 
 public interface WeiboMapper {
 
-	PaginationBean<Weibo> listAll(PaginationBean<Weibo> pb);
+	PaginationBean<Weibo> listAll(Map<String, String> map);
 
 	int insertWeibo(Weibo weibo);
 	
@@ -20,7 +20,8 @@ public interface WeiboMapper {
 	String findNum(String wuserid);
 
 	PaginationBean<Weibo> findAttentionWeibo(Map<String, String> map);
-	
 
-	//PaginationBean<Weibo> findFriend(Map map);
+	PaginationBean<Weibo> findWeiboByid(Map<String, String> map);
+
+
 }

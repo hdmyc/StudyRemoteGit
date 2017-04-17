@@ -9,10 +9,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		(wid_seq.nextval,#{wuserid,jdbcType=VARCHAR},default,#{wNote,jdbcType=VARCHAR})
 	</insert>
 
-	<select id="findWeibo" parameterType="string" resultType="Weibo">
-		select * from weibo where wuserid=#{wuserid}
-	</select>
-
 	<select id="findById" resultType="Weibo">
 		select * from Weibo where wid = #{wid}
 	</select>
@@ -25,16 +21,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="pageSize" property="pageSize"/>
 		<result column="currPage" property="currPage"/>
 		<collection property="rows"
-			column="{pageSize}=pageSize,{currPage}=currPage" ofType="Weibo"
+			column="{pageSize=pageSize,currPage=currPage,wstatus=wstatus}" ofType="Weibo"
 			select="getWeibo" />
 	</resultMap>
 	
-	<select id="listAll" parameterType="PaginationBean" resultMap="PaginationBeanMap">
-		select count(1) total, ceil(count(1)/${pageSize}) totalPage, ${pageSize} pageSize, ${currPage} currPage from weibo
+	<select id="listAll" parameterType="string" resultMap="PaginationBeanMap">
+		select count(1) total, ceil(count(1)/${pageSize}) totalPage, ${pageSize} pageSize, ${currPage} currPage, ${wstatus} wstatus from weibo where wstatus=${wstatus}
 	</select>
 	<select id="getWeibo" resultMap="WeiboMap">
 		select t.* from (select n.* ,rownum rn from (select * from weibo w,userDetail u 
-		where wstatus = 0 and w.wuserid = u.userid order by 1 ) n 
+		where w.wstatus=${wstatus} and w.wuserid = u.userid order by 1 ) n 
 		where ${currPage} * ${pageSize} >=rownum) t
 		where rn > (${currPage} - 1) * ${pageSize}
 	</select>
@@ -82,6 +78,24 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		 select t.* from (select n.* ,rownum rn from (SELECT * FROM weibo w,userDetail u 
  		 WHERE w.wstatus = 0 and w.wuserid = u.userid and w.wuserid IN 
 		(SELECT DISTINCT fuseridb FROM follow WHERE fuserida='${fuserida}' )) n 
+		where ${currPage} * ${pageSize} >=rownum) t
+		where rn > (${currPage} - 1) * ${pageSize}
+	</select>
+	
+	
+	<resultMap type="PaginationBean" id="PaPaginationBeanMap">
+		<result column="pageSize" property="pageSize" />
+		<result column="currPage" property="currPage" />
+		<collection property="rows"
+			column="{pageSize=pageSize,currPage=currPage,wuserid=wuserid}"
+			select="getOwnWeibo" />
+	</resultMap>
+	<select id="findWeiboByid" parameterType="string" resultMap="PaPaginationBeanMap">
+		select count(1) total, ceil(count(1)/${pageSize}) totalPage, ${pageSize} pageSize, ${currPage} currPage ,'${wuserid}' wuserid from weibo where wuserid='${wuserid}'
+	</select>
+	<select id="getOwnWeibo" resultMap="WeiboMap">
+		select t.* from (select n.* ,rownum rn from (select * from weibo w,userDetail u 
+		where wstatus = 0 and w.wuserid = u.userid and wuserid='${wuserid}' order by 1 ) n 
 		where ${currPage} * ${pageSize} >=rownum) t
 		where rn > (${currPage} - 1) * ${pageSize}
 	</select>

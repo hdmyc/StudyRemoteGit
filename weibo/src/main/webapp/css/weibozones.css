@@ -131,6 +131,22 @@ a{
 	text-decoration:none;
 	color:#696E78;
 }
+.head_position .head_nav li:first-child{
+	list-style:none;
+	float:left;
+	line-height:48px;
+	font-family:'wbficon';
+	font-size:24px;
+	margin-left:180px;	
+}
+.head_position .head_nav li:last-child{
+	list-style:none;
+	float:left;
+	line-height:48px;
+	font-family:'wbficon';
+	font-size:24px;
+	margin-left:20px;	
+}
 .head_position .head_nav li a:hover{
 	color:#FA7D3C;
 }
@@ -338,7 +354,7 @@ a{
 	display: block;
 	width: 150px;
 	float: left;
-	margin:5px 0px 0px 400px ;
+	margin:5px 0px 0px 380px ;
 }
 #content .conttop1_2 span{
 	font-size: 25px;
@@ -354,7 +370,7 @@ a{
 }
 #content .conttop1_3{
 	float: left;
-	margin:10px 350px;
+	margin:10px 400px;
 	font-size: 12px;
 }
 #content .conttop1_3 a{
@@ -1044,7 +1060,7 @@ a{
 	color: #F3702B;
 }
 .content4{
-	height:188px;
+	height:330px;
 	width:600px;
 	background:#fff;
 	position:relative;
@@ -1057,6 +1073,7 @@ a{
 	left:21px;
 	top:16px;
 }
+
 .content4 .cont4-top .cont4-top-wenzi h4{
 	position:absolute;
 	left:78px;
@@ -1088,26 +1105,28 @@ a{
 .content4 .cont4-top .cont4-top-wenzi span:hover{
 	color:#F4702B;
 }
-.content4 .cont4-top .cont4-top-wenzi img.cont4-pic{
-	width:500px;
-	height:60px;
+.content4 .cont4-cen #weiboPic{
 	position:absolute;
-	right:10px;
-	top:5px;
+	left:100px;
+	top:135px;
+	width:150px;
+	height:150px;
 }
+
 .content4 .cont4-cen span{
 	position:absolute;
 	left:18px;
-	top:72px;
+	top:70px;
 	color:#333;
 	font-size:14px;
-	left: 100px;
+	width:562px;
+	height:60px;
 }
 
 .content4 .cont4-foot{
 	position:absolute;
 	left:0px;
-	top:150px;
+	top:290px;
 	border-top: 1px solid #F2F2F5;
 }
 .content4 .cont4-foot li{
@@ -1142,7 +1161,7 @@ a{
 	font-size: 12px;
 	position: absolute;
 	left: 30px;
-	top: 160px;
+	top: 300px;
 }
 .content5{
 	height:200px;

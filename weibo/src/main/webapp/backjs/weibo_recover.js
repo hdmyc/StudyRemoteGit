@@ -1,5 +1,5 @@
-$('#weiboEdit').datagrid({    
-	url:'weibo/listAll?wstatus=0',
+$('#weiboRecover').datagrid({    
+	url:'weibo/listAll?wstatus=1',
 	fitColumns:true,
 	fit:true,
 	singleSelect:true,
@@ -27,7 +27,7 @@ $('#weiboEdit').datagrid({
 	        		  formatter: function(value,row,index){
 	        			  //alert(row + "==>" + JSON.stringify(row));
 	        			  return '<a class="editBtn" href="javascript:void(0)" onclick="showDetail(' + row.wid + ')">详请</a>'+
-	        			  '<a class="delBtn" href="javascript:void(0)" onclick="notSpeak(' + index + ')">屏蔽</a>' + 
+	        			  '<a class="delBtn" href="javascript:void(0)" onclick="notSpeak(' + index + ')">恢复</a>' + 
 	        			  '<script>$(".editBtn").linkbutton({iconCls: "icon-search"});$(".delBtn").linkbutton({iconCls: "icon-cancel"});</script>';
 	        		  }
 	        	  }
@@ -36,54 +36,55 @@ $('#weiboEdit').datagrid({
 });  
 
 
-$("#weiboDiv").dialog({
+$("#recoverDiv").dialog({
 	title: '微博信息',        
 	closed: true,
 	maximizable:true,
 	minimizable:true,
 });
 
-$("#weiboDiv").dialog("close");
+$("#recoverDiv").dialog("close");
 
 function showDetail(wid){
-	$("#weiboDiv").dialog("open");
+	$("#recoverDiv").dialog("open");
 	$.post("weibo/findById?wid="+wid,function(data){
-		$("#awid").val(data.wid);
-		$("#awuserid").val(data.wuserid);
-		$("#awtime").val(data.wtime);
-		$("#awnote").val(data.wNote);
-		$("#azanNum").val(data.zanNum);
-		$("#atransmitNum").val(data.transmitNum);
-		$("#acommentNum").val(data.commentNum);
-		$("#awstatus").val(data.wstatus);
-		$("#awpic").val("");
+		$("#cwid").val(data.wid);
+		$("#cwuserid").val(data.wuserid);
+		$("#cwtime").val(data.wtime);
+		$("#cwnote").val(data.wNote);
+		$("#czanNum").val(data.zanNum);
+		$("#ctransmitNum").val(data.transmitNum);
+		$("#ccommentNum").val(data.commentNum);
+		$("#cwstatus").val(data.wstatus);
+		$("#cwpic").val("");
 		if(data.wpic){
-			$("#awpic").attr("src", data.wpic);
+			$("#cwpic").attr("src", data.wpic);
 		}else{
-			$("#awpic").attr("src", "backimages/not_pic.jpg");
+			$("#cwpic").attr("src", "backimages/not_pic.jpg");
 		}
 	},"json");
 }
 
 function notSpeak(index){
-	var row = $("#weiboEdit").datagrid("getRows")[index];
+	var row = $("#weiboRecover").datagrid("getRows")[index];
 	var wid = (row.wid);
 	var wstatus = (row.wstatus);
-	if(wstatus==0){
+	if(wstatus==1){
 		$.ajax({
 			type:'post',
 			url:"weibo/updateStatus",
-			data:{wid:wid,wstatus:1},
+			data:{wid:wid,wstatus:0},
 			success:function(data){
 				if(data){
-					$.messager.confirm('成功提示', '屏蔽该微博成功！！', function(r){
+					$.messager.confirm('成功提示', '恢复该微博成功！！', function(r){
 						if (r){
 						}
 					});
-					$('#weiboEdit').datagrid('reload');
+					$('#weiboRecover').datagrid('reload');
 				}else{
 					$.messager.alert('失败提示','修改失败！！','info');
 				}
+
 			}
 		});
 	}
