@@ -20,8 +20,8 @@ public class FollowServiceTest {
 	@Test
 	public void testInsertF() {
 		Follow  f=new Follow();
-		f.setUserid("1119185633@qq.com");
 		f.setFuseridA("15570934077");
+		f.setFuseridB("1119185633@qq.com");
 		System.out.println(followService.insertF(f));
 		assertNotNull(f);
 	}

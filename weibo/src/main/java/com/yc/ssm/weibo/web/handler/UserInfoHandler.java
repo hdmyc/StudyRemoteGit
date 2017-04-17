@@ -30,9 +30,13 @@ public class UserInfoHandler{
 
 	//用户注册
 	@RequestMapping(value="register",method=RequestMethod.POST)
-	public boolean register(String userid,UserInfo userInfo){
-		LogManager.getLogger().debug("==============register====================");
-		return userInfoService.register(userInfo)>0;
+	public String register(String userid,UserInfo userInfo){
+		int i=0;
+		if( i>0){
+			return "redirect:/page/visitor.jsp";
+		}else{
+			return "/page/register1.jsp";
+		}
 	}
 	//用户登录
 	@RequestMapping("login")

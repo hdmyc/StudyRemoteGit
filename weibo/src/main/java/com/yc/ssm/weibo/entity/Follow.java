@@ -4,8 +4,7 @@ public class Follow {//8.关注表
 	
     private Integer fid;
     private String fuseridA;
-    private String userid;
-    
+    private String fuseridB;
 	public Integer getFid() {
 		return fid;
 	}
@@ -18,15 +17,14 @@ public class Follow {//8.关注表
 	public void setFuseridA(String fuseridA) {
 		this.fuseridA = fuseridA;
 	}
-	public String getUserid() {
-		return userid;
+	public String getFuseridB() {
+		return fuseridB;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setFuseridB(String fuseridB) {
+		this.fuseridB = fuseridB;
 	}
 	@Override
 	public String toString() {
-		return "\nFollow [fid=" + fid + ", fuseridA=" + fuseridA +  ", userid=" + userid + "]";
+		return "\nFollow [fid=" + fid + ", fuseridA=" + fuseridA + ", fuseridB=" + fuseridB + "]";
 	}
-
 }

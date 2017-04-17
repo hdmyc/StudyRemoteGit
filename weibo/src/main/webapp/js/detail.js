@@ -31,24 +31,15 @@ $("#detail").form({
 	url:"userDetail/ModifyUsers",    
     success:function(data){ 
     	if(data){
-    		$("#detail").datagrid("reload"); //刷新修改数据
-    		$.messager.show({
-    			title:'修改信息',
-    			msg:'修改成功！！！',
-    			showType:'show',
-    			style:{
-    				top:document.body.scrollTop+document.documentElement.scrollTop,
-    			}
-    		});
+    		$.messager.confirm('成功提示', '修改成功！！', function(r){
+				if (r){
+				}
+			});
     	}else{
-    		$.messager.show({
-    			title:'修改信息',
-    			msg:'修改失败！！！',
-    			showType:'show',
-    			style:{
-    				top:document.body.scrollTop+document.documentElement.scrollTop,
-    			}
-    		});
+    		$.messager.confirm('失败提示', '修改失败！！', function(r){
+				if (r){
+				}
+			});
     	}
     } 
 });

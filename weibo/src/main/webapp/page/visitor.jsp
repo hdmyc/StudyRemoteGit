@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="javax.servlet.http.Cookie"%>
+<%-- <%@ page import="javax.servlet.http.Cookie"%> --%>
 <!DOCTYPE html>
 <html>
 <head>

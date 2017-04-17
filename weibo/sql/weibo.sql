@@ -256,3 +256,6 @@ create table follow(
      start with 10000001 
      DROP TABLE reply
 select * from reply
+
+select * from weibo w,userDetail u 
+		where w.wstatus=1 and w.wuserid = u.userid order by 1

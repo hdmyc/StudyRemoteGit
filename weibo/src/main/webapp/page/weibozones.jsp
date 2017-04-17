@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html>
 <head>
@@ -120,7 +121,7 @@
 							style="font-size: 15px; position: relative; top: -2px; left: 3px">首页</span></a></li>
 					<li><a href="">H<span
 							style="font-size: 15px; position: relative; top: -2px; left: 3px"
-							class="uname">语默</span></a></li>
+							class="uname" id="titleName">语默</span></a></li>
 				</ul>
 			</div>
 			<div class="head_set">
@@ -165,15 +166,15 @@
 		<div class="contenttop">
 			<p class="conttop1_1">
 				<a href=""> <img src="images/meicon.jpg" width="100px"
-					height="100px" />
+					height="100px" id="userPic"/>
 				</a>
 			</p>
 
 			<p class="conttop1_2">
-				<span id="uname">${loginUser.userid}</span> <i></i>
+				<span id="uname">${loginUser.userid}</span>
 			</p>
 			<p class="conttop1_3">
-				<a href="" class="conttop1_31" id="ubrief"></a>
+				<a href="" class="conttop1_31" id="ubrief">aaaaaaaaaaaaassssss</a>
 			</p>
 			<p class="conttop1_3" style="display: none;">上传封面图</p>
 		</div>
@@ -185,17 +186,17 @@
 				<div class="contleft1">
 					<div class="contleft1_1">
 						<a>
-							<p>60</p> 关注
+							<p id="attention">60</p> 关注
 						</a>
 					</div>
 					<div class="contleft1_2">
 						<a>
-							<p>1</p> 粉丝
+							<p id="fans">1</p> 粉丝
 						</a>
 					</div>
 					<div class="contleft1_3">
 						<a>
-							<p>0</p> 微博
+							<p id="weiboNum">0</p> 微博
 						</a>
 					</div>
 				</div>
@@ -250,12 +251,12 @@
 				               <img src="images/2016-10-15_171828.png" id="cont4-icon"/>
 				               <div class="cont4-top-wenzi">
 				                  <h4>wk语默</h4>
-				                  <p>今天14:25来自<a href="">微博weibo.com</a></p>   
+				                  <p>今天14:25</p>   
 				               </div>
 				           </div>
-				           http://weibo.com/u/5760843730/home?wvr=5&lf=reg
 				           <div class="cont4-cen">
 				              <span>aaaaaaaaaaaaaaaaaaaaaa</span>
+				              <div><img src="" id="weiboPic"></div>
 				           </div>
 				           <div class="cont4-foot">
 				               <li class="cont4-foot-li1">推广</li>
@@ -264,8 +265,8 @@
 				               <li  class="cont4-foot-li5"><span>ñ</span>赞</li>
 				           </div>
 				           <p class="cont4_1">阅读   <span>68</span></p>
-				       	</div>
-				       	-->
+				       	</div> -->
+				       	
 						<!-- <div class="content5">
 				           <div class="cont5-top">
 				               <img src="images/2016-10-15_171828.png" id="cont5-icon"/>

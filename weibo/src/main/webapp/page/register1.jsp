@@ -20,7 +20,7 @@
 				<a href="register1.jsp" id="cont1">个人注册</a>
 			</div>
 			<div id="con2">
-				<form action="" method="post" id="form1" style="display: block;">
+				<form action="user/register" method="post" id="form1" style="display: block;">
 					<div id="shoujidiv">
 						<span id="span1" ><i id="spani">*</i>手机：</span>
 						<span id="guoqi" class="color1"></span>
