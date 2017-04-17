@@ -209,8 +209,8 @@ DROP table weibo
 --8.关注表
 create table follow(
        fid       number(8) PRIMARY KEY,  --关注编号
-       fuseridA   varchar2(20)  constraint fk_fuseriA  references userInfo(userid),--用户
-       fuseridB  varchar2(20)  constraint fk_fuseridB  references userInfo(userid) --关注用户
+       userid    varchar2(20),				--用户
+       fuseridA   varchar2(20)  constraint fk_fuseriA  references userInfo(userid)--关注用户
   );
    create sequence fid_seq          
      increment by 1          
@@ -220,11 +220,12 @@ create table follow(
   INSERT INTO follow VALUES(fid_seq.nextval,'jaejoonglee@163.com','1119185633@qq.com');
   INSERT INTO follow VALUES(fid_seq.nextval,'jaejoonglee@163.com','565944701@qq.com');
   INSERT INTO follow VALUES(fid_seq.nextval,'1298237952@qq.com','565944701@qq.com');
-  
+
    select count(1) from follow where fuseridA='1119185633@qq.com'
   SELECT * FROM follow
   DROP SEQUENCE fid_seq
-  DROP TABLE follow
+  DROP TABLE follo;
+    commit;
  --9.点赞表
  create table zan(
        zid       number(8) PRIMARY KEY,  --关注编号

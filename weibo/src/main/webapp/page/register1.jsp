@@ -47,7 +47,7 @@
 						<span id="mimats5" style="display: none;"><span class="sp3">强：</span>您的密码很安全</span>
 					</div>
 					<div>
-						<input type="submit" name="submit" value="立即注册" id="sub"/>
+						<a href="page/visitor.jsp"><input type="submit" name="submit" value="立即注册" id="sub"/></a>
 					</div>
 					
 					<a href="">微博服务使用协议</a><br />
@@ -84,7 +84,7 @@
 						<span id="yanzhengmats3" style="display: none;"></span>
 					</div>
 					<div>
-						<input type="submit" name="submit" value="立即注册" id="sub2"/>
+						<a href="page/visitor.jsp"><input type="submit" name="submit" value="立即注册" id="sub2"/></a>
 					</div>
 					
 					<a href="">微博服务使用协议</a><br />

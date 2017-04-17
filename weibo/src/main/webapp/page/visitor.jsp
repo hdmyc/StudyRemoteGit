@@ -32,7 +32,7 @@
 				</div>
 			</div>
 			<div id="con2">
-				<form action="../新浪登录界面/index.html" method="post">
+				<form action="" method="post">
 					<div class="phonediv1">
 						<a href=""><div class="pic12"></div></a> <input type="text"
 							name="uname" placeholder="邮箱/会员账号/手机号登录" id="phone" />
@@ -289,9 +289,34 @@
 		<a href="#top"></a>
 	</div>
 	<!--返回顶部结束-->
-	<!-- 记住密码 -->
-	<script src="scripts/jquery.cookie.js" type="text/javascript"></script>
-	
+ <!-- 记住密码 -->
+	<!-- <script type="text/javascript" src="easyui/jquery.cookie.js"></script>
+	<script type="text/javascript">
+ 
+  $(document).ready(function () {
+    if ($.cookie("rmbUser") == "true") {
+    $("#loginStatus").attr("checked", true);
+    $("#phone").val($.cookie("userid"));
+    $("#pwd").val($.cookie("upwd"));
+    }
+  });
+ 
+  //记住用户名密码
+  function Save() {
+    if ($("#loginStatus").attr("checked")) {
+      var str_username = $("#phone").val();
+      var str_password = $("#pwd").val();
+      $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie
+      $.cookie("userid", str_username, { expires: 7 });
+      $.cookie("upwd", str_password, { expires: 7 });
+    }
+    else {
+      $.cookie("rmbUser", "false", { expire: -1 });
+      $.cookie("userid", "", { expires: -1 });
+      $.cookie("upwd", "", { expires: -1 });
+    }
+  }; 
+ </script> -->
 	<script type="text/javascript" src="easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>

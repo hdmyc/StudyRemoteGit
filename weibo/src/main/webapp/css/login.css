@@ -474,13 +474,15 @@ body{
 }
 
 #content .content_middle .content1{
-	height:165px;
+	height:30px;
 	width:600px;
-	background-color:#fff;
 	border-radius:4px;
 	float:left;
 	margin-top:16px;
 	margin-bottom:10px;
+}
+#content .content_middle .content1 input:hover {
+	background-color:#FF8140;
 }
 .content1 .content11{
 	height:21px;
@@ -503,7 +505,7 @@ body{
 	padding:3px 0 0 4px;
 }
 .content1 .content11 .content113{
-	color:#808080;
+	color:#ff8080;
 	position:absolute;
 	left:598px;
 	line-height:21px;

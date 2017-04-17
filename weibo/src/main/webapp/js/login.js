@@ -510,7 +510,7 @@ function loadWeibo(){
 	var rows = "8";
 	$.post("weibo/listAll?page="+page+"&rows="+rows,function(d){
 		var data = d.rows;
-		alert(JSON.stringify(data));
+		//alert(JSON.stringify(data));
 		var weiboStr = "";
 		for(var i = 0; i < data.length; i++){
 			weiboStr += '<div class="content5"><div class="cont5-top">';
@@ -531,4 +531,59 @@ function loadWeibo(){
 	}, "json");
 }
 
+/*$("#listWeibo").panel({
+	fit : true,
+	title : " ",
+	border : false,
+});*/
 
+$("#addWeibo").dialog({
+	height:380, 
+	width:430,
+	title:'',
+	border:false,
+	modal:true,
+	closed:true
+});
+
+//添加书签
+$("#addWeiboForm").form({
+	url:"weibo",
+	success:function(date){
+		addWinClose();  //关闭添加窗口
+alert(1);
+		//添加结果信息
+		$.messager.show({
+			title:'添加信息',
+			msg:'添加微博' + (data ? "成功..." : "失败!!!"),
+			showType:'show',
+			style:{
+				top:document.body.scrollTop+document.documentElement.scrollTop,
+			}
+		});
+	}
+});
+
+$("#addWeibo").dialog("close", true);
+
+$("#labels_table td").hover(selecrLabel);
+
+function add(){
+	UE.getEditor('wNote');
+	$("#addWeibo").dialog("open", true);
+}
+
+function addWinClose(){
+	$("#addWeibo").dialog("close");
+}
+
+function  selecrLabel(){
+	$("#labels_table td").removeClass("selected_label");
+	$(this).addClass("selected_label");
+}
+
+
+function addWeibo(){
+	$("#addWeiboForm").submit();
+	return false;
+}
