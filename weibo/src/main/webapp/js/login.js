@@ -1,5 +1,5 @@
-/*// JavaScript Document
-window.onload=function(){
+// JavaScript Document
+/*window.onload=function(){
 	showInfo();
 }
 
@@ -503,6 +503,7 @@ function showUser(){
 	$.post("weibo/findNum?userid="+userid,function(data){
 		$("#weiboNum").text(data);
 	},"json");
+	
 }
 
 loadWeibo();
@@ -511,7 +512,6 @@ function loadWeibo(){
 	var rows = "8";
 	$.post("weibo/findAttentionWeibo?page="+page+"&rows="+rows+"&fuserid="+userid,function(d){
 		var data = d.rows;
-		//alert(JSON.stringify(data));
 		var weiboStr = "";
 		for(var i = 0; i < data.length; i++){
 			weiboStr += '<div class="content5"><div class="cont5-top">';
@@ -526,65 +526,40 @@ function loadWeibo(){
 			}
 			weiboStr += '<div class="cont5-foot"><li><span>û</span>收藏</li>';
 			weiboStr += '<li><span></span>56</li><li><span></span>23</li>';
-			weiboStr += '<li class="cont5-foot-li5"><span>ñ</span>71</li></div></div>';
+			weiboStr += '<li class="cont5-foot-li5" id="zan" onclick="zan()"><span class="zan">ñ</span><i class="zanNum" style="font-style:normal">71</i></li></div></div>';
 		}
 		$(".content5").html(weiboStr);
 	}, "json");
 }
 
-/*$("#listWeibo").panel({
-	fit : true,
-	title : " ",
-	border : false,
-});*/
-
-$("#addWeibo").dialog({
-	height:380, 
-	width:430,
-	title:'',
-	border:false,
-	modal:true,
-	closed:true
-});
-
-//添加书签
-$("#addWeiboForm").form({
-	url:"weibo",
-	success:function(date){
-		addWinClose();  //关闭添加窗口
-alert(1);
-		//添加结果信息
-		$.messager.show({
-			title:'添加信息',
-			msg:'添加微博' + (data ? "成功..." : "失败!!!"),
-			showType:'show',
-			style:{
-				top:document.body.scrollTop+document.documentElement.scrollTop,
-			}
-		});
+$("#btn").click(function(){
+	if($("textarea").text() == "" || $("textarea").text()== null){
+		$.messager.alert('失败提示','内容不能为空，请重新输入..'); 
+	}else{
+		alert($("textarea").html());
 	}
 });
-
-$("#addWeibo").dialog("close", true);
-
-$("#labels_table td").hover(selecrLabel);
-
-function add(){
-	UE.getEditor('wNote');
-	$("#addWeibo").dialog("open", true);
+//点赞部分
+var flag=true;
+function zan(){
+	var a= parseInt ( $("#zan i.zanNum").html());
+	if(flag){
+		$("#zan").css("color","gray");
+		a=a+1;
+		flag=false;	
+	}else{
+		$("#zan").css("color","red");
+		a=a-1;
+		flag=true;
+	}
+	$("#zan i.zanNum").text(a);
 }
 
-function addWinClose(){
-	$("#addWeibo").dialog("close");
-}
+/*$("#zan").click(function(){
+	url:"zan/listZan"
+});*/
 
-function  selecrLabel(){
-	$("#labels_table td").removeClass("selected_label");
-	$(this).addClass("selected_label");
-}
+$("zan/listZan").html(function(n){
+    return "zan/listZan" + n;
+});
 
-
-function addWeibo(){
-	$("#addWeiboForm").submit();
-	return false;
-}

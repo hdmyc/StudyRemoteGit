@@ -148,8 +148,31 @@ $("#loginBtn").click(function(){
 	$("#loginForm").submit();
 });
 
-
-
+/*//记住密码
+$(document).ready(function () {
+    if ($.cookie("loginStatus") == "true") {
+    $("#loginStatus").attr("checked", true);
+    $("#phone").val($.cookie("userid"));
+    $("#pwd").val($.cookie("upwd"));
+    }
+  });
+ 
+  //记住用户名密码
+  function Save() {
+    if ($("#loginStatus").attr("checked")) {
+      var str_username = $("#phone").val();
+      var str_password = $("#pwd").val();
+      $.cookie("loginStatus", "true", { expires: 7 }); //存储一个带7天期限的cookie
+      $.cookie("userid", str_username, { expires: 7 });
+      $.cookie("upwd", str_password, { expires: 7 });
+    }
+    else {
+      $.cookie("loginStatus", "false", { expire: -1 });
+      $.cookie("userid", "", { expires: -1 });
+      $.cookie("upwd", "", { expires: -1 });
+    }
+  };
+*/
 loadWeibo();
 function loadWeibo(){
 	var page = "1";
@@ -157,6 +180,7 @@ function loadWeibo(){
 	$.post("weibo/listAll?page="+page+"&rows="+rows+"&wstatus=0",function(d){
 		var data = d.rows;
 		var weiboStr = "";
+		//alert(JSON.stringify(data));
 		for(var i = 0; i < data.length; i++){
 			var userid = data[i].wuserid;
 			weiboStr += '<div class="content_1">';
@@ -173,7 +197,4 @@ function loadWeibo(){
 		$(".content").html(weiboStr);
 	}, "json");
 }
-
-
-
 

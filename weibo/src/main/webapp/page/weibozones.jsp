@@ -239,8 +239,40 @@
 						<a id="contright1_32" class="color1">f</a> <a id="contright1_33"
 							class="color2">g</a>
 					</div>
+					<ul id="contright1_4" style="display: none;">
+						<li><a href="">原创</a></li>
+						<li><a href="">图片</a></li>
+						<li><a href="">视频</a></li>
+						<li><a href="">音乐</a></li>
+						<li><a href="">文章</a></li>
+						<li><a href="">标签</a></li>
+						<li><a href="">查看权限</a></li>
+						<li><a href="">定时微博</a></li>
+					</ul>
 				</div>
 				<div class="contright2" style="display: none;">
+					<div class="contright2_1">
+						<p>高级搜索</p>
+					</div>
+					<div class="contright2_2">
+						<form action="" method="post">
+							<p id="contright2_2_p1">
+								类&nbsp;&nbsp;&nbsp;型： <input type="checkbox" /> 原创&nbsp;&nbsp;
+								<input type="checkbox" /> 转发&nbsp;&nbsp; <input type="checkbox" />
+								纯文字&nbsp;&nbsp; <input type="checkbox" /> 含图片&nbsp;&nbsp; <input
+									type="checkbox" /> 含视频&nbsp;&nbsp; <input type="checkbox" />
+								含音乐&nbsp;&nbsp; <input type="checkbox" /> 含文章&nbsp;&nbsp;
+							</p>
+							<p>
+								关键字： <input type="text" placeholder="搜我的微博" id="contright2_21"
+									class="border1" />
+							</p>
+							<p class="contright2_24">
+								<input type="submit" value="搜索" class="contright2_25" />
+							</p>
+						</form>
+
+					</div>
 					<div class="contright2_3">
 						<span class="contright2_31">X</span>
 					</div>
