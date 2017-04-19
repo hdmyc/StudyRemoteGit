@@ -49,7 +49,6 @@ public class WeiboServiceImpl implements WeiboService{
 
 	@Override
 	public boolean insertWeibo(Weibo weibo) {
-		
 		return weiboMapper.insertWeibo(weibo)>0;
 	}
 	

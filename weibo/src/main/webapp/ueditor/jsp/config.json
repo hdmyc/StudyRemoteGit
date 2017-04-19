@@ -8,8 +8,11 @@
     "imageCompressEnable": true, /* 是否压缩图片,默认是true */
     "imageCompressBorder": 1600, /* 图片压缩最长边限制 */
     "imageInsertAlign": "none", /* 插入的图片浮动方式 */
-    "imageUrlPrefix": "/News30", /* 图片访问路径前缀 */
-    "imagePathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
+    "imageUrlPrefix": "", /* 图片访问路径前缀 ，如果为空，访问路径就从Tomcat下的webapps下开始*/
+    "physicsPath":"E:\\apache-tomcat-7.0.47-windows-x86\\apache-tomcat-7.0.47\\webapps",/*图片上传前缀，如果为空就在发布名目录路径下开始*/
+    /*图片上传的路径是physicsPath + imagePathFormat
+               图片访问的路径是imageUrlPrefix + imagePathFormat*/
+    "imagePathFormat": "/uploadWeibo/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
                                 /* {filename} 会替换成原文件名,配置这项需要注意中文乱码问题 */
                                 /* {rand:6} 会替换成随机数,后面的数字是随机数的位数 */
                                 /* {time} 会替换成时间戳 */

@@ -31,6 +31,7 @@ public class UserInfoHandler{
 	//用户注册
 	@RequestMapping(value="register",method=RequestMethod.POST)
 	public String register(String userid,UserInfo userInfo){
+		System.out.println(userInfo);
 		int i=0;
 		if( i>0){
 			return "redirect:/page/visitor.jsp";

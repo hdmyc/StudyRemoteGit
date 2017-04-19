@@ -4,9 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yc.ssm.weibo.mapper.WeiboMapper">
 	<insert id="insertWeibo" parameterType="Weibo">
-		INSERT INTO
-		weibo(wid,wuserid,wtime,wNote) VALUES
-		(wid_seq.nextval,#{wuserid,jdbcType=VARCHAR},default,#{wNote,jdbcType=VARCHAR})
+		insert into weibo(wid,wuserid,wNote) values (wid_seq.nextval,'${wuserid}','${wNote}')
 	</insert>
 
 	<select id="findById" resultType="Weibo">
@@ -45,7 +43,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="transmitNum" property="transmitNum" />
 		<result column="commentNum" property="commentNum" />
 		<result column="wstatus" property="wstatus" />
-		<association property="userDetail" column="userDetailId" javaType="UserDetail">
+		<association property="userDetail" javaType="UserDetail">
 			<id column="userDetailId" property="userDetailId" />
 			<result column="nickname" property="nickname" />
 			<result column="head_picture" property="head_picture"/>
@@ -64,7 +62,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</if>
 		<if test="fuserida==null">
 			,'' fuserida
-		</if> FROM weibo WHERE wuserid IN (SELECT DISTINCT fuseridb FROM follow WHERE fuserida='${fuserida}')
+		</if> FROM weibo 
+		WHERE wuserid IN (SELECT DISTINCT fuseridb FROM follow WHERE fuserida='${fuserida}') 
+		OR wuserid IN (SELECT DISTINCT '${fuserida}' fuserida FROM follow)
 	</select>
 	
 	<resultMap type="PaginationBean" id="findFriendMap">
@@ -76,12 +76,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 		<select id="getfriendweibo" resultMap="WeiboMap">
 		 select t.* from (select n.* ,rownum rn from (SELECT * FROM weibo w,userDetail u 
- 		 WHERE w.wstatus = 0 and w.wuserid = u.userid and w.wuserid IN 
-		(SELECT DISTINCT fuseridb FROM follow WHERE fuserida='${fuserida}' )) n 
+ 		 WHERE w.wstatus = 0 and w.wuserid = u.userid and (w.wuserid IN 
+		(SELECT DISTINCT fuseridb FROM follow WHERE fuserida='${fuserida}') 
+		OR wuserid IN (SELECT DISTINCT '${fuserida}' fuserida FROM follow)) order by w.wid desc) n 
 		where ${currPage} * ${pageSize} >=rownum) t
 		where rn > (${currPage} - 1) * ${pageSize}
 	</select>
-	
 	
 	<resultMap type="PaginationBean" id="PaPaginationBeanMap">
 		<result column="pageSize" property="pageSize" />

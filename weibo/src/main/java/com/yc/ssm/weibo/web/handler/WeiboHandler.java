@@ -19,7 +19,7 @@ public class WeiboHandler {
 	private WeiboService weiboService;
 
 
-	//列出所有微博消息
+	//登录前显示微博
 	@ResponseBody
 	@RequestMapping(value="/listAll",method=RequestMethod.POST)
 	public PaginationBean<Weibo> listAll(String page,String rows,String wstatus){
@@ -51,7 +51,7 @@ public class WeiboHandler {
 	public String findNum(String userid){
 		return weiboService.findNum(userid);
 	}
-	//查找所有好友微博
+	//登录后显示微博
 	@ResponseBody
 	@RequestMapping(value="findAttentionWeibo",method=RequestMethod.POST)
 	public PaginationBean<Weibo> findAttentionWeibo(String page,String rows,String fuserid){
@@ -64,5 +64,11 @@ public class WeiboHandler {
 	public PaginationBean<Weibo> findWeiboByid(String page,String rows,String wuserid){
 		return weiboService.findWeiboByid(page,rows,wuserid);
 	}
-
+	
+	@ResponseBody
+	@RequestMapping(value="sendWeibo",method=RequestMethod.POST)
+	public Boolean sendWeibo(Weibo weibo){
+		System.out.println("weibo"+weibo);
+		return weiboService.insertWeibo(weibo);
+	}
 }

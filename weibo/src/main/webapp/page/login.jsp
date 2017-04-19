@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html>
@@ -12,7 +13,8 @@
 <link rel="icon" href="images/favicon.ico" />
 <link rel="stylesheet" href="css/login.css">
 </head>
-<body><!-- onload="init()" -->
+<body>
+	<!-- onload="init()" -->
 	<!--头部开始-->
 	<div id="head">
 		<div class="head_logo">
@@ -30,7 +32,8 @@
 					<li class="head_nav_li1"><a href="">E<span
 							style="font-size: 15px; position: relative; top: -2px; left: 3px">首页</span></a></li>
 					<li><a href="page/weibozones.jsp">H<span
-							style="font-size: 15px; position: relative; top: -2px; left: 3px" id="titleName">语默</span></a></li>
+							style="font-size: 15px; position: relative; top: -2px; left: 3px"
+							id="titleName">语默</span></a></li>
 				</ul>
 			</div>
 			<div class="head_set">
@@ -93,33 +96,30 @@
 		<!--内容的内容开始-->
 		<div class="content_middle">
 			<div class="content1">
-				<div class="content11">
-					<div class="content111">
-						<em>有什么新</em> <em class="WZ_em2">鲜</em> <em>事想告诉大家</em> <em
-							class="WZ_em4"><sub>?</sub></em>
-					</div>
-					<div class="content113">
-						还可以输入<span style="font-size: 20px" id="count">140</span>字
-					</div>
-				</div>
-				<div class="content12">
-					<textarea id="textarea" class="W_input" title="微博输入框" value=""
-						range="0&amp;0"
-						style="border: none; font-size: 14px; word-wrap: break-word; line-height: 18px; overflow-y: auto; overflow-x: hidden; outline: none; background: transparent; width: 100%; height: 100%; font-size: 14px;"></textarea>
-
-				</div>
-				<div class="content13">
-					<div class="content131">
-						<li><em style="color: #FFB705; font-size: 18px;">o</em><a>表情</a></li>
-						<li><em style="color: #84C002; font-size: 18px;">p</em><a>图片</a></li>
-					</div>
-					<div class="content132">
-						<div class="cont1321">
-							<a>公开</a><em>c</em>
+				<form id="sendWeiboForm" method="post">
+					<div class="content11">
+						<div class="content111">
+							<em>有什么新</em> <em class="WZ_em2">鲜</em> <em>事想告诉大家</em> <em
+								class="WZ_em4"><sub>?</sub></em>
 						</div>
-						<input type="button" id="btn" value="发布" />
+						<!-- <div class="content113">
+						还可以输入<span style="font-size: 20px" id="count">140</span>字
+					</div> -->
 					</div>
-				</div>
+					<div class="content12">
+						<input type="hidden" value="${loginUser.userid}" name="wuserid" />
+						<textarea id="textarea" name="wNote" class="W_input" title="微博输入框"
+							style="width: 598px; height: 180px;"></textarea>
+					</div>
+					<div class="content13">
+						<div class="content132">
+							<div class="cont1321">
+								<a>公开</a><em>c</em>
+							</div>
+							<input type="button" value="发布" onclick="return submitForm()" />
+						</div>
+					</div>
+				</form>
 			</div>
 
 			<div class="content0" id="weibo">
@@ -241,7 +241,7 @@
 			<div class="cont-intro-me">
 				<div class="cont-intro-me1">
 					<img src="images/008_s.jpg" /> <a href="page/weibozones.jsp"><img
-						src="images/contMe.png" alt="用户" id="userPic"/></a>
+						src="images/contMe.png" alt="用户" id="userPic" /></a>
 				</div>
 				<div class="cont-intro-me2">
 					<div class="nameBox">
@@ -250,14 +250,14 @@
 						</a>
 					</div>
 					<ul>
-						<li class="S_line1"><a href=""> <strong class="stro1" id="attention">49</strong><strong
-								class="stro2">关注</strong>
+						<li class="S_line1"><a href=""> <strong class="stro1"
+								id="attention">49</strong><strong class="stro2">关注</strong>
 						</a></li>
-						<li class="S_line2"><a href=""> <strong class="stro1" id="fans">5</strong><strong
-								class="stro2">粉丝</strong>
+						<li class="S_line2"><a href=""> <strong class="stro1"
+								id="fans">5</strong><strong class="stro2">粉丝</strong>
 						</a></li>
-						<li class="S_line3"><a href=""> <strong class="stro1" id="weiboNum">4</strong><strong
-								class="stro2">微博</strong>
+						<li class="S_line3"><a href=""> <strong class="stro1"
+								id="weiboNum">4</strong><strong class="stro2">微博</strong>
 						</a></li>
 					</ul>
 				</div>
@@ -307,7 +307,8 @@
 		<!--脚注结束-->
 		<script type="text/javascript" src="easyui/jquery.min.js"></script>
 		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
-		<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+		<script type="text/javascript"
+			src="easyui/locale/easyui-lang-zh_CN.js"></script>
 		<script type="text/javascript" charset="utf-8"
 			src="ueditor/ueditor.config.js"></script>
 		<script type="text/javascript" charset="utf-8"
