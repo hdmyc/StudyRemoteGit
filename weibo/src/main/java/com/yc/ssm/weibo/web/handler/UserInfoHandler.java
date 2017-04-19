@@ -28,12 +28,16 @@ public class UserInfoHandler{
 	@Autowired
 	private UserInfoService userInfoService;
 
-	// 用户注册
-	@ResponseBody
-	@RequestMapping(value = "register", method = RequestMethod.POST)
-	public int register(UserInfo user) {
-		LogManager.getLogger().debug("我是register的处理");
-		return userInfoService.register(user);
+	//用户注册
+	@RequestMapping(value="register",method=RequestMethod.POST)
+	public String register(String userid,UserInfo userInfo){
+		System.out.println(userInfo);
+		int i=0;
+		if( i>0){
+			return "redirect:/page/visitor.jsp";
+		}else{
+			return "/page/register1.jsp";
+		}
 	}
 	//用户登录
 	@ResponseBody

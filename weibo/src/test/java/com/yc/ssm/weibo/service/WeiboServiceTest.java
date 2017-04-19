@@ -37,7 +37,8 @@ public class WeiboServiceTest {
 	@Test
 	public void testInsertWeibo() {
 		Weibo  weibo=new Weibo();
-		weibo.setWuserid("15570934077");
+		weibo.setWuserid("1119185633@qq.com");
+		weibo.setwNote("今天天气好好！！");
 		System.out.println(weiboService.insertWeibo(weibo));
 		assertNotNull(weibo);
 	}
@@ -65,7 +66,7 @@ public class WeiboServiceTest {
 	
 	@Test
 	public void testFindAttentionWeibo() {
-		PaginationBean<Weibo> weibo = weiboService.findAttentionWeibo("1", "10", "jaejoonglee@163.com");
+		PaginationBean<Weibo> weibo = weiboService.findAttentionWeibo("2", "8", "jaejoonglee@163.com");
 		System.out.println(weibo);
 		assertNotNull(weibo);
 	}

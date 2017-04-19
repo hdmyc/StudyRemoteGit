@@ -510,9 +510,11 @@ loadWeibo();
 function loadWeibo(){
 	var page = "1";
 	var rows = "8";
+	UE.getEditor('textarea');
 	$.post("weibo/findAttentionWeibo?page="+page+"&rows="+rows+"&fuserid="+userid,function(d){
 		var data = d.rows;
 		var weiboStr = "";
+		/*alert(JSON.stringify(data));*/
 		for(var i = 0; i < data.length; i++){
 			weiboStr += '<div class="content5"><div class="cont5-top">';
 			weiboStr += '<img src="'+ data[i].userDetail.head_picture +'" width="20px" height="20px" id="cont5-icon" />';
@@ -521,7 +523,7 @@ function loadWeibo(){
 			weiboStr += '<i class="WB_icon_airball" title="带着微博去旅行"><a href="ong.weibo.com/travel2016?ref=icon"></a></i>';
 			weiboStr += '<p>'+ data[i].wtime +'</p><span>c</span></div></div>';
 			weiboStr += '<div class="cont5-cen"><div class="WB_text_01">'+ data[i].wNote +'</div>';
-			if(data[i].wpic != null){
+			if(data[i].wpic != "" || data[i].wpic != null){
 				weiboStr += '<div id="WB_img"><img src="'+ data[i].wpic +'" width="180px" height="180px"></div></div>';
 			}
 			weiboStr += '<div class="cont5-foot"><li><span>û</span>收藏</li>';
@@ -532,13 +534,25 @@ function loadWeibo(){
 	}, "json");
 }
 
-$("#btn").click(function(){
+/*$("#btn").click(function(){
 	if($("textarea").text() == "" || $("textarea").text()== null){
 		$.messager.alert('失败提示','内容不能为空，请重新输入..'); 
 	}else{
 		alert($("textarea").html());
 	}
-});
+});*/
+
+$("#sendWeiboForm").form({    
+    url:'weibo/sendWeibo',    
+    success:function(data){    
+        if(data == "true"){
+        	window.location.reload();
+        }    
+    }    
+});    
+function submitForm(){
+	$("#sendWeiboForm").submit();
+}
 //点赞部分
 var flag=true;
 function zan(){
