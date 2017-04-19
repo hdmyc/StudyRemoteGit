@@ -5,7 +5,7 @@
 <head>
 <base href="${deployName}">
 <meta charset="utf-8">
-<title>我的首页 微博-随时随地发现新鲜事</title>
+<title>我的 微博-随时随地发现新鲜事</title>
 <link rel="stylesheet" type="text/css"
 	href="easyui/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
@@ -77,8 +77,8 @@
 		<!--内容导航栏开始-->
 		<div class="content_left">
 			<div class="content_left_me">
-				<a href="index.jsp"><span>首页</span></a> <a href=""><span>我的收藏</span></a>
-				<a href=""><span>我的赞</span></a>
+				<a href="page/login.jsp"><span>首页</span></a> <a href="page/mycollection.jsp"><span>我的收藏</span></a>
+				<a href="page/zan.jsp"><span>我的赞</span></a>
 			</div>
 			<div class="content_left_hotwb">
 				<a href=""><em>ì</em><span>热门微博</span></a>
@@ -132,6 +132,7 @@
 					</div><br/><br/>
 					<div class="content3" style="display: block;">
 						<div class="contentd4" style="display: block;">
+						<form action="weibo/findWeiboByid" method="post" id="content">
 							<!--  <div class="cont4-top">
 	                   <img src="images/cont4-cen.png" id="cont4pic"/>
 	                   <div class="cont4-top-wenzi">
@@ -160,6 +161,7 @@
 	                   <li><span></span>1</li>
 	                   <li  class="cont4-foot-li4"><span>ñ</span>3</li>
 	               </div>-->
+	               </form>
 						</div>
 						<div class="contentd6">
 							<!--  <div class="cont6-top">

@@ -3,6 +3,7 @@ package com.yc.ssm.weibo.web.handler;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+
 import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,4 +34,16 @@ public class ZanHandler {
 		//zwid = new String(zwid.getBytes("ISO-8859-1"),"utf-8");
 		return zanService.listZan(zwid);
 	}
+	
+	/*//判断点赞的微博是否存在
+	@ResponseBody
+	@RequestMapping(value="findweibo",method=RequestMethod.POST)
+	public int findWeib(String zuseriA,int zwid){
+		int i = 0;
+		if(i>0){
+			return i-1;
+		}else{
+			return i+1;
+		}
+	}*/
 }

@@ -75,7 +75,7 @@
 		<!--内容导航栏开始-->
 		<div class="content_left">
 			<div class="content_left_me">
-				<a href="login.jsp"><span>首页</span></a> <a
+				<a href="page/login.jsp"><span>首页</span></a> <a
 					href="page/mycollection.jsp"><span>我的收藏</span></a> <a href="page/zan.jsp"><span>我的赞</span></a>
 			</div>
 			<div class="content_left_hotwb">
@@ -83,9 +83,6 @@
 			</div>
 			<div class="line_icon">
 				<a href="">J</a>
-			</div>
-			<div class="content_left_other">
-				<a href=""><em>C</em><span>朋友圈</span></a>
 			</div>
 		</div>
 		<!--内容导航栏结束-->

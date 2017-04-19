@@ -324,3 +324,16 @@ function loadWeibo(){
 	}, "json");
 }
 
+/*$("zan/listZan").html(function(n){
+    return "zan/listZan" + n;
+});
+
+$('#content').form('submit', {    
+    url:"weibo/findWeiboByid",    
+    onSubmit: function(){    
+        // return false to prevent submit;    
+    },    
+    success:function(data){    
+        alert(data)    
+    }    
+}); */

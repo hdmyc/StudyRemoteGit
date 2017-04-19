@@ -544,11 +544,11 @@ var flag=true;
 function zan(){
 	var a= parseInt ( $("#zan i.zanNum").html());
 	if(flag){
-		$("#zan").css("color","gray");
+		$("#zan").css("color","red");
 		a=a+1;
 		flag=false;	
 	}else{
-		$("#zan").css("color","red");
+		$("#zan").css("color","gray");
 		a=a-1;
 		flag=true;
 	}
@@ -558,8 +558,4 @@ function zan(){
 /*$("#zan").click(function(){
 	url:"zan/listZan"
 });*/
-
-$("zan/listZan").html(function(n){
-    return "zan/listZan" + n;
-});
 
