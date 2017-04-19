@@ -5,7 +5,7 @@ import java.io.File;
 public class ServletUtil {
 	public static String DEPLOY_NAME;   //项目发布名
 	public static String UPLOAD_DIR;
-	public static String VIRTUAL_UPLOAD_DIR="/upload/";
+	public static String VIRTUAL_UPLOAD_DIR="/uploadWeibo/";
 	public static final String LOGIN_USER = "loginUser";  //登录用户
 	public static final String ERROR_MESSAGE = "errorMsg";
 	public static final String LOGIN_ROOT = "loginRoot";  //登录管理员

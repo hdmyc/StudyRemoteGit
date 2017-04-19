@@ -158,6 +158,12 @@
 					</p> <span class="chara_3"><p>2.1万&nbsp;&nbsp;|</p></span> <span
 					class="chara_4"><p>9999&nbsp;&nbsp;|</p></span> <span
 					class="chara_5"><p>43万</p></span>
+					<div class="content">
+	<div class="hua">
+         <p class="name">梅</P>
+		 <div class="zan"><span>10</span></div>
+		 <p class="jieshuo">梅：探波傲雪，剪雪裁冰，一身傲骨，是为高洁志士；</p>
+    </div>
 				</a>
 			</div> -->
 		</div>
@@ -289,16 +295,14 @@
 		<a href="#top"></a>
 	</div>
 	<!--返回顶部结束-->
-	<!-- 记住密码 -->
-	<script src="scripts/jquery.cookie.js" type="text/javascript"></script>
-	
+	<!-- <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script> -->
 	<script type="text/javascript" src="easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
 
 	<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
-	<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
+	<!--<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"></script>
+	 <script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script> -->
 	<script type="text/javascript" src="js/visitor.js"></script>
 </body>
 </html>

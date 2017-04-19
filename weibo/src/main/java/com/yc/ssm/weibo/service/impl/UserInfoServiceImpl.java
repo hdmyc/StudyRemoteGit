@@ -42,16 +42,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 	public int register(UserInfo user) {
 		System.out.println("用户进行注册操作==》" +user);
 		user.setUpwd(Encrypt.md5AndSha(user.getUpwd()));
-		int i=0;
-	//	try {
-			 i=userInfoMapper.insert(user);
-	//	} catch (Exception e) {
-			/*if(e instanceof org.springframework.dao.DuplicateKeyException){
-				System.out.println("12232543");
-				
-			}*/
-		//}
-		return i;
+		return userInfoMapper.insert(user);
 	}
 
 	@Override

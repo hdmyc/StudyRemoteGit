@@ -1,5 +1,7 @@
 package com.yc.ssm.weibo.web.handler;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.ssm.weibo.entity.CommentWeibo;
 import com.yc.ssm.weibo.entity.PaginationBean;
+import com.yc.ssm.weibo.entity.UserInfo;
 import com.yc.ssm.weibo.service.CommentWeiboService;
 
 @Controller("commentWeiboHandler")
@@ -37,5 +40,17 @@ public class CommentWeiboHandler {
 	@RequestMapping("listAll")
 	public PaginationBean<CommentWeibo> listAll(String page,String rows){
 		return commentWeiboService.listAll(page,rows);
+	}
+
+	// 判断用户是否登录
+	public String isLogin(HttpSession session) {
+		UserInfo user = (UserInfo) session.getAttribute("userid");
+		if (user == null) {
+			return "redirect:/login.jsp";
+		} else {
+			String usid = user.getUserid();
+			return String.valueOf(usid);
+		}
+
 	}
 }

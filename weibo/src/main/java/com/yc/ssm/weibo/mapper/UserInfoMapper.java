@@ -9,7 +9,7 @@ public interface UserInfoMapper {
 
 	UserInfo checkUserByName(String userid);
 	
-    int insert(UserInfo record);
+    int insert(UserInfo user);
 
 	PaginationBean<UserInfo> listAllUser(PaginationBean<UserInfo> pb);
 

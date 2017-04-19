@@ -40,6 +40,7 @@ public class UserInfoHandler{
 		}
 	}
 	//用户登录
+	@ResponseBody
 	@RequestMapping("login")
 	public String login(UserInfo user,HttpServletRequest request,HttpServletResponse response){
 		LogManager.getLogger().debug("login user ===>"+user);

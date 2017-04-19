@@ -78,17 +78,14 @@
 		<!--内容导航栏开始-->
 		<div class="content_left">
 			<div class="content_left_me">
-				<a href="login.jsp"><span>首页</span></a> <a
-					href="page/mycollection.jsp"><span>我的收藏</span></a> <a href=""><span>我的赞</span></a>
+				<a href="page/login.jsp"><span>首页</span></a> <a
+					href="page/mycollection.jsp"><span>我的收藏</span></a> <a href="page/zan.jsp"><span>我的赞</span></a>
 			</div>
 			<div class="content_left_hotwb">
 				<a href=""><em>ì</em><span>热门微博</span></a>
 			</div>
 			<div class="line_icon">
 				<a href="">J</a>
-			</div>
-			<div class="content_left_other">
-				<a href=""><em>C</em><span>朋友圈</span></a>
 			</div>
 		</div>
 		<!--内容导航栏结束-->
@@ -311,10 +308,10 @@
 			src="easyui/locale/easyui-lang-zh_CN.js"></script>
 		<script type="text/javascript" charset="utf-8"
 			src="ueditor/ueditor.config.js"></script>
+		<!-- <script type="text/javascript" charset="utf-8"
+			src="ueditor/ueditor.all.min.js"></script> 
 		<script type="text/javascript" charset="utf-8"
-			src="ueditor/ueditor.all.min.js"></script>
-		<script type="text/javascript" charset="utf-8"
-			src="ueditor/lang/zh-cn/zh-cn.js"></script>
+			src="ueditor/lang/zh-cn/zh-cn.js"></script> -->
 
 		<script type="text/javascript" src="js/login.js"></script>
 </body>

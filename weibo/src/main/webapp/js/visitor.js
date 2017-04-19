@@ -148,7 +148,7 @@ $("#loginBtn").click(function(){
 	$("#loginForm").submit();
 });
 
-//记住密码
+/*//记住密码
 $(document).ready(function () {
     if ($.cookie("loginStatus") == "true") {
     $("#loginStatus").attr("checked", true);
@@ -172,7 +172,7 @@ $(document).ready(function () {
       $.cookie("upwd", "", { expires: -1 });
     }
   };
-
+*/
 loadWeibo();
 function loadWeibo(){
 	var page = "1";
@@ -180,6 +180,7 @@ function loadWeibo(){
 	$.post("weibo/listAll?page="+page+"&rows="+rows+"&wstatus=0",function(d){
 		var data = d.rows;
 		var weiboStr = "";
+		//alert(JSON.stringify(data));
 		for(var i = 0; i < data.length; i++){
 			var userid = data[i].wuserid;
 			weiboStr += '<div class="content_1">';
@@ -196,7 +197,4 @@ function loadWeibo(){
 		$(".content").html(weiboStr);
 	}, "json");
 }
-
-
-
 

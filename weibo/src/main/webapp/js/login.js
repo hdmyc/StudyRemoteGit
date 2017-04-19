@@ -503,6 +503,7 @@ function showUser(){
 	$.post("weibo/findNum?userid="+userid,function(data){
 		$("#weiboNum").text(data);
 	},"json");
+	
 }
 
 loadWeibo();
@@ -527,7 +528,7 @@ function loadWeibo(){
 			}
 			weiboStr += '<div class="cont5-foot"><li><span>û</span>收藏</li>';
 			weiboStr += '<li><span></span>56</li><li><span></span>23</li>';
-			weiboStr += '<li class="cont5-foot-li5"><span>ñ</span>71</li></div></div>';
+			weiboStr += '<li class="cont5-foot-li5" id="zan" onclick="zan()"><span class="zan">ñ</span><i class="zanNum" style="font-style:normal">71</i></li></div></div>';
 		}
 		$(".content5").html(weiboStr);
 	}, "json");
@@ -552,4 +553,23 @@ $("#sendWeiboForm").form({
 function submitForm(){
 	$("#sendWeiboForm").submit();
 }
+//点赞部分
+var flag=true;
+function zan(){
+	var a= parseInt ( $("#zan i.zanNum").html());
+	if(flag){
+		$("#zan").css("color","red");
+		a=a+1;
+		flag=false;	
+	}else{
+		$("#zan").css("color","gray");
+		a=a-1;
+		flag=true;
+	}
+	$("#zan i.zanNum").text(a);
+}
+
+/*$("#zan").click(function(){
+	url:"zan/listZan"
+});*/
 

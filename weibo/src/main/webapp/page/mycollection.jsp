@@ -5,16 +5,19 @@
 <head>
 <base href="${deployName}">
 <meta charset="utf-8">
-<title>我的首页 微博-随时随地发现新鲜事</title>
+<title>我的微博-发现新鲜事</title>
+<link rel="stylesheet" type="text/css"
+	href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 <link rel="icon" href="images/favicon.ico" />
-<link  rel="stylesheet" href="../css/mycollection.css">
+<link  rel="stylesheet" href="css/mycollection.css">
 </head>
 
 <body> 
     <!--头部开始-->
     <div id="head">
         <div class="head_logo">
-            <img src="../images/WB_logo.png" />
+            <img src="images/WB_logo.png" />
         </div>
         <div class="head_search">
             <input type="text" id="text" placeholder="大家正在搜索：" />
@@ -52,26 +55,16 @@
                <div class="hideinfo1">
                     <em class="line_bg1"></em>
                     <ul>
-                       <li><a href="">&#64;我</a></li>
                        <li><a href="">评论</a></li>
                        <li class="hideinfoli2"><a href="">赞</a></li>
                        <li><a href="">私信</a></li>
-                       <li><a href="">未关注人私信</a></li>
-                       <li class="hideinfoli6"><a href="">群消息</a></li>
-                       <li class="hideinfoli7"><a href="">消息设置</a></li>
                     </ul>
                </div>
                <div class="hideinfo2">
                     <em class="line_bg2"></em>
                     <ul>
                        <li><a href="">账号设置</a></li>
-                       <li><a href="">会员中心</a></li>
-                       <li><a href="">V认证</a></li>
-                       <li><a href="">账号安全</a></li>
-                       <li><a href="">隐私设置</a></li>
-                       <li><a href="">消息设置</a></li>
-                       <li class="hideinfo27"><a href="">帮助中心</a></li>
-                       <li class="hideinfo28"><a href="index.jsp">退出</a></li>
+                       <li class="hideinfo28"><a href="page/visitor.jsp">退出</a></li>
                     </ul>     
                </div>
                <div class="hideinfo3">
@@ -90,23 +83,14 @@
         <!--内容导航栏开始-->
         <div class="content_left">
            <div class="content_left_me">
-               <a href="index.jsp"><span>首页</span></a>
-               <a href=""><span>我的收藏</span></a>
-               <a href=""><span>我的赞</span></a>
+               <a href="page/login.jsp"><span>首页</span></a>
+               <a href="page/mycollection.jsp"><span>我的收藏</span></a>
+               <a href="page/zan.jsp"><span>我的赞</span></a>
            </div>
            <div class="content_left_hotwb">
                <a href=""><em>ì</em><span>热门微博</span></a>
            </div>
            <div class="line_icon"><a href="">J</a></div>
-           <div class="content_left_other">
-               <a href=""><em>C</em><span>朋友圈</span></a>
-               <a href=""><em>æ</em><span>特别关注</span></a>
-               <a href=""><em>D</em><span>明星</span></a>
-               <a href=""><em>D</em><span>文学</span></a>
-               <a href=""><em>D</em><span>同学</span></a>
-               <a href=""><em>º</em><span>群微博</span></a>
-               <a href=""><em>â</em><span>悄悄关注</span></a>
-           </div>
         </div>
         <!--内容导航栏结束-->
         
@@ -122,225 +106,7 @@
            			<a href="" id="coll3"><em style="color:#696E78;font-size:15px;">f</em></a>
            		</div>
            		<div id="content1_2" style="display: none;">
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>美食</a>
-           				</div>
-           			</div>
            			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>电影</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>生活</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>学习</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>健身</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>化妆</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>视频</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>旅游</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>绘画</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>英语</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>音乐</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>减肥</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>搞笑</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>实用</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>PS</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>摄影</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>健康</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify" id="classifyname18">
-           				<div class="classify1" id="classifyd18">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2" id="ifyname18">
-           					<a>纪录片</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>设计</a>
-           				</div>
-           			</div>
-           			
-           			<div class="classify">
-           				<div class="classify1">
-           					<div class="classify1_1">
-	           					<span class="classname1"></span>
-	           				</div>
-           				</div>
-           				<div class="classify2">
-           					<a>EXO</a>
-           				</div>
-           			</div>
            		</div>
     
            	</div>
@@ -381,7 +147,7 @@
            	<div class="content3" style="display: none;">
            		<div class="contentd4" style="display: block;">
 	               <div class="cont4-top">
-	                   <img src="../images/cont4-cen.png" id="cont4pic"/>
+	                   <img src="images/cont4-cen.png" id="cont4pic"/>
 	                   <div class="cont4-top-wenzi">
 	                      <h4>我的朋友是个呆B</h4>
 	                      <i class="WB_icon_app" title="微博个人认证"><a href="http://verified.weibo.com/verify"></a></i>
@@ -394,108 +160,25 @@
 	               <div class="cont4-cen">
 	                   <div class="WB_text_01">牵手</div>
 	                   <div class="cont4-cen-pic">
-	                       <li><img src="../images/cont4-cen01.jpg"></li>
-	                       <li><img src="../images/cont4-cen02.jpg"></li>
-	                       <li><img src="../images/cont4-cen03.jpg"></li>
-	                       <li><img src="../images/cont4-cen04.jpg"></li>
-	                       <li><img src="../images/cont4-cen05.jpg"></li>
-	                       <li><img src="../images/cont4-cen06.jpg"></li>
+	                       <li><img src="images/cont4-cen01.jpg"></li>
+	                       <li><img src="images/cont4-cen02.jpg"></li>
+	                       <li><img src="images/cont4-cen03.jpg"></li>
+	                       <li><img src="images/cont4-cen04.jpg"></li>
+	                       <li><img src="images/cont4-cen05.jpg"></li>
+	                       <li><img src="images/cont4-cen06.jpg"></li>
 	                   </div>
 	               </div>
-	               <div class="cont4-bot">
-			            <div class="cont4-bot3" style="display:block;">
-		               		<div class="classify">
-		           				<div class="classify1">
-		           					<div class="classify1_1">
-			           					<span class="classname1"></span>
-			           				</div>
-		           				</div>
-		           				<div class="classify2">
-		           					<a onMouseOver="ify(4)">学习</a>
-		           				</div>
-		           			</div>
-		           			
-		           			<div class="classify">
-		           				<div class="classify1">
-		           					<div class="classify1_1">
-			           					<span class="classname1"></span>
-			           				</div>
-		           				</div>
-		           				<div class="classify2">
-		           					<a onMouseOver="ify(5)">健身</a>
-		           				</div>
-		           			</div>
-		           			
-		           			<div class="classify">
-		           				<div class="classify1">
-		           					<div class="classify1_1">
-			           					<span class="classname1"></span>
-			           				</div>
-		           				</div>
-		           				<div class="classify2">
-		           					<a onMouseOver="ify(6)">化妆</a>
-		           				</div>
-		           			</div>
-		           			
-		               	</div>
-		            </div>
+	               
 	               <div class="cont4-foot">
 	                   <li><span>û</span>已收藏</li>
 	                   <li><span></span>5</li>
 	                   <li><span></span>1</li>
 	                   <li  class="cont4-foot-li4"><span>ñ</span>3</li>
 	               </div>
-	                <div class="cont4_ying">      <!--content4隐藏的部分-->
-	                    <div class="cont4_ying_pic">
-	                       <img src="../images/profile_cover_m.jpg" class="cont4_ying_pic1"/>
-	                       <img src="../images/cont4-cen.png" class="cont4_ying_pic2" title="TopShop穿搭"/>
-	                       <i class="cont4_ying_pic_icon" title="深圳高飞传媒有限公司设计师"></i>
-	                       <p class="PChuan">TopShop穿搭（设置备注）</p>
-	                       <span class="cont4span1" title="男"></span>
-	                       <span class="cont4span2" title="微博会员"></span>
-	                       <span class="cont4span3" title="带着微博去旅行"></span>
-	                       <p class="PJian">简介：深圳高飞传媒有限公司 设计师</p>
-	                    </div>
-	                    <div class="cont4_ying_wenzi">
-	                        <div class="cont4_ying_wenzi1">
-	                            <li class="li1"><a href="">关注<span>113</span></a></li>
-	                            <li class="li2"><a href="">粉丝<span>988万</span></a></li>
-	                            <li class="li3"><a href="">微博<span>74368</span></a></li>
-	                        </div>
-	                        <div class="cont4_ying_wenzi2">
-	                            <a href="">内蒙古呼和...</a>
-	                        </div>
-	                        <div class="cont4_ying_wenzi3">
-	                            <a href="" class="wenzi31"><span>Y</span>已关注<span>g</span></a>
-	                            <a href="" class="wenzi32">私信</a>
-	                            <a href="" class="wenzi33">=</a>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="cont4_jian_ying" style="display:none">
-	                    <li>帮上头条</li>
-	                    <li>屏蔽</li>
-	                    <li>取消关注TopShop穿搭</li>
-	                    <li>用次卡片背景</li>
-	                    <li>举报</li>
-	                </div>
-	                <div class="cont4_ying_ying1">
-	                    <li>取消关注</li>
-	                    <li>设置分组</li>
-	                </div>
-	                <div class="cont4_ying_ying3">
-	                    <li>设置备注</li>
-	                    <li>@他</li>
-	                    <li>悄悄关注</li>
-	                    <li>推荐给朋友</li>
-	                    <li>加入黑名单</li>
-	                    <li>屏蔽TA的微博</li>
-	                    <li>举报他</li>
-	                </div>
 	           	</div>
 	           	<div class="contentd6">
 		            <div class="cont6-top">
-		                <img src="../images/cont6.png" class="cont6pic"/>
+		                <img src="images/cont6.png" class="cont6pic"/>
 		                <div class="cont6-top-wenzi">
 		              	    <h4>华尔街日报中文网</h4>
 		                    <i class="WB_icon_app" title="微博个人认证"><a href="http://verified.weibo.com/verify"></a></i>
@@ -508,49 +191,11 @@
 		            <div class="cont6-cen">
 		                <div class="WB_text_01">【中国央行面临政策放松压力，但房地产泡沫令人担忧】- 中国在今年余下时间运用宽松货币政策来扶持经济增长的能力主要取决于政府如何应对不断膨胀的房地产泡沫。今年到目前为止，中国央行都没有采取降息及其他强有力的信贷宽松措施来促进经济增长。<a href=""><span>°</span> 中国央行面临政策放松压力，但房地产泡沫令人...</a></div>
 		                <div class="WB_text_02">
-		                    <img src="../images/cont6-test02.jpg" class="WB_text_021"/>
+		                    <img src="images/cont6-test02.jpg" class="WB_text_021"/>
 		                    <p class="WB_text_022">华尔街日报中文网</p>
 		                    <p class="WB_text_023">中国央行面临政策放松压力，但房地产泡沫令人担忧</p>
 		                    <div class="WB_text_024"><span ></span></div>
 		                </div>
-		            </div>
-		            <div class="cont6-bot">
-			            
-		               	<div class="cont6-bot3" style="display:block;">
-		               		<div class="classify">
-		           				<div class="classify1">
-		           					<div class="classify1_1">
-			           					<span class="classname1"></span>
-			           				</div>
-		           				</div>
-		           				<div class="classify2">
-		           					<a onMouseOver="ify(1)">美食</a>
-		           				</div>
-		           			</div>
-		           			
-		           			<div class="classify">
-		           				<div class="classify1">
-		           					<div class="classify1_1">
-			           					<span class="classname1"></span>
-			           				</div>
-		           				</div>
-		           				<div class="classify2">
-		           					<a  onMouseOver="ify(2)">电影</a>
-		           				</div>
-		           			</div>
-		           			
-		           			<div class="classify">
-		           				<div class="classify1">
-		           					<div class="classify1_1">
-			           					<span class="classname1"></span>
-			           				</div>
-		           				</div>
-		           				<div class="classify2">
-		           					<a onMouseOver="ify(3)">生活</a>
-		           				</div>
-		           			</div>
-		           			
-		               	</div>
 		            </div>
 		            <div class="cont6-foot">
 		                <li><span>û</span>收藏</li>
@@ -592,20 +237,6 @@
 	   			</dl>
 	   			
    			</div>
-   			<div class="content6">
-   				<div class="content6_1">
-   					<h5 >微博意见反馈</h5>
-   				</div>
-   				<div class="content6_2">
-   					<p>欢迎使用微博并提出宝贵建议。请<a href="">点击这里</a>提交微博意见反馈。</p>
-   					<ul>
-	   					<li><a href="">微博常见问题</a></li>
-	   					<li><a href="">微博客服专区</a></li>
-	   					<li><a href="">全国人大常委会《关于加强网络信息保护的决定》</a></li>
-	   				</ul>
-	   				<p><em></em><a href="">微博举报处理中心</a></p>
-   				</div>	
-   			</div>
    		</div>
      </div>
      
@@ -623,42 +254,9 @@
         
    		<!--脚注开始-->
         <div id="foot">
-            <div class="foot-top">
-               <div class="splendid-WB">
-                  <p>微博精彩</p>
-                  <a href="" class="a1">热门微博</a>
-                  <a href="" class="a2">热门话题</a>
-                  <a href="" class="a1">名人堂</a>
-                  <a href="" class="a2">微博会员</a>
-                  <a href="" class="a1">微相册</a>
-                  <a href="" class="a2">微游戏</a>
-                  <a href="" class="a1">微指数</a>
-               </div>
-               <div class="phone-WB">
-                  <p>手机玩微博</p>
-                  <img src="../images/footer_code.jpg" />
-                  <a href="">扫码下载，更多版本戳这里</a>
-               </div>
-               <div class="authenticate_WB">
-                  <p>认证&amp;合作</p>
-                  <a href="" class="a1">申请认证</a>
-                  <a href="" class="a2">开放平台</a>
-                  <a href="" class="a1">企业微博</a>
-                  <a href="" class="a2">链接网站</a>
-                  <a href="" class="a1">微博标识</a>
-                  <a href="" class="a2">广告服务</a>
-                  <a href="" class="a1">微博商学院</a>
-                  <a href="" class="a2">广告代理商</a>
-               </div>
-               <div class="help-WB">
-                  <p>微博帮助</p>
-                  <a href="">常见问题</a>
-                  <a href="">自助服务</a>
-               </div>
-            </div>
             <div class="foot-bottom">
                <div class="notice">
-                  <a href=""><img src="../images/foot-wb-logo.png" />微博客服</a>
+                  <a href=""><img src="images/foot-wb-logo.png" />微博客服</a>
                   <a href="" class="a2">意见反馈</a>
                   <a href="" class="a2">舞弊举报</a>
                   <a href="" class="a2">开放平台</a>
@@ -682,12 +280,21 @@
                </div>
                <div class="copyright">
                   <p>Copyright &copy; 2009-2016 WEIBO 北京微梦创科网络技术有限公司</p>
-                  <a href=""><img src="../images/emblem.png" />京公网安备11000002000019号</a>
+                  <a href=""><img src="images/emblem.png" />京公网安备11000002000019号</a>
                </div>
             </div>
         
         <!--脚注结束-->
-	    
-   		<script type="text/javascript" src="../js/mycollection.js" ></script>
+	    <script type="text/javascript" src="easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+		<script type="text/javascript" charset="utf-8"
+			src="ueditor/ueditor.config.js"></script>
+		<!-- <script type="text/javascript" charset="utf-8"
+			src="ueditor/ueditor.all.min.js"></script> 
+		<script type="text/javascript" charset="utf-8"
+			src="ueditor/lang/zh-cn/zh-cn.js"></script> -->
+
+   		<script type="text/javascript" src="js/mycollection.js" ></script>
 </body>
 </html>

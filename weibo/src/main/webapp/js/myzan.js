@@ -1,8 +1,8 @@
-window.onload=function(){
+/*window.onload=function(){
 	showInfo();
 }
 
-/*head_search搜索栏*/
+head_search搜索栏
 function showInfo(){
 	var SCs=document.getElementsByClassName("search_contant")[0].getElementsByTagName("ul")[0].getElementsByTagName("li");
 	var text=document.getElementById("text");
@@ -124,7 +124,7 @@ coll2.onclick=function(){
 	content3.style.display="block";
 }
 
-/*退出*/
+退出
 
 var contedclose=conted.getElementsByClassName("contedclose")[0].getElementsByTagName("span")[0];
 contedclose.onclick=function(){
@@ -135,7 +135,7 @@ contedclose.onclick=function(){
 
 
 
-/*查找*/
+查找
 var content1_1=document.getElementById("content1_1");
 var cont=content1_1.getElementsByTagName("input");
 var em1=content1_1.getElementsByTagName("a")[0].getElementsByTagName("em");
@@ -179,8 +179,8 @@ cont[0].onkeyup=function(){
 }
 
 
-/*热门收藏隐藏部分*/
-/*var biao=document.getElementById("content1_2").getElementsByTagName("div");
+热门收藏隐藏部分
+var biao=document.getElementById("content1_2").getElementsByTagName("div");
 for(var i=0;i<biao.length;i++){
 	var class1=biao[i].getElementsByTagName("div")[1];
 	var a=class1.getElementsByTagName("a")[0];
@@ -189,7 +189,7 @@ for(var i=0;i<biao.length;i++){
 		a.style.color="#FA7D3C";
 	}
 	
-}*/
+}
 
 
 //中间的第二大部分--（第四小部）contentd4
@@ -279,20 +279,17 @@ window.onscroll = function(){
 		contLeft.style.position="position";  
 		contLeft.style.top=(realTop-t+250)+"px";  
 	}  
-}  
+}  */
 
-/*========================================================*/
-alert(1);
-var userid = "";
+/*===============================================*/
+
 showUser();
 function showUser(){
-	userid = $("#uname").text();
+	var userid = $(".uname").text();
 	$.post("userDetail/listDetail?userid="+userid,function(data){
+		$(".uname").text(data.nickname);
 		$("#titleName").text(data.nickname);
 		
-	},"json");
-	$.post("zan/listZan?userid="+userid,function(data){
-		$("#zan").text(data);
 	},"json");
 }
 
@@ -300,40 +297,27 @@ loadWeibo();
 function loadWeibo(){
 	var page = "1";
 	var rows = "4";
-	$.post("zan/listZan?page="+page+"&rows="+rows+"&fuserid="+userid,function(d){
+	$.post("weibo/listAll?page="+page+"&rows="+rows,function(d){
 		var data = d.rows;
+		alert(JSON.stringify(data));
 		var weiboStr = "";
 		for(var i = 0; i < data.length; i++){
-			weiboStr += '<div class="contentd4" style="display: block;"><div class="cont4-top">';
-			weiboStr += '<img src="'+ data[i].userDetail.head_picture +'" id="cont4pic"/>';
-			weiboStr += '<div class="cont4-top-wenzi"><h4>'+ data[i].userDetail.nickname +'</h4>';
+			weiboStr += '<div class="content3" style="display: none;"><div class="contentd4" style="display: block;">';
+			weiboStr += '<div class="cont4-top"><img src="'+ data[i].userDetail.head_picture +'" id="cont4pic"/>';
+			weiboStr += '<div class="cont4-top-wenzi">'+ data[i].userDetail.nickname +'</h4>';
 			weiboStr += '<i class="WB_icon_app" title="微博个人认证"><a href="http://verified.weibo.com/verify"></a></i>';
 			weiboStr += '<i class="WB_icon_member6" title="微博会员"><a href="http://vip.weibo.com/"></a></i>';
-			weiboStr += '<i class="WB_icon_airball" title="带着微博去旅行"><a href="ong.weibo.com/travel2016?ref=icon"></a></i> ';
-			weiboStr += '<p>'+ data[i].wtime +'<a href="">微博weibo.com</a></p><span>c</span></div></div>';
+			weiboStr += '<i class="WB_icon_airball" title="带着微博去旅行"><a href="ong.weibo.com/travel2016?ref=icon"></a></i>'; 
+			weiboStr += '<p>'+data[i].wtime+'<a href="">微博weibo.com</a></p><span>c</span></div></div>';
 			weiboStr += '<div class="cont4-cen"><div class="WB_text_01">'+ data[i].wNote +'</div><div class="cont4-cen-pic">';
 			if(data[i].wpic != null){
 				weiboStr += '<div id="WB_img"><img src="'+ data[i].wpic +'" width="180px" height="180px"></div></div>';
 			}
-			weiboStr += '<div class="cont4-foot">';
-			weiboStr += '<li><span>û</span>收藏</li>';
-			weiboStr += '<li><span></span>5</li><li><span></span>1</li>';
-			weiboStr += '<li class="cont4-foot-li4" id="zan" onclick="zan()"><span class="zan">ñ</span><i class="zanNum" style="font-style:normal">3</i></li></div></div>';
+			weiboStr += '</li></div></div><div class="cont4-foot">';
+			weiboStr += '<li><span>û</span>已收藏</li><li><span></span>5</li><li><span></span>1</li>';
+			weiboStr += '<li  class="cont4-foot-li4"><span>ñ</span>3</li></div></div></div>';
 		}
-		$(".contentd4").html(weiboStr);
+		$(".content3").html(weiboStr);
 	}, "json");
 }
 
-/*$("zan/listZan").html(function(n){
-    return "zan/listZan" + n;
-});
-
-$('#content').form('submit', {    
-    url:"weibo/findWeiboByid",    
-    onSubmit: function(){    
-        // return false to prevent submit;    
-    },    
-    success:function(data){    
-        alert(data)    
-    }    
-}); */

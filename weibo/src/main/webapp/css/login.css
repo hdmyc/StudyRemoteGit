@@ -671,6 +671,7 @@ body{
 }
 .content5 .cont5-foot li{
 	list-style:none;
+	cursor:pointer;/* 点赞的手势 */
 	margin:8px 0px;
 	height:20px;
 	border-right:1px solid #d9d9d9;
@@ -2690,3 +2691,18 @@ body{
 	right: 3px;
 } */
 /*脚注部分结束*/
+
+
+/*点赞部分*/
+/* after 伪元素在元素之前添加内容*/
+.chara_5:before,.chara_51:before{
+content:" ";
+background:gray;
+left:20px;}
+
+/* after 伪元素在元素之后添加内容*/
+.chara_5:after,.chara_51:after{
+content:" ";
+background:gray;
+left:28px;top:0px;}
+.zan1:before,.zan1:after{background:red;}

@@ -1117,3 +1117,19 @@ body {
 	margin-right: 20px;
 	cursor: pointer;
 }
+
+
+/*点赞部分*/
+/* after 伪元素在元素之前添加内容*/
+.chara_5:before,.chara_51:before{
+content:" ";
+background:gray;
+left:20px;}
+
+/* after 伪元素在元素之后添加内容*/
+.chara_5:after,.chara_51:after{
+content:" ";
+background:gray;
+left:28px;top:0px;
+}
+.chara_51:before,.chara_51:after{background:red;}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> 
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" /> 
+  <title>点赞效果</title> 
+  <style>
+.zan,.zan1{width:60px;height:60px;position:relative;float:right; padding-left: 40px;margin-top: 10px;/* relative(相对定位) 对象不可层叠、不脱离文档流，参考自身静态位置通过 top,bottom,left,right 定位，并且可以通过z-index进行层次分级 */
+}
+/* after 伪元素在元素之前添加内容*/
+.zan:before,.zan1:before{
+content:" ";
+border-radius:30px 30px 0 0;/* 正方形的内切圆的半径等于正方形边长的一半 */
+width:20px; height:30px;/* 长方形 */
+background:gray;
+-moz-transform: rotate(-48deg);/* 逆时针旋转45°*/
+-ms-transform: rotate(-48deg);
+-o-transform: rotate(-48deg);
+-webkit-transform: rotate(-48deg);
+position:absolute;/* absolute(绝对定位) 脱离文档流，通过 top,bottom,left,right 定位 */
+left:20px;}
+
+/* after 伪元素在元素之后添加内容*/
+.zan:after,.zan1:after{
+content:" ";
+width:20px; height:30px;
+background:gray;
+border-radius:30px 30px 0 0;
+-moz-transform: rotate(48deg);
+-ms-transform: rotate(48deg);
+-o-transform: rotate(48deg);
+-webkit-transform: rotate(48deg); 
+position:absolute;
+left:28px;top:0px;
+}
+.zan1:before,.zan1:after{background:red;}
+span{font-size:20px;line-height:35px;}
+  </style>
+ </head> 
+ <body> 
+ <div class="content">
+	<div class="hua">
+         <p class="name">梅</P>
+		 <div class="zan"><span>10</span></div>
+		 <p class="jieshuo">梅：探波傲雪，剪雪裁冰，一身傲骨，是为高洁志士；</p>
+    </div> 
+	<div class="hua">
+         <p class="name">兰</P>
+		 <div class="zan"><span>8</span></div>
+		 <p class="jieshuo">兰：空谷幽放，孤芳自赏，香雅怡情，是为世上贤达；</p>
+    </div> 
+	<div class="hua">
+         <p class="name">竹</P>
+		 <div class="zan"><span>6</span></div>
+		 <p class="jieshuo">竹：筛风弄月，潇洒一生，清雅澹泊，是为谦谦君子；</p>
+    </div> 
+	<div class="hua">
+         <p class="name">菊</P>
+		 <div class="zan"><span>5</span></div>
+		 <p class="jieshuo">菊：凌霜飘逸，特立独行，不趋炎势，是为世外隐士。</p>
+    </div> 
+ </div>
+ </body>
+ <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+ <script>
+	
+	$(".zan").click(function () {
+		//$(".zan").removeClass("zan1");
+		$(this).toggleClass("zan1");
+		var classname=$(this).attr("class");
+		//alert(classname);
+		var zan_num=parseInt($('>span',this).text());
+		//alert(zan_num);
+		if(classname == "zan zan1"){
+			zan_num +=1;
+			//alert(zan_num);
+			$('>span',this).text(zan_num);
+			
+		}else if(classname== "zan"){
+			zan_num -=1;
+			//alert(zan_num);
+			$('>span',this).text(zan_num);
+		}
+	})
+	
+ </script>
+</html>
